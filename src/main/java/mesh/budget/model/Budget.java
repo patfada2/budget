@@ -13,24 +13,33 @@ import java.util.TreeSet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-
 public class Budget {
 	private static final Logger logger = LoggerFactory.getLogger(Budget.class);
 
+	private Set<BankStatementRow> budget;
 	
-	Set<BankStatementRow> budget;
 	
+    // load the csv file and add to the budget. Count the number of non-duplciates
 	public void addExportFile(String filename) {
+		int count = 0;
 		logger.info("loading " + filename);
 		Set<BankStatementRow> rows = loadCsv(filename);
-		if (!budget.addAll(rows)) {
-			logger.info("no new records found");
+		
+		Iterator<BankStatementRow> it = rows.iterator();
+		while (it.hasNext()) {
+			if (budget.add(it.next())) {
+				count++;
+			}
+		}		
+		
+		if (count > 0) {
+			logger.info(count + " new records found");
 		}
 		else
-			logger.info("new records found");;
+			logger.info("no new records found");
 		
 	}
-		
+
 	private Set<BankStatementRow> loadCsv(String filename) {
 		Set<BankStatementRow> rows = new TreeSet<BankStatementRow>();
 		try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
@@ -61,13 +70,10 @@ public class Budget {
 
 	}
 
-	public  void loadFromFile(String filename) {
+	public void loadFromFile(String filename) {
 		budget = loadCsv(filename);
 	}
 
-	
-		
-	
 	public void saveToFile(String filename) {
 		String str;
 		BufferedWriter writer;
@@ -88,6 +94,5 @@ public class Budget {
 		}
 
 	}
-		
-	
+
 }
