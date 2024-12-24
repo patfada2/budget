@@ -1,0 +1,48 @@
+copied cookie into postman, saw this in browser debug
+
+<html><head><title>Object moved</title></head><body>
+<h2>Object moved to <a href="/fnc/1/A22AAD589B44B881638ACB28B4BA897A/balances/index">here</a>.</h2>
+</body></html>
+
+
+
+browse to
+
+https://online.asb.co.nz/fnc/1/A22AAD589B44B881638ACB28B4BA897A/balances/index
+
+
+but nothing
+
+
+cant see from dev tool what causes the file download
+
+
+I think the button hooks to  a locla script but I cant folloq it
+
+
+Considering automating withe selenium
+
+bash script
+clear downloads
+dat range vars
+call seelnium, selenium downloads for given data range?
+
+then load into xls from download susing excel dynamic data loder?
+
+
+
+=====
+
+to run seleium from command line, from a powershell window, run 
+
+selenium-side-runner -c "browserName=chrome"  --output-directory=results  C:\Users\patri\git\budget\asb.side\
+
+
+it runs but exits with "no such  frame error"
+
+
+- so run from browser, then a script to proess hte downloads
+
+23/12/2024
+tried running selenium test script with Junit, got an error trying to lpad the login page
+tried 
