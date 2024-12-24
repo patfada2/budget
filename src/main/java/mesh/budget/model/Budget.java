@@ -10,10 +10,18 @@ import java.util.Iterator;
 import java.util.Set;
 import java.util.TreeSet;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+
 public class Budget {
+	private static final Logger logger = LoggerFactory.getLogger(Budget.class);
+
+	
 	Set<BankStatementRow> budget;
 	
 	public void addExportFile(String filename) {
+		logger.info("loading " + filename);
 		Set<BankStatementRow> rows = loadCsv(filename);
 		budget.addAll(rows);
 		
@@ -35,7 +43,7 @@ public class Budget {
 
 			while ((line = br.readLine()) != null) {
 				BankStatementRow row = BankStatementRow.CreateFromCsv(line);
-				System.out.println(row.toString());
+				logger.trace(row.toString());
 				rows.add(row);
 			}
 		} catch (FileNotFoundException e) {

@@ -1,4 +1,6 @@
 package mesh.budget.model;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class BankStatementRow  implements Comparable<BankStatementRow>{
 
@@ -14,6 +16,9 @@ public class BankStatementRow  implements Comparable<BankStatementRow>{
 	private String amount;
 	
 	private static String COMMA_DELIMITER = ",";
+	
+	private static final Logger logger = LoggerFactory.getLogger(BankStatementRow.class);
+
 	
 	public static BankStatementRow CreateFromCsv(String line) {
 		String[] values = line.split(COMMA_DELIMITER);
@@ -101,7 +106,10 @@ public class BankStatementRow  implements Comparable<BankStatementRow>{
 
 	@Override
 	public int compareTo(BankStatementRow o) {
-		 return this.id.compareTo(o.getId());
+		int result = this.id.compareTo(o.getId());
+		if (result == 0 )
+			logger.trace("duplicate");
+		 return result;
 	}
 
 }

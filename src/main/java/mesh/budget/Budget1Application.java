@@ -2,6 +2,7 @@ package mesh.budget;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -35,7 +36,14 @@ public class Budget1Application {
 		Budget budget = new Budget();
 		budget.loadFromFile(Budget1Application.budgetFileName);
 		//add exports
-		budget.addExportFile("C:\\Users\\patri\\Downloads\\Export20241223152105.csv");
+		
+		List<File> exports = Utils.findExports("C:\\Users\\patri\\Downloads");
+		
+		for (File e:exports) {
+			budget.addExportFile(e.getAbsolutePath());
+						
+		}
+		
 		budget.saveToFile(Budget1Application.budgetFileName);
 		
 
