@@ -23,7 +23,11 @@ public class Budget {
 	public void addExportFile(String filename) {
 		logger.info("loading " + filename);
 		Set<BankStatementRow> rows = loadCsv(filename);
-		budget.addAll(rows);
+		if (!budget.addAll(rows)) {
+			logger.info("no new records found");
+		}
+		else
+			logger.info("new records found");;
 		
 	}
 		
