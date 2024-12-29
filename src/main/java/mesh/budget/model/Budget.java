@@ -19,7 +19,11 @@ public class Budget {
 	private Set<BankStatementRow> budget;
 	
 	
-    // load the csv file and add to the budget. Count the number of non-duplciates
+    public Set<BankStatementRow> getBudget() {
+		return budget;
+	}
+
+	// load the csv file and add to the budget. Count the number of non-duplciates
 	public void addExportFile(String filename) {
 		int count = 0;
 		logger.info("loading " + filename);

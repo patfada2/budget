@@ -1,38 +1,44 @@
 package mesh.budget.model;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
+import javafx.beans.property.SimpleStringProperty;
+import mesh.budget.model.BankStatementRow;
 
 public class BankStatementRow  implements Comparable<BankStatementRow>{
 
 	// Date Processed Date of Transaction Unique Id Tran Type Reference Description
 	// Amount
 
-	private String dateProcessed;
-	private String dateOfTransaction;
-	private String id;
-	private String type;
-	private String reference;
-	private String description;
-	private String amount;
+	private SimpleStringProperty  dateProcessed;
+	private SimpleStringProperty  dateOfTransaction;
+	private SimpleStringProperty  id;
+	private SimpleStringProperty  type;
+	private SimpleStringProperty  reference;
+	private SimpleStringProperty  description;
+	private SimpleStringProperty  amount;
 	
-	private static String COMMA_DELIMITER = ",";
 	
-	private static final Logger logger = LoggerFactory.getLogger(BankStatementRow.class);
 
 	
+	public BankStatementRow(String dateProcessed, String dateOfTransaction, String id, String type, 
+			 String reference, String description, String amount) {
+	        this.dateProcessed = new SimpleStringProperty(dateProcessed);
+	        this.dateOfTransaction = new SimpleStringProperty(dateOfTransaction);
+	        this.id = new SimpleStringProperty(id);
+	        this.type = new SimpleStringProperty(type);
+	        this.reference = new SimpleStringProperty(reference);
+	        this.description = new SimpleStringProperty(description);
+	        this.amount = new SimpleStringProperty(amount);
+	    }
+	
 	public static BankStatementRow CreateFromCsv(String line) {
-		String[] values = line.split(COMMA_DELIMITER);
-		BankStatementRow row = new BankStatementRow();
-		row.setDateProcessed(values[0]);
-		row.setDateOfTransaction(values[1]);
-		row.setId(values[2]);
-		row.setType(values[3]);
-		row.setReference(values[4]);
-		row.setDescription(values[5]);
-		row.setAmount(values[6]);
+		String[] values = line.split(COMMA_DELIMITER);		
+		BankStatementRow row = new BankStatementRow(values[0],values[1],values[2],values[3],values[4],values[5],values[6]);		
 		return row;
 
 	}
+
+	private static String COMMA_DELIMITER = ",";
+	
 
 	public String toString() {
 		return "dateProcessed=" + dateProcessed + "dateOfTransaction=" + dateOfTransaction + "id=" + id + "type=" + type
@@ -49,66 +55,66 @@ public class BankStatementRow  implements Comparable<BankStatementRow>{
 	}
 
 	public String getDateProcessed() {
-		return dateProcessed;
+		return dateProcessed.get();
 	}
 
-	public void setDateProcessed(String dateProcessed) {
-		this.dateProcessed = dateProcessed;
+	public void setDateProcessed(String dp) {
+		this.dateProcessed.set(dp);
 	}
 
 	public String getDateOfTransaction() {
-		return dateOfTransaction;
+		return dateOfTransaction.get();
 	}
 
 	public void setDateOfTransaction(String dateOfTransaction) {
-		this.dateOfTransaction = dateOfTransaction;
+		this.dateOfTransaction.set(dateOfTransaction);
 	}
 
 	public String getId() {
-		return id;
+		return id.get();
 	}
 
 	public void setId(String id) {
-		this.id = id;
+		this.id.set(id);
 	}
 
 	public String getType() {
-		return type;
+		return type.get();
 	}
 
 	public void setType(String type) {
-		this.type = type;
+		this.type.set(type);
 	}
 
 	public String getReference() {
-		return reference;
+		return reference.get();
 	}
 
 	public void setReference(String reference) {
-		this.reference = reference;
+		this.reference.set(reference);
 	}
 
 	public String getDescription() {
-		return description;
+		return description.get();
 	}
 
 	public void setDescription(String description) {
-		this.description = description;
+		this.description.set(description);
 	}
 
 	public String getAmount() {
-		return amount;
+		return amount.get();
 	}
 
 	public void setAmount(String amount) {
-		this.amount = amount;
+		this.amount.set(amount);
 	}
 
 	@Override
 	public int compareTo(BankStatementRow o) {
-		int result = this.id.compareTo(o.getId());
-		if (result == 0 )
-			logger.trace("duplicate");
+		
+		int result =  this.id.get().compareTo(o.getId());
+		
 		 return result;
 	}
 
