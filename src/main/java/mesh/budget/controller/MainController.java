@@ -32,10 +32,12 @@ import mesh.budget.model.BankStatementRow;
 import mesh.budget.model.Budget;
 
 public class MainController {
-	
+
 	private static final Logger logger = LoggerFactory.getLogger(MainController.class);
 	static String budgetFileName = "C:\\Users\\patri\\git\\budget\\budget.csv";
-
+	public CategoryUIController catController;
+	public Scene catScene;
+	public Stage catStage;
 
 	@FXML
 	private Button labeutton1l1;
@@ -43,22 +45,57 @@ public class MainController {
 	private TableView table1;
 	@FXML
 	private DialogPane dialogPane1;
-	
+
 	@FXML
 	private Alert alert;
 
 	private boolean tableCreated = false;
-	
+
 	@FXML
 	public void Table1Context(ContextMenuEvent event) {
-		//System.out.println("context");
+		// System.out.println("context");
 		logger.info("context");
-		alert.show();
-			
+		showCategoryManger();
+
+	}
+
+	@FXML
+	public void initialize() {
+		tableSetup();
+		loadData();
+		
 	}
 
 	
-	private void TableSetup() {
+
+	private void loadData() {
+		ObservableList<BankStatementRow> l = FXCollections.observableArrayList();
+
+		Budget budget = new Budget();
+		budget.loadFromFile(budgetFileName);
+		// add exports
+
+		List<File> exports = Utils.findExports("C:\\Users\\patri\\Downloads");
+
+		for (File e : exports) {
+			budget.addExportFile(e.getAbsolutePath());
+
+		}
+
+		budget.saveToFile(budgetFileName);
+
+		for (BankStatementRow r : budget.getBudget()) {
+			l.add(r);
+
+		}
+
+		table1.setItems(l);
+
+	}
+
+	
+
+	private void tableSetup() {
 		if (!tableCreated) {
 
 			TableColumn dateProcessed = new TableColumn("dateProcessed");
@@ -68,103 +105,76 @@ public class MainController {
 			TableColumn referenece = new TableColumn("reference");
 			TableColumn description = new TableColumn("description");
 			TableColumn amount = new TableColumn("amount");
+			TableColumn category = new TableColumn("category");
 
-			table1.getColumns().addAll(dateProcessed, dateOfTransaction, id, type, referenece, description, amount);
-			
+			table1.getColumns().addAll(dateProcessed, dateOfTransaction, id, type, referenece, description, amount,
+					category);
+
 			dateProcessed.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("dateProcessed"));
 			amount.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("amount"));
 			description.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("description"));
-			dateOfTransaction.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("dateOfTransaction"));
+			dateOfTransaction
+					.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("dateOfTransaction"));
 			id.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("id"));
 			referenece.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("reference"));
 			type.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("type"));
-			
-			
-			
-			tableCreated=true;
+			category.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("category"));
+
+			tableCreated = true;
 		}
-	}
-	
-	@FXML
-	public void loadData(ActionEvent event) {
-		TableSetup();
-		ObservableList<BankStatementRow> l = FXCollections.observableArrayList();
-		
-		Budget budget = new Budget();
-		budget.loadFromFile(budgetFileName);
-		//add exports
-		
-		List<File> exports = Utils.findExports("C:\\Users\\patri\\Downloads");
-		
-		for (File e:exports) {
-			budget.addExportFile(e.getAbsolutePath());
-						
-		}
-		
-		budget.saveToFile(budgetFileName);
-		
-		for (BankStatementRow r:budget.getBudget() ) {
-			l.add(r);			
-			
-		}
-		
-		table1.setItems(l);
-		
-	}
-	
-	
-	@FXML
-	public void HelloButtonClicked(ActionEvent event) {
-		
-		URL location = getResourceURL("fxml/CategoryUI.fxml");
-		
-		Parent root;
-		try {
-			root = FXMLLoader.load(location);
-			Scene scene = new Scene(root);
-			Stage stage = new Stage();
-			stage.setScene(scene);
-			stage.show();
-			
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-				
 	}
 
-	public MainController() {
+	@FXML
+	public void loadData(ActionEvent event) {
+
+		logger.info("action event");
+	}
+
+	@FXML
+	public void HelloButtonClicked(ActionEvent event) {
+
+		logger.info("hello button clicked");
+		table1.refresh();
+
+	}
+
+	private void showCategoryManger() {
+
 		
-		this.alert = new Alert(AlertType.INFORMATION);
-		alert.setTitle("select category");
-		alert.setHeaderText("Information Alert");
-		String s ="This is an example of JavaFX 8 Dialogs... ";
-		alert.setContentText(s);
-		
+		BankStatementRow r = (BankStatementRow) table1.getSelectionModel().getSelectedItem();
+
+		catController.setSelectedRow(r);
+
+		if (r == null) {
+			logger.error("selected row is null");
+		} else {
+			logger.info("showing category manager for " + r.getDescription());
+		}
+		catController.show();
 
 	}
 
 	// Event Listener on TableView.onMouseClicked
 	@FXML
 	public void Table1Clicked(MouseEvent event) {
-		
-		
-		
+		logger.info("Table1Clicked");
+
+		table1.refresh();
 
 	}
+
+	private URL getResourceURL(final String fileName) {
+		URL url = this.getClass().getClassLoader().getResource(fileName);
+
+		if (url == null) {
+			throw new IllegalArgumentException(fileName + " is not found 1");
+		}
+
+		return url;
+	}
 	
-	private URL getResourceURL(final String fileName) 
-	{
-	    URL url = this.getClass()
-	        .getClassLoader()
-	        .getResource(fileName);
-	    
-	    if(url == null) {
-	        throw new IllegalArgumentException(fileName + " is not found 1");
-	    }
-	    
-	    
-	    return url;
+	public MainController() {
+		logger.info("constructing main controler="+this.toString());
+		
 	}
 }

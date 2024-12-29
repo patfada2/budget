@@ -1,5 +1,7 @@
 package mesh.budget.model;
 
+import java.util.ArrayList;
+
 import javafx.beans.property.SimpleStringProperty;
 import mesh.budget.model.BankStatementRow;
 
@@ -15,12 +17,13 @@ public class BankStatementRow  implements Comparable<BankStatementRow>{
 	private SimpleStringProperty  reference;
 	private SimpleStringProperty  description;
 	private SimpleStringProperty  amount;
+	private SimpleStringProperty  category;
 	
 	
 
 	
 	public BankStatementRow(String dateProcessed, String dateOfTransaction, String id, String type, 
-			 String reference, String description, String amount) {
+			 String reference, String description, String amount, String category) {
 	        this.dateProcessed = new SimpleStringProperty(dateProcessed);
 	        this.dateOfTransaction = new SimpleStringProperty(dateOfTransaction);
 	        this.id = new SimpleStringProperty(id);
@@ -28,11 +31,19 @@ public class BankStatementRow  implements Comparable<BankStatementRow>{
 	        this.reference = new SimpleStringProperty(reference);
 	        this.description = new SimpleStringProperty(description);
 	        this.amount = new SimpleStringProperty(amount);
+	        this.category = new SimpleStringProperty(category);
 	    }
 	
 	public static BankStatementRow CreateFromCsv(String line) {
-		String[] values = line.split(COMMA_DELIMITER);		
-		BankStatementRow row = new BankStatementRow(values[0],values[1],values[2],values[3],values[4],values[5],values[6]);		
+		String[] v = line.split(COMMA_DELIMITER);	
+		ArrayList<String> values = new ArrayList<String>();
+		for (int i=0; i< v.length; i++)
+		values.add(v[i]);	
+		if (values.size() < 8) {
+			values.add("no category");
+		}
+		BankStatementRow row = new BankStatementRow(values.get(0),values.get(1),values.get(2),values.get(3),
+				values.get(4),values.get(5),values.get(6),values.get(7));		
 		return row;
 
 	}
@@ -41,17 +52,17 @@ public class BankStatementRow  implements Comparable<BankStatementRow>{
 	
 
 	public String toString() {
-		return "dateProcessed=" + dateProcessed + "dateOfTransaction=" + dateOfTransaction + "id=" + id + "type=" + type
-				+ "referenece=" + reference + "description=" + description + "amount=" + amount;
+		return "dateProcessed=" + dateProcessed + " dateOfTransaction=" + dateOfTransaction + " id=" + id + " type=" + type
+				+ " referenece=" + reference + " description=" + description + " amount=" + amount + "category=" + category;
 	}
 
 	public static String cSVHeader() {
 		return "dateProcessed=,dateOfTransaction,id,type,referenece,description,amount\n";
 	}
-	
+	 
 	public String toCsv() {
 		return dateProcessed + "," + dateOfTransaction + "," + id + "," + type
-				+ "," + reference + "," + description + "," + amount + "\n";
+				+ "," + reference + "," + description + "," + amount + "," + category +"\n";
 	}
 
 	public String getDateProcessed() {
@@ -108,6 +119,14 @@ public class BankStatementRow  implements Comparable<BankStatementRow>{
 
 	public void setAmount(String amount) {
 		this.amount.set(amount);
+	}
+
+	public String getCategory() {
+		return category.get();
+	}
+
+	public void setCategory(String category) {
+		this.category.set(category);
 	}
 
 	@Override
