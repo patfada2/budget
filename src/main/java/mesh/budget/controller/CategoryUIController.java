@@ -14,11 +14,16 @@ import javafx.scene.control.ListView;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import mesh.budget.model.BankStatementRow;
+import mesh.budget.model.Categories;
+import mesh.budget.model.Category;
 
 public class CategoryUIController {
 	
+	private Categories categories;
+	
 
 	private static final Logger logger = LoggerFactory.getLogger(CategoryUIController.class);
+	static String categoryFileName = "C:\\Users\\patri\\git\\budget\\categories.csv";
 	
 	private BankStatementRow selectedRow;
 	
@@ -39,13 +44,19 @@ public class CategoryUIController {
 	@FXML
 	public void initialize() {
 		logger.info("intitializing catcontroler="+this.toString());
-		ObservableList<String> names = FXCollections.observableArrayList("Julia", "Ian", "Sue", "Matthew", "Hannah",
-				"Stephan", "Denise");
+		
+		
+		categories  = new Categories();
+		categories.loadFromFile(categoryFileName);
+		
+		ObservableList<String> names = FXCollections.observableArrayList();
+
+		for (Category c : categories.getCategories()) {
+			names.add(c.getName());
+		}
 
 		list1.setItems(names);
 		
-
-		ObservableList<String> data = FXCollections.observableArrayList("chocolate", "blue");
 
 		list1.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
 
@@ -78,6 +89,7 @@ public class CategoryUIController {
 		logger.info("constructing catcontroler="+this.toString());
 		
 	}
+	
 	
 	public void show() {
 	
