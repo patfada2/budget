@@ -5,14 +5,17 @@
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" >
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <top>
       <Label text="Category Manager" BorderPane.alignment="CENTER" />
    </top>
    <center>
       <ListView fx:id="list1" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
    </center>
+   <left>
+      <Button fx:id="addButton" mnemonicParsing="false" onAction="#onAddClick" text="Add" BorderPane.alignment="CENTER" />
+   </left>
    <bottom>
-      <Button fx:id="button1" mnemonicParsing="false" onAction="#onClick" text="Button" BorderPane.alignment="CENTER" />
+      <Button fx:id="okButton" mnemonicParsing="false" onAction="#onOKClick" text="OK" BorderPane.alignment="CENTER" />
    </bottom>
 </BorderPane>

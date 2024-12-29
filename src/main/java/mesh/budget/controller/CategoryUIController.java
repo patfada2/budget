@@ -39,7 +39,10 @@ public class CategoryUIController {
 	private ListView list1;
 
 	@FXML
-	private Button button1;
+	private Button okButton;
+	
+	@FXML
+	private Button addButton;
 
 	@FXML
 	public void initialize() {
@@ -70,13 +73,22 @@ public class CategoryUIController {
 	}
 
 	@FXML
-	public void onClick(ActionEvent event) {
-		logger.info("category button clicked");
+	public void onOKClick(ActionEvent event) {
+		logger.info("category ok button clicked");
 		logger.info("selected row="+selectedRow.getDescription());
 		
 		selectedRow.setCategory(selection);
 		logger.info("selected row's category:" + selectedRow.getCategory());
+		
+		Stage stage = (Stage) borderPane.getScene().getWindow();
+		stage.hide();
  
+	}
+	
+	@FXML
+	public void onAddClick(ActionEvent event) {
+		logger.info("onAddClick");
+		
 	}
 
 
@@ -92,7 +104,6 @@ public class CategoryUIController {
 	
 	
 	public void show() {
-	
 	
 		Stage stage = (Stage) borderPane.getScene().getWindow();
 		stage.show();
