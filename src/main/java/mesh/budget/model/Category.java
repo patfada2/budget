@@ -13,14 +13,14 @@ public class Category {
 	private static final Logger logger = LoggerFactory.getLogger(Category.class);
 
 	private SimpleStringProperty name;
-	private List matches = new ArrayList<String>();
+	private List<String> matches = new ArrayList<String>();
 	public String getName() {
 		return name.get();
 	}
 	public void setName(String name) {
 		this.name.set(name);
 	}
-	public List getMatches() {
+	public List<String> getMatches() {
 		return matches;
 	}
 	public void setMatches(List matches) {

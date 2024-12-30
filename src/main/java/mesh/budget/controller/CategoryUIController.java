@@ -41,7 +41,7 @@ public class CategoryUIController {
 	@FXML
 	private BorderPane borderPane;
 	@FXML
-	private ListView list1;
+	private ListView listCategory;
 	
 	@FXML
 	private ListView listDetail;
@@ -54,6 +54,17 @@ public class CategoryUIController {
 	
 	@FXML
 	private TextField newCatText;
+	
+	@FXML
+	private Button addMatchButton;
+	
+	
+	@FXML
+	private TextField matchText;
+	
+	private Category selectedCategory;
+	
+	
 
 	@FXML
 	public void initialize() {
@@ -65,14 +76,14 @@ public class CategoryUIController {
 		names = FXCollections.observableArrayList();
 		matches = FXCollections.observableArrayList();	
 		
-		list1.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
+		listCategory.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
 
 			@Override
 			public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
 				logger.info(newValue);
 				selection = newValue;
-				Category cat = categories.getCategoryByName(selection);
-				loadMatches(cat);
+				selectedCategory = categories.getCategoryByName(selection);
+				loadMatches(selectedCategory);
 
 			}
 		});
@@ -97,7 +108,16 @@ public class CategoryUIController {
 		Category cat = new Category();
 		cat.setName(newCatText.getText());
 		categories.add(cat);
-		
+		loadCategories();
+	}
+	
+	
+	@FXML
+	public void onAddMatch(ActionEvent event) {
+		logger.info("onAddMatch");
+		selectedCategory.getMatches().add(matchText.getText());
+		logger.info("!!!!!" + selectedCategory.getMatches().toString());
+		loadMatches(selectedCategory) ;	
 	}
 	
 	private void loadMatches(Category cat) {
@@ -118,14 +138,10 @@ public class CategoryUIController {
 			names.add(c.getName());
 		}
 
-		list1.setItems(names);
+		listCategory.setItems(names);
 		
 	}
 
-	public void setSelectedRow(BankStatementRow selectedRow) {
-		this.selectedRow = selectedRow;
-		logger.info(selectedRow.getDescription());
-	}
 
 	public CategoryUIController() {
 		logger.info("constructing catcontroler="+this.toString());
@@ -133,11 +149,12 @@ public class CategoryUIController {
 	}
 	
 	
-	public void show() {
+	public void show(BankStatementRow selectedRow) {
 	
 		Stage stage = (Stage) borderPane.getScene().getWindow();
 		loadCategories();
 		newCatText.clear();
+		this.selectedRow = selectedRow;
 		stage.show();
 		
 	}

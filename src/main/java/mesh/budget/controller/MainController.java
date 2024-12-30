@@ -143,14 +143,14 @@ public class MainController {
 		
 		BankStatementRow r = (BankStatementRow) table1.getSelectionModel().getSelectedItem();
 
-		catController.setSelectedRow(r);
+		//catController.setSelectedRow(r);
 
 		if (r == null) {
 			logger.error("selected row is null");
 		} else {
 			logger.info("showing category manager for " + r.getDescription());
 		}
-		catController.show();
+		catController.show(r);
 
 	}
 
