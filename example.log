@@ -1768,3 +1768,266 @@ INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - "IA
 INFO JavaFX Application Thread mesh.budget.controller.MainController - showing category manager for "IAG NZ - ASB INSURANCE AUCKLAND"
 INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - Food
 INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - Insurance
+INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - constructing catcontroler=mesh.budget.controller.CategoryUIController@10abc420
+INFO JavaFX Application Thread mesh.budget.App - catcontroler=mesh.budget.controller.CategoryUIController@10abc420
+INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - intitializing catcontroler=mesh.budget.controller.CategoryUIController@10abc420
+INFO JavaFX Application Thread mesh.budget.model.Categories - !!!!!! line =Insurance,iag 123,southern cross
+INFO JavaFX Application Thread mesh.budget.model.Category - !!!!!!v0Insurance
+INFO JavaFX Application Thread mesh.budget.model.Categories - !!!!!! line =Food,countdown
+INFO JavaFX Application Thread mesh.budget.model.Category - !!!!!!v0Food
+INFO JavaFX Application Thread mesh.budget.App - 1.cat stagex =javafx.stage.Stage@1cf1fb6f
+INFO JavaFX Application Thread mesh.budget.controller.MainController - constructing main controler=mesh.budget.controller.MainController@5ac55986
+INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241104144304.csv
+INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241104144511.ofx
+INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241104144700.ofx
+INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241205152636.csv
+INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241205152636.xlsx
+INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241224162527.csv
+INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241224162534.csv
+INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241104144304.csv
+INFO JavaFX Application Thread mesh.budget.model.Budget - 6 new records found
+INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241104144511.ofx
+INFO JavaFX Application Thread mesh.budget.model.Budget - no new records found
+INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241104144700.ofx
+INFO JavaFX Application Thread mesh.budget.model.Budget - no new records found
+INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241205152636.csv
+INFO JavaFX Application Thread mesh.budget.model.Budget - 2 new records found
+INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241205152636.xlsx
+INFO JavaFX Application Thread mesh.budget.model.Budget - no new records found
+INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241224162527.csv
+INFO JavaFX Application Thread mesh.budget.model.Budget - 3 new records found
+INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241224162534.csv
+INFO JavaFX Application Thread mesh.budget.model.Budget - 578 new records found
+INFO JavaFX Application Thread mesh.budget.App - 2.cat stagex =javafx.stage.Stage@1cf1fb6f
+INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
+INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
+INFO JavaFX Application Thread mesh.budget.controller.MainController - context
+INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - "IAG NZ - ASB INSURANCE AUCKLAND"
+INFO JavaFX Application Thread mesh.budget.controller.MainController - showing category manager for "IAG NZ - ASB INSURANCE AUCKLAND"
+INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - Food
+INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - category ok button clicked
+INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - selected row="IAG NZ - ASB INSURANCE AUCKLAND"
+INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - selected row's category:Food
+INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
+INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
+INFO JavaFX Application Thread mesh.budget.controller.MainController - context
+INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - "MY FOOD BAG Auckland"
+INFO JavaFX Application Thread mesh.budget.controller.MainController - showing category manager for "MY FOOD BAG Auckland"
+INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - onAddClick
+INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - category ok button clicked
+INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - selected row="MY FOOD BAG Auckland"
+INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - selected row's category:Food
+INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
+INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - constructing catcontroler=mesh.budget.controller.CategoryUIController@10abc420
+INFO JavaFX Application Thread mesh.budget.App - catcontroler=mesh.budget.controller.CategoryUIController@10abc420
+INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - intitializing catcontroler=mesh.budget.controller.CategoryUIController@10abc420
+INFO JavaFX Application Thread mesh.budget.model.Categories - !!!!!! line =Insurance,iag 123,southern cross
+INFO JavaFX Application Thread mesh.budget.model.Category - !!!!!!v0Insurance
+INFO JavaFX Application Thread mesh.budget.model.Categories - !!!!!! line =Food,countdown
+INFO JavaFX Application Thread mesh.budget.model.Category - !!!!!!v0Food
+INFO JavaFX Application Thread mesh.budget.App - 1.cat stagex =javafx.stage.Stage@46312e81
+INFO JavaFX Application Thread mesh.budget.controller.MainController - constructing main controler=mesh.budget.controller.MainController@11393929
+INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241104144304.csv
+INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241104144511.ofx
+INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241104144700.ofx
+INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241205152636.csv
+INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241205152636.xlsx
+INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241224162527.csv
+INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241224162534.csv
+INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241104144304.csv
+INFO JavaFX Application Thread mesh.budget.model.Budget - 6 new records found
+INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241104144511.ofx
+INFO JavaFX Application Thread mesh.budget.model.Budget - no new records found
+INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241104144700.ofx
+INFO JavaFX Application Thread mesh.budget.model.Budget - no new records found
+INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241205152636.csv
+INFO JavaFX Application Thread mesh.budget.model.Budget - 2 new records found
+INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241205152636.xlsx
+INFO JavaFX Application Thread mesh.budget.model.Budget - no new records found
+INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241224162527.csv
+INFO JavaFX Application Thread mesh.budget.model.Budget - 3 new records found
+INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241224162534.csv
+INFO JavaFX Application Thread mesh.budget.model.Budget - 578 new records found
+INFO JavaFX Application Thread mesh.budget.App - 2.cat stagex =javafx.stage.Stage@46312e81
+INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
+INFO JavaFX Application Thread mesh.budget.controller.MainController - context
+INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - "WWNZ Online/80 Favona Rd Favona"
+INFO JavaFX Application Thread mesh.budget.controller.MainController - showing category manager for "WWNZ Online/80 Favona Rd Favona"
+INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - onAddClick
+INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - category ok button clicked
+INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - selected row="WWNZ Online/80 Favona Rd Favona"
+INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - selected row's category:null
+INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - constructing catcontroler=mesh.budget.controller.CategoryUIController@5498903d
+INFO JavaFX Application Thread mesh.budget.App - catcontroler=mesh.budget.controller.CategoryUIController@5498903d
+INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - intitializing catcontroler=mesh.budget.controller.CategoryUIController@5498903d
+INFO JavaFX Application Thread mesh.budget.model.Categories - !!!!!! line =Insurance,iag 123,southern cross
+INFO JavaFX Application Thread mesh.budget.model.Category - !!!!!!v0Insurance
+INFO JavaFX Application Thread mesh.budget.model.Categories - !!!!!! line =Food,countdown
+INFO JavaFX Application Thread mesh.budget.model.Category - !!!!!!v0Food
+INFO JavaFX Application Thread mesh.budget.App - 1.cat stagex =javafx.stage.Stage@68ac1177
+INFO JavaFX Application Thread mesh.budget.controller.MainController - constructing main controler=mesh.budget.controller.MainController@7b410126
+INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241104144304.csv
+INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241104144511.ofx
+INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241104144700.ofx
+INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241205152636.csv
+INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241205152636.xlsx
+INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241224162527.csv
+INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241224162534.csv
+INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241104144304.csv
+INFO JavaFX Application Thread mesh.budget.model.Budget - 6 new records found
+INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241104144511.ofx
+INFO JavaFX Application Thread mesh.budget.model.Budget - no new records found
+INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241104144700.ofx
+INFO JavaFX Application Thread mesh.budget.model.Budget - no new records found
+INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241205152636.csv
+INFO JavaFX Application Thread mesh.budget.model.Budget - 2 new records found
+INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241205152636.xlsx
+INFO JavaFX Application Thread mesh.budget.model.Budget - no new records found
+INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241224162527.csv
+INFO JavaFX Application Thread mesh.budget.model.Budget - 3 new records found
+INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241224162534.csv
+INFO JavaFX Application Thread mesh.budget.model.Budget - 578 new records found
+INFO JavaFX Application Thread mesh.budget.App - 2.cat stagex =javafx.stage.Stage@68ac1177
+INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
+INFO JavaFX Application Thread mesh.budget.controller.MainController - context
+INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - "TRADEME KU5Q PING Wellington"
+INFO JavaFX Application Thread mesh.budget.controller.MainController - showing category manager for "TRADEME KU5Q PING Wellington"
+INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - onAddClick
+INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - category ok button clicked
+INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - selected row="TRADEME KU5Q PING Wellington"
+INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - selected row's category:null
+INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
+INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
+INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
+INFO JavaFX Application Thread mesh.budget.controller.MainController - context
+INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - "PURE NATURE AUCKLAND"
+INFO JavaFX Application Thread mesh.budget.controller.MainController - showing category manager for "PURE NATURE AUCKLAND"
+INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - category ok button clicked
+INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - selected row="PURE NATURE AUCKLAND"
+INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - selected row's category:null
+INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - constructing catcontroler=mesh.budget.controller.CategoryUIController@10abc420
+INFO JavaFX Application Thread mesh.budget.App - catcontroler=mesh.budget.controller.CategoryUIController@10abc420
+INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - intitializing catcontroler=mesh.budget.controller.CategoryUIController@10abc420
+INFO JavaFX Application Thread mesh.budget.model.Categories - !!!!!! line =Insurance,iag 123,southern cross
+INFO JavaFX Application Thread mesh.budget.model.Category - !!!!!!v0Insurance
+INFO JavaFX Application Thread mesh.budget.model.Categories - !!!!!! line =Food,countdown
+INFO JavaFX Application Thread mesh.budget.model.Category - !!!!!!v0Food
+INFO JavaFX Application Thread mesh.budget.App - 1.cat stagex =javafx.stage.Stage@2aa62352
+INFO JavaFX Application Thread mesh.budget.controller.MainController - constructing main controler=mesh.budget.controller.MainController@d9aaf05
+INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241104144304.csv
+INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241104144511.ofx
+INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241104144700.ofx
+INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241205152636.csv
+INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241205152636.xlsx
+INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241224162527.csv
+INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241224162534.csv
+INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241104144304.csv
+INFO JavaFX Application Thread mesh.budget.model.Budget - 6 new records found
+INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241104144511.ofx
+INFO JavaFX Application Thread mesh.budget.model.Budget - no new records found
+INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241104144700.ofx
+INFO JavaFX Application Thread mesh.budget.model.Budget - no new records found
+INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241205152636.csv
+INFO JavaFX Application Thread mesh.budget.model.Budget - 2 new records found
+INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241205152636.xlsx
+INFO JavaFX Application Thread mesh.budget.model.Budget - no new records found
+INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241224162527.csv
+INFO JavaFX Application Thread mesh.budget.model.Budget - 3 new records found
+INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241224162534.csv
+INFO JavaFX Application Thread mesh.budget.model.Budget - 578 new records found
+INFO JavaFX Application Thread mesh.budget.App - 2.cat stagex =javafx.stage.Stage@2aa62352
+INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
+INFO JavaFX Application Thread mesh.budget.controller.MainController - context
+INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - "PAYPAL  MICROSOFTNE 4029357733"
+INFO JavaFX Application Thread mesh.budget.controller.MainController - showing category manager for "PAYPAL  MICROSOFTNE 4029357733"
+INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - constructing catcontroler=mesh.budget.controller.CategoryUIController@10abc420
+INFO JavaFX Application Thread mesh.budget.App - catcontroler=mesh.budget.controller.CategoryUIController@10abc420
+INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - intitializing catcontroler=mesh.budget.controller.CategoryUIController@10abc420
+INFO JavaFX Application Thread mesh.budget.model.Categories - !!!!!! line =Insurance,iag 123,southern cross
+INFO JavaFX Application Thread mesh.budget.model.Category - !!!!!!v0Insurance
+INFO JavaFX Application Thread mesh.budget.model.Categories - !!!!!! line =Food,countdown
+INFO JavaFX Application Thread mesh.budget.model.Category - !!!!!!v0Food
+INFO JavaFX Application Thread mesh.budget.App - 1.cat stagex =javafx.stage.Stage@2aa62352
+INFO JavaFX Application Thread mesh.budget.controller.MainController - constructing main controler=mesh.budget.controller.MainController@d9aaf05
+INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241104144304.csv
+INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241104144511.ofx
+INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241104144700.ofx
+INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241205152636.csv
+INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241205152636.xlsx
+INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241224162527.csv
+INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241224162534.csv
+INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241104144304.csv
+INFO JavaFX Application Thread mesh.budget.model.Budget - 6 new records found
+INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241104144511.ofx
+INFO JavaFX Application Thread mesh.budget.model.Budget - no new records found
+INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241104144700.ofx
+INFO JavaFX Application Thread mesh.budget.model.Budget - no new records found
+INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241205152636.csv
+INFO JavaFX Application Thread mesh.budget.model.Budget - 2 new records found
+INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241205152636.xlsx
+INFO JavaFX Application Thread mesh.budget.model.Budget - no new records found
+INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241224162527.csv
+INFO JavaFX Application Thread mesh.budget.model.Budget - 3 new records found
+INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241224162534.csv
+INFO JavaFX Application Thread mesh.budget.model.Budget - 578 new records found
+INFO JavaFX Application Thread mesh.budget.App - 2.cat stagex =javafx.stage.Stage@2aa62352
+INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
+INFO JavaFX Application Thread mesh.budget.controller.MainController - context
+INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - "TRADEME KU5Q PING Wellington"
+INFO JavaFX Application Thread mesh.budget.controller.MainController - showing category manager for "TRADEME KU5Q PING Wellington"
+INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - onAddClick
+INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - category ok button clicked
+INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - selected row="TRADEME KU5Q PING Wellington"
+INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - selected row's category:null
+INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
+INFO JavaFX Application Thread mesh.budget.controller.MainController - context
+INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - "PURE NATURE AUCKLAND"
+INFO JavaFX Application Thread mesh.budget.controller.MainController - showing category manager for "PURE NATURE AUCKLAND"
+INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - category ok button clicked
+INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - selected row="PURE NATURE AUCKLAND"
+INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - selected row's category:null
+INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - constructing catcontroler=mesh.budget.controller.CategoryUIController@10abc420
+INFO JavaFX Application Thread mesh.budget.App - catcontroler=mesh.budget.controller.CategoryUIController@10abc420
+INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - intitializing catcontroler=mesh.budget.controller.CategoryUIController@10abc420
+INFO JavaFX Application Thread mesh.budget.model.Categories - !!!!!! line =Insurance,iag 123,southern cross
+INFO JavaFX Application Thread mesh.budget.model.Category - !!!!!!v0Insurance
+INFO JavaFX Application Thread mesh.budget.model.Categories - !!!!!! line =Food,countdown
+INFO JavaFX Application Thread mesh.budget.model.Category - !!!!!!v0Food
+INFO JavaFX Application Thread mesh.budget.App - 1.cat stagex =javafx.stage.Stage@2aa62352
+INFO JavaFX Application Thread mesh.budget.controller.MainController - constructing main controler=mesh.budget.controller.MainController@d9aaf05
+INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241104144304.csv
+INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241104144511.ofx
+INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241104144700.ofx
+INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241205152636.csv
+INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241205152636.xlsx
+INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241224162527.csv
+INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241224162534.csv
+INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241104144304.csv
+INFO JavaFX Application Thread mesh.budget.model.Budget - 6 new records found
+INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241104144511.ofx
+INFO JavaFX Application Thread mesh.budget.model.Budget - no new records found
+INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241104144700.ofx
+INFO JavaFX Application Thread mesh.budget.model.Budget - no new records found
+INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241205152636.csv
+INFO JavaFX Application Thread mesh.budget.model.Budget - 2 new records found
+INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241205152636.xlsx
+INFO JavaFX Application Thread mesh.budget.model.Budget - no new records found
+INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241224162527.csv
+INFO JavaFX Application Thread mesh.budget.model.Budget - 3 new records found
+INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241224162534.csv
+INFO JavaFX Application Thread mesh.budget.model.Budget - 578 new records found
+INFO JavaFX Application Thread mesh.budget.App - 2.cat stagex =javafx.stage.Stage@2aa62352
+INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
+INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
+INFO JavaFX Application Thread mesh.budget.controller.MainController - context
+INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - "PAYPAL  MICROSOFTNE 4029357733"
+INFO JavaFX Application Thread mesh.budget.controller.MainController - showing category manager for "PAYPAL  MICROSOFTNE 4029357733"
+INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - onAddClick
+INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - category ok button clicked
+INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - selected row="PAYPAL  MICROSOFTNE 4029357733"
+INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - selected row's category:null
+INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
+INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
+INFO JavaFX Application Thread mesh.budget.controller.MainController - context
+INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - "PAYPAL  GOOGLE GOOGLE 4029357733"
+INFO JavaFX Application Thread mesh.budget.controller.MainController - showing category manager for "PAYPAL  GOOGLE GOOGLE 4029357733"

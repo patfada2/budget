@@ -24,6 +24,10 @@ public class Categories {
 		return categories;
 	}
 
+	public void add(Category cat) {
+		categories.add(cat);
+	}
+	
 	public void loadFromFile(String filename) {
 		
 		try (BufferedReader br = new BufferedReader(new FileReader(filename))) {

@@ -11,6 +11,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import mesh.budget.model.BankStatementRow;
@@ -20,6 +21,7 @@ import mesh.budget.model.Category;
 public class CategoryUIController {
 	
 	private Categories categories;
+	private ObservableList<String> names; 
 	
 
 	private static final Logger logger = LoggerFactory.getLogger(CategoryUIController.class);
@@ -43,6 +45,9 @@ public class CategoryUIController {
 	
 	@FXML
 	private Button addButton;
+	
+	@FXML
+	private TextField newCatText;
 
 	@FXML
 	public void initialize() {
@@ -51,25 +56,9 @@ public class CategoryUIController {
 		
 		categories  = new Categories();
 		categories.loadFromFile(categoryFileName);
+		names = FXCollections.observableArrayList();
 		
-		ObservableList<String> names = FXCollections.observableArrayList();
-
-		for (Category c : categories.getCategories()) {
-			names.add(c.getName());
-		}
-
-		list1.setItems(names);
-		
-
-		list1.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
-
-			@Override
-			public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-				logger.info(newValue);
-				selection = newValue;
-
-			}
-		});
+	
 	}
 
 	@FXML
@@ -88,9 +77,33 @@ public class CategoryUIController {
 	@FXML
 	public void onAddClick(ActionEvent event) {
 		logger.info("onAddClick");
+		Category cat = new Category();
+		cat.setName(newCatText.getText());
+		categories.add(cat);
 		
 	}
 
+	private void loadCategories() {
+		names.clear();
+
+		for (Category c : categories.getCategories()) {
+			names.add(c.getName());
+		}
+
+		list1.setItems(names);
+		
+
+		list1.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
+
+			@Override
+			public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+				logger.info(newValue);
+				selection = newValue;
+
+			}
+		});
+		
+	}
 
 	public void setSelectedRow(BankStatementRow selectedRow) {
 		this.selectedRow = selectedRow;
@@ -106,6 +119,8 @@ public class CategoryUIController {
 	public void show() {
 	
 		Stage stage = (Stage) borderPane.getScene().getWindow();
+		loadCategories();
+		newCatText.clear();
 		stage.show();
 		
 	}
