@@ -14,12 +14,11 @@ import org.slf4j.LoggerFactory;
 
 import mesh.budget.App;
 
-
 public class Categories {
 	private static final Logger logger = LoggerFactory.getLogger(Categories.class);
 
 	private List<Category> categories = new ArrayList<Category>();
-	
+
 	public List<Category> getCategories() {
 		return categories;
 	}
@@ -27,19 +26,29 @@ public class Categories {
 	public void add(Category cat) {
 		categories.add(cat);
 	}
-	
+
+	public Category getCategoryByName(String name) {
+
+		Category result = null;
+		for (Category c : categories) {
+			if (c.getName().equals(name)) {
+				result = c;
+				break;
+			}
+		}
+		return result;
+	}
+
 	public void loadFromFile(String filename) {
-		
+
 		try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
 			String line;
-			
-			
+
 			while ((line = br.readLine()) != null) {
 				Category c = new Category();
-				logger.info("!!!!!! line ="+line);
+				logger.info("!!!!!! line =" + line);
 				categories.add(c.createFromCsv(line));
-				
-				
+
 			}
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
@@ -48,10 +57,7 @@ public class Categories {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
 
-	
 	}
-	
 
 }

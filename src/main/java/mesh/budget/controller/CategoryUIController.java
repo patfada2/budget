@@ -1,5 +1,7 @@
 package mesh.budget.controller;
 
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -22,6 +24,7 @@ public class CategoryUIController {
 	
 	private Categories categories;
 	private ObservableList<String> names; 
+	private ObservableList<String> matches; 
 	
 
 	private static final Logger logger = LoggerFactory.getLogger(CategoryUIController.class);
@@ -39,7 +42,10 @@ public class CategoryUIController {
 	private BorderPane borderPane;
 	@FXML
 	private ListView list1;
-
+	
+	@FXML
+	private ListView listDetail;
+	
 	@FXML
 	private Button okButton;
 	
@@ -57,8 +63,19 @@ public class CategoryUIController {
 		categories  = new Categories();
 		categories.loadFromFile(categoryFileName);
 		names = FXCollections.observableArrayList();
+		matches = FXCollections.observableArrayList();	
 		
-	
+		list1.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
+
+			@Override
+			public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+				logger.info(newValue);
+				selection = newValue;
+				Category cat = categories.getCategoryByName(selection);
+				loadMatches(cat);
+
+			}
+		});
 	}
 
 	@FXML
@@ -82,6 +99,17 @@ public class CategoryUIController {
 		categories.add(cat);
 		
 	}
+	
+	private void loadMatches(Category cat) {
+		matches.clear();
+		
+		List<String> theMatches = cat.getMatches();
+		for (int i=0; i < theMatches.size(); i++) {
+			matches.add(theMatches.get(i));
+		}
+		listDetail.setItems(matches);
+				
+	}
 
 	private void loadCategories() {
 		names.clear();
@@ -91,17 +119,6 @@ public class CategoryUIController {
 		}
 
 		list1.setItems(names);
-		
-
-		list1.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
-
-			@Override
-			public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-				logger.info(newValue);
-				selection = newValue;
-
-			}
-		});
 		
 	}
 
