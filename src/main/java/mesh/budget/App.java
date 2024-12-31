@@ -21,6 +21,7 @@ import javafx.stage.Stage;
 import mesh.budget.controller.CategoryUIController;
 import mesh.budget.controller.MainController;
 import mesh.budget.model.AppState;
+import mesh.budget.model.Categories;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
@@ -31,11 +32,13 @@ import javafx.fxml.FXMLLoader;
 public class App extends Application {
 
 	private static final Logger logger = LoggerFactory.getLogger(App.class);
+	static String categoryFileName = "C:\\Users\\patri\\git\\budget\\categories.csv";
 
 	private Scene catScene;
 	private Stage catStagex;
 	private CategoryUIController catController;
 	private AppState appStateModel = new AppState();
+	private Categories categories;
 
 	@Override
 	public void start(Stage stage) {
@@ -47,7 +50,7 @@ public class App extends Application {
 
 			logger.info(appStateModel.toString());
 			URL location = getResourceURL("fxml/mainUI.fxml");
-			MainController mainController = new MainController(appStateModel);
+			MainController mainController = new MainController(appStateModel,categories);
 
 			FXMLLoader mainLoader = new FXMLLoader(location);
 			mainLoader.setController(mainController);
@@ -61,6 +64,7 @@ public class App extends Application {
 			//mainController.catScene = this.catScene;
 			//mainController.catStage = this.catStage;
 			mainController.catController = this.catController;
+			
 			
 			logger.info(appStateModel.toString());
 			
@@ -82,6 +86,10 @@ public class App extends Application {
 		catController =  new CategoryUIController();
 		catLoader.setController(catController );
 		catController.setAppStateModel(appStateModel);
+		
+		categories  = new Categories();
+		categories.loadFromFile(categoryFileName);
+		catController.setCategories(categories);
 		
 		logger.info("catcontroler=" + catController.toString());
 		try {

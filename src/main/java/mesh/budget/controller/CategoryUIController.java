@@ -24,6 +24,10 @@ import mesh.budget.model.Category;
 public class CategoryUIController {
 	
 	private Categories categories;
+	public void setCategories(Categories categories) {
+		this.categories = categories;
+	}
+
 	private ObservableList<String> names; 
 	private ObservableList<String> matches; 
 	private AppState appStateModel;
@@ -38,7 +42,7 @@ public class CategoryUIController {
 	}
 
 	private static final Logger logger = LoggerFactory.getLogger(CategoryUIController.class);
-	static String categoryFileName = "C:\\Users\\patri\\git\\budget\\categories.csv";
+	
 	
 	private BankStatementRow selectedRow;
 	
@@ -80,9 +84,7 @@ public class CategoryUIController {
 	public void initialize() {
 		logger.info("intitializing catcontroler="+this.toString());
 		
-		
-		categories  = new Categories();
-		categories.loadFromFile(categoryFileName);
+				
 		names = FXCollections.observableArrayList();
 		matches = FXCollections.observableArrayList();	
 		

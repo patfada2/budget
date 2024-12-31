@@ -39,13 +39,15 @@ import mesh.budget.Utils;
 import mesh.budget.model.AppState;
 import mesh.budget.model.BankStatementRow;
 import mesh.budget.model.Budget;
+import mesh.budget.model.Categories;
+import mesh.budget.model.Category;
 
 public class MainController {
 
 	private static final Logger logger = LoggerFactory.getLogger(MainController.class);
 	static String budgetFileName = "C:\\Users\\patri\\git\\budget\\budget.csv";
 	private AppState appStateModel;
-	
+	private Categories categories;
 
 	public CategoryUIController catController;
 	public Scene catScene;
@@ -155,7 +157,11 @@ public class MainController {
 	        ChoiceBox<String> categoryBox = new ChoiceBox<>();
 
 	        public TableCel_Edit() {
-	        	categoryBox.getItems().addAll("Buy", "Sell");
+	        	
+	        	for (Category c : categories.getCategories()) {
+	        		categoryBox.getItems().add(c.getName());
+	    		}
+	        	
 	        	categoryBox.getSelectionModel().selectedIndexProperty().addListener((obs, oldValue, newValue) -> {
 
 	                String value = categoryBox.getItems().get(newValue.intValue());
@@ -257,9 +263,10 @@ public class MainController {
 		return url;
 	}
 	
-	public MainController(AppState appStateModel)
+	public MainController(AppState appStateModel,Categories categories)
 	{
 		this.appStateModel=appStateModel;
+		this.categories = categories;
 		logger.info("constructing main controler="+this.toString());
 		
 	}
