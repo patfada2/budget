@@ -93,7 +93,8 @@ public class CategoryUIController {
 				logger.info(newValue);
 				selection = newValue;
 				selectedCategory = categories.getCategoryByName(selection);
-				loadMatches(selectedCategory);
+				if (selectedCategory != null)
+					loadMatches(selectedCategory);
 
 			}
 		});
