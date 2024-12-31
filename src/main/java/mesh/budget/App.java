@@ -20,6 +20,7 @@ import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import mesh.budget.controller.CategoryUIController;
 import mesh.budget.controller.MainController;
+import mesh.budget.model.AppState;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
@@ -34,6 +35,7 @@ public class App extends Application {
 	private Scene catScene;
 	private Stage catStagex;
 	private CategoryUIController catController;
+	private AppState appStateModel = new AppState();
 
 	@Override
 	public void start(Stage stage) {
@@ -43,8 +45,9 @@ public class App extends Application {
 
 		try {
 
+			logger.info(appStateModel.toString());
 			URL location = getResourceURL("fxml/mainUI.fxml");
-			MainController mainController = new MainController();
+			MainController mainController = new MainController(appStateModel);
 
 			FXMLLoader mainLoader = new FXMLLoader(location);
 			mainLoader.setController(mainController);
@@ -58,6 +61,8 @@ public class App extends Application {
 			//mainController.catScene = this.catScene;
 			//mainController.catStage = this.catStage;
 			mainController.catController = this.catController;
+			
+			logger.info(appStateModel.toString());
 			
 			logger.info("2.cat stagex =" + this.catStagex);
 
@@ -76,6 +81,7 @@ public class App extends Application {
 		FXMLLoader catLoader = new FXMLLoader(location);
 		catController =  new CategoryUIController();
 		catLoader.setController(catController );
+		catController.setAppStateModel(appStateModel);
 		
 		logger.info("catcontroler=" + catController.toString());
 		try {

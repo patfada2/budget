@@ -136,5 +136,23 @@ public class BankStatementRow  implements Comparable<BankStatementRow>{
 		
 		 return result;
 	}
+	
+	 @Override
+	    public boolean equals(Object obj) {
+	        if (obj == null) {
+	            return false;
+	        }
+
+	        if (obj.getClass() != this.getClass()) {
+	            return false;
+	        }
+
+	        final BankStatementRow other = (BankStatementRow) obj;
+	        if ((this.id == null) ? (other.id != null) : !this.id.equals(other.id)) {
+	            return false;
+	        }
+
+	        return true;
+	    }
 
 }

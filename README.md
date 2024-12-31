@@ -3,13 +3,6 @@ budget
 
 Next:
 
-caregory model, a category has many matc strings
-
-load from file
-save to file
-
-display in cat manager
-
-add new macth strings
+make the BudgerModel an ObservableSet and have a chnage event lsitener on the controller so it updates when chnged from cat selector
 
 

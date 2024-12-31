@@ -13,25 +13,41 @@ import java.util.TreeSet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javafx.beans.property.SimpleSetProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.collections.ObservableSet;
+
 public class Budget {
 	private static final Logger logger = LoggerFactory.getLogger(Budget.class);
 
-	private Set<BankStatementRow> budget;
+	private ObservableList<BankStatementRow> budget;
 	
 	
-    public Set<BankStatementRow> getBudget() {
+	
+    public ObservableList<BankStatementRow> getBudget() {
 		return budget;
 	}
+    
+    //de-duplicates
+    public boolean add(BankStatementRow row) {
+    	boolean result = true;
+    	if (budget.indexOf(row) <0 ){ 
+    		budget.add(row);
+    		result = true;   		
+    	}
+    	return result;
+    }
 
 	// load the csv file and add to the budget. Count the number of non-duplciates
 	public void addExportFile(String filename) {
 		int count = 0;
 		logger.info("loading " + filename);
-		Set<BankStatementRow> rows = loadCsv(filename);
+		ObservableList<BankStatementRow> rows = loadCsv(filename);
 		
 		Iterator<BankStatementRow> it = rows.iterator();
 		while (it.hasNext()) {
-			if (budget.add(it.next())) {
+			if (this.add(it.next())) {
 				count++;
 			}
 		}		
@@ -44,10 +60,12 @@ public class Budget {
 		
 	}
 
-	private Set<BankStatementRow> loadCsv(String filename) {
-		Set<BankStatementRow> rows = new TreeSet<BankStatementRow>();
+	private ObservableList<BankStatementRow> loadCsv(String filename) {
+		ObservableList<BankStatementRow> rows =  FXCollections.observableArrayList();
+				
 		try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
 			String line;
+			BankStatementRow row;
 			// skip headers
 			do {
 				line = br.readLine();
@@ -55,11 +73,11 @@ public class Budget {
 					break;
 			} while (!line.startsWith("202"));
 
-			if (line != null)
+			if (line != null)				
 				rows.add(BankStatementRow.CreateFromCsv(line));
 
 			while ((line = br.readLine()) != null) {
-				BankStatementRow row = BankStatementRow.CreateFromCsv(line);
+				row = BankStatementRow.CreateFromCsv(line);
 				logger.trace(row.toString());
 				rows.add(row);
 			}

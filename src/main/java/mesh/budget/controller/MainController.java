@@ -11,7 +11,9 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
+import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.Parent;
@@ -28,6 +30,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import mesh.budget.Budget1Application;
 import mesh.budget.Utils;
+import mesh.budget.model.AppState;
 import mesh.budget.model.BankStatementRow;
 import mesh.budget.model.Budget;
 
@@ -35,6 +38,9 @@ public class MainController {
 
 	private static final Logger logger = LoggerFactory.getLogger(MainController.class);
 	static String budgetFileName = "C:\\Users\\patri\\git\\budget\\budget.csv";
+	private AppState appStateModel;
+
+
 	public CategoryUIController catController;
 	public Scene catScene;
 	public Stage catStage;
@@ -63,14 +69,18 @@ public class MainController {
 	public void initialize() {
 		tableSetup();
 		loadData();
+		appStateModel.bankStatementRowChangedProperty().addListener((observable, oldValue, newValue) -> {
+            // Only if completed
+          logger.info("bankStatementRow changed");
+          table1.refresh();
+          appStateModel.setBankStatementRowChanged(false);
+        });
 		
 	}
 
 	
-
+	
 	private void loadData() {
-		ObservableList<BankStatementRow> l = FXCollections.observableArrayList();
-
 		Budget budget = new Budget();
 		budget.loadFromFile(budgetFileName);
 		// add exports
@@ -84,12 +94,15 @@ public class MainController {
 
 		budget.saveToFile(budgetFileName);
 
-		for (BankStatementRow r : budget.getBudget()) {
-			l.add(r);
-
-		}
-
-		table1.setItems(l);
+		table1.setItems(budget.getBudget());
+		
+		budget.getBudget().addListener(new ListChangeListener<BankStatementRow>() {
+			  @Override
+			  public void onChanged(Change<? extends BankStatementRow> c) {
+				  table1.refresh();
+				  logger.info("budget changed");
+			  }
+			});
 
 	}
 
@@ -173,7 +186,9 @@ public class MainController {
 		return url;
 	}
 	
-	public MainController() {
+	public MainController(AppState appStateModel)
+	{
+		this.appStateModel=appStateModel;
 		logger.info("constructing main controler="+this.toString());
 		
 	}

@@ -16,6 +16,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import mesh.budget.model.AppState;
 import mesh.budget.model.BankStatementRow;
 import mesh.budget.model.Categories;
 import mesh.budget.model.Category;
@@ -25,7 +26,16 @@ public class CategoryUIController {
 	private Categories categories;
 	private ObservableList<String> names; 
 	private ObservableList<String> matches; 
+	private AppState appStateModel;
 	
+
+	public AppState getAppStateModel() {
+		return appStateModel;
+	}
+
+	public void setAppStateModel(AppState appStateModel) {
+		this.appStateModel = appStateModel;
+	}
 
 	private static final Logger logger = LoggerFactory.getLogger(CategoryUIController.class);
 	static String categoryFileName = "C:\\Users\\patri\\git\\budget\\categories.csv";
@@ -97,6 +107,7 @@ public class CategoryUIController {
 		selectedRow.setCategory(selection);
 		logger.info("selected row's category:" + selectedRow.getCategory());
 		
+		appStateModel.setBankStatementRowChanged(true);
 		Stage stage = (Stage) borderPane.getScene().getWindow();
 		stage.hide();
  
