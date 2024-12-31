@@ -21,13 +21,19 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.DialogPane;
+import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableColumn.CellDataFeatures;
+import javafx.scene.control.TableRow;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.input.ContextMenuEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import javafx.util.Callback;
 import mesh.budget.Budget1Application;
 import mesh.budget.Utils;
 import mesh.budget.model.AppState;
@@ -39,7 +45,7 @@ public class MainController {
 	private static final Logger logger = LoggerFactory.getLogger(MainController.class);
 	static String budgetFileName = "C:\\Users\\patri\\git\\budget\\budget.csv";
 	private AppState appStateModel;
-
+	
 
 	public CategoryUIController catController;
 	public Scene catScene;
@@ -118,7 +124,7 @@ public class MainController {
 			TableColumn referenece = new TableColumn("reference");
 			TableColumn description = new TableColumn("description");
 			TableColumn amount = new TableColumn("amount");
-			TableColumn category = new TableColumn("category");
+			TableColumn<BankStatementRow, String> category = new TableColumn<BankStatementRow, String>("category");
 
 			table1.getColumns().addAll(dateProcessed, dateOfTransaction, id, type, referenece, description, amount,
 					category);
@@ -131,11 +137,76 @@ public class MainController {
 			id.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("id"));
 			referenece.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("reference"));
 			type.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("type"));
-			category.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("category"));
+		
+			category.setCellValueFactory(new PropertyValueFactory<BankStatementRow,String>("category"));
+			category.setCellFactory(column -> new TableCel_Edit());
+			
+			};
+						
 
 			tableCreated = true;
+			table1.setEditable(true);
 		}
-	}
+	
+	
+	
+	 private class TableCel_Edit extends TableCell<BankStatementRow, String> {
+
+	        ChoiceBox<String> categoryBox = new ChoiceBox<>();
+
+	        public TableCel_Edit() {
+	        	categoryBox.getItems().addAll("Buy", "Sell");
+	        	categoryBox.getSelectionModel().selectedIndexProperty().addListener((obs, oldValue, newValue) -> {
+
+	                String value = categoryBox.getItems().get(newValue.intValue());
+	                processEdit(value);
+	            });
+
+	        }
+
+	        private void processEdit(String value) {
+	            commitEdit(value);
+	        }
+
+	        @Override
+	        public void cancelEdit() {
+	            super.cancelEdit();
+	            setText(getItem());
+	            setGraphic(null);
+	        }
+
+	        @Override
+	        public void commitEdit(String value) {
+	            super.commitEdit(value);
+	            TableRow<BankStatementRow> row = this.getTableRow();
+	            row.getItem().setCategory(value);	           
+	            setGraphic(null);
+	            table1.refresh();
+	            
+	        }
+
+	        @Override
+	        public void startEdit() {
+	            super.startEdit();
+	            String value = getItem();
+	            if (value != null) {
+	                setGraphic(categoryBox);
+	                setText(null);
+	            }
+	        }
+
+	        @Override
+	        protected void updateItem(String item, boolean empty) {
+	            super.updateItem(item, empty);
+	            if (item == null || empty) {
+	                setText(null);
+
+	            } else {
+	                setText(item);
+	            }
+	        }
+
+	    }
 
 	@FXML
 	public void loadData(ActionEvent event) {
