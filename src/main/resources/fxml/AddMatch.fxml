@@ -6,10 +6,10 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 
-<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="134.0" prefWidth="490.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="74.0" prefWidth="436.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button layoutX="397.0" layoutY="94.0" mnemonicParsing="false" onAction="#addMatch" text="Add" />
-      <TextField fx:id="matchText" layoutX="14.0" layoutY="94.0" prefHeight="25.0" prefWidth="364.0" />
-      <Label layoutX="38.0" layoutY="21.0" text="Add Match" />
+      <Button layoutX="388.0" layoutY="37.0" mnemonicParsing="false" onAction="#addMatch" text="Add" />
+      <TextField fx:id="matchText" layoutX="14.0" layoutY="37.0" prefHeight="25.0" prefWidth="364.0" />
+      <Label layoutX="14.0" layoutY="14.0" text="Add Match" />
    </children>
 </AnchorPane>

@@ -18,6 +18,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.StackPane;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import mesh.budget.controller.AddMatchController;
 import mesh.budget.controller.CategoryUIController;
@@ -79,13 +80,14 @@ public class App extends Application {
 		Parent root;
 
 		FXMLLoader addMatchLoader = new FXMLLoader(location);
-		addMatchController = new AddMatchController(budget);
+		addMatchController = new AddMatchController(budget,categories);
 		addMatchLoader.setController(addMatchController);
 
 		try {
 			root = addMatchLoader.load();
 			scene = new Scene(root);
 			stage = new Stage();
+			stage.initModality(Modality.WINDOW_MODAL);
 			stage.setScene(scene);
 
 		} catch (IOException e) {

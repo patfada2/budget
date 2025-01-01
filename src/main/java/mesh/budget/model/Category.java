@@ -11,6 +11,8 @@ import mesh.budget.App;
 
 public class Category {
 	private static final Logger logger = LoggerFactory.getLogger(Category.class);
+	
+	public  static final String UNKOWN="unknown";
 
 	private SimpleStringProperty name;
 	private List<String> matches = new ArrayList<String>();
@@ -28,7 +30,7 @@ public class Category {
 	}
 	
 	public Category() {
-		name = new SimpleStringProperty("unknown");
+		name = new SimpleStringProperty(Category.UNKOWN);
 	}
 	public Category createFromCsv(String line) {
 		String[] v = line.split(",");	

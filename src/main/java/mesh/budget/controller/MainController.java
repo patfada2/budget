@@ -163,7 +163,9 @@ public class MainController {
 			
 			description.setOnEditStart(event -> {
 			    String currentValue = event.getOldValue();
-			    addMatchController.show(currentValue);
+			   
+			    BankStatementRow row = (BankStatementRow)event.getRowValue();
+			    addMatchController.show(currentValue,row);
 			});
 			dateOfTransaction
 					.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("dateOfTransaction"));

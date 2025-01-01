@@ -10,3 +10,5 @@ menus: file: load exports
 category manager : edit matches
 menu : run mATCHES
 column editor : add selction o matches (incudes, starts with)
+
+
