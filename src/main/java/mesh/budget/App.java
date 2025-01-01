@@ -19,6 +19,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+import mesh.budget.controller.AddMatchController;
 import mesh.budget.controller.CategoryUIController;
 import mesh.budget.controller.MainController;
 import mesh.budget.model.AppState;
@@ -34,50 +35,26 @@ import javafx.fxml.FXMLLoader;
 public class App extends Application {
 
 	private static final Logger logger = LoggerFactory.getLogger(App.class);
-	
 
-	private Scene catScene;
-	private Stage catStagex;
 	private CategoryUIController catController;
+	private AddMatchController addMatchController;
 	private AppState appStateModel = new AppState();
 	private Categories categories;
 	private Budget budget = new Budget();
 
 	@Override
 	public void start(Stage stage) {
-
-		categoryManagerSetup();
-		logger.info("1.cat stagex =" + this.catStagex);
+		
+		//initialise model
 		loadBudget();
+		
+		//initialise views
+		categoryManagerSetup();
+		addMatchSetup();
+		mainSetup(stage);
+		
+		
 
-		try {
-
-			logger.info(appStateModel.toString());
-			URL location = getResourceURL("fxml/mainUI.fxml");
-			MainController mainController = new MainController(appStateModel, categories,budget);
-
-			FXMLLoader mainLoader = new FXMLLoader(location);
-			mainLoader.setController(mainController);
-
-			Parent root = mainLoader.load();
-
-			Scene scene = new Scene(root);
-			stage.setScene(scene);
-			stage.show();
-
-			// mainController.catScene = this.catScene;
-			// mainController.catStage = this.catStage;
-			mainController.catController = this.catController;
-
-			logger.info(appStateModel.toString());
-
-			logger.info("2.cat stagex =" + this.catStagex);
-
-		} catch (IOException e) {
-			logger.info("App.start() failed");
-			e.printStackTrace();
-
-		}
 	}
 
 	private void loadBudget() {
@@ -94,7 +71,66 @@ public class App extends Application {
 		budget.saveToFile(Utils.budgetFileName);
 	}
 
+	private void addMatchSetup() {
+		URL location = getResourceURL("fxml/AddMatch.fxml");
+		Scene scene;
+		Stage stage;
+
+		Parent root;
+
+		FXMLLoader addMatchLoader = new FXMLLoader(location);
+		addMatchController = new AddMatchController(budget);
+		addMatchLoader.setController(addMatchController);
+
+		try {
+			root = addMatchLoader.load();
+			scene = new Scene(root);
+			stage = new Stage();
+			stage.setScene(scene);
+
+		} catch (IOException e) {
+			logger.info("categoryManagerSetup failed");
+			e.printStackTrace();
+
+		}
+
+	}
+
+	private void mainSetup(Stage stage) {
+		try {
+
+			logger.info(appStateModel.toString());
+			URL location = getResourceURL("fxml/mainUI.fxml");
+			MainController mainController = new MainController(appStateModel, categories, budget);
+
+			FXMLLoader mainLoader = new FXMLLoader(location);
+			mainLoader.setController(mainController);
+
+			Parent root = mainLoader.load();
+
+			Scene scene = new Scene(root);
+			stage.setScene(scene);
+			stage.show();
+
+			// mainController.catScene = this.catScene;
+			// mainController.catStage = this.catStage;
+			mainController.catController = this.catController;
+			mainController.addMatchController = this.addMatchController;
+
+			logger.info(appStateModel.toString());
+
+
+		} catch (IOException e) {
+			logger.info("App.start() failed");
+			e.printStackTrace();
+
+		}
+
+	}
+
 	private void categoryManagerSetup() {
+		Scene catScene;
+		Stage catStagex;
 		URL location = getResourceURL("fxml/CategoryUI.fxml");
 
 		Parent root;

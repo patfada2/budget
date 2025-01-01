@@ -26,6 +26,7 @@ import javafx.scene.control.DialogPane;
 import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableColumn.CellDataFeatures;
+import javafx.scene.control.TableColumn.CellEditEvent;
 import javafx.scene.control.TableRow;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -54,6 +55,9 @@ public class MainController {
 	
 
 	public CategoryUIController catController;
+	public AddMatchController addMatchController;
+	
+	
 	public Scene catScene;
 	public Stage catStage;
 
@@ -135,7 +139,7 @@ public class MainController {
 
 	}
 
-	
+
 
 	private void tableSetup() {
 		if (!tableCreated) {
@@ -155,6 +159,12 @@ public class MainController {
 			dateProcessed.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("dateProcessed"));
 			amount.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("amount"));
 			description.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("description"));
+			//description.setCellFactory(column -> addMatchController.show(" hello"));
+			
+			description.setOnEditStart(event -> {
+			    String currentValue = event.getOldValue();
+			    addMatchController.show(currentValue);
+			});
 			dateOfTransaction
 					.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("dateOfTransaction"));
 			id.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("id"));
@@ -163,6 +173,9 @@ public class MainController {
 		
 			category.setCellValueFactory(new PropertyValueFactory<BankStatementRow,String>("category"));
 			category.setCellFactory(column -> new TableCel_Edit());
+			
+			
+			
 			
 			};
 						
