@@ -76,6 +76,36 @@ public class MainController {
 		showCategoryManger();
 
 	}
+	
+	@FXML
+	public void loadExports(ActionEvent event) {
+
+		logger.info("loading exports");
+		List<File> exports = Utils.findExports("C:\\Users\\patri\\Downloads");
+
+		for (File e : exports) {
+			budget.addExportFile(e.getAbsolutePath());
+
+		}		
+	}
+	
+	@FXML
+	public void save(ActionEvent event) {
+		
+		budget.saveToFile(Utils.budgetFileName);
+		logger.info("saved to " + Utils.budgetFileName);
+		
+	}
+	
+
+	@FXML
+	public void HelloButtonClicked(ActionEvent event) {
+
+		logger.info("hello button clicked");
+		table1.refresh();
+
+	}
+
 
 	@FXML
 	public void initialize() {
@@ -200,29 +230,7 @@ public class MainController {
 
 	    }
 
-	@FXML
-	public void loadExports(ActionEvent event) {
-
-		logger.info("loading exports");
-		List<File> exports = Utils.findExports("C:\\Users\\patri\\Downloads");
-
-		for (File e : exports) {
-			budget.addExportFile(e.getAbsolutePath());
-
-		}
-
-		budget.saveToFile(Utils.budgetFileName);
-	}
 	
-
-	@FXML
-	public void HelloButtonClicked(ActionEvent event) {
-
-		logger.info("hello button clicked");
-		table1.refresh();
-
-	}
-
 	private void showCategoryManger() {
 
 		
