@@ -73,8 +73,7 @@ public class MainController {
 	public void Table1Context(ContextMenuEvent event) {
 		// System.out.println("context");
 		logger.info("context");
-		showCategoryManger();
-
+		
 	}
 	
 	@FXML
@@ -96,6 +95,14 @@ public class MainController {
 		logger.info("saved to " + Utils.budgetFileName);
 		
 	}
+	
+	@FXML
+	public void showCategoryManager(ActionEvent event) {
+		logger.info("showing Category Manger");
+		showCategoryManger();
+	}
+	
+	
 	
 
 	@FXML
@@ -133,13 +140,13 @@ public class MainController {
 	private void tableSetup() {
 		if (!tableCreated) {
 
-			TableColumn dateProcessed = new TableColumn("dateProcessed");
-			TableColumn dateOfTransaction = new TableColumn("dateOfTransaction");
-			TableColumn id = new TableColumn("id");
-			TableColumn type = new TableColumn("type");
-			TableColumn referenece = new TableColumn("reference");
-			TableColumn description = new TableColumn("description");
-			TableColumn amount = new TableColumn("amount");
+			TableColumn<BankStatementRow, String> dateProcessed = new TableColumn<BankStatementRow, String>("dateProcessed");
+			TableColumn<BankStatementRow, String> dateOfTransaction = new TableColumn<BankStatementRow, String>("dateOfTransaction");
+			TableColumn<BankStatementRow, String> id = new TableColumn<BankStatementRow, String>("id");
+			TableColumn<BankStatementRow, String> type = new TableColumn<BankStatementRow, String>("type");
+			TableColumn<BankStatementRow, String> referenece = new TableColumn<BankStatementRow, String>("reference");
+			TableColumn<BankStatementRow, String> description = new TableColumn<BankStatementRow, String>("description");
+			TableColumn<BankStatementRow, String> amount = new TableColumn<BankStatementRow, String>("amount");
 			TableColumn<BankStatementRow, String> category = new TableColumn<BankStatementRow, String>("category");
 
 			table1.getColumns().addAll(dateProcessed, dateOfTransaction, id, type, referenece, description, amount,

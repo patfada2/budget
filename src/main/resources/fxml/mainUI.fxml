@@ -53,14 +53,9 @@
                   <MenuItem fx:id="savemenu1" mnemonicParsing="false" onAction="#save" text="save" />
             </items>
           </Menu>
-          <Menu mnemonicParsing="false" text="Edit">
+          <Menu mnemonicParsing="false" text="Tools">
             <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Help">
-            <items>
-              <MenuItem mnemonicParsing="false" text="About" />
+              <MenuItem mnemonicParsing="false" onAction="#showCategoryManager" text="Category Manager" />
             </items>
           </Menu>
         </menus>
