@@ -10,6 +10,11 @@ import mesh.budget.model.Budget;
 
 
 public class Utils {
+	
+	static public String categoryFileName = "C:\\Users\\patri\\git\\budget\\categories.csv";
+	static public String budgetFileName = "C:\\Users\\patri\\git\\budget\\budget.csv";
+	
+	
 	private static final Logger logger = LoggerFactory.getLogger(Utils.class);
 
 

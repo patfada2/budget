@@ -49,7 +49,7 @@
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
-              <MenuItem fx:id="loadmenu" mnemonicParsing="false" onAction="#loadData" text="load" />
+              <MenuItem fx:id="loadmenu" mnemonicParsing="false" onAction="#loadExports" text="load exports" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Edit">

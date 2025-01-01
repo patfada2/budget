@@ -45,9 +45,13 @@ import mesh.budget.model.Category;
 public class MainController {
 
 	private static final Logger logger = LoggerFactory.getLogger(MainController.class);
-	static String budgetFileName = "C:\\Users\\patri\\git\\budget\\budget.csv";
+	
+	
+	//Models
 	private AppState appStateModel;
 	private Categories categories;
+	private Budget budget;
+	
 
 	public CategoryUIController catController;
 	public Scene catScene;
@@ -76,34 +80,14 @@ public class MainController {
 	@FXML
 	public void initialize() {
 		tableSetup();
-		loadData();
+	
 		appStateModel.bankStatementRowChangedProperty().addListener((observable, oldValue, newValue) -> {
             // Only if completed
           logger.info("bankStatementRow changed");
           table1.refresh();
           appStateModel.setBankStatementRowChanged(false);
         });
-		
-	}
-
-	
-	
-	private void loadData() {
-		Budget budget = new Budget();
-		budget.loadFromFile(budgetFileName);
-		// add exports
-
-		List<File> exports = Utils.findExports("C:\\Users\\patri\\Downloads");
-
-		for (File e : exports) {
-			budget.addExportFile(e.getAbsolutePath());
-
-		}
-
-		budget.saveToFile(budgetFileName);
-
-		table1.setItems(budget.getBudget());
-		
+			
 		budget.getBudget().addListener(new ListChangeListener<BankStatementRow>() {
 			  @Override
 			  public void onChanged(Change<? extends BankStatementRow> c) {
@@ -147,7 +131,9 @@ public class MainController {
 						
 
 			tableCreated = true;
+			table1.setItems(budget.getBudget());
 			table1.setEditable(true);
+			
 		}
 	
 	
@@ -215,10 +201,19 @@ public class MainController {
 	    }
 
 	@FXML
-	public void loadData(ActionEvent event) {
+	public void loadExports(ActionEvent event) {
 
-		logger.info("action event");
+		logger.info("loading exports");
+		List<File> exports = Utils.findExports("C:\\Users\\patri\\Downloads");
+
+		for (File e : exports) {
+			budget.addExportFile(e.getAbsolutePath());
+
+		}
+
+		budget.saveToFile(Utils.budgetFileName);
 	}
+	
 
 	@FXML
 	public void HelloButtonClicked(ActionEvent event) {
@@ -263,10 +258,11 @@ public class MainController {
 		return url;
 	}
 	
-	public MainController(AppState appStateModel,Categories categories)
+	public MainController(AppState appStateModel,Categories categories, Budget budget)
 	{
 		this.appStateModel=appStateModel;
 		this.categories = categories;
+		this.budget = budget;
 		logger.info("constructing main controler="+this.toString());
 		
 	}
