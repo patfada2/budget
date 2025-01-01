@@ -40,7 +40,7 @@ public class BankStatementRow  implements Comparable<BankStatementRow>{
 		for (int i=0; i< v.length; i++)
 		values.add(v[i]);	
 		if (values.size() < 8) {
-			values.add("no category");
+			values.add(Category.UNKOWN);
 		}
 		BankStatementRow row = new BankStatementRow(values.get(0),values.get(1),values.get(2),values.get(3),
 				values.get(4),values.get(5),values.get(6),values.get(7));		

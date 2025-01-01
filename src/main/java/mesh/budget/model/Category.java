@@ -12,7 +12,7 @@ import mesh.budget.App;
 public class Category {
 	private static final Logger logger = LoggerFactory.getLogger(Category.class);
 	
-	public  static final String UNKOWN="unknown";
+	public  static final String UNKOWN="no category";
 
 	private SimpleStringProperty name;
 	private List<String> matches = new ArrayList<String>();

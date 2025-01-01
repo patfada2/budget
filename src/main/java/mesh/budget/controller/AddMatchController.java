@@ -32,6 +32,9 @@ public class AddMatchController {
 	// Event Listener on Button.onAction
 	@FXML
 	public void addMatch(ActionEvent event) {
+		
+		logger.info("adding match to category:"+selectedRow.getCategory());
+		
 		if (selectedRow.getCategory().equals(Category.UNKOWN)) {
 			logger.info(" cant add match befroe categtoy is assigned");
 		}
@@ -41,12 +44,18 @@ public class AddMatchController {
 			
 			selectedCategory.getMatches().add(matchText.getText());
 		}
+		hide();
 			
 	}
 
 	public AddMatchController(Budget budget, Categories categories) {
 		this.budget = budget;
 		this.categories=categories;
+	}
+	
+	private void hide() {
+		Stage stage = (Stage) anchorPane.getScene().getWindow();
+		stage.hide();		
 	}
 
 	public void show(String description, BankStatementRow selectedRow) {
