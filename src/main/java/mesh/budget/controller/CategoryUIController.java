@@ -55,10 +55,10 @@ public class CategoryUIController {
 	@FXML
 	private BorderPane borderPane;
 	@FXML
-	private ListView listCategory;
+	private ListView<String> listCategory;
 	
 	@FXML
-	private ListView listDetail;
+	private ListView<String> listDetail;
 	
 	@FXML
 	private Button okButton;
@@ -104,12 +104,7 @@ public class CategoryUIController {
 
 	@FXML
 	public void onOKClick(ActionEvent event) {
-		logger.info("category ok button clicked");
-		logger.info("selected row="+selectedRow.getDescription());
-		
-		selectedRow.setCategory(selection);
-		logger.info("selected row's category:" + selectedRow.getCategory());
-		
+	
 		appStateModel.setBankStatementRowChanged(true);
 		Stage stage = (Stage) borderPane.getScene().getWindow();
 		stage.hide();
@@ -170,6 +165,7 @@ public class CategoryUIController {
 		newCatText.clear();
 		this.selectedRow = selectedRow;
 		stage.show();
+		stage.toFront();
 		
 	}
 	

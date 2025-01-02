@@ -1,6 +1,7 @@
 package mesh.budget.controller;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
@@ -36,7 +37,7 @@ public class AddMatchController {
 		logger.info("adding match to category:"+selectedRow.getCategory());
 		
 		if (selectedRow.getCategory().equals(Category.UNKNOWN)) {
-			logger.info(" cant add match befroe categtoy is assigned");
+			showAlert();
 		}
 		else {
 			
@@ -48,6 +49,14 @@ public class AddMatchController {
 			
 	}
 
+	private void  showAlert() {
+		Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+		alert.setTitle("Message");
+		alert.setHeaderText("cant add match before category is assigned");
+		alert.showAndWait();
+	}
+	
+	
 	public AddMatchController(Budget budget, Categories categories) {
 		this.budget = budget;
 		this.categories=categories;
@@ -65,6 +74,7 @@ public class AddMatchController {
 		matchText.setText(description);
 
 		stage.show();
+		stage.toFront();
 	}
 
 }
