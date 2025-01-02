@@ -1,608 +1,192 @@
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
-INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
-INFO JavaFX Application Thread mesh.budget.model.Category - "MITRE 10 MEGA KAPITI PARAPARAUMU"does not contain iag 123
-INFO JavaFX Application Thread mesh.budget.model.Category - "MITRE 10 MEGA KAPITI PARAPARAUMU"does not contain southern cross
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "MITRE 10 MEGA KAPITI PARAPARAUMU"in category Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
-INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
-INFO JavaFX Application Thread mesh.budget.model.Category - "MITRE 10 MEGA KAPITI PARAPARAUMU"does not contain countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - "MITRE 10 MEGA KAPITI PARAPARAUMU"does not contain Dominos
-INFO JavaFX Application Thread mesh.budget.model.Category - "MITRE 10 MEGA KAPITI PARAPARAUMU"does not contain EFTPOS
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "MITRE 10 MEGA KAPITI PARAPARAUMU"in category Food
-INFO JavaFX Application Thread mesh.budget.model.Budget - "MITRE 10 MEGA KAPITI PARAPARAUMU" does not match any categories
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
-INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
-INFO JavaFX Application Thread mesh.budget.model.Category - "MITRE 10 MEGA KAPITI PARAPARAUMU"does not contain iag 123
-INFO JavaFX Application Thread mesh.budget.model.Category - "MITRE 10 MEGA KAPITI PARAPARAUMU"does not contain southern cross
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "MITRE 10 MEGA KAPITI PARAPARAUMU"in category Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
-INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
-INFO JavaFX Application Thread mesh.budget.model.Category - "MITRE 10 MEGA KAPITI PARAPARAUMU"does not contain countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - "MITRE 10 MEGA KAPITI PARAPARAUMU"does not contain Dominos
-INFO JavaFX Application Thread mesh.budget.model.Category - "MITRE 10 MEGA KAPITI PARAPARAUMU"does not contain EFTPOS
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "MITRE 10 MEGA KAPITI PARAPARAUMU"in category Food
-INFO JavaFX Application Thread mesh.budget.model.Budget - "MITRE 10 MEGA KAPITI PARAPARAUMU" does not match any categories
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
-INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
-INFO JavaFX Application Thread mesh.budget.model.Category - "aliexpress London"does not contain iag 123
-INFO JavaFX Application Thread mesh.budget.model.Category - "aliexpress London"does not contain southern cross
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "aliexpress London"in category Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
-INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
-INFO JavaFX Application Thread mesh.budget.model.Category - "aliexpress London"does not contain countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - "aliexpress London"does not contain Dominos
-INFO JavaFX Application Thread mesh.budget.model.Category - "aliexpress London"does not contain EFTPOS
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "aliexpress London"in category Food
-INFO JavaFX Application Thread mesh.budget.model.Budget - "aliexpress London" does not match any categories
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
-INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
-INFO JavaFX Application Thread mesh.budget.model.Category - "SP FOXTROT HOME WAIPUKURAU"does not contain iag 123
-INFO JavaFX Application Thread mesh.budget.model.Category - "SP FOXTROT HOME WAIPUKURAU"does not contain southern cross
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "SP FOXTROT HOME WAIPUKURAU"in category Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
-INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
-INFO JavaFX Application Thread mesh.budget.model.Category - "SP FOXTROT HOME WAIPUKURAU"does not contain countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - "SP FOXTROT HOME WAIPUKURAU"does not contain Dominos
-INFO JavaFX Application Thread mesh.budget.model.Category - "SP FOXTROT HOME WAIPUKURAU"does not contain EFTPOS
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "SP FOXTROT HOME WAIPUKURAU"in category Food
-INFO JavaFX Application Thread mesh.budget.model.Budget - "SP FOXTROT HOME WAIPUKURAU" does not match any categories
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
-INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
-INFO JavaFX Application Thread mesh.budget.model.Category - "WILSON PARKING WELLINGTON"does not contain iag 123
-INFO JavaFX Application Thread mesh.budget.model.Category - "WILSON PARKING WELLINGTON"does not contain southern cross
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "WILSON PARKING WELLINGTON"in category Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
-INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
-INFO JavaFX Application Thread mesh.budget.model.Category - "WILSON PARKING WELLINGTON"does not contain countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - "WILSON PARKING WELLINGTON"does not contain Dominos
-INFO JavaFX Application Thread mesh.budget.model.Category - "WILSON PARKING WELLINGTON"does not contain EFTPOS
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "WILSON PARKING WELLINGTON"in category Food
-INFO JavaFX Application Thread mesh.budget.model.Budget - "WILSON PARKING WELLINGTON" does not match any categories
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
-INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
-INFO JavaFX Application Thread mesh.budget.model.Category - "OLD GEORGE CAFE WELLINGTON"does not contain iag 123
-INFO JavaFX Application Thread mesh.budget.model.Category - "OLD GEORGE CAFE WELLINGTON"does not contain southern cross
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "OLD GEORGE CAFE WELLINGTON"in category Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
-INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
-INFO JavaFX Application Thread mesh.budget.model.Category - "OLD GEORGE CAFE WELLINGTON"does not contain countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - "OLD GEORGE CAFE WELLINGTON"does not contain Dominos
-INFO JavaFX Application Thread mesh.budget.model.Category - "OLD GEORGE CAFE WELLINGTON"does not contain EFTPOS
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "OLD GEORGE CAFE WELLINGTON"in category Food
-INFO JavaFX Application Thread mesh.budget.model.Budget - "OLD GEORGE CAFE WELLINGTON" does not match any categories
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
-INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
-INFO JavaFX Application Thread mesh.budget.model.Category - "ST PIERRE'S LAMBTON SQUAR WELLINGTON"does not contain iag 123
-INFO JavaFX Application Thread mesh.budget.model.Category - "ST PIERRE'S LAMBTON SQUAR WELLINGTON"does not contain southern cross
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "ST PIERRE'S LAMBTON SQUAR WELLINGTON"in category Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
-INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
-INFO JavaFX Application Thread mesh.budget.model.Category - "ST PIERRE'S LAMBTON SQUAR WELLINGTON"does not contain countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - "ST PIERRE'S LAMBTON SQUAR WELLINGTON"does not contain Dominos
-INFO JavaFX Application Thread mesh.budget.model.Category - "ST PIERRE'S LAMBTON SQUAR WELLINGTON"does not contain EFTPOS
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "ST PIERRE'S LAMBTON SQUAR WELLINGTON"in category Food
-INFO JavaFX Application Thread mesh.budget.model.Budget - "ST PIERRE'S LAMBTON SQUAR WELLINGTON" does not match any categories
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
-INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
-INFO JavaFX Application Thread mesh.budget.model.Category - "aliexpress London"does not contain iag 123
-INFO JavaFX Application Thread mesh.budget.model.Category - "aliexpress London"does not contain southern cross
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "aliexpress London"in category Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
-INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
-INFO JavaFX Application Thread mesh.budget.model.Category - "aliexpress London"does not contain countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - "aliexpress London"does not contain Dominos
-INFO JavaFX Application Thread mesh.budget.model.Category - "aliexpress London"does not contain EFTPOS
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "aliexpress London"in category Food
-INFO JavaFX Application Thread mesh.budget.model.Budget - "aliexpress London" does not match any categories
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
-INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
-INFO JavaFX Application Thread mesh.budget.model.Category - "NPD KAPITI PARAPARAUMU"does not contain iag 123
-INFO JavaFX Application Thread mesh.budget.model.Category - "NPD KAPITI PARAPARAUMU"does not contain southern cross
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "NPD KAPITI PARAPARAUMU"in category Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
-INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
-INFO JavaFX Application Thread mesh.budget.model.Category - "NPD KAPITI PARAPARAUMU"does not contain countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - "NPD KAPITI PARAPARAUMU"does not contain Dominos
-INFO JavaFX Application Thread mesh.budget.model.Category - "NPD KAPITI PARAPARAUMU"does not contain EFTPOS
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "NPD KAPITI PARAPARAUMU"in category Food
-INFO JavaFX Application Thread mesh.budget.model.Budget - "NPD KAPITI PARAPARAUMU" does not match any categories
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
-INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
-INFO JavaFX Application Thread mesh.budget.model.Category - "PAYMENT RECEIVED drawings"does not contain iag 123
-INFO JavaFX Application Thread mesh.budget.model.Category - "PAYMENT RECEIVED drawings"does not contain southern cross
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "PAYMENT RECEIVED drawings"in category Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
-INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
-INFO JavaFX Application Thread mesh.budget.model.Category - "PAYMENT RECEIVED drawings"does not contain countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - "PAYMENT RECEIVED drawings"does not contain Dominos
-INFO JavaFX Application Thread mesh.budget.model.Category - "PAYMENT RECEIVED drawings"does not contain EFTPOS
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "PAYMENT RECEIVED drawings"in category Food
-INFO JavaFX Application Thread mesh.budget.model.Budget - "PAYMENT RECEIVED drawings" does not match any categories
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
-INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
-INFO JavaFX Application Thread mesh.budget.model.Category - "Kings Plant Barn Milford"does not contain iag 123
-INFO JavaFX Application Thread mesh.budget.model.Category - "Kings Plant Barn Milford"does not contain southern cross
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "Kings Plant Barn Milford"in category Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
-INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
-INFO JavaFX Application Thread mesh.budget.model.Category - "Kings Plant Barn Milford"does not contain countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - "Kings Plant Barn Milford"does not contain Dominos
-INFO JavaFX Application Thread mesh.budget.model.Category - "Kings Plant Barn Milford"does not contain EFTPOS
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "Kings Plant Barn Milford"in category Food
-INFO JavaFX Application Thread mesh.budget.model.Budget - "Kings Plant Barn Milford" does not match any categories
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
-INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
-INFO JavaFX Application Thread mesh.budget.model.Category - "NZ Candle Supplies Papakura"does not contain iag 123
-INFO JavaFX Application Thread mesh.budget.model.Category - "NZ Candle Supplies Papakura"does not contain southern cross
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "NZ Candle Supplies Papakura"in category Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
-INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
-INFO JavaFX Application Thread mesh.budget.model.Category - "NZ Candle Supplies Papakura"does not contain countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - "NZ Candle Supplies Papakura"does not contain Dominos
-INFO JavaFX Application Thread mesh.budget.model.Category - "NZ Candle Supplies Papakura"does not contain EFTPOS
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "NZ Candle Supplies Papakura"in category Food
-INFO JavaFX Application Thread mesh.budget.model.Budget - "NZ Candle Supplies Papakura" does not match any categories
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
-INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
-INFO JavaFX Application Thread mesh.budget.model.Category - "HARTLEYS HAIR PARAPARAUMU"does not contain iag 123
-INFO JavaFX Application Thread mesh.budget.model.Category - "HARTLEYS HAIR PARAPARAUMU"does not contain southern cross
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "HARTLEYS HAIR PARAPARAUMU"in category Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
-INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
-INFO JavaFX Application Thread mesh.budget.model.Category - "HARTLEYS HAIR PARAPARAUMU"does not contain countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - "HARTLEYS HAIR PARAPARAUMU"does not contain Dominos
-INFO JavaFX Application Thread mesh.budget.model.Category - "HARTLEYS HAIR PARAPARAUMU"does not contain EFTPOS
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "HARTLEYS HAIR PARAPARAUMU"in category Food
-INFO JavaFX Application Thread mesh.budget.model.Budget - "HARTLEYS HAIR PARAPARAUMU" does not match any categories
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
-INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
-INFO JavaFX Application Thread mesh.budget.model.Category - "Dominos Estore PARAPARAUM dominos.co.nz"does not contain iag 123
-INFO JavaFX Application Thread mesh.budget.model.Category - "Dominos Estore PARAPARAUM dominos.co.nz"does not contain southern cross
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "Dominos Estore PARAPARAUM dominos.co.nz"in category Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
-INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
-INFO JavaFX Application Thread mesh.budget.model.Category - "Dominos Estore PARAPARAUM dominos.co.nz"does not contain countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - match found:Dominos
-INFO JavaFX Application Thread mesh.budget.model.Categories - match found for "Dominos Estore PARAPARAUM dominos.co.nz"
-INFO JavaFX Application Thread mesh.budget.model.Budget - match assigned
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
-INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
-INFO JavaFX Application Thread mesh.budget.model.Category - "NZH PREMIUM CONTENT 093739276"does not contain iag 123
-INFO JavaFX Application Thread mesh.budget.model.Category - "NZH PREMIUM CONTENT 093739276"does not contain southern cross
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "NZH PREMIUM CONTENT 093739276"in category Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
-INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
-INFO JavaFX Application Thread mesh.budget.model.Category - "NZH PREMIUM CONTENT 093739276"does not contain countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - "NZH PREMIUM CONTENT 093739276"does not contain Dominos
-INFO JavaFX Application Thread mesh.budget.model.Category - "NZH PREMIUM CONTENT 093739276"does not contain EFTPOS
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "NZH PREMIUM CONTENT 093739276"in category Food
-INFO JavaFX Application Thread mesh.budget.model.Budget - "NZH PREMIUM CONTENT 093739276" does not match any categories
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
-INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
-INFO JavaFX Application Thread mesh.budget.model.Category - "PAYPAL  SKYSPORT 4029357733 NY"does not contain iag 123
-INFO JavaFX Application Thread mesh.budget.model.Category - "PAYPAL  SKYSPORT 4029357733 NY"does not contain southern cross
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "PAYPAL  SKYSPORT 4029357733 NY"in category Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
-INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
-INFO JavaFX Application Thread mesh.budget.model.Category - "PAYPAL  SKYSPORT 4029357733 NY"does not contain countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - "PAYPAL  SKYSPORT 4029357733 NY"does not contain Dominos
-INFO JavaFX Application Thread mesh.budget.model.Category - "PAYPAL  SKYSPORT 4029357733 NY"does not contain EFTPOS
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "PAYPAL  SKYSPORT 4029357733 NY"in category Food
-INFO JavaFX Application Thread mesh.budget.model.Budget - "PAYPAL  SKYSPORT 4029357733 NY" does not match any categories
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
-INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
-INFO JavaFX Application Thread mesh.budget.model.Category - "MY FOOD BAG Auckland"does not contain iag 123
-INFO JavaFX Application Thread mesh.budget.model.Category - "MY FOOD BAG Auckland"does not contain southern cross
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "MY FOOD BAG Auckland"in category Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
-INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
-INFO JavaFX Application Thread mesh.budget.model.Category - "MY FOOD BAG Auckland"does not contain countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - "MY FOOD BAG Auckland"does not contain Dominos
-INFO JavaFX Application Thread mesh.budget.model.Category - "MY FOOD BAG Auckland"does not contain EFTPOS
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "MY FOOD BAG Auckland"in category Food
-INFO JavaFX Application Thread mesh.budget.model.Budget - "MY FOOD BAG Auckland" does not match any categories
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
-INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
-INFO JavaFX Application Thread mesh.budget.model.Category - "IAG NZ - ASB INSURANCE AUCKLAND"does not contain iag 123
-INFO JavaFX Application Thread mesh.budget.model.Category - "IAG NZ - ASB INSURANCE AUCKLAND"does not contain southern cross
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "IAG NZ - ASB INSURANCE AUCKLAND"in category Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
-INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
-INFO JavaFX Application Thread mesh.budget.model.Category - "IAG NZ - ASB INSURANCE AUCKLAND"does not contain countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - "IAG NZ - ASB INSURANCE AUCKLAND"does not contain Dominos
-INFO JavaFX Application Thread mesh.budget.model.Category - "IAG NZ - ASB INSURANCE AUCKLAND"does not contain EFTPOS
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "IAG NZ - ASB INSURANCE AUCKLAND"in category Food
-INFO JavaFX Application Thread mesh.budget.model.Budget - "IAG NZ - ASB INSURANCE AUCKLAND" does not match any categories
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
-INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
-INFO JavaFX Application Thread mesh.budget.model.Category - "IAG NZ - ASB INSURANCE AUCKLAND"does not contain iag 123
-INFO JavaFX Application Thread mesh.budget.model.Category - "IAG NZ - ASB INSURANCE AUCKLAND"does not contain southern cross
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "IAG NZ - ASB INSURANCE AUCKLAND"in category Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
-INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
-INFO JavaFX Application Thread mesh.budget.model.Category - "IAG NZ - ASB INSURANCE AUCKLAND"does not contain countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - "IAG NZ - ASB INSURANCE AUCKLAND"does not contain Dominos
-INFO JavaFX Application Thread mesh.budget.model.Category - "IAG NZ - ASB INSURANCE AUCKLAND"does not contain EFTPOS
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "IAG NZ - ASB INSURANCE AUCKLAND"in category Food
-INFO JavaFX Application Thread mesh.budget.model.Budget - "IAG NZ - ASB INSURANCE AUCKLAND" does not match any categories
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
-INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
-INFO JavaFX Application Thread mesh.budget.model.Category - "IAG NZ - ASB INSURANCE AUCKLAND"does not contain iag 123
-INFO JavaFX Application Thread mesh.budget.model.Category - "IAG NZ - ASB INSURANCE AUCKLAND"does not contain southern cross
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "IAG NZ - ASB INSURANCE AUCKLAND"in category Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
-INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
-INFO JavaFX Application Thread mesh.budget.model.Category - "IAG NZ - ASB INSURANCE AUCKLAND"does not contain countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - "IAG NZ - ASB INSURANCE AUCKLAND"does not contain Dominos
-INFO JavaFX Application Thread mesh.budget.model.Category - "IAG NZ - ASB INSURANCE AUCKLAND"does not contain EFTPOS
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "IAG NZ - ASB INSURANCE AUCKLAND"in category Food
-INFO JavaFX Application Thread mesh.budget.model.Budget - "IAG NZ - ASB INSURANCE AUCKLAND" does not match any categories
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
-INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
-INFO JavaFX Application Thread mesh.budget.model.Category - "WWNZ Online/80 Favona Rd Favona"does not contain iag 123
-INFO JavaFX Application Thread mesh.budget.model.Category - "WWNZ Online/80 Favona Rd Favona"does not contain southern cross
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "WWNZ Online/80 Favona Rd Favona"in category Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
-INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
-INFO JavaFX Application Thread mesh.budget.model.Category - "WWNZ Online/80 Favona Rd Favona"does not contain countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - "WWNZ Online/80 Favona Rd Favona"does not contain Dominos
-INFO JavaFX Application Thread mesh.budget.model.Category - "WWNZ Online/80 Favona Rd Favona"does not contain EFTPOS
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "WWNZ Online/80 Favona Rd Favona"in category Food
-INFO JavaFX Application Thread mesh.budget.model.Budget - "WWNZ Online/80 Favona Rd Favona" does not match any categories
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
-INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
-INFO JavaFX Application Thread mesh.budget.model.Category - "Mana Unlimited Porirua"does not contain iag 123
-INFO JavaFX Application Thread mesh.budget.model.Category - "Mana Unlimited Porirua"does not contain southern cross
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "Mana Unlimited Porirua"in category Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
-INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
-INFO JavaFX Application Thread mesh.budget.model.Category - "Mana Unlimited Porirua"does not contain countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - "Mana Unlimited Porirua"does not contain Dominos
-INFO JavaFX Application Thread mesh.budget.model.Category - "Mana Unlimited Porirua"does not contain EFTPOS
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "Mana Unlimited Porirua"in category Food
-INFO JavaFX Application Thread mesh.budget.model.Budget - "Mana Unlimited Porirua" does not match any categories
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
-INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
-INFO JavaFX Application Thread mesh.budget.model.Category - "Paperplus Coastlands Paraparaumu"does not contain iag 123
-INFO JavaFX Application Thread mesh.budget.model.Category - "Paperplus Coastlands Paraparaumu"does not contain southern cross
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "Paperplus Coastlands Paraparaumu"in category Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
-INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
-INFO JavaFX Application Thread mesh.budget.model.Category - "Paperplus Coastlands Paraparaumu"does not contain countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - "Paperplus Coastlands Paraparaumu"does not contain Dominos
-INFO JavaFX Application Thread mesh.budget.model.Category - "Paperplus Coastlands Paraparaumu"does not contain EFTPOS
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "Paperplus Coastlands Paraparaumu"in category Food
-INFO JavaFX Application Thread mesh.budget.model.Budget - "Paperplus Coastlands Paraparaumu" does not match any categories
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
-INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
-INFO JavaFX Application Thread mesh.budget.model.Category - "Animates Coastlands Ellerslie"does not contain iag 123
-INFO JavaFX Application Thread mesh.budget.model.Category - "Animates Coastlands Ellerslie"does not contain southern cross
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "Animates Coastlands Ellerslie"in category Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
-INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
-INFO JavaFX Application Thread mesh.budget.model.Category - "Animates Coastlands Ellerslie"does not contain countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - "Animates Coastlands Ellerslie"does not contain Dominos
-INFO JavaFX Application Thread mesh.budget.model.Category - "Animates Coastlands Ellerslie"does not contain EFTPOS
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "Animates Coastlands Ellerslie"in category Food
-INFO JavaFX Application Thread mesh.budget.model.Budget - "Animates Coastlands Ellerslie" does not match any categories
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
-INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
-INFO JavaFX Application Thread mesh.budget.model.Category - "Spotlight Stores NZ Ltd Porirua"does not contain iag 123
-INFO JavaFX Application Thread mesh.budget.model.Category - "Spotlight Stores NZ Ltd Porirua"does not contain southern cross
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "Spotlight Stores NZ Ltd Porirua"in category Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
-INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
-INFO JavaFX Application Thread mesh.budget.model.Category - "Spotlight Stores NZ Ltd Porirua"does not contain countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - "Spotlight Stores NZ Ltd Porirua"does not contain Dominos
-INFO JavaFX Application Thread mesh.budget.model.Category - "Spotlight Stores NZ Ltd Porirua"does not contain EFTPOS
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "Spotlight Stores NZ Ltd Porirua"in category Food
-INFO JavaFX Application Thread mesh.budget.model.Budget - "Spotlight Stores NZ Ltd Porirua" does not match any categories
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
-INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
-INFO JavaFX Application Thread mesh.budget.model.Category - "PAYPAL  MICROSOFTNE 4029357733"does not contain iag 123
-INFO JavaFX Application Thread mesh.budget.model.Category - "PAYPAL  MICROSOFTNE 4029357733"does not contain southern cross
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "PAYPAL  MICROSOFTNE 4029357733"in category Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
-INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
-INFO JavaFX Application Thread mesh.budget.model.Category - "PAYPAL  MICROSOFTNE 4029357733"does not contain countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - "PAYPAL  MICROSOFTNE 4029357733"does not contain Dominos
-INFO JavaFX Application Thread mesh.budget.model.Category - "PAYPAL  MICROSOFTNE 4029357733"does not contain EFTPOS
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "PAYPAL  MICROSOFTNE 4029357733"in category Food
-INFO JavaFX Application Thread mesh.budget.model.Budget - "PAYPAL  MICROSOFTNE 4029357733" does not match any categories
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
-INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
-INFO JavaFX Application Thread mesh.budget.model.Category - "DARK HORSE COFFEE KAPITI"does not contain iag 123
-INFO JavaFX Application Thread mesh.budget.model.Category - "DARK HORSE COFFEE KAPITI"does not contain southern cross
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "DARK HORSE COFFEE KAPITI"in category Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
-INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
-INFO JavaFX Application Thread mesh.budget.model.Category - "DARK HORSE COFFEE KAPITI"does not contain countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - "DARK HORSE COFFEE KAPITI"does not contain Dominos
-INFO JavaFX Application Thread mesh.budget.model.Category - "DARK HORSE COFFEE KAPITI"does not contain EFTPOS
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "DARK HORSE COFFEE KAPITI"in category Food
-INFO JavaFX Application Thread mesh.budget.model.Budget - "DARK HORSE COFFEE KAPITI" does not match any categories
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
-INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
-INFO JavaFX Application Thread mesh.budget.model.Category - "SALVATION ARMY FAMIL PARAPARAUMU"does not contain iag 123
-INFO JavaFX Application Thread mesh.budget.model.Category - "SALVATION ARMY FAMIL PARAPARAUMU"does not contain southern cross
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "SALVATION ARMY FAMIL PARAPARAUMU"in category Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
-INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
-INFO JavaFX Application Thread mesh.budget.model.Category - "SALVATION ARMY FAMIL PARAPARAUMU"does not contain countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - "SALVATION ARMY FAMIL PARAPARAUMU"does not contain Dominos
-INFO JavaFX Application Thread mesh.budget.model.Category - "SALVATION ARMY FAMIL PARAPARAUMU"does not contain EFTPOS
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "SALVATION ARMY FAMIL PARAPARAUMU"in category Food
-INFO JavaFX Application Thread mesh.budget.model.Budget - "SALVATION ARMY FAMIL PARAPARAUMU" does not match any categories
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
-INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
-INFO JavaFX Application Thread mesh.budget.model.Category - "PAYPAL  GOOGLE GOOGLE 4029357733"does not contain iag 123
-INFO JavaFX Application Thread mesh.budget.model.Category - "PAYPAL  GOOGLE GOOGLE 4029357733"does not contain southern cross
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "PAYPAL  GOOGLE GOOGLE 4029357733"in category Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
-INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
-INFO JavaFX Application Thread mesh.budget.model.Category - "PAYPAL  GOOGLE GOOGLE 4029357733"does not contain countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - "PAYPAL  GOOGLE GOOGLE 4029357733"does not contain Dominos
-INFO JavaFX Application Thread mesh.budget.model.Category - "PAYPAL  GOOGLE GOOGLE 4029357733"does not contain EFTPOS
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "PAYPAL  GOOGLE GOOGLE 4029357733"in category Food
-INFO JavaFX Application Thread mesh.budget.model.Budget - "PAYPAL  GOOGLE GOOGLE 4029357733" does not match any categories
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
-INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
-INFO JavaFX Application Thread mesh.budget.model.Category - "ST PIERRE'S LAMBTON SQUAR WELLINGTON"does not contain iag 123
-INFO JavaFX Application Thread mesh.budget.model.Category - "ST PIERRE'S LAMBTON SQUAR WELLINGTON"does not contain southern cross
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "ST PIERRE'S LAMBTON SQUAR WELLINGTON"in category Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
-INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
-INFO JavaFX Application Thread mesh.budget.model.Category - "ST PIERRE'S LAMBTON SQUAR WELLINGTON"does not contain countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - "ST PIERRE'S LAMBTON SQUAR WELLINGTON"does not contain Dominos
-INFO JavaFX Application Thread mesh.budget.model.Category - "ST PIERRE'S LAMBTON SQUAR WELLINGTON"does not contain EFTPOS
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "ST PIERRE'S LAMBTON SQUAR WELLINGTON"in category Food
-INFO JavaFX Application Thread mesh.budget.model.Budget - "ST PIERRE'S LAMBTON SQUAR WELLINGTON" does not match any categories
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
-INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
-INFO JavaFX Application Thread mesh.budget.model.Category - "APPLE.COM/BILL SYDNEY"does not contain iag 123
-INFO JavaFX Application Thread mesh.budget.model.Category - "APPLE.COM/BILL SYDNEY"does not contain southern cross
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "APPLE.COM/BILL SYDNEY"in category Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
-INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
-INFO JavaFX Application Thread mesh.budget.model.Category - "APPLE.COM/BILL SYDNEY"does not contain countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - "APPLE.COM/BILL SYDNEY"does not contain Dominos
-INFO JavaFX Application Thread mesh.budget.model.Category - "APPLE.COM/BILL SYDNEY"does not contain EFTPOS
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "APPLE.COM/BILL SYDNEY"in category Food
-INFO JavaFX Application Thread mesh.budget.model.Budget - "APPLE.COM/BILL SYDNEY" does not match any categories
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
-INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
-INFO JavaFX Application Thread mesh.budget.model.Category - "Dominos Estore PARAPARAUM dominos.co.nz"does not contain iag 123
-INFO JavaFX Application Thread mesh.budget.model.Category - "Dominos Estore PARAPARAUM dominos.co.nz"does not contain southern cross
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "Dominos Estore PARAPARAUM dominos.co.nz"in category Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
-INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
-INFO JavaFX Application Thread mesh.budget.model.Category - "Dominos Estore PARAPARAUM dominos.co.nz"does not contain countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - match found:Dominos
-INFO JavaFX Application Thread mesh.budget.model.Categories - match found for "Dominos Estore PARAPARAUM dominos.co.nz"
-INFO JavaFX Application Thread mesh.budget.model.Budget - match assigned
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
-INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
-INFO JavaFX Application Thread mesh.budget.model.Category - "Paperplus Coastlands Paraparaumu"does not contain iag 123
-INFO JavaFX Application Thread mesh.budget.model.Category - "Paperplus Coastlands Paraparaumu"does not contain southern cross
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "Paperplus Coastlands Paraparaumu"in category Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
-INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
-INFO JavaFX Application Thread mesh.budget.model.Category - "Paperplus Coastlands Paraparaumu"does not contain countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - "Paperplus Coastlands Paraparaumu"does not contain Dominos
-INFO JavaFX Application Thread mesh.budget.model.Category - "Paperplus Coastlands Paraparaumu"does not contain EFTPOS
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "Paperplus Coastlands Paraparaumu"in category Food
-INFO JavaFX Application Thread mesh.budget.model.Budget - "Paperplus Coastlands Paraparaumu" does not match any categories
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
-INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
-INFO JavaFX Application Thread mesh.budget.model.Category - "WOOLWORTHS NZ/COASTLANDS PARAPARAUMU"does not contain iag 123
-INFO JavaFX Application Thread mesh.budget.model.Category - "WOOLWORTHS NZ/COASTLANDS PARAPARAUMU"does not contain southern cross
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "WOOLWORTHS NZ/COASTLANDS PARAPARAUMU"in category Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
-INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
-INFO JavaFX Application Thread mesh.budget.model.Category - "WOOLWORTHS NZ/COASTLANDS PARAPARAUMU"does not contain countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - "WOOLWORTHS NZ/COASTLANDS PARAPARAUMU"does not contain Dominos
-INFO JavaFX Application Thread mesh.budget.model.Category - "WOOLWORTHS NZ/COASTLANDS PARAPARAUMU"does not contain EFTPOS
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "WOOLWORTHS NZ/COASTLANDS PARAPARAUMU"in category Food
-INFO JavaFX Application Thread mesh.budget.model.Budget - "WOOLWORTHS NZ/COASTLANDS PARAPARAUMU" does not match any categories
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
-INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
-INFO JavaFX Application Thread mesh.budget.model.Category - "MITRE 10 MEGA KAPITI PARAPARAUMU"does not contain iag 123
-INFO JavaFX Application Thread mesh.budget.model.Category - "MITRE 10 MEGA KAPITI PARAPARAUMU"does not contain southern cross
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "MITRE 10 MEGA KAPITI PARAPARAUMU"in category Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
-INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
-INFO JavaFX Application Thread mesh.budget.model.Category - "MITRE 10 MEGA KAPITI PARAPARAUMU"does not contain countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - "MITRE 10 MEGA KAPITI PARAPARAUMU"does not contain Dominos
-INFO JavaFX Application Thread mesh.budget.model.Category - "MITRE 10 MEGA KAPITI PARAPARAUMU"does not contain EFTPOS
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "MITRE 10 MEGA KAPITI PARAPARAUMU"in category Food
-INFO JavaFX Application Thread mesh.budget.model.Budget - "MITRE 10 MEGA KAPITI PARAPARAUMU" does not match any categories
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
-INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
-INFO JavaFX Application Thread mesh.budget.model.Category - "aliexpress London"does not contain iag 123
-INFO JavaFX Application Thread mesh.budget.model.Category - "aliexpress London"does not contain southern cross
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "aliexpress London"in category Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
-INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
-INFO JavaFX Application Thread mesh.budget.model.Category - "aliexpress London"does not contain countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - "aliexpress London"does not contain Dominos
-INFO JavaFX Application Thread mesh.budget.model.Category - "aliexpress London"does not contain EFTPOS
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "aliexpress London"in category Food
-INFO JavaFX Application Thread mesh.budget.model.Budget - "aliexpress London" does not match any categories
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
-INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
-INFO JavaFX Application Thread mesh.budget.model.Category - "Neon Auckland"does not contain iag 123
-INFO JavaFX Application Thread mesh.budget.model.Category - "Neon Auckland"does not contain southern cross
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "Neon Auckland"in category Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
-INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
-INFO JavaFX Application Thread mesh.budget.model.Category - "Neon Auckland"does not contain countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - "Neon Auckland"does not contain Dominos
-INFO JavaFX Application Thread mesh.budget.model.Category - "Neon Auckland"does not contain EFTPOS
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "Neon Auckland"in category Food
-INFO JavaFX Application Thread mesh.budget.model.Budget - "Neon Auckland" does not match any categories
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
-INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
-INFO JavaFX Application Thread mesh.budget.model.Category - "ST PIERRE'S LAMBTON SQUAR WELLINGTON"does not contain iag 123
-INFO JavaFX Application Thread mesh.budget.model.Category - "ST PIERRE'S LAMBTON SQUAR WELLINGTON"does not contain southern cross
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "ST PIERRE'S LAMBTON SQUAR WELLINGTON"in category Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
-INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
-INFO JavaFX Application Thread mesh.budget.model.Category - "ST PIERRE'S LAMBTON SQUAR WELLINGTON"does not contain countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - "ST PIERRE'S LAMBTON SQUAR WELLINGTON"does not contain Dominos
-INFO JavaFX Application Thread mesh.budget.model.Category - "ST PIERRE'S LAMBTON SQUAR WELLINGTON"does not contain EFTPOS
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "ST PIERRE'S LAMBTON SQUAR WELLINGTON"in category Food
-INFO JavaFX Application Thread mesh.budget.model.Budget - "ST PIERRE'S LAMBTON SQUAR WELLINGTON" does not match any categories
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
-INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
-INFO JavaFX Application Thread mesh.budget.model.Category - "Woolworths Online Favona"does not contain iag 123
-INFO JavaFX Application Thread mesh.budget.model.Category - "Woolworths Online Favona"does not contain southern cross
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "Woolworths Online Favona"in category Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
-INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
-INFO JavaFX Application Thread mesh.budget.model.Category - "Woolworths Online Favona"does not contain countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - "Woolworths Online Favona"does not contain Dominos
-INFO JavaFX Application Thread mesh.budget.model.Category - "Woolworths Online Favona"does not contain EFTPOS
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "Woolworths Online Favona"in category Food
-INFO JavaFX Application Thread mesh.budget.model.Budget - "Woolworths Online Favona" does not match any categories
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
-INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
-INFO JavaFX Application Thread mesh.budget.model.Category - "Dominos Estore PARAPARAUM dominos.co.nz"does not contain iag 123
-INFO JavaFX Application Thread mesh.budget.model.Category - "Dominos Estore PARAPARAUM dominos.co.nz"does not contain southern cross
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "Dominos Estore PARAPARAUM dominos.co.nz"in category Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
-INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
-INFO JavaFX Application Thread mesh.budget.model.Category - "Dominos Estore PARAPARAUM dominos.co.nz"does not contain countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - match found:Dominos
-INFO JavaFX Application Thread mesh.budget.model.Categories - match found for "Dominos Estore PARAPARAUM dominos.co.nz"
-INFO JavaFX Application Thread mesh.budget.model.Budget - match assigned
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
-INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
-INFO JavaFX Application Thread mesh.budget.model.Category - "DARK HORSE COFFEE KAPITI"does not contain iag 123
-INFO JavaFX Application Thread mesh.budget.model.Category - "DARK HORSE COFFEE KAPITI"does not contain southern cross
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "DARK HORSE COFFEE KAPITI"in category Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
-INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
-INFO JavaFX Application Thread mesh.budget.model.Category - "DARK HORSE COFFEE KAPITI"does not contain countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - "DARK HORSE COFFEE KAPITI"does not contain Dominos
-INFO JavaFX Application Thread mesh.budget.model.Category - "DARK HORSE COFFEE KAPITI"does not contain EFTPOS
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "DARK HORSE COFFEE KAPITI"in category Food
-INFO JavaFX Application Thread mesh.budget.model.Budget - "DARK HORSE COFFEE KAPITI" does not match any categories
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
-INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
-INFO JavaFX Application Thread mesh.budget.model.Category - "Dominos Estore PARAPARAUM dominos.co.nz"does not contain iag 123
-INFO JavaFX Application Thread mesh.budget.model.Category - "Dominos Estore PARAPARAUM dominos.co.nz"does not contain southern cross
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "Dominos Estore PARAPARAUM dominos.co.nz"in category Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
-INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
-INFO JavaFX Application Thread mesh.budget.model.Category - "Dominos Estore PARAPARAUM dominos.co.nz"does not contain countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - match found:Dominos
-INFO JavaFX Application Thread mesh.budget.model.Categories - match found for "Dominos Estore PARAPARAUM dominos.co.nz"
-INFO JavaFX Application Thread mesh.budget.model.Budget - match assigned
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
-INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
-INFO JavaFX Application Thread mesh.budget.model.Category - "SUPERCHEAP AUTO PARAPARAUMU"does not contain iag 123
-INFO JavaFX Application Thread mesh.budget.model.Category - "SUPERCHEAP AUTO PARAPARAUMU"does not contain southern cross
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "SUPERCHEAP AUTO PARAPARAUMU"in category Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
-INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
-INFO JavaFX Application Thread mesh.budget.model.Category - "SUPERCHEAP AUTO PARAPARAUMU"does not contain countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - "SUPERCHEAP AUTO PARAPARAUMU"does not contain Dominos
-INFO JavaFX Application Thread mesh.budget.model.Category - "SUPERCHEAP AUTO PARAPARAUMU"does not contain EFTPOS
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "SUPERCHEAP AUTO PARAPARAUMU"in category Food
-INFO JavaFX Application Thread mesh.budget.model.Budget - "SUPERCHEAP AUTO PARAPARAUMU" does not match any categories
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
-INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
-INFO JavaFX Application Thread mesh.budget.model.Category - "Dominos Estore PARAPARAUM dominos.co.nz"does not contain iag 123
-INFO JavaFX Application Thread mesh.budget.model.Category - "Dominos Estore PARAPARAUM dominos.co.nz"does not contain southern cross
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "Dominos Estore PARAPARAUM dominos.co.nz"in category Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
-INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
-INFO JavaFX Application Thread mesh.budget.model.Category - "Dominos Estore PARAPARAUM dominos.co.nz"does not contain countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - match found:Dominos
-INFO JavaFX Application Thread mesh.budget.model.Categories - match found for "Dominos Estore PARAPARAUM dominos.co.nz"
-INFO JavaFX Application Thread mesh.budget.model.Budget - match assigned
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
-INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
-INFO JavaFX Application Thread mesh.budget.model.Category - "MITRE 10 MEGA KAPITI PARAPARAUMU"does not contain iag 123
-INFO JavaFX Application Thread mesh.budget.model.Category - "MITRE 10 MEGA KAPITI PARAPARAUMU"does not contain southern cross
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "MITRE 10 MEGA KAPITI PARAPARAUMU"in category Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
-INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
-INFO JavaFX Application Thread mesh.budget.model.Category - "MITRE 10 MEGA KAPITI PARAPARAUMU"does not contain countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - "MITRE 10 MEGA KAPITI PARAPARAUMU"does not contain Dominos
-INFO JavaFX Application Thread mesh.budget.model.Category - "MITRE 10 MEGA KAPITI PARAPARAUMU"does not contain EFTPOS
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "MITRE 10 MEGA KAPITI PARAPARAUMU"in category Food
-INFO JavaFX Application Thread mesh.budget.model.Budget - "MITRE 10 MEGA KAPITI PARAPARAUMU" does not match any categories
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
-INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
-INFO JavaFX Application Thread mesh.budget.model.Category - "WOOLWORTHS NZ/COASTLANDS PARAPARAUMU"does not contain iag 123
-INFO JavaFX Application Thread mesh.budget.model.Category - "WOOLWORTHS NZ/COASTLANDS PARAPARAUMU"does not contain southern cross
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "WOOLWORTHS NZ/COASTLANDS PARAPARAUMU"in category Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
-INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
-INFO JavaFX Application Thread mesh.budget.model.Category - "WOOLWORTHS NZ/COASTLANDS PARAPARAUMU"does not contain countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - "WOOLWORTHS NZ/COASTLANDS PARAPARAUMU"does not contain Dominos
-INFO JavaFX Application Thread mesh.budget.model.Category - "WOOLWORTHS NZ/COASTLANDS PARAPARAUMU"does not contain EFTPOS
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "WOOLWORTHS NZ/COASTLANDS PARAPARAUMU"in category Food
-INFO JavaFX Application Thread mesh.budget.model.Budget - "WOOLWORTHS NZ/COASTLANDS PARAPARAUMU" does not match any categories
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
-INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
-INFO JavaFX Application Thread mesh.budget.model.Category - "THREE QUARTER SOCIETY WELLINGTON"does not contain iag 123
-INFO JavaFX Application Thread mesh.budget.model.Category - "THREE QUARTER SOCIETY WELLINGTON"does not contain southern cross
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "THREE QUARTER SOCIETY WELLINGTON"in category Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
-INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
-INFO JavaFX Application Thread mesh.budget.model.Category - "THREE QUARTER SOCIETY WELLINGTON"does not contain countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - "THREE QUARTER SOCIETY WELLINGTON"does not contain Dominos
-INFO JavaFX Application Thread mesh.budget.model.Category - "THREE QUARTER SOCIETY WELLINGTON"does not contain EFTPOS
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "THREE QUARTER SOCIETY WELLINGTON"in category Food
-INFO JavaFX Application Thread mesh.budget.model.Budget - "THREE QUARTER SOCIETY WELLINGTON" does not match any categories
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
-INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
-INFO JavaFX Application Thread mesh.budget.model.Category - "WELLINGTON AIRPORT WELLINGTON"does not contain iag 123
-INFO JavaFX Application Thread mesh.budget.model.Category - "WELLINGTON AIRPORT WELLINGTON"does not contain southern cross
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "WELLINGTON AIRPORT WELLINGTON"in category Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
-INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
-INFO JavaFX Application Thread mesh.budget.model.Category - "WELLINGTON AIRPORT WELLINGTON"does not contain countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - "WELLINGTON AIRPORT WELLINGTON"does not contain Dominos
-INFO JavaFX Application Thread mesh.budget.model.Category - "WELLINGTON AIRPORT WELLINGTON"does not contain EFTPOS
-INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "WELLINGTON AIRPORT WELLINGTON"in category Food
-INFO JavaFX Application Thread mesh.budget.model.Budget - "WELLINGTON AIRPORT WELLINGTON" does not match any categories
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/11/26] dateOfTransaction=StringProperty [value: 2024/11/26] id=StringProperty [value: 2024112602] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "Paperplus Coastlands Paraparaumu"] amount=StringProperty [value: 1.00]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/11/26] dateOfTransaction=StringProperty [value: 2024/11/26] id=StringProperty [value: 2024112603] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "Paperplus Coastlands Paraparaumu"] amount=StringProperty [value: 241.08]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/11/26] dateOfTransaction=StringProperty [value: 2024/11/25] id=StringProperty [value: 2024112604] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "Dominos Estore PARAPARAUM dominos.co.nz"] amount=StringProperty [value: 31.69]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/11/26] dateOfTransaction=StringProperty [value: 2024/11/25] id=StringProperty [value: 2024112605] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8128] description=StringProperty [value: "ST PIERRE'S LAMBTON SQUAR WELLINGTON"] amount=StringProperty [value: 12.10]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/11/26] dateOfTransaction=StringProperty [value: 2024/11/24] id=StringProperty [value: 2024112606] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "APPLE.COM/BILL SYDNEY"] amount=StringProperty [value: 4.99]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/11/26] dateOfTransaction=StringProperty [value: 2024/11/25] id=StringProperty [value: 2024112607] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "aliexpress London"] amount=StringProperty [value: 6.63]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/11/26] dateOfTransaction=StringProperty [value: 2024/11/25] id=StringProperty [value: 2024112608] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "aliexpress London"] amount=StringProperty [value: 23.95]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/11/27] dateOfTransaction=StringProperty [value: 2024/11/27] id=StringProperty [value: 2024112701] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "SP FOXTROT HOME WAIPUKURAU"] amount=StringProperty [value: 265.00]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/11/27] dateOfTransaction=StringProperty [value: 2024/11/26] id=StringProperty [value: 2024112702] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8128] description=StringProperty [value: "THE WAREHOUSE 135 PARAPAR WELLINGTON"] amount=StringProperty [value: 12.00]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/11/27] dateOfTransaction=StringProperty [value: 2024/11/26] id=StringProperty [value: 2024112703] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "WHITCOULL PARAPARA 131 PARAPARAUMU"] amount=StringProperty [value: 22.99]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/11/27] dateOfTransaction=StringProperty [value: 2024/11/26] id=StringProperty [value: 2024112704] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "BP CONNECT PARAPARAUMU PARAPARAUMU"] amount=StringProperty [value: 118.53]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/11/27] dateOfTransaction=StringProperty [value: 2024/11/26] id=StringProperty [value: 2024112705] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "MITRE 10 MEGA KAPITI PARAPARAUMU"] amount=StringProperty [value: 43.80]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/11/27] dateOfTransaction=StringProperty [value: 2024/11/26] id=StringProperty [value: 2024112706] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "Spotify P31C97AA5C Stockholm"] amount=StringProperty [value: 18.99]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/11/28] dateOfTransaction=StringProperty [value: 2024/11/27] id=StringProperty [value: 2024112801] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "DARK HORSE COFFEE KAPITI"] amount=StringProperty [value: 49.80]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/11/29] dateOfTransaction=StringProperty [value: 2024/11/29] id=StringProperty [value: 2024112901] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "Paperplus Coastlands Paraparaumu"] amount=StringProperty [value: 121.45]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/11/29] dateOfTransaction=StringProperty [value: 2024/11/29] id=StringProperty [value: 2024112902] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "Paperplus Coastlands Paraparaumu"] amount=StringProperty [value: 94.94]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/11/30] dateOfTransaction=StringProperty [value: 2024/11/30] id=StringProperty [value: 2024113001] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8128] description=StringProperty [value: "Midwest Disposals Otaihanga"] amount=StringProperty [value: 70.00]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/11/30] dateOfTransaction=StringProperty [value: 2024/11/29] id=StringProperty [value: 2024113002] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8128] description=StringProperty [value: "ST PIERRE'S LAMBTON SQUAR WELLINGTON"] amount=StringProperty [value: 11.60]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/11/30] dateOfTransaction=StringProperty [value: 2024/11/29] id=StringProperty [value: 2024113003] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "VAPE VEND PARAPARAUMU"] amount=StringProperty [value: 52.50]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/11/30] dateOfTransaction=StringProperty [value: 2024/11/29] id=StringProperty [value: 2024113004] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "BP CONNECT PARAPARAUMU PARAPARAUMU"] amount=StringProperty [value: 48.00]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/01] dateOfTransaction=StringProperty [value: 2024/11/30] id=StringProperty [value: 2024120101] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "WWNZ Online/80 Favona Rd Favona"] amount=StringProperty [value: 116.21]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/01] dateOfTransaction=StringProperty [value: 2024/11/30] id=StringProperty [value: 2024120102] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "Dominos Estore PARAPARAUM dominos.co.nz"] amount=StringProperty [value: 31.69]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/01] dateOfTransaction=StringProperty [value: 2024/11/29] id=StringProperty [value: 2024120103] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "EVENT CINEMAS COASTLAN PARAPARAUMU"] amount=StringProperty [value: 50.00]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/02] dateOfTransaction=StringProperty [value: 2024/12/02] id=StringProperty [value: 2024120201] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "WOOLWORTHS NZ/COASTLANDS PARAPARAUMU"] amount=StringProperty [value: 54.00]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/03] dateOfTransaction=StringProperty [value: 2024/12/02] id=StringProperty [value: 2024120301] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8128] description=StringProperty [value: "AMAZON WEB SERVICES AUCKLAND"] amount=StringProperty [value: 9.43]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/03] dateOfTransaction=StringProperty [value: 2024/12/02] id=StringProperty [value: 2024120302] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8128] description=StringProperty [value: "ST PIERRE'S LAMBTON SQUAR WELLINGTON"] amount=StringProperty [value: 11.60]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/03] dateOfTransaction=StringProperty [value: 2024/12/01] id=StringProperty [value: 2024120303] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8128] description=StringProperty [value: "PAYPAL  STOCK ROVER 4029357733"] amount=StringProperty [value: 14.16]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/03] dateOfTransaction=StringProperty [value: 2024/12/01] id=StringProperty [value: 2024120304] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8128] description=StringProperty [value: "GOOGLE  SERVICES AUCKLAND 16.56 US DOLLAR at a Conversion Rate  of 0.5885 (NZ$28.14)"] amount=StringProperty [value: 28.14]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/03] dateOfTransaction=StringProperty [value: 2024/12/01] id=StringProperty [value: 2024120305] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8128] description=StringProperty [value: "OFFSHORE SERVICE MARGINS"] amount=StringProperty [value: 0.59]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/03] dateOfTransaction=StringProperty [value: 2024/12/02] id=StringProperty [value: 2024120306] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "MY FOOD BAG Auckland"] amount=StringProperty [value: 124.59]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/04] dateOfTransaction=StringProperty [value: 2024/12/03] id=StringProperty [value: 2024120401] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "WELLINGTON AIRPORT WELLINGTON"] amount=StringProperty [value: 14.00]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/05] dateOfTransaction=StringProperty [value: 2024/12/04] id=StringProperty [value: 2024120501] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "Paperplus Coastlands Paraparaumu"] amount=StringProperty [value: 39.95]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/05] dateOfTransaction=StringProperty [value: 2024/12/05] id=StringProperty [value: 2024120502] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "Spotlight Stores NZ Ltd Porirua"] amount=StringProperty [value: 71.90]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/05] dateOfTransaction=StringProperty [value: 2024/12/04] id=StringProperty [value: 2024120503] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "DARK HORSE COFFEE KAPITI"] amount=StringProperty [value: 49.80]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/05] dateOfTransaction=StringProperty [value: 2024/12/04] id=StringProperty [value: 2024120504] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "FARMERS PARAPARAUMU"] amount=StringProperty [value: 25.18]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/06] dateOfTransaction=StringProperty [value: 2024/12/02] id=StringProperty [value: 2024120601] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "SP DISCOUNTOFFICE SANDRINGHAM"] amount=StringProperty [value: 26.59]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/06] dateOfTransaction=StringProperty [value: 2024/12/05] id=StringProperty [value: 2024120602] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "THE WAREHOUSE 135 PARAPAR WELLINGTON"] amount=StringProperty [value: 13.20]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/06] dateOfTransaction=StringProperty [value: 2024/12/05] id=StringProperty [value: 2024120603] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8128] description=StringProperty [value: "WCC PARKING METERS WELLINGTON"] amount=StringProperty [value: 9.30]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/06] dateOfTransaction=StringProperty [value: 2024/12/05] id=StringProperty [value: 2024120604] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "MITRE 10 MEGA KAPITI PARAPARAUMU"] amount=StringProperty [value: 15.96]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/06] dateOfTransaction=StringProperty [value: 2024/12/05] id=StringProperty [value: 2024120605] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "MITRE 10 MEGA KAPITI PARAPARAUMU"] amount=StringProperty [value: 16.98]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/06] dateOfTransaction=StringProperty [value: 2024/12/05] id=StringProperty [value: 2024120606] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "aliexpress London"] amount=StringProperty [value: 31.42]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/06] dateOfTransaction=StringProperty [value: 2024/12/05] id=StringProperty [value: 2024120607] type=StringProperty [value: CREDIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "SP FOXTROT HOME WAIPUKURAU"] amount=StringProperty [value: -265.00]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/07] dateOfTransaction=StringProperty [value: 2024/12/06] id=StringProperty [value: 2024120701] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "WILSON PARKING WELLINGTON"] amount=StringProperty [value: 18.60]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/07] dateOfTransaction=StringProperty [value: 2024/12/06] id=StringProperty [value: 2024120702] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8128] description=StringProperty [value: "OLD GEORGE CAFE WELLINGTON"] amount=StringProperty [value: 4.59]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/07] dateOfTransaction=StringProperty [value: 2024/12/06] id=StringProperty [value: 2024120703] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8128] description=StringProperty [value: "ST PIERRE'S LAMBTON SQUAR WELLINGTON"] amount=StringProperty [value: 12.99]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/07] dateOfTransaction=StringProperty [value: 2024/12/05] id=StringProperty [value: 2024120704] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "aliexpress London"] amount=StringProperty [value: 74.02]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/07] dateOfTransaction=StringProperty [value: 2024/12/06] id=StringProperty [value: 2024120705] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "NPD KAPITI PARAPARAUMU"] amount=StringProperty [value: 87.61]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/07] dateOfTransaction=StringProperty [value: 2024/12/07] id=StringProperty [value: 2024120706] type=StringProperty [value: CREDIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "PAYMENT RECEIVED drawings"] amount=StringProperty [value: -5200.00]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/08] dateOfTransaction=StringProperty [value: 2024/12/07] id=StringProperty [value: 2024120801] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8128] description=StringProperty [value: "Kings Plant Barn Milford"] amount=StringProperty [value: 21.99]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/08] dateOfTransaction=StringProperty [value: 2024/12/08] id=StringProperty [value: 2024120802] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "NZ Candle Supplies Papakura"] amount=StringProperty [value: 36.72]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/08] dateOfTransaction=StringProperty [value: 2024/12/07] id=StringProperty [value: 2024120803] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8128] description=StringProperty [value: "HARTLEYS HAIR PARAPARAUMU"] amount=StringProperty [value: 48.00]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/08] dateOfTransaction=StringProperty [value: 2024/12/07] id=StringProperty [value: 2024120804] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "Dominos Estore PARAPARAUM dominos.co.nz"] amount=StringProperty [value: 31.69]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/08] dateOfTransaction=StringProperty [value: 2024/12/07] id=StringProperty [value: 2024120805] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "NZH PREMIUM CONTENT 093739276"] amount=StringProperty [value: 24.00]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/08] dateOfTransaction=StringProperty [value: 2024/12/06] id=StringProperty [value: 2024120806] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8128] description=StringProperty [value: "PAYPAL  SKYSPORT 4029357733 NY"] amount=StringProperty [value: 49.99]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/10] dateOfTransaction=StringProperty [value: 2024/12/09] id=StringProperty [value: 2024121001] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "MY FOOD BAG Auckland"] amount=StringProperty [value: 124.59]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/10] dateOfTransaction=StringProperty [value: 2024/12/10] id=StringProperty [value: 2024121002] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "IAG NZ - ASB INSURANCE AUCKLAND"] amount=StringProperty [value: 47.39]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/10] dateOfTransaction=StringProperty [value: 2024/12/10] id=StringProperty [value: 2024121003] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "IAG NZ - ASB INSURANCE AUCKLAND"] amount=StringProperty [value: 366.03]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/10] dateOfTransaction=StringProperty [value: 2024/12/10] id=StringProperty [value: 2024121004] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "IAG NZ - ASB INSURANCE AUCKLAND"] amount=StringProperty [value: 74.83]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/11] dateOfTransaction=StringProperty [value: 2024/12/10] id=StringProperty [value: 2024121101] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "WWNZ Online/80 Favona Rd Favona"] amount=StringProperty [value: 169.24]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/11] dateOfTransaction=StringProperty [value: 2024/12/11] id=StringProperty [value: 2024121102] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "Mana Unlimited Porirua"] amount=StringProperty [value: 420.00]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/11] dateOfTransaction=StringProperty [value: 2024/12/11] id=StringProperty [value: 2024121103] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "Paperplus Coastlands Paraparaumu"] amount=StringProperty [value: 50.49]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/11] dateOfTransaction=StringProperty [value: 2024/12/11] id=StringProperty [value: 2024121104] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "Animates Coastlands Ellerslie"] amount=StringProperty [value: 40.48]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/11] dateOfTransaction=StringProperty [value: 2024/12/11] id=StringProperty [value: 2024121105] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "Spotlight Stores NZ Ltd Porirua"] amount=StringProperty [value: 33.10]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/11] dateOfTransaction=StringProperty [value: 2024/12/09] id=StringProperty [value: 2024121106] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8128] description=StringProperty [value: "PAYPAL  MICROSOFTNE 4029357733"] amount=StringProperty [value: 17.00]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/12] dateOfTransaction=StringProperty [value: 2024/12/11] id=StringProperty [value: 2024121201] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "DARK HORSE COFFEE KAPITI"] amount=StringProperty [value: 49.80]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/12] dateOfTransaction=StringProperty [value: 2024/12/11] id=StringProperty [value: 2024121202] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "SALVATION ARMY FAMIL PARAPARAUMU"] amount=StringProperty [value: 18.00]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/13] dateOfTransaction=StringProperty [value: 2024/12/11] id=StringProperty [value: 2024121301] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8128] description=StringProperty [value: "PAYPAL  GOOGLE GOOGLE 4029357733"] amount=StringProperty [value: 3.49]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/14] dateOfTransaction=StringProperty [value: 2024/12/13] id=StringProperty [value: 2024121401] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8128] description=StringProperty [value: "ST PIERRE'S LAMBTON SQUAR WELLINGTON"] amount=StringProperty [value: 11.60]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/14] dateOfTransaction=StringProperty [value: 2024/12/12] id=StringProperty [value: 2024121402] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "APPLE.COM/BILL SYDNEY"] amount=StringProperty [value: 69.99]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/15] dateOfTransaction=StringProperty [value: 2024/12/14] id=StringProperty [value: 2024121501] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "Dominos Estore PARAPARAUM dominos.co.nz"] amount=StringProperty [value: 31.69]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/16] dateOfTransaction=StringProperty [value: 2024/12/16] id=StringProperty [value: 2024121601] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "Paperplus Coastlands Paraparaumu"] amount=StringProperty [value: 10.50]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/16] dateOfTransaction=StringProperty [value: 2024/12/16] id=StringProperty [value: 2024121602] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "WOOLWORTHS NZ/COASTLANDS PARAPARAUMU"] amount=StringProperty [value: 203.73]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/16] dateOfTransaction=StringProperty [value: 2024/12/15] id=StringProperty [value: 2024121603] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8128] description=StringProperty [value: "MITRE 10 MEGA KAPITI PARAPARAUMU"] amount=StringProperty [value: 19.58]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/16] dateOfTransaction=StringProperty [value: 2024/12/14] id=StringProperty [value: 2024121604] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8128] description=StringProperty [value: "aliexpress London"] amount=StringProperty [value: 23.52]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/17] dateOfTransaction=StringProperty [value: 2024/12/17] id=StringProperty [value: 2024121701] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "Neon Auckland"] amount=StringProperty [value: 12.99]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/17] dateOfTransaction=StringProperty [value: 2024/12/16] id=StringProperty [value: 2024121702] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8128] description=StringProperty [value: "ST PIERRE'S LAMBTON SQUAR WELLINGTON"] amount=StringProperty [value: 13.90]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/18] dateOfTransaction=StringProperty [value: 2024/12/16] id=StringProperty [value: 2024121801] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "Woolworths Online Favona"] amount=StringProperty [value: 238.17]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/18] dateOfTransaction=StringProperty [value: 2024/12/17] id=StringProperty [value: 2024121802] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "Dominos Estore PARAPARAUM dominos.co.nz"] amount=StringProperty [value: 31.69]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/19] dateOfTransaction=StringProperty [value: 2024/12/18] id=StringProperty [value: 2024121901] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "DARK HORSE COFFEE KAPITI"] amount=StringProperty [value: 49.80]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/21] dateOfTransaction=StringProperty [value: 2024/12/20] id=StringProperty [value: 2024122101] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "Dominos Estore PARAPARAUM dominos.co.nz"] amount=StringProperty [value: 31.69]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/22] dateOfTransaction=StringProperty [value: 2024/12/21] id=StringProperty [value: 2024122201] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8128] description=StringProperty [value: "SUPERCHEAP AUTO PARAPARAUMU"] amount=StringProperty [value: 249.99]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/22] dateOfTransaction=StringProperty [value: 2024/12/21] id=StringProperty [value: 2024122202] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "Dominos Estore PARAPARAUM dominos.co.nz"] amount=StringProperty [value: 31.69]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/22] dateOfTransaction=StringProperty [value: 2024/12/21] id=StringProperty [value: 2024122203] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8128] description=StringProperty [value: "MITRE 10 MEGA KAPITI PARAPARAUMU"] amount=StringProperty [value: 10.09]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/23] dateOfTransaction=StringProperty [value: 2024/12/23] id=StringProperty [value: 2024122301] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8128] description=StringProperty [value: "WOOLWORTHS NZ/COASTLANDS PARAPARAUMU"] amount=StringProperty [value: 38.58]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/23] dateOfTransaction=StringProperty [value: 2024/12/22] id=StringProperty [value: 2024122302] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "THREE QUARTER SOCIETY WELLINGTON"] amount=StringProperty [value: 4.90]category=StringProperty [value: no category]
+DEBUG JavaFX Application Thread mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO JavaFX Application Thread mesh.budget.model.Budget - dateProcessed=StringProperty [value: 2024/12/23] dateOfTransaction=StringProperty [value: 2024/12/22] id=StringProperty [value: 2024122303] type=StringProperty [value: DEBIT] referenece=StringProperty [value: 8920] description=StringProperty [value: "WELLINGTON AIRPORT WELLINGTON"] amount=StringProperty [value: 14.00]category=StringProperty [value: no category]
+INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - constructing catcontroler=mesh.budget.controller.CategoryUIController@72ba7b95
+INFO JavaFX Application Thread mesh.budget.model.Categories - loading category file from: C:\Users\patri\git\budget\categories.txt
+DEBUG JavaFX Application Thread mesh.budget.model.Categories - line =Food,Countdown,xxx
+DEBUG JavaFX Application Thread mesh.budget.model.Categories - line =InsuranceFamily
+INFO JavaFX Application Thread mesh.budget.App - catcontroler=mesh.budget.controller.CategoryUIController@72ba7b95
+INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - intitializing catcontroler=mesh.budget.controller.CategoryUIController@72ba7b95
+INFO JavaFX Application Thread mesh.budget.App - mesh.budget.model.AppState@5d1fc3db
+INFO JavaFX Application Thread mesh.budget.controller.MainController - constructing main controler=mesh.budget.controller.MainController@17e6f8e8
+INFO JavaFX Application Thread mesh.budget.App - mesh.budget.model.AppState@5d1fc3db
 INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
+INFO JavaFX Application Thread mesh.budget.controller.MainController - showing Category Manger
+INFO JavaFX Application Thread mesh.budget.controller.MainController - showing category manager for "D/D KAPITI RATES 21 GAVIN RD 1528235800"
 INFO JavaFX Application Thread mesh.budget.controller.MainController - budget changed
 INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO main mesh.BudgetTest - testing matcher
-INFO main mesh.BudgetTest - testing matcher
-DEBUG main mesh.budget.model.Category - creating category: Food
-INFO main mesh.BudgetTest - testing matcher
-DEBUG main mesh.budget.model.Category - creating category: Food
-INFO main mesh.BudgetTest - testing matcher
-DEBUG main mesh.budget.model.Category - creating category: Food
-INFO main mesh.BudgetTest - testing matcher
-DEBUG main mesh.budget.model.Category - creating category: Food
-DEBUG main mesh.budget.model.Category - created category: Food
-DEBUG main mesh.budget.model.BankStatementRow - creating new BankStatementRow
-INFO main mesh.budget.model.Category - Foodmatches[countdown]
-INFO main mesh.budget.model.Category - D/D 000035942669 2040493does not contain countdown
-INFO main mesh.BudgetTest - matching category is no category
-INFO main mesh.BudgetTest - testing matcher
-DEBUG main mesh.budget.model.Category - creating category: Food
-DEBUG main mesh.budget.model.Category - created category: Food
-DEBUG main mesh.budget.model.BankStatementRow - creating new BankStatementRow
-INFO main mesh.budget.model.Category - Foodmatches[countdown]
-INFO main mesh.budget.model.Category - match found:countdown
-INFO main mesh.BudgetTest - matching category is Food
-INFO main mesh.BudgetTest - testing matcher
-DEBUG main mesh.budget.model.Category - creating category: Food
-DEBUG main mesh.budget.model.Category - created category: Food
-DEBUG main mesh.budget.model.BankStatementRow - creating new BankStatementRow
-INFO main mesh.budget.model.Category - Foodmatches[countdown]
-INFO main mesh.budget.model.Category - match found:countdown
-INFO main mesh.BudgetTest - matching category is Food
+INFO JavaFX Application Thread mesh.budget.controller.MainController - showing Category Manger
+INFO JavaFX Application Thread mesh.budget.controller.MainController - showing category manager for "D/D KAPITI RATES 21 GAVIN RD 1528235800"
+INFO JavaFX Application Thread mesh.budget.controller.MainController - showing Category Manger
+INFO JavaFX Application Thread mesh.budget.controller.MainController - showing category manager for "D/D KAPITI RATES 21 GAVIN RD 1528235800"
+INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - Food
+INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - InsuranceFamily

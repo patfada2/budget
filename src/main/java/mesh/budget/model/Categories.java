@@ -1,8 +1,10 @@
 package mesh.budget.model;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -58,16 +60,18 @@ public class Categories {
 	}
 
 	public void loadFromFile(String filename) {
+		logger.info("loading category file from: "+filename );
 
 		try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
 			String line;
 
 			while ((line = br.readLine()) != null) {
 				Category c = new Category();
-				logger.info("!!!!!! line =" + line);
+				logger.debug("line =" + line);
 				categories.add(c.createFromCsv(line));
 
 			}
+			br.close();
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -75,6 +79,28 @@ public class Categories {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+
+	}
+	
+	public void saveToFile(String filename) {
+		logger.info("saving  category file to: "+filename );
+		String str;		
+		try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename))) {
+		
+			Iterator<Category> it = categories.iterator();
+			
+			while (it.hasNext()) {
+
+				writer.append(it.next().toCsv());
+
+			}
+			writer.close();
+
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 
 	}
 

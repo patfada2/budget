@@ -66,8 +66,8 @@ public class BankStatementRow  implements Comparable<BankStatementRow>{
 	}
 	 
 	public String toCsv() {
-		return dateProcessed + "," + dateOfTransaction + "," + id + "," + type
-				+ "," + reference + "," + description + "," + amount + "," + category +"\n";
+		return dateProcessed.get() + "," + dateOfTransaction.get() + "," + id.get() + "," + type.get()
+				+ "," + reference.get() + "," + description.get() + "," + amount.get() + "," + category.get() +"\n";
 	}
 
 	public String getDateProcessed() {

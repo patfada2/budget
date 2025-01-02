@@ -81,8 +81,15 @@ public class BudgetTest {
 			logger.info("matching category is " + result);
 		}
 	    assertEquals("Food",result);
-		
-		
+			
+	}
+	
+	@Test
+	public void categoryFile() {
+		Categories categories = new Categories();
+		categories.loadFromFile(Utils.categoryFileName);
+		logger.info("categories count" + categories.getCategories().size());
+		categories.saveToFile(Utils.categoryFileName);
 		
 	}
 	

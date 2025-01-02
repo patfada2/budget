@@ -88,10 +88,8 @@ public class MainController {
 	
 	@FXML
 	public void save(ActionEvent event) {
-		
 		budget.saveToFile(Utils.budgetFileName);
-		logger.info("saved to " + Utils.budgetFileName);
-		
+		categories.saveToFile(Utils.categoryFileName);		
 	}
 	
 	@FXML

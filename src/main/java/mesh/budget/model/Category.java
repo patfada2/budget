@@ -43,7 +43,7 @@ public class Category {
 	
 	public Category createFromCsv(String line) {
 		String[] v = line.split(",");	
-		logger.info("!!!!!!v0"+ v[0]);
+		
 		Category c = new Category();
 		c.setName(v[0]);
 		for (int i = 1; i< v.length; i++) {
@@ -51,6 +51,23 @@ public class Category {
 		}
 		return c;
 		
+	}
+	
+	public String toCsv() {
+		String result = this.name.get();
+		if (matches.size()>0) {
+			result += ",";
+		}
+		Iterator<String> it = matches.iterator();	
+		while (it.hasNext()) {
+			String match = it.next();
+			result += match;
+			if (it.hasNext()) {
+				result += ",";
+			} else	result += "\n";
+		}
+		logger.debug("cat row=" +result);
+		return result;
 	}
 	
 	
