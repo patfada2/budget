@@ -35,7 +35,6 @@ import javafx.scene.input.ContextMenuEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.util.Callback;
-import mesh.budget.Budget1Application;
 import mesh.budget.Utils;
 import mesh.budget.model.AppState;
 import mesh.budget.model.BankStatementRow;
@@ -84,12 +83,7 @@ public class MainController {
 	public void loadExports(ActionEvent event) {
 
 		logger.info("loading exports");
-		List<File> exports = Utils.findExports("C:\\Users\\patri\\Downloads");
-
-		for (File e : exports) {
-			budget.addExportFile(e.getAbsolutePath());
-
-		}		
+		budget.loadExports();
 	}
 	
 	@FXML
@@ -104,6 +98,13 @@ public class MainController {
 	public void showCategoryManager(ActionEvent event) {
 		logger.info("showing Category Manger");
 		showCategoryManger();
+	}
+	
+	@FXML
+	public void runMatches(ActionEvent event) {
+		logger.info("running matches");
+		budget.runMatches(categories);
+		table1.refresh();
 	}
 	
 	

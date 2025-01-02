@@ -2,11 +2,13 @@ package mesh.budget.model;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -17,68 +19,100 @@ import javafx.beans.property.SimpleSetProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.ObservableSet;
+import mesh.budget.Utils;
 
 public class Budget {
 	private static final Logger logger = LoggerFactory.getLogger(Budget.class);
 
 	private ObservableList<BankStatementRow> budget;
-	
-	
-	
-    public ObservableList<BankStatementRow> getBudget() {
+
+	public ObservableList<BankStatementRow> getBudget() {
 		return budget;
 	}
-    
-    //de-duplicates
-    public boolean add(BankStatementRow row) {
-    	boolean result = true;
-    	if (budget.indexOf(row) <0 ){ 
-    		budget.add(row);
-    		result = true;   		
-    	}
-    	return result;
-    }
+
+	// de-duplicates
+	public boolean add(BankStatementRow row) {
+		boolean result = true;
+		if (budget.indexOf(row) < 0) {
+			budget.add(row);
+			result = true;
+		}
+		return result;
+	}
+	
+	public void loadExports() {
+		List<File> exports = Utils.findExports(Utils.exportsDir);
+
+		for (File e : exports) {
+			addExportFile(e.getAbsolutePath());
+
+		}
+
+	}
 
 	// load the csv file and add to the budget. Count the number of non-duplciates
-	public void addExportFile(String filename) {
+	private void addExportFile(String filename) {
 		int count = 0;
 		logger.info("loading " + filename);
 		ObservableList<BankStatementRow> rows = loadCsv(filename);
-		
+
 		Iterator<BankStatementRow> it = rows.iterator();
 		while (it.hasNext()) {
 			if (this.add(it.next())) {
 				count++;
 			}
-		}		
-		
+		}
+
 		if (count > 0) {
 			logger.info(count + " new records found");
-		}
-		else
+		} else
 			logger.info("no new records found");
+
+	}
+
+	public void runMatches(Categories categories) {
+		// ObservableList<BankStatementRow> budget;
+		logger.info("running matches!!");
+		Iterator<BankStatementRow> it = budget.iterator();
 		
+		while (it.hasNext()) {
+
+			BankStatementRow row = it.next();
+			if (row.getCategory().equals(Category.UNKNOWN)) {
+				String match = categories.findMatch(row.getDescription());
+				if (!match.equals(Category.UNKNOWN)) {
+					row.setCategory(match);
+					logger.info("match assigned");
+				}
+				else logger.info(row.getDescription() + " does not match any categories" );
+
+			}
+		}
 	}
 
 	private ObservableList<BankStatementRow> loadCsv(String filename) {
-		ObservableList<BankStatementRow> rows =  FXCollections.observableArrayList();
-				
+		
+		logger.info("loading file " + filename); 
+		ObservableList<BankStatementRow> rows = FXCollections.observableArrayList();
+
 		try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
 			String line;
+			
 			BankStatementRow row;
 			// skip headers
 			do {
 				line = br.readLine();
+				logger.info("!!@@## " + line);
 				if (line == null)
 					break;
 			} while (!line.startsWith("202"));
 
-			if (line != null)				
+			if (line != null)
 				rows.add(BankStatementRow.CreateFromCsv(line));
 
 			while ((line = br.readLine()) != null) {
 				row = BankStatementRow.CreateFromCsv(line);
-				logger.trace(row.toString());
+				logger.info(row.toString());
 				rows.add(row);
 			}
 		} catch (FileNotFoundException e) {

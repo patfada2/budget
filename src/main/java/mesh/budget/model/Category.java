@@ -1,6 +1,7 @@
 package mesh.budget.model;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -12,7 +13,7 @@ import mesh.budget.App;
 public class Category {
 	private static final Logger logger = LoggerFactory.getLogger(Category.class);
 	
-	public  static final String UNKOWN="no category";
+	public  static final String UNKNOWN="no category";
 
 	private SimpleStringProperty name;
 	private List<String> matches = new ArrayList<String>();
@@ -25,12 +26,12 @@ public class Category {
 	public List<String> getMatches() {
 		return matches;
 	}
-	public void setMatches(List matches) {
+	public void setMatches(List<String> matches) {
 		this.matches = matches;
 	}
 	
 	public Category() {
-		name = new SimpleStringProperty(Category.UNKOWN);
+		name = new SimpleStringProperty(Category.UNKNOWN);
 	}
 	public Category createFromCsv(String line) {
 		String[] v = line.split(",");	
@@ -42,6 +43,24 @@ public class Category {
 		}
 		return c;
 		
+	}
+	
+	
+	public String findMatch(String description) {
+		String result = Category.UNKNOWN;
+		Iterator<String> it = matches.iterator();
+		logger.info(this.getName() + "matches"+ matches.toString());
+		while (it.hasNext()) {
+			String match = it.next();
+			if (description.contains(match)) {
+				result = this.getName();
+				logger.info("match found:"+ match);		
+				break;
+			}
+			else logger.info(description + "does not contain " + match);
+		}
+		return result;
+
 	}
 
 }

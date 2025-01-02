@@ -35,7 +35,7 @@ public class AddMatchController {
 		
 		logger.info("adding match to category:"+selectedRow.getCategory());
 		
-		if (selectedRow.getCategory().equals(Category.UNKOWN)) {
+		if (selectedRow.getCategory().equals(Category.UNKNOWN)) {
 			logger.info(" cant add match befroe categtoy is assigned");
 		}
 		else {

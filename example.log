@@ -1,421 +1,580 @@
-INFO JavaFX Application Thread mesh.budget.model.Categories - !!!!!! line =Insurance,iag 123,southern cross
-INFO JavaFX Application Thread mesh.budget.model.Category - !!!!!!v0Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - !!!!!! line =Food,countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - !!!!!!v0Food
-INFO JavaFX Application Thread mesh.budget.App - catcontroler=mesh.budget.controller.CategoryUIController@39e82836
-INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - intitializing catcontroler=mesh.budget.controller.CategoryUIController@39e82836
-INFO JavaFX Application Thread mesh.budget.App - 1.cat stagex =javafx.stage.Stage@77e7133c
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241104144304.csv
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241104144511.ofx
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241104144700.ofx
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241205152636.csv
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241205152636.xlsx
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241224162527.csv
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241224162534.csv
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241104144304.csv
-INFO JavaFX Application Thread mesh.budget.model.Budget - 14 new records found
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241104144511.ofx
-INFO JavaFX Application Thread mesh.budget.model.Budget - no new records found
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241104144700.ofx
-INFO JavaFX Application Thread mesh.budget.model.Budget - no new records found
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241205152636.csv
-INFO JavaFX Application Thread mesh.budget.model.Budget - 87 new records found
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241205152636.xlsx
-INFO JavaFX Application Thread mesh.budget.model.Budget - no new records found
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241224162527.csv
-INFO JavaFX Application Thread mesh.budget.model.Budget - 178 new records found
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241224162534.csv
-INFO JavaFX Application Thread mesh.budget.model.Budget - 578 new records found
-INFO JavaFX Application Thread mesh.budget.App - mesh.budget.model.AppState@3d9bb328
-INFO JavaFX Application Thread mesh.budget.controller.MainController - constructing main controler=mesh.budget.controller.MainController@201cd9f7
-INFO JavaFX Application Thread mesh.budget.App - mesh.budget.model.AppState@3d9bb328
-INFO JavaFX Application Thread mesh.budget.App - 2.cat stagex =javafx.stage.Stage@77e7133c
-INFO JavaFX Application Thread mesh.budget.controller.MainController - showing Category Manger
-ERROR JavaFX Application Thread mesh.budget.controller.MainController - selected row is null
-INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - Insurance
-INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - category ok button clicked
-INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - onAddClick
-INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - 
-INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - gggg
-INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - onAddMatch
-INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - !!!!![mmmmm]
-INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - category ok button clicked
-INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - category ok button clicked
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
+INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
+INFO JavaFX Application Thread mesh.budget.model.Category - "MITRE 10 MEGA KAPITI PARAPARAUMU"does not contain iag 123
+INFO JavaFX Application Thread mesh.budget.model.Category - "MITRE 10 MEGA KAPITI PARAPARAUMU"does not contain southern cross
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "MITRE 10 MEGA KAPITI PARAPARAUMU"in category Insurance
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
+INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
+INFO JavaFX Application Thread mesh.budget.model.Category - "MITRE 10 MEGA KAPITI PARAPARAUMU"does not contain countdown
+INFO JavaFX Application Thread mesh.budget.model.Category - "MITRE 10 MEGA KAPITI PARAPARAUMU"does not contain Dominos
+INFO JavaFX Application Thread mesh.budget.model.Category - "MITRE 10 MEGA KAPITI PARAPARAUMU"does not contain EFTPOS
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "MITRE 10 MEGA KAPITI PARAPARAUMU"in category Food
+INFO JavaFX Application Thread mesh.budget.model.Budget - "MITRE 10 MEGA KAPITI PARAPARAUMU" does not match any categories
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
+INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
+INFO JavaFX Application Thread mesh.budget.model.Category - "MITRE 10 MEGA KAPITI PARAPARAUMU"does not contain iag 123
+INFO JavaFX Application Thread mesh.budget.model.Category - "MITRE 10 MEGA KAPITI PARAPARAUMU"does not contain southern cross
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "MITRE 10 MEGA KAPITI PARAPARAUMU"in category Insurance
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
+INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
+INFO JavaFX Application Thread mesh.budget.model.Category - "MITRE 10 MEGA KAPITI PARAPARAUMU"does not contain countdown
+INFO JavaFX Application Thread mesh.budget.model.Category - "MITRE 10 MEGA KAPITI PARAPARAUMU"does not contain Dominos
+INFO JavaFX Application Thread mesh.budget.model.Category - "MITRE 10 MEGA KAPITI PARAPARAUMU"does not contain EFTPOS
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "MITRE 10 MEGA KAPITI PARAPARAUMU"in category Food
+INFO JavaFX Application Thread mesh.budget.model.Budget - "MITRE 10 MEGA KAPITI PARAPARAUMU" does not match any categories
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
+INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
+INFO JavaFX Application Thread mesh.budget.model.Category - "aliexpress London"does not contain iag 123
+INFO JavaFX Application Thread mesh.budget.model.Category - "aliexpress London"does not contain southern cross
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "aliexpress London"in category Insurance
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
+INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
+INFO JavaFX Application Thread mesh.budget.model.Category - "aliexpress London"does not contain countdown
+INFO JavaFX Application Thread mesh.budget.model.Category - "aliexpress London"does not contain Dominos
+INFO JavaFX Application Thread mesh.budget.model.Category - "aliexpress London"does not contain EFTPOS
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "aliexpress London"in category Food
+INFO JavaFX Application Thread mesh.budget.model.Budget - "aliexpress London" does not match any categories
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
+INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
+INFO JavaFX Application Thread mesh.budget.model.Category - "SP FOXTROT HOME WAIPUKURAU"does not contain iag 123
+INFO JavaFX Application Thread mesh.budget.model.Category - "SP FOXTROT HOME WAIPUKURAU"does not contain southern cross
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "SP FOXTROT HOME WAIPUKURAU"in category Insurance
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
+INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
+INFO JavaFX Application Thread mesh.budget.model.Category - "SP FOXTROT HOME WAIPUKURAU"does not contain countdown
+INFO JavaFX Application Thread mesh.budget.model.Category - "SP FOXTROT HOME WAIPUKURAU"does not contain Dominos
+INFO JavaFX Application Thread mesh.budget.model.Category - "SP FOXTROT HOME WAIPUKURAU"does not contain EFTPOS
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "SP FOXTROT HOME WAIPUKURAU"in category Food
+INFO JavaFX Application Thread mesh.budget.model.Budget - "SP FOXTROT HOME WAIPUKURAU" does not match any categories
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
+INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
+INFO JavaFX Application Thread mesh.budget.model.Category - "WILSON PARKING WELLINGTON"does not contain iag 123
+INFO JavaFX Application Thread mesh.budget.model.Category - "WILSON PARKING WELLINGTON"does not contain southern cross
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "WILSON PARKING WELLINGTON"in category Insurance
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
+INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
+INFO JavaFX Application Thread mesh.budget.model.Category - "WILSON PARKING WELLINGTON"does not contain countdown
+INFO JavaFX Application Thread mesh.budget.model.Category - "WILSON PARKING WELLINGTON"does not contain Dominos
+INFO JavaFX Application Thread mesh.budget.model.Category - "WILSON PARKING WELLINGTON"does not contain EFTPOS
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "WILSON PARKING WELLINGTON"in category Food
+INFO JavaFX Application Thread mesh.budget.model.Budget - "WILSON PARKING WELLINGTON" does not match any categories
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
+INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
+INFO JavaFX Application Thread mesh.budget.model.Category - "OLD GEORGE CAFE WELLINGTON"does not contain iag 123
+INFO JavaFX Application Thread mesh.budget.model.Category - "OLD GEORGE CAFE WELLINGTON"does not contain southern cross
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "OLD GEORGE CAFE WELLINGTON"in category Insurance
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
+INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
+INFO JavaFX Application Thread mesh.budget.model.Category - "OLD GEORGE CAFE WELLINGTON"does not contain countdown
+INFO JavaFX Application Thread mesh.budget.model.Category - "OLD GEORGE CAFE WELLINGTON"does not contain Dominos
+INFO JavaFX Application Thread mesh.budget.model.Category - "OLD GEORGE CAFE WELLINGTON"does not contain EFTPOS
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "OLD GEORGE CAFE WELLINGTON"in category Food
+INFO JavaFX Application Thread mesh.budget.model.Budget - "OLD GEORGE CAFE WELLINGTON" does not match any categories
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
+INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
+INFO JavaFX Application Thread mesh.budget.model.Category - "ST PIERRE'S LAMBTON SQUAR WELLINGTON"does not contain iag 123
+INFO JavaFX Application Thread mesh.budget.model.Category - "ST PIERRE'S LAMBTON SQUAR WELLINGTON"does not contain southern cross
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "ST PIERRE'S LAMBTON SQUAR WELLINGTON"in category Insurance
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
+INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
+INFO JavaFX Application Thread mesh.budget.model.Category - "ST PIERRE'S LAMBTON SQUAR WELLINGTON"does not contain countdown
+INFO JavaFX Application Thread mesh.budget.model.Category - "ST PIERRE'S LAMBTON SQUAR WELLINGTON"does not contain Dominos
+INFO JavaFX Application Thread mesh.budget.model.Category - "ST PIERRE'S LAMBTON SQUAR WELLINGTON"does not contain EFTPOS
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "ST PIERRE'S LAMBTON SQUAR WELLINGTON"in category Food
+INFO JavaFX Application Thread mesh.budget.model.Budget - "ST PIERRE'S LAMBTON SQUAR WELLINGTON" does not match any categories
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
+INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
+INFO JavaFX Application Thread mesh.budget.model.Category - "aliexpress London"does not contain iag 123
+INFO JavaFX Application Thread mesh.budget.model.Category - "aliexpress London"does not contain southern cross
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "aliexpress London"in category Insurance
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
+INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
+INFO JavaFX Application Thread mesh.budget.model.Category - "aliexpress London"does not contain countdown
+INFO JavaFX Application Thread mesh.budget.model.Category - "aliexpress London"does not contain Dominos
+INFO JavaFX Application Thread mesh.budget.model.Category - "aliexpress London"does not contain EFTPOS
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "aliexpress London"in category Food
+INFO JavaFX Application Thread mesh.budget.model.Budget - "aliexpress London" does not match any categories
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
+INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
+INFO JavaFX Application Thread mesh.budget.model.Category - "NPD KAPITI PARAPARAUMU"does not contain iag 123
+INFO JavaFX Application Thread mesh.budget.model.Category - "NPD KAPITI PARAPARAUMU"does not contain southern cross
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "NPD KAPITI PARAPARAUMU"in category Insurance
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
+INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
+INFO JavaFX Application Thread mesh.budget.model.Category - "NPD KAPITI PARAPARAUMU"does not contain countdown
+INFO JavaFX Application Thread mesh.budget.model.Category - "NPD KAPITI PARAPARAUMU"does not contain Dominos
+INFO JavaFX Application Thread mesh.budget.model.Category - "NPD KAPITI PARAPARAUMU"does not contain EFTPOS
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "NPD KAPITI PARAPARAUMU"in category Food
+INFO JavaFX Application Thread mesh.budget.model.Budget - "NPD KAPITI PARAPARAUMU" does not match any categories
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
+INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
+INFO JavaFX Application Thread mesh.budget.model.Category - "PAYMENT RECEIVED drawings"does not contain iag 123
+INFO JavaFX Application Thread mesh.budget.model.Category - "PAYMENT RECEIVED drawings"does not contain southern cross
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "PAYMENT RECEIVED drawings"in category Insurance
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
+INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
+INFO JavaFX Application Thread mesh.budget.model.Category - "PAYMENT RECEIVED drawings"does not contain countdown
+INFO JavaFX Application Thread mesh.budget.model.Category - "PAYMENT RECEIVED drawings"does not contain Dominos
+INFO JavaFX Application Thread mesh.budget.model.Category - "PAYMENT RECEIVED drawings"does not contain EFTPOS
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "PAYMENT RECEIVED drawings"in category Food
+INFO JavaFX Application Thread mesh.budget.model.Budget - "PAYMENT RECEIVED drawings" does not match any categories
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
+INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
+INFO JavaFX Application Thread mesh.budget.model.Category - "Kings Plant Barn Milford"does not contain iag 123
+INFO JavaFX Application Thread mesh.budget.model.Category - "Kings Plant Barn Milford"does not contain southern cross
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "Kings Plant Barn Milford"in category Insurance
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
+INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
+INFO JavaFX Application Thread mesh.budget.model.Category - "Kings Plant Barn Milford"does not contain countdown
+INFO JavaFX Application Thread mesh.budget.model.Category - "Kings Plant Barn Milford"does not contain Dominos
+INFO JavaFX Application Thread mesh.budget.model.Category - "Kings Plant Barn Milford"does not contain EFTPOS
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "Kings Plant Barn Milford"in category Food
+INFO JavaFX Application Thread mesh.budget.model.Budget - "Kings Plant Barn Milford" does not match any categories
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
+INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
+INFO JavaFX Application Thread mesh.budget.model.Category - "NZ Candle Supplies Papakura"does not contain iag 123
+INFO JavaFX Application Thread mesh.budget.model.Category - "NZ Candle Supplies Papakura"does not contain southern cross
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "NZ Candle Supplies Papakura"in category Insurance
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
+INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
+INFO JavaFX Application Thread mesh.budget.model.Category - "NZ Candle Supplies Papakura"does not contain countdown
+INFO JavaFX Application Thread mesh.budget.model.Category - "NZ Candle Supplies Papakura"does not contain Dominos
+INFO JavaFX Application Thread mesh.budget.model.Category - "NZ Candle Supplies Papakura"does not contain EFTPOS
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "NZ Candle Supplies Papakura"in category Food
+INFO JavaFX Application Thread mesh.budget.model.Budget - "NZ Candle Supplies Papakura" does not match any categories
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
+INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
+INFO JavaFX Application Thread mesh.budget.model.Category - "HARTLEYS HAIR PARAPARAUMU"does not contain iag 123
+INFO JavaFX Application Thread mesh.budget.model.Category - "HARTLEYS HAIR PARAPARAUMU"does not contain southern cross
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "HARTLEYS HAIR PARAPARAUMU"in category Insurance
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
+INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
+INFO JavaFX Application Thread mesh.budget.model.Category - "HARTLEYS HAIR PARAPARAUMU"does not contain countdown
+INFO JavaFX Application Thread mesh.budget.model.Category - "HARTLEYS HAIR PARAPARAUMU"does not contain Dominos
+INFO JavaFX Application Thread mesh.budget.model.Category - "HARTLEYS HAIR PARAPARAUMU"does not contain EFTPOS
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "HARTLEYS HAIR PARAPARAUMU"in category Food
+INFO JavaFX Application Thread mesh.budget.model.Budget - "HARTLEYS HAIR PARAPARAUMU" does not match any categories
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
+INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
+INFO JavaFX Application Thread mesh.budget.model.Category - "Dominos Estore PARAPARAUM dominos.co.nz"does not contain iag 123
+INFO JavaFX Application Thread mesh.budget.model.Category - "Dominos Estore PARAPARAUM dominos.co.nz"does not contain southern cross
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "Dominos Estore PARAPARAUM dominos.co.nz"in category Insurance
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
+INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
+INFO JavaFX Application Thread mesh.budget.model.Category - "Dominos Estore PARAPARAUM dominos.co.nz"does not contain countdown
+INFO JavaFX Application Thread mesh.budget.model.Category - match found:Dominos
+INFO JavaFX Application Thread mesh.budget.model.Categories - match found for "Dominos Estore PARAPARAUM dominos.co.nz"
+INFO JavaFX Application Thread mesh.budget.model.Budget - match assigned
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
+INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
+INFO JavaFX Application Thread mesh.budget.model.Category - "NZH PREMIUM CONTENT 093739276"does not contain iag 123
+INFO JavaFX Application Thread mesh.budget.model.Category - "NZH PREMIUM CONTENT 093739276"does not contain southern cross
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "NZH PREMIUM CONTENT 093739276"in category Insurance
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
+INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
+INFO JavaFX Application Thread mesh.budget.model.Category - "NZH PREMIUM CONTENT 093739276"does not contain countdown
+INFO JavaFX Application Thread mesh.budget.model.Category - "NZH PREMIUM CONTENT 093739276"does not contain Dominos
+INFO JavaFX Application Thread mesh.budget.model.Category - "NZH PREMIUM CONTENT 093739276"does not contain EFTPOS
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "NZH PREMIUM CONTENT 093739276"in category Food
+INFO JavaFX Application Thread mesh.budget.model.Budget - "NZH PREMIUM CONTENT 093739276" does not match any categories
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
+INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
+INFO JavaFX Application Thread mesh.budget.model.Category - "PAYPAL  SKYSPORT 4029357733 NY"does not contain iag 123
+INFO JavaFX Application Thread mesh.budget.model.Category - "PAYPAL  SKYSPORT 4029357733 NY"does not contain southern cross
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "PAYPAL  SKYSPORT 4029357733 NY"in category Insurance
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
+INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
+INFO JavaFX Application Thread mesh.budget.model.Category - "PAYPAL  SKYSPORT 4029357733 NY"does not contain countdown
+INFO JavaFX Application Thread mesh.budget.model.Category - "PAYPAL  SKYSPORT 4029357733 NY"does not contain Dominos
+INFO JavaFX Application Thread mesh.budget.model.Category - "PAYPAL  SKYSPORT 4029357733 NY"does not contain EFTPOS
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "PAYPAL  SKYSPORT 4029357733 NY"in category Food
+INFO JavaFX Application Thread mesh.budget.model.Budget - "PAYPAL  SKYSPORT 4029357733 NY" does not match any categories
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
+INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
+INFO JavaFX Application Thread mesh.budget.model.Category - "MY FOOD BAG Auckland"does not contain iag 123
+INFO JavaFX Application Thread mesh.budget.model.Category - "MY FOOD BAG Auckland"does not contain southern cross
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "MY FOOD BAG Auckland"in category Insurance
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
+INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
+INFO JavaFX Application Thread mesh.budget.model.Category - "MY FOOD BAG Auckland"does not contain countdown
+INFO JavaFX Application Thread mesh.budget.model.Category - "MY FOOD BAG Auckland"does not contain Dominos
+INFO JavaFX Application Thread mesh.budget.model.Category - "MY FOOD BAG Auckland"does not contain EFTPOS
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "MY FOOD BAG Auckland"in category Food
+INFO JavaFX Application Thread mesh.budget.model.Budget - "MY FOOD BAG Auckland" does not match any categories
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
+INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
+INFO JavaFX Application Thread mesh.budget.model.Category - "IAG NZ - ASB INSURANCE AUCKLAND"does not contain iag 123
+INFO JavaFX Application Thread mesh.budget.model.Category - "IAG NZ - ASB INSURANCE AUCKLAND"does not contain southern cross
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "IAG NZ - ASB INSURANCE AUCKLAND"in category Insurance
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
+INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
+INFO JavaFX Application Thread mesh.budget.model.Category - "IAG NZ - ASB INSURANCE AUCKLAND"does not contain countdown
+INFO JavaFX Application Thread mesh.budget.model.Category - "IAG NZ - ASB INSURANCE AUCKLAND"does not contain Dominos
+INFO JavaFX Application Thread mesh.budget.model.Category - "IAG NZ - ASB INSURANCE AUCKLAND"does not contain EFTPOS
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "IAG NZ - ASB INSURANCE AUCKLAND"in category Food
+INFO JavaFX Application Thread mesh.budget.model.Budget - "IAG NZ - ASB INSURANCE AUCKLAND" does not match any categories
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
+INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
+INFO JavaFX Application Thread mesh.budget.model.Category - "IAG NZ - ASB INSURANCE AUCKLAND"does not contain iag 123
+INFO JavaFX Application Thread mesh.budget.model.Category - "IAG NZ - ASB INSURANCE AUCKLAND"does not contain southern cross
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "IAG NZ - ASB INSURANCE AUCKLAND"in category Insurance
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
+INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
+INFO JavaFX Application Thread mesh.budget.model.Category - "IAG NZ - ASB INSURANCE AUCKLAND"does not contain countdown
+INFO JavaFX Application Thread mesh.budget.model.Category - "IAG NZ - ASB INSURANCE AUCKLAND"does not contain Dominos
+INFO JavaFX Application Thread mesh.budget.model.Category - "IAG NZ - ASB INSURANCE AUCKLAND"does not contain EFTPOS
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "IAG NZ - ASB INSURANCE AUCKLAND"in category Food
+INFO JavaFX Application Thread mesh.budget.model.Budget - "IAG NZ - ASB INSURANCE AUCKLAND" does not match any categories
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
+INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
+INFO JavaFX Application Thread mesh.budget.model.Category - "IAG NZ - ASB INSURANCE AUCKLAND"does not contain iag 123
+INFO JavaFX Application Thread mesh.budget.model.Category - "IAG NZ - ASB INSURANCE AUCKLAND"does not contain southern cross
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "IAG NZ - ASB INSURANCE AUCKLAND"in category Insurance
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
+INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
+INFO JavaFX Application Thread mesh.budget.model.Category - "IAG NZ - ASB INSURANCE AUCKLAND"does not contain countdown
+INFO JavaFX Application Thread mesh.budget.model.Category - "IAG NZ - ASB INSURANCE AUCKLAND"does not contain Dominos
+INFO JavaFX Application Thread mesh.budget.model.Category - "IAG NZ - ASB INSURANCE AUCKLAND"does not contain EFTPOS
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "IAG NZ - ASB INSURANCE AUCKLAND"in category Food
+INFO JavaFX Application Thread mesh.budget.model.Budget - "IAG NZ - ASB INSURANCE AUCKLAND" does not match any categories
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
+INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
+INFO JavaFX Application Thread mesh.budget.model.Category - "WWNZ Online/80 Favona Rd Favona"does not contain iag 123
+INFO JavaFX Application Thread mesh.budget.model.Category - "WWNZ Online/80 Favona Rd Favona"does not contain southern cross
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "WWNZ Online/80 Favona Rd Favona"in category Insurance
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
+INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
+INFO JavaFX Application Thread mesh.budget.model.Category - "WWNZ Online/80 Favona Rd Favona"does not contain countdown
+INFO JavaFX Application Thread mesh.budget.model.Category - "WWNZ Online/80 Favona Rd Favona"does not contain Dominos
+INFO JavaFX Application Thread mesh.budget.model.Category - "WWNZ Online/80 Favona Rd Favona"does not contain EFTPOS
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "WWNZ Online/80 Favona Rd Favona"in category Food
+INFO JavaFX Application Thread mesh.budget.model.Budget - "WWNZ Online/80 Favona Rd Favona" does not match any categories
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
+INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
+INFO JavaFX Application Thread mesh.budget.model.Category - "Mana Unlimited Porirua"does not contain iag 123
+INFO JavaFX Application Thread mesh.budget.model.Category - "Mana Unlimited Porirua"does not contain southern cross
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "Mana Unlimited Porirua"in category Insurance
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
+INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
+INFO JavaFX Application Thread mesh.budget.model.Category - "Mana Unlimited Porirua"does not contain countdown
+INFO JavaFX Application Thread mesh.budget.model.Category - "Mana Unlimited Porirua"does not contain Dominos
+INFO JavaFX Application Thread mesh.budget.model.Category - "Mana Unlimited Porirua"does not contain EFTPOS
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "Mana Unlimited Porirua"in category Food
+INFO JavaFX Application Thread mesh.budget.model.Budget - "Mana Unlimited Porirua" does not match any categories
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
+INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
+INFO JavaFX Application Thread mesh.budget.model.Category - "Paperplus Coastlands Paraparaumu"does not contain iag 123
+INFO JavaFX Application Thread mesh.budget.model.Category - "Paperplus Coastlands Paraparaumu"does not contain southern cross
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "Paperplus Coastlands Paraparaumu"in category Insurance
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
+INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
+INFO JavaFX Application Thread mesh.budget.model.Category - "Paperplus Coastlands Paraparaumu"does not contain countdown
+INFO JavaFX Application Thread mesh.budget.model.Category - "Paperplus Coastlands Paraparaumu"does not contain Dominos
+INFO JavaFX Application Thread mesh.budget.model.Category - "Paperplus Coastlands Paraparaumu"does not contain EFTPOS
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "Paperplus Coastlands Paraparaumu"in category Food
+INFO JavaFX Application Thread mesh.budget.model.Budget - "Paperplus Coastlands Paraparaumu" does not match any categories
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
+INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
+INFO JavaFX Application Thread mesh.budget.model.Category - "Animates Coastlands Ellerslie"does not contain iag 123
+INFO JavaFX Application Thread mesh.budget.model.Category - "Animates Coastlands Ellerslie"does not contain southern cross
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "Animates Coastlands Ellerslie"in category Insurance
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
+INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
+INFO JavaFX Application Thread mesh.budget.model.Category - "Animates Coastlands Ellerslie"does not contain countdown
+INFO JavaFX Application Thread mesh.budget.model.Category - "Animates Coastlands Ellerslie"does not contain Dominos
+INFO JavaFX Application Thread mesh.budget.model.Category - "Animates Coastlands Ellerslie"does not contain EFTPOS
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "Animates Coastlands Ellerslie"in category Food
+INFO JavaFX Application Thread mesh.budget.model.Budget - "Animates Coastlands Ellerslie" does not match any categories
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
+INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
+INFO JavaFX Application Thread mesh.budget.model.Category - "Spotlight Stores NZ Ltd Porirua"does not contain iag 123
+INFO JavaFX Application Thread mesh.budget.model.Category - "Spotlight Stores NZ Ltd Porirua"does not contain southern cross
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "Spotlight Stores NZ Ltd Porirua"in category Insurance
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
+INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
+INFO JavaFX Application Thread mesh.budget.model.Category - "Spotlight Stores NZ Ltd Porirua"does not contain countdown
+INFO JavaFX Application Thread mesh.budget.model.Category - "Spotlight Stores NZ Ltd Porirua"does not contain Dominos
+INFO JavaFX Application Thread mesh.budget.model.Category - "Spotlight Stores NZ Ltd Porirua"does not contain EFTPOS
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "Spotlight Stores NZ Ltd Porirua"in category Food
+INFO JavaFX Application Thread mesh.budget.model.Budget - "Spotlight Stores NZ Ltd Porirua" does not match any categories
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
+INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
+INFO JavaFX Application Thread mesh.budget.model.Category - "PAYPAL  MICROSOFTNE 4029357733"does not contain iag 123
+INFO JavaFX Application Thread mesh.budget.model.Category - "PAYPAL  MICROSOFTNE 4029357733"does not contain southern cross
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "PAYPAL  MICROSOFTNE 4029357733"in category Insurance
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
+INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
+INFO JavaFX Application Thread mesh.budget.model.Category - "PAYPAL  MICROSOFTNE 4029357733"does not contain countdown
+INFO JavaFX Application Thread mesh.budget.model.Category - "PAYPAL  MICROSOFTNE 4029357733"does not contain Dominos
+INFO JavaFX Application Thread mesh.budget.model.Category - "PAYPAL  MICROSOFTNE 4029357733"does not contain EFTPOS
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "PAYPAL  MICROSOFTNE 4029357733"in category Food
+INFO JavaFX Application Thread mesh.budget.model.Budget - "PAYPAL  MICROSOFTNE 4029357733" does not match any categories
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
+INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
+INFO JavaFX Application Thread mesh.budget.model.Category - "DARK HORSE COFFEE KAPITI"does not contain iag 123
+INFO JavaFX Application Thread mesh.budget.model.Category - "DARK HORSE COFFEE KAPITI"does not contain southern cross
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "DARK HORSE COFFEE KAPITI"in category Insurance
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
+INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
+INFO JavaFX Application Thread mesh.budget.model.Category - "DARK HORSE COFFEE KAPITI"does not contain countdown
+INFO JavaFX Application Thread mesh.budget.model.Category - "DARK HORSE COFFEE KAPITI"does not contain Dominos
+INFO JavaFX Application Thread mesh.budget.model.Category - "DARK HORSE COFFEE KAPITI"does not contain EFTPOS
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "DARK HORSE COFFEE KAPITI"in category Food
+INFO JavaFX Application Thread mesh.budget.model.Budget - "DARK HORSE COFFEE KAPITI" does not match any categories
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
+INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
+INFO JavaFX Application Thread mesh.budget.model.Category - "SALVATION ARMY FAMIL PARAPARAUMU"does not contain iag 123
+INFO JavaFX Application Thread mesh.budget.model.Category - "SALVATION ARMY FAMIL PARAPARAUMU"does not contain southern cross
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "SALVATION ARMY FAMIL PARAPARAUMU"in category Insurance
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
+INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
+INFO JavaFX Application Thread mesh.budget.model.Category - "SALVATION ARMY FAMIL PARAPARAUMU"does not contain countdown
+INFO JavaFX Application Thread mesh.budget.model.Category - "SALVATION ARMY FAMIL PARAPARAUMU"does not contain Dominos
+INFO JavaFX Application Thread mesh.budget.model.Category - "SALVATION ARMY FAMIL PARAPARAUMU"does not contain EFTPOS
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "SALVATION ARMY FAMIL PARAPARAUMU"in category Food
+INFO JavaFX Application Thread mesh.budget.model.Budget - "SALVATION ARMY FAMIL PARAPARAUMU" does not match any categories
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
+INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
+INFO JavaFX Application Thread mesh.budget.model.Category - "PAYPAL  GOOGLE GOOGLE 4029357733"does not contain iag 123
+INFO JavaFX Application Thread mesh.budget.model.Category - "PAYPAL  GOOGLE GOOGLE 4029357733"does not contain southern cross
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "PAYPAL  GOOGLE GOOGLE 4029357733"in category Insurance
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
+INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
+INFO JavaFX Application Thread mesh.budget.model.Category - "PAYPAL  GOOGLE GOOGLE 4029357733"does not contain countdown
+INFO JavaFX Application Thread mesh.budget.model.Category - "PAYPAL  GOOGLE GOOGLE 4029357733"does not contain Dominos
+INFO JavaFX Application Thread mesh.budget.model.Category - "PAYPAL  GOOGLE GOOGLE 4029357733"does not contain EFTPOS
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "PAYPAL  GOOGLE GOOGLE 4029357733"in category Food
+INFO JavaFX Application Thread mesh.budget.model.Budget - "PAYPAL  GOOGLE GOOGLE 4029357733" does not match any categories
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
+INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
+INFO JavaFX Application Thread mesh.budget.model.Category - "ST PIERRE'S LAMBTON SQUAR WELLINGTON"does not contain iag 123
+INFO JavaFX Application Thread mesh.budget.model.Category - "ST PIERRE'S LAMBTON SQUAR WELLINGTON"does not contain southern cross
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "ST PIERRE'S LAMBTON SQUAR WELLINGTON"in category Insurance
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
+INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
+INFO JavaFX Application Thread mesh.budget.model.Category - "ST PIERRE'S LAMBTON SQUAR WELLINGTON"does not contain countdown
+INFO JavaFX Application Thread mesh.budget.model.Category - "ST PIERRE'S LAMBTON SQUAR WELLINGTON"does not contain Dominos
+INFO JavaFX Application Thread mesh.budget.model.Category - "ST PIERRE'S LAMBTON SQUAR WELLINGTON"does not contain EFTPOS
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "ST PIERRE'S LAMBTON SQUAR WELLINGTON"in category Food
+INFO JavaFX Application Thread mesh.budget.model.Budget - "ST PIERRE'S LAMBTON SQUAR WELLINGTON" does not match any categories
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
+INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
+INFO JavaFX Application Thread mesh.budget.model.Category - "APPLE.COM/BILL SYDNEY"does not contain iag 123
+INFO JavaFX Application Thread mesh.budget.model.Category - "APPLE.COM/BILL SYDNEY"does not contain southern cross
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "APPLE.COM/BILL SYDNEY"in category Insurance
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
+INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
+INFO JavaFX Application Thread mesh.budget.model.Category - "APPLE.COM/BILL SYDNEY"does not contain countdown
+INFO JavaFX Application Thread mesh.budget.model.Category - "APPLE.COM/BILL SYDNEY"does not contain Dominos
+INFO JavaFX Application Thread mesh.budget.model.Category - "APPLE.COM/BILL SYDNEY"does not contain EFTPOS
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "APPLE.COM/BILL SYDNEY"in category Food
+INFO JavaFX Application Thread mesh.budget.model.Budget - "APPLE.COM/BILL SYDNEY" does not match any categories
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
+INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
+INFO JavaFX Application Thread mesh.budget.model.Category - "Dominos Estore PARAPARAUM dominos.co.nz"does not contain iag 123
+INFO JavaFX Application Thread mesh.budget.model.Category - "Dominos Estore PARAPARAUM dominos.co.nz"does not contain southern cross
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "Dominos Estore PARAPARAUM dominos.co.nz"in category Insurance
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
+INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
+INFO JavaFX Application Thread mesh.budget.model.Category - "Dominos Estore PARAPARAUM dominos.co.nz"does not contain countdown
+INFO JavaFX Application Thread mesh.budget.model.Category - match found:Dominos
+INFO JavaFX Application Thread mesh.budget.model.Categories - match found for "Dominos Estore PARAPARAUM dominos.co.nz"
+INFO JavaFX Application Thread mesh.budget.model.Budget - match assigned
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
+INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
+INFO JavaFX Application Thread mesh.budget.model.Category - "Paperplus Coastlands Paraparaumu"does not contain iag 123
+INFO JavaFX Application Thread mesh.budget.model.Category - "Paperplus Coastlands Paraparaumu"does not contain southern cross
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "Paperplus Coastlands Paraparaumu"in category Insurance
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
+INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
+INFO JavaFX Application Thread mesh.budget.model.Category - "Paperplus Coastlands Paraparaumu"does not contain countdown
+INFO JavaFX Application Thread mesh.budget.model.Category - "Paperplus Coastlands Paraparaumu"does not contain Dominos
+INFO JavaFX Application Thread mesh.budget.model.Category - "Paperplus Coastlands Paraparaumu"does not contain EFTPOS
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "Paperplus Coastlands Paraparaumu"in category Food
+INFO JavaFX Application Thread mesh.budget.model.Budget - "Paperplus Coastlands Paraparaumu" does not match any categories
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
+INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
+INFO JavaFX Application Thread mesh.budget.model.Category - "WOOLWORTHS NZ/COASTLANDS PARAPARAUMU"does not contain iag 123
+INFO JavaFX Application Thread mesh.budget.model.Category - "WOOLWORTHS NZ/COASTLANDS PARAPARAUMU"does not contain southern cross
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "WOOLWORTHS NZ/COASTLANDS PARAPARAUMU"in category Insurance
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
+INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
+INFO JavaFX Application Thread mesh.budget.model.Category - "WOOLWORTHS NZ/COASTLANDS PARAPARAUMU"does not contain countdown
+INFO JavaFX Application Thread mesh.budget.model.Category - "WOOLWORTHS NZ/COASTLANDS PARAPARAUMU"does not contain Dominos
+INFO JavaFX Application Thread mesh.budget.model.Category - "WOOLWORTHS NZ/COASTLANDS PARAPARAUMU"does not contain EFTPOS
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "WOOLWORTHS NZ/COASTLANDS PARAPARAUMU"in category Food
+INFO JavaFX Application Thread mesh.budget.model.Budget - "WOOLWORTHS NZ/COASTLANDS PARAPARAUMU" does not match any categories
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
+INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
+INFO JavaFX Application Thread mesh.budget.model.Category - "MITRE 10 MEGA KAPITI PARAPARAUMU"does not contain iag 123
+INFO JavaFX Application Thread mesh.budget.model.Category - "MITRE 10 MEGA KAPITI PARAPARAUMU"does not contain southern cross
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "MITRE 10 MEGA KAPITI PARAPARAUMU"in category Insurance
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
+INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
+INFO JavaFX Application Thread mesh.budget.model.Category - "MITRE 10 MEGA KAPITI PARAPARAUMU"does not contain countdown
+INFO JavaFX Application Thread mesh.budget.model.Category - "MITRE 10 MEGA KAPITI PARAPARAUMU"does not contain Dominos
+INFO JavaFX Application Thread mesh.budget.model.Category - "MITRE 10 MEGA KAPITI PARAPARAUMU"does not contain EFTPOS
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "MITRE 10 MEGA KAPITI PARAPARAUMU"in category Food
+INFO JavaFX Application Thread mesh.budget.model.Budget - "MITRE 10 MEGA KAPITI PARAPARAUMU" does not match any categories
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
+INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
+INFO JavaFX Application Thread mesh.budget.model.Category - "aliexpress London"does not contain iag 123
+INFO JavaFX Application Thread mesh.budget.model.Category - "aliexpress London"does not contain southern cross
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "aliexpress London"in category Insurance
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
+INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
+INFO JavaFX Application Thread mesh.budget.model.Category - "aliexpress London"does not contain countdown
+INFO JavaFX Application Thread mesh.budget.model.Category - "aliexpress London"does not contain Dominos
+INFO JavaFX Application Thread mesh.budget.model.Category - "aliexpress London"does not contain EFTPOS
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "aliexpress London"in category Food
+INFO JavaFX Application Thread mesh.budget.model.Budget - "aliexpress London" does not match any categories
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
+INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
+INFO JavaFX Application Thread mesh.budget.model.Category - "Neon Auckland"does not contain iag 123
+INFO JavaFX Application Thread mesh.budget.model.Category - "Neon Auckland"does not contain southern cross
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "Neon Auckland"in category Insurance
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
+INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
+INFO JavaFX Application Thread mesh.budget.model.Category - "Neon Auckland"does not contain countdown
+INFO JavaFX Application Thread mesh.budget.model.Category - "Neon Auckland"does not contain Dominos
+INFO JavaFX Application Thread mesh.budget.model.Category - "Neon Auckland"does not contain EFTPOS
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "Neon Auckland"in category Food
+INFO JavaFX Application Thread mesh.budget.model.Budget - "Neon Auckland" does not match any categories
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
+INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
+INFO JavaFX Application Thread mesh.budget.model.Category - "ST PIERRE'S LAMBTON SQUAR WELLINGTON"does not contain iag 123
+INFO JavaFX Application Thread mesh.budget.model.Category - "ST PIERRE'S LAMBTON SQUAR WELLINGTON"does not contain southern cross
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "ST PIERRE'S LAMBTON SQUAR WELLINGTON"in category Insurance
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
+INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
+INFO JavaFX Application Thread mesh.budget.model.Category - "ST PIERRE'S LAMBTON SQUAR WELLINGTON"does not contain countdown
+INFO JavaFX Application Thread mesh.budget.model.Category - "ST PIERRE'S LAMBTON SQUAR WELLINGTON"does not contain Dominos
+INFO JavaFX Application Thread mesh.budget.model.Category - "ST PIERRE'S LAMBTON SQUAR WELLINGTON"does not contain EFTPOS
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "ST PIERRE'S LAMBTON SQUAR WELLINGTON"in category Food
+INFO JavaFX Application Thread mesh.budget.model.Budget - "ST PIERRE'S LAMBTON SQUAR WELLINGTON" does not match any categories
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
+INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
+INFO JavaFX Application Thread mesh.budget.model.Category - "Woolworths Online Favona"does not contain iag 123
+INFO JavaFX Application Thread mesh.budget.model.Category - "Woolworths Online Favona"does not contain southern cross
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "Woolworths Online Favona"in category Insurance
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
+INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
+INFO JavaFX Application Thread mesh.budget.model.Category - "Woolworths Online Favona"does not contain countdown
+INFO JavaFX Application Thread mesh.budget.model.Category - "Woolworths Online Favona"does not contain Dominos
+INFO JavaFX Application Thread mesh.budget.model.Category - "Woolworths Online Favona"does not contain EFTPOS
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "Woolworths Online Favona"in category Food
+INFO JavaFX Application Thread mesh.budget.model.Budget - "Woolworths Online Favona" does not match any categories
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
+INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
+INFO JavaFX Application Thread mesh.budget.model.Category - "Dominos Estore PARAPARAUM dominos.co.nz"does not contain iag 123
+INFO JavaFX Application Thread mesh.budget.model.Category - "Dominos Estore PARAPARAUM dominos.co.nz"does not contain southern cross
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "Dominos Estore PARAPARAUM dominos.co.nz"in category Insurance
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
+INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
+INFO JavaFX Application Thread mesh.budget.model.Category - "Dominos Estore PARAPARAUM dominos.co.nz"does not contain countdown
+INFO JavaFX Application Thread mesh.budget.model.Category - match found:Dominos
+INFO JavaFX Application Thread mesh.budget.model.Categories - match found for "Dominos Estore PARAPARAUM dominos.co.nz"
+INFO JavaFX Application Thread mesh.budget.model.Budget - match assigned
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
+INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
+INFO JavaFX Application Thread mesh.budget.model.Category - "DARK HORSE COFFEE KAPITI"does not contain iag 123
+INFO JavaFX Application Thread mesh.budget.model.Category - "DARK HORSE COFFEE KAPITI"does not contain southern cross
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "DARK HORSE COFFEE KAPITI"in category Insurance
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
+INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
+INFO JavaFX Application Thread mesh.budget.model.Category - "DARK HORSE COFFEE KAPITI"does not contain countdown
+INFO JavaFX Application Thread mesh.budget.model.Category - "DARK HORSE COFFEE KAPITI"does not contain Dominos
+INFO JavaFX Application Thread mesh.budget.model.Category - "DARK HORSE COFFEE KAPITI"does not contain EFTPOS
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "DARK HORSE COFFEE KAPITI"in category Food
+INFO JavaFX Application Thread mesh.budget.model.Budget - "DARK HORSE COFFEE KAPITI" does not match any categories
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
+INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
+INFO JavaFX Application Thread mesh.budget.model.Category - "Dominos Estore PARAPARAUM dominos.co.nz"does not contain iag 123
+INFO JavaFX Application Thread mesh.budget.model.Category - "Dominos Estore PARAPARAUM dominos.co.nz"does not contain southern cross
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "Dominos Estore PARAPARAUM dominos.co.nz"in category Insurance
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
+INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
+INFO JavaFX Application Thread mesh.budget.model.Category - "Dominos Estore PARAPARAUM dominos.co.nz"does not contain countdown
+INFO JavaFX Application Thread mesh.budget.model.Category - match found:Dominos
+INFO JavaFX Application Thread mesh.budget.model.Categories - match found for "Dominos Estore PARAPARAUM dominos.co.nz"
+INFO JavaFX Application Thread mesh.budget.model.Budget - match assigned
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
+INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
+INFO JavaFX Application Thread mesh.budget.model.Category - "SUPERCHEAP AUTO PARAPARAUMU"does not contain iag 123
+INFO JavaFX Application Thread mesh.budget.model.Category - "SUPERCHEAP AUTO PARAPARAUMU"does not contain southern cross
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "SUPERCHEAP AUTO PARAPARAUMU"in category Insurance
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
+INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
+INFO JavaFX Application Thread mesh.budget.model.Category - "SUPERCHEAP AUTO PARAPARAUMU"does not contain countdown
+INFO JavaFX Application Thread mesh.budget.model.Category - "SUPERCHEAP AUTO PARAPARAUMU"does not contain Dominos
+INFO JavaFX Application Thread mesh.budget.model.Category - "SUPERCHEAP AUTO PARAPARAUMU"does not contain EFTPOS
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "SUPERCHEAP AUTO PARAPARAUMU"in category Food
+INFO JavaFX Application Thread mesh.budget.model.Budget - "SUPERCHEAP AUTO PARAPARAUMU" does not match any categories
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
+INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
+INFO JavaFX Application Thread mesh.budget.model.Category - "Dominos Estore PARAPARAUM dominos.co.nz"does not contain iag 123
+INFO JavaFX Application Thread mesh.budget.model.Category - "Dominos Estore PARAPARAUM dominos.co.nz"does not contain southern cross
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "Dominos Estore PARAPARAUM dominos.co.nz"in category Insurance
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
+INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
+INFO JavaFX Application Thread mesh.budget.model.Category - "Dominos Estore PARAPARAUM dominos.co.nz"does not contain countdown
+INFO JavaFX Application Thread mesh.budget.model.Category - match found:Dominos
+INFO JavaFX Application Thread mesh.budget.model.Categories - match found for "Dominos Estore PARAPARAUM dominos.co.nz"
+INFO JavaFX Application Thread mesh.budget.model.Budget - match assigned
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
+INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
+INFO JavaFX Application Thread mesh.budget.model.Category - "MITRE 10 MEGA KAPITI PARAPARAUMU"does not contain iag 123
+INFO JavaFX Application Thread mesh.budget.model.Category - "MITRE 10 MEGA KAPITI PARAPARAUMU"does not contain southern cross
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "MITRE 10 MEGA KAPITI PARAPARAUMU"in category Insurance
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
+INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
+INFO JavaFX Application Thread mesh.budget.model.Category - "MITRE 10 MEGA KAPITI PARAPARAUMU"does not contain countdown
+INFO JavaFX Application Thread mesh.budget.model.Category - "MITRE 10 MEGA KAPITI PARAPARAUMU"does not contain Dominos
+INFO JavaFX Application Thread mesh.budget.model.Category - "MITRE 10 MEGA KAPITI PARAPARAUMU"does not contain EFTPOS
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "MITRE 10 MEGA KAPITI PARAPARAUMU"in category Food
+INFO JavaFX Application Thread mesh.budget.model.Budget - "MITRE 10 MEGA KAPITI PARAPARAUMU" does not match any categories
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
+INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
+INFO JavaFX Application Thread mesh.budget.model.Category - "WOOLWORTHS NZ/COASTLANDS PARAPARAUMU"does not contain iag 123
+INFO JavaFX Application Thread mesh.budget.model.Category - "WOOLWORTHS NZ/COASTLANDS PARAPARAUMU"does not contain southern cross
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "WOOLWORTHS NZ/COASTLANDS PARAPARAUMU"in category Insurance
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
+INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
+INFO JavaFX Application Thread mesh.budget.model.Category - "WOOLWORTHS NZ/COASTLANDS PARAPARAUMU"does not contain countdown
+INFO JavaFX Application Thread mesh.budget.model.Category - "WOOLWORTHS NZ/COASTLANDS PARAPARAUMU"does not contain Dominos
+INFO JavaFX Application Thread mesh.budget.model.Category - "WOOLWORTHS NZ/COASTLANDS PARAPARAUMU"does not contain EFTPOS
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "WOOLWORTHS NZ/COASTLANDS PARAPARAUMU"in category Food
+INFO JavaFX Application Thread mesh.budget.model.Budget - "WOOLWORTHS NZ/COASTLANDS PARAPARAUMU" does not match any categories
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
+INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
+INFO JavaFX Application Thread mesh.budget.model.Category - "THREE QUARTER SOCIETY WELLINGTON"does not contain iag 123
+INFO JavaFX Application Thread mesh.budget.model.Category - "THREE QUARTER SOCIETY WELLINGTON"does not contain southern cross
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "THREE QUARTER SOCIETY WELLINGTON"in category Insurance
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
+INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
+INFO JavaFX Application Thread mesh.budget.model.Category - "THREE QUARTER SOCIETY WELLINGTON"does not contain countdown
+INFO JavaFX Application Thread mesh.budget.model.Category - "THREE QUARTER SOCIETY WELLINGTON"does not contain Dominos
+INFO JavaFX Application Thread mesh.budget.model.Category - "THREE QUARTER SOCIETY WELLINGTON"does not contain EFTPOS
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "THREE QUARTER SOCIETY WELLINGTON"in category Food
+INFO JavaFX Application Thread mesh.budget.model.Budget - "THREE QUARTER SOCIETY WELLINGTON" does not match any categories
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Insurance
+INFO JavaFX Application Thread mesh.budget.model.Category - Insurancematches[iag 123, southern cross]
+INFO JavaFX Application Thread mesh.budget.model.Category - "WELLINGTON AIRPORT WELLINGTON"does not contain iag 123
+INFO JavaFX Application Thread mesh.budget.model.Category - "WELLINGTON AIRPORT WELLINGTON"does not contain southern cross
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "WELLINGTON AIRPORT WELLINGTON"in category Insurance
+INFO JavaFX Application Thread mesh.budget.model.Categories - looking in Food
+INFO JavaFX Application Thread mesh.budget.model.Category - Foodmatches[countdown, Dominos, EFTPOS]
+INFO JavaFX Application Thread mesh.budget.model.Category - "WELLINGTON AIRPORT WELLINGTON"does not contain countdown
+INFO JavaFX Application Thread mesh.budget.model.Category - "WELLINGTON AIRPORT WELLINGTON"does not contain Dominos
+INFO JavaFX Application Thread mesh.budget.model.Category - "WELLINGTON AIRPORT WELLINGTON"does not contain EFTPOS
+INFO JavaFX Application Thread mesh.budget.model.Categories - no match found for "WELLINGTON AIRPORT WELLINGTON"in category Food
+INFO JavaFX Application Thread mesh.budget.model.Budget - "WELLINGTON AIRPORT WELLINGTON" does not match any categories
+INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
+INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
+INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
+INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
+INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
+INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
+INFO JavaFX Application Thread mesh.budget.controller.MainController - budget changed
 INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
 INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - context
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241104144304.csv
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241104144511.ofx
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241104144700.ofx
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241205152636.csv
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241205152636.xlsx
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241224162527.csv
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241224162534.csv
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241104144304.csv
-INFO JavaFX Application Thread mesh.budget.model.Budget - 14 new records found
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241104144511.ofx
-INFO JavaFX Application Thread mesh.budget.model.Budget - no new records found
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241104144700.ofx
-INFO JavaFX Application Thread mesh.budget.model.Budget - no new records found
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241205152636.csv
-INFO JavaFX Application Thread mesh.budget.model.Budget - 87 new records found
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241205152636.xlsx
-INFO JavaFX Application Thread mesh.budget.model.Budget - no new records found
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241224162527.csv
-INFO JavaFX Application Thread mesh.budget.model.Budget - 178 new records found
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241224162534.csv
-INFO JavaFX Application Thread mesh.budget.model.Budget - 578 new records found
-INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - constructing catcontroler=mesh.budget.controller.CategoryUIController@71f7cf1e
-INFO JavaFX Application Thread mesh.budget.model.Categories - !!!!!! line =Insurance,iag 123,southern cross
-INFO JavaFX Application Thread mesh.budget.model.Category - !!!!!!v0Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - !!!!!! line =Food,countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - !!!!!!v0Food
-INFO JavaFX Application Thread mesh.budget.App - catcontroler=mesh.budget.controller.CategoryUIController@71f7cf1e
-INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - intitializing catcontroler=mesh.budget.controller.CategoryUIController@71f7cf1e
-INFO JavaFX Application Thread mesh.budget.App - mesh.budget.model.AppState@268a17ca
-INFO JavaFX Application Thread mesh.budget.controller.MainController - constructing main controler=mesh.budget.controller.MainController@220b3458
-INFO JavaFX Application Thread mesh.budget.App - mesh.budget.model.AppState@268a17ca
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241104144304.csv
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241104144511.ofx
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241104144700.ofx
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241205152636.csv
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241205152636.xlsx
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241224162527.csv
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241224162534.csv
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241104144304.csv
-INFO JavaFX Application Thread mesh.budget.model.Budget - 14 new records found
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241104144511.ofx
-INFO JavaFX Application Thread mesh.budget.model.Budget - no new records found
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241104144700.ofx
-INFO JavaFX Application Thread mesh.budget.model.Budget - no new records found
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241205152636.csv
-INFO JavaFX Application Thread mesh.budget.model.Budget - 87 new records found
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241205152636.xlsx
-INFO JavaFX Application Thread mesh.budget.model.Budget - no new records found
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241224162527.csv
-INFO JavaFX Application Thread mesh.budget.model.Budget - 178 new records found
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241224162534.csv
-INFO JavaFX Application Thread mesh.budget.model.Budget - 578 new records found
-INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - constructing catcontroler=mesh.budget.controller.CategoryUIController@71f7cf1e
-INFO JavaFX Application Thread mesh.budget.model.Categories - !!!!!! line =Insurance,iag 123,southern cross
-INFO JavaFX Application Thread mesh.budget.model.Category - !!!!!!v0Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - !!!!!! line =Food,countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - !!!!!!v0Food
-INFO JavaFX Application Thread mesh.budget.App - catcontroler=mesh.budget.controller.CategoryUIController@71f7cf1e
-INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - intitializing catcontroler=mesh.budget.controller.CategoryUIController@71f7cf1e
-INFO JavaFX Application Thread mesh.budget.App - mesh.budget.model.AppState@5d07018c
-INFO JavaFX Application Thread mesh.budget.controller.MainController - constructing main controler=mesh.budget.controller.MainController@7ec2ba48
-INFO JavaFX Application Thread mesh.budget.App - mesh.budget.model.AppState@5d07018c
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - context
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - context
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - context
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - context
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241104144304.csv
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241104144511.ofx
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241104144700.ofx
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241205152636.csv
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241205152636.xlsx
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241224162527.csv
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241224162534.csv
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241104144304.csv
-INFO JavaFX Application Thread mesh.budget.model.Budget - 14 new records found
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241104144511.ofx
-INFO JavaFX Application Thread mesh.budget.model.Budget - no new records found
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241104144700.ofx
-INFO JavaFX Application Thread mesh.budget.model.Budget - no new records found
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241205152636.csv
-INFO JavaFX Application Thread mesh.budget.model.Budget - 87 new records found
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241205152636.xlsx
-INFO JavaFX Application Thread mesh.budget.model.Budget - no new records found
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241224162527.csv
-INFO JavaFX Application Thread mesh.budget.model.Budget - 178 new records found
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241224162534.csv
-INFO JavaFX Application Thread mesh.budget.model.Budget - 578 new records found
-INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - constructing catcontroler=mesh.budget.controller.CategoryUIController@6850d2c3
-INFO JavaFX Application Thread mesh.budget.model.Categories - !!!!!! line =Insurance,iag 123,southern cross
-INFO JavaFX Application Thread mesh.budget.model.Category - !!!!!!v0Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - !!!!!! line =Food,countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - !!!!!!v0Food
-INFO JavaFX Application Thread mesh.budget.App - catcontroler=mesh.budget.controller.CategoryUIController@6850d2c3
-INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - intitializing catcontroler=mesh.budget.controller.CategoryUIController@6850d2c3
-INFO JavaFX Application Thread mesh.budget.App - mesh.budget.model.AppState@dc371e9
-INFO JavaFX Application Thread mesh.budget.controller.MainController - constructing main controler=mesh.budget.controller.MainController@494aae89
-INFO JavaFX Application Thread mesh.budget.App - mesh.budget.model.AppState@dc371e9
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - context
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241104144304.csv
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241104144511.ofx
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241104144700.ofx
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241205152636.csv
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241205152636.xlsx
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241224162527.csv
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241224162534.csv
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241104144304.csv
-INFO JavaFX Application Thread mesh.budget.model.Budget - 14 new records found
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241104144511.ofx
-INFO JavaFX Application Thread mesh.budget.model.Budget - no new records found
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241104144700.ofx
-INFO JavaFX Application Thread mesh.budget.model.Budget - no new records found
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241205152636.csv
-INFO JavaFX Application Thread mesh.budget.model.Budget - 87 new records found
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241205152636.xlsx
-INFO JavaFX Application Thread mesh.budget.model.Budget - no new records found
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241224162527.csv
-INFO JavaFX Application Thread mesh.budget.model.Budget - 178 new records found
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241224162534.csv
-INFO JavaFX Application Thread mesh.budget.model.Budget - 578 new records found
-INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - constructing catcontroler=mesh.budget.controller.CategoryUIController@13a8bd89
-INFO JavaFX Application Thread mesh.budget.model.Categories - !!!!!! line =Insurance,iag 123,southern cross
-INFO JavaFX Application Thread mesh.budget.model.Category - !!!!!!v0Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - !!!!!! line =Food,countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - !!!!!!v0Food
-INFO JavaFX Application Thread mesh.budget.App - catcontroler=mesh.budget.controller.CategoryUIController@13a8bd89
-INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - intitializing catcontroler=mesh.budget.controller.CategoryUIController@13a8bd89
-INFO JavaFX Application Thread mesh.budget.App - mesh.budget.model.AppState@752416f2
-INFO JavaFX Application Thread mesh.budget.controller.MainController - constructing main controler=mesh.budget.controller.MainController@14b8ea
-INFO JavaFX Application Thread mesh.budget.App - mesh.budget.model.AppState@752416f2
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241104144304.csv
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241104144511.ofx
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241104144700.ofx
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241205152636.csv
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241205152636.xlsx
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241224162527.csv
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241224162534.csv
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241104144304.csv
-INFO JavaFX Application Thread mesh.budget.model.Budget - 14 new records found
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241104144511.ofx
-INFO JavaFX Application Thread mesh.budget.model.Budget - no new records found
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241104144700.ofx
-INFO JavaFX Application Thread mesh.budget.model.Budget - no new records found
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241205152636.csv
-INFO JavaFX Application Thread mesh.budget.model.Budget - 87 new records found
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241205152636.xlsx
-INFO JavaFX Application Thread mesh.budget.model.Budget - no new records found
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241224162527.csv
-INFO JavaFX Application Thread mesh.budget.model.Budget - 178 new records found
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241224162534.csv
-INFO JavaFX Application Thread mesh.budget.model.Budget - 578 new records found
-INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - constructing catcontroler=mesh.budget.controller.CategoryUIController@139b9896
-INFO JavaFX Application Thread mesh.budget.model.Categories - !!!!!! line =Insurance,iag 123,southern cross
-INFO JavaFX Application Thread mesh.budget.model.Category - !!!!!!v0Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - !!!!!! line =Food,countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - !!!!!!v0Food
-INFO JavaFX Application Thread mesh.budget.App - catcontroler=mesh.budget.controller.CategoryUIController@139b9896
-INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - intitializing catcontroler=mesh.budget.controller.CategoryUIController@139b9896
-INFO JavaFX Application Thread mesh.budget.App - mesh.budget.model.AppState@3070de27
-INFO JavaFX Application Thread mesh.budget.controller.MainController - constructing main controler=mesh.budget.controller.MainController@3f30f558
-INFO JavaFX Application Thread mesh.budget.App - mesh.budget.model.AppState@3070de27
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - showing Category Manger
-INFO JavaFX Application Thread mesh.budget.controller.MainController - showing category manager for "D/D KAPITI RATES 21 GAVIN RD 1528235800"
-INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - Insurance
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - context
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - showing Category Manger
-INFO JavaFX Application Thread mesh.budget.controller.MainController - showing category manager for "MOH MDM  APR 24"
-INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - 
-INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - Food
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241104144304.csv
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241104144511.ofx
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241104144700.ofx
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241205152636.csv
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241205152636.xlsx
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241224162527.csv
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241224162534.csv
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241104144304.csv
-INFO JavaFX Application Thread mesh.budget.model.Budget - 14 new records found
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241104144511.ofx
-INFO JavaFX Application Thread mesh.budget.model.Budget - no new records found
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241104144700.ofx
-INFO JavaFX Application Thread mesh.budget.model.Budget - no new records found
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241205152636.csv
-INFO JavaFX Application Thread mesh.budget.model.Budget - 87 new records found
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241205152636.xlsx
-INFO JavaFX Application Thread mesh.budget.model.Budget - no new records found
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241224162527.csv
-INFO JavaFX Application Thread mesh.budget.model.Budget - 178 new records found
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241224162534.csv
-INFO JavaFX Application Thread mesh.budget.model.Budget - 578 new records found
-INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - constructing catcontroler=mesh.budget.controller.CategoryUIController@139b9896
-INFO JavaFX Application Thread mesh.budget.model.Categories - !!!!!! line =Insurance,iag 123,southern cross
-INFO JavaFX Application Thread mesh.budget.model.Category - !!!!!!v0Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - !!!!!! line =Food,countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - !!!!!!v0Food
-INFO JavaFX Application Thread mesh.budget.App - catcontroler=mesh.budget.controller.CategoryUIController@139b9896
-INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - intitializing catcontroler=mesh.budget.controller.CategoryUIController@139b9896
-INFO JavaFX Application Thread mesh.budget.App - mesh.budget.model.AppState@3070de27
-INFO JavaFX Application Thread mesh.budget.controller.MainController - constructing main controler=mesh.budget.controller.MainController@3f30f558
-INFO JavaFX Application Thread mesh.budget.App - mesh.budget.model.AppState@3070de27
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241104144304.csv
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241104144511.ofx
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241104144700.ofx
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241205152636.csv
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241205152636.xlsx
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241224162527.csv
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241224162534.csv
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241104144304.csv
-INFO JavaFX Application Thread mesh.budget.model.Budget - 14 new records found
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241104144511.ofx
-INFO JavaFX Application Thread mesh.budget.model.Budget - no new records found
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241104144700.ofx
-INFO JavaFX Application Thread mesh.budget.model.Budget - no new records found
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241205152636.csv
-INFO JavaFX Application Thread mesh.budget.model.Budget - 87 new records found
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241205152636.xlsx
-INFO JavaFX Application Thread mesh.budget.model.Budget - no new records found
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241224162527.csv
-INFO JavaFX Application Thread mesh.budget.model.Budget - 178 new records found
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241224162534.csv
-INFO JavaFX Application Thread mesh.budget.model.Budget - 578 new records found
-INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - constructing catcontroler=mesh.budget.controller.CategoryUIController@139b9896
-INFO JavaFX Application Thread mesh.budget.model.Categories - !!!!!! line =Insurance,iag 123,southern cross
-INFO JavaFX Application Thread mesh.budget.model.Category - !!!!!!v0Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - !!!!!! line =Food,countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - !!!!!!v0Food
-INFO JavaFX Application Thread mesh.budget.App - catcontroler=mesh.budget.controller.CategoryUIController@139b9896
-INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - intitializing catcontroler=mesh.budget.controller.CategoryUIController@139b9896
-INFO JavaFX Application Thread mesh.budget.App - mesh.budget.model.AppState@3070de27
-INFO JavaFX Application Thread mesh.budget.controller.MainController - constructing main controler=mesh.budget.controller.MainController@3f30f558
-INFO JavaFX Application Thread mesh.budget.App - mesh.budget.model.AppState@3070de27
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.AddMatchController - adding match to category:no category
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241104144304.csv
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241104144511.ofx
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241104144700.ofx
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241205152636.csv
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241205152636.xlsx
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241224162527.csv
-INFO JavaFX Application Thread mesh.budget.Utils - found export C:\Users\patri\Downloads\Export20241224162534.csv
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241104144304.csv
-INFO JavaFX Application Thread mesh.budget.model.Budget - 14 new records found
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241104144511.ofx
-INFO JavaFX Application Thread mesh.budget.model.Budget - no new records found
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241104144700.ofx
-INFO JavaFX Application Thread mesh.budget.model.Budget - no new records found
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241205152636.csv
-INFO JavaFX Application Thread mesh.budget.model.Budget - 87 new records found
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241205152636.xlsx
-INFO JavaFX Application Thread mesh.budget.model.Budget - no new records found
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241224162527.csv
-INFO JavaFX Application Thread mesh.budget.model.Budget - 178 new records found
-INFO JavaFX Application Thread mesh.budget.model.Budget - loading C:\Users\patri\Downloads\Export20241224162534.csv
-INFO JavaFX Application Thread mesh.budget.model.Budget - 578 new records found
-INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - constructing catcontroler=mesh.budget.controller.CategoryUIController@2868dc07
-INFO JavaFX Application Thread mesh.budget.model.Categories - !!!!!! line =Insurance,iag 123,southern cross
-INFO JavaFX Application Thread mesh.budget.model.Category - !!!!!!v0Insurance
-INFO JavaFX Application Thread mesh.budget.model.Categories - !!!!!! line =Food,countdown
-INFO JavaFX Application Thread mesh.budget.model.Category - !!!!!!v0Food
-INFO JavaFX Application Thread mesh.budget.App - catcontroler=mesh.budget.controller.CategoryUIController@2868dc07
-INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - intitializing catcontroler=mesh.budget.controller.CategoryUIController@2868dc07
-INFO JavaFX Application Thread mesh.budget.App - mesh.budget.model.AppState@4543abc4
-INFO JavaFX Application Thread mesh.budget.controller.MainController - constructing main controler=mesh.budget.controller.MainController@f537e7b
-INFO JavaFX Application Thread mesh.budget.App - mesh.budget.model.AppState@4543abc4
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.AddMatchController - adding match to category:no category
-INFO JavaFX Application Thread mesh.budget.controller.AddMatchController -  cant add match befroe categtoy is assigned
-INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
-INFO JavaFX Application Thread mesh.budget.controller.AddMatchController - adding match to category:Food
-INFO JavaFX Application Thread mesh.budget.controller.MainController - showing Category Manger
-INFO JavaFX Application Thread mesh.budget.controller.MainController - showing category manager for "A/P savings"
-INFO JavaFX Application Thread mesh.budget.controller.CategoryUIController - Food

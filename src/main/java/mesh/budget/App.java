@@ -60,16 +60,7 @@ public class App extends Application {
 
 	private void loadBudget() {
 		budget.loadFromFile(Utils.budgetFileName);
-		// add exports
-
-		List<File> exports = Utils.findExports("C:\\Users\\patri\\Downloads");
-
-		for (File e : exports) {
-			budget.addExportFile(e.getAbsolutePath());
-
-		}
-
-		budget.saveToFile(Utils.budgetFileName);
+	
 	}
 
 	private void addMatchSetup() {

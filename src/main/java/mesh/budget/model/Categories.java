@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
@@ -25,6 +26,23 @@ public class Categories {
 
 	public void add(Category cat) {
 		categories.add(cat);
+	}
+	
+	
+	//return matching category, or UNKNOWN
+	public String findMatch(String description) {
+		String result = Category.UNKNOWN;
+		Iterator<Category> it = categories.iterator();
+		while (it.hasNext()) {
+			Category cat = it.next();
+			logger.info("looking in " + cat.getName());
+			result = cat.findMatch(description);
+			if (!result.equals(Category.UNKNOWN)){								
+				logger.info("match found for " + description);
+				break;
+			} else logger.info("no match found for " + description + "in category " + cat.getName());
+		}		
+		return result;		
 	}
 
 	public Category getCategoryByName(String name) {

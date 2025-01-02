@@ -13,6 +13,7 @@ public class Utils {
 	
 	static public String categoryFileName = "C:\\Users\\patri\\git\\budget\\categories.csv";
 	static public String budgetFileName = "C:\\Users\\patri\\git\\budget\\budget.csv";
+	static public String exportsDir = "C:\\Users\\patri\\Downloads";
 	
 	
 	private static final Logger logger = LoggerFactory.getLogger(Utils.class);
