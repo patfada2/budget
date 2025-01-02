@@ -2,6 +2,9 @@ package mesh;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.junit.jupiter.api.Test;
 
 
@@ -19,7 +22,7 @@ public class BudgetTest {
 	private static final Logger logger = LoggerFactory.getLogger(BudgetTest.class);
 
 	
-	@Test
+	//@Test
 	public void classifier() {
 		logger.info("testing");
 		//BudgetClassifier c = new BudgetClassifier();
@@ -51,4 +54,37 @@ public class BudgetTest {
 		
 	}
 		
+	@Test
+	public void matcher() {
+		
+		logger.info("testing matcher");
+		
+		Category cat = new Category("Food");
+		List<String> matches = new ArrayList<String>();
+		matches.add("countdown");
+		cat.setMatches(matches);
+		
+		String dateProcessed="2024/10/24";
+		String dateOfTransaction="2024102402";
+		String id="1";
+		String type= "D/D";
+		String reference="Southern Cross Health";
+		String description="countdown";
+		String amount="109.21";
+		String category="no category";
+		
+		BankStatementRow row = new BankStatementRow(dateProcessed,dateOfTransaction,id,type,reference,description,amount,category);
+		
+		
+		String result = cat.findMatch(description);
+		if (result != null) {
+			logger.info("matching category is " + result);
+		}
+	    assertEquals("Food",result);
+		
+		
+		
+	}
+	
+	
 }

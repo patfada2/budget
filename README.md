@@ -2,10 +2,8 @@
 budget
 
 Next:
-
-menu : run mATCHES
-column editor : (incudes, starts with)
-
-budget.runMatches(Categories catgeories)
-
+file menu budget save
+unit tests fro matcher
+matcher for description
+category file save
 

@@ -2,10 +2,14 @@ package mesh.budget.model;
 
 import java.util.ArrayList;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import javafx.beans.property.SimpleStringProperty;
 import mesh.budget.model.BankStatementRow;
 
 public class BankStatementRow  implements Comparable<BankStatementRow>{
+	private static final Logger logger = LoggerFactory.getLogger(BankStatementRow.class);
 
 	// Date Processed Date of Transaction Unique Id Tran Type Reference Description
 	// Amount
@@ -24,6 +28,7 @@ public class BankStatementRow  implements Comparable<BankStatementRow>{
 	
 	public BankStatementRow(String dateProcessed, String dateOfTransaction, String id, String type, 
 			 String reference, String description, String amount, String category) {
+		    logger.debug("creating new BankStatementRow");
 	        this.dateProcessed = new SimpleStringProperty(dateProcessed);
 	        this.dateOfTransaction = new SimpleStringProperty(dateOfTransaction);
 	        this.id = new SimpleStringProperty(id);

@@ -33,6 +33,14 @@ public class Category {
 	public Category() {
 		name = new SimpleStringProperty(Category.UNKNOWN);
 	}
+	
+	public Category(String name) {
+		
+		logger.debug("creating category: " + name);
+		this.name = new SimpleStringProperty(name);
+		logger.debug("created category: " + name);
+	}
+	
 	public Category createFromCsv(String line) {
 		String[] v = line.split(",");	
 		logger.info("!!!!!!v0"+ v[0]);

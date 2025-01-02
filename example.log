@@ -578,3 +578,31 @@ INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Cli
 INFO JavaFX Application Thread mesh.budget.controller.MainController - budget changed
 INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
 INFO JavaFX Application Thread mesh.budget.controller.MainController - Table1Clicked
+INFO main mesh.BudgetTest - testing matcher
+INFO main mesh.BudgetTest - testing matcher
+DEBUG main mesh.budget.model.Category - creating category: Food
+INFO main mesh.BudgetTest - testing matcher
+DEBUG main mesh.budget.model.Category - creating category: Food
+INFO main mesh.BudgetTest - testing matcher
+DEBUG main mesh.budget.model.Category - creating category: Food
+INFO main mesh.BudgetTest - testing matcher
+DEBUG main mesh.budget.model.Category - creating category: Food
+DEBUG main mesh.budget.model.Category - created category: Food
+DEBUG main mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO main mesh.budget.model.Category - Foodmatches[countdown]
+INFO main mesh.budget.model.Category - D/D 000035942669 2040493does not contain countdown
+INFO main mesh.BudgetTest - matching category is no category
+INFO main mesh.BudgetTest - testing matcher
+DEBUG main mesh.budget.model.Category - creating category: Food
+DEBUG main mesh.budget.model.Category - created category: Food
+DEBUG main mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO main mesh.budget.model.Category - Foodmatches[countdown]
+INFO main mesh.budget.model.Category - match found:countdown
+INFO main mesh.BudgetTest - matching category is Food
+INFO main mesh.BudgetTest - testing matcher
+DEBUG main mesh.budget.model.Category - creating category: Food
+DEBUG main mesh.budget.model.Category - created category: Food
+DEBUG main mesh.budget.model.BankStatementRow - creating new BankStatementRow
+INFO main mesh.budget.model.Category - Foodmatches[countdown]
+INFO main mesh.budget.model.Category - match found:countdown
+INFO main mesh.BudgetTest - matching category is Food
