@@ -23,7 +23,7 @@ public class BudgetTest {
 
 	
 	//@Test
-	public void classifier() {
+	public void descriptionMatches() {
 		logger.info("testing");
 		//BudgetClassifier c = new BudgetClassifier();
 		
@@ -44,7 +44,7 @@ public class BudgetTest {
 		
 		BankStatementRow row = budget.getBudget().get(0);
 		row.setCategory("Food");
-		categories.getCategoryByName("Food").getMatches().add("EFTPOS");
+		categories.getCategoryByName("Food").getDescriptionMatches().add("EFTPOS");
 		logger.info("row 0:"+row.getDescription());
 		
 		String match = categories.findMatch(row.getDescription());
@@ -62,7 +62,7 @@ public class BudgetTest {
 		Category cat = new Category("Food");
 		List<String> matches = new ArrayList<String>();
 		matches.add("countdown");
-		cat.setMatches(matches);
+		cat.setDescriptionMatches(matches);
 		
 		String dateProcessed="2024/10/24";
 		String dateOfTransaction="2024102402";

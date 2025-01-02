@@ -16,18 +16,18 @@ public class Category {
 	public  static final String UNKNOWN="no category";
 
 	private SimpleStringProperty name;
-	private List<String> matches = new ArrayList<String>();
+	private List<String> descriptionMatches = new ArrayList<String>();
 	public String getName() {
 		return name.get();
 	}
 	public void setName(String name) {
 		this.name.set(name);
 	}
-	public List<String> getMatches() {
-		return matches;
+	public List<String> getDescriptionMatches() {
+		return descriptionMatches;
 	}
-	public void setMatches(List<String> matches) {
-		this.matches = matches;
+	public void setDescriptionMatches(List<String> matches) {
+		this.descriptionMatches = matches;
 	}
 	
 	public Category() {
@@ -47,7 +47,7 @@ public class Category {
 		Category c = new Category();
 		c.setName(v[0]);
 		for (int i = 1; i< v.length; i++) {
-			c.matches.add(v[i]);
+			c.descriptionMatches.add(v[i]);
 		}
 		return c;
 		
@@ -55,10 +55,10 @@ public class Category {
 	
 	public String toCsv() {
 		String result = this.name.get();
-		if (matches.size()>0) {
+		if (descriptionMatches.size()>0) {
 			result += ",";
 		}
-		Iterator<String> it = matches.iterator();	
+		Iterator<String> it = descriptionMatches.iterator();	
 		while (it.hasNext()) {
 			String match = it.next();
 			result += match;
@@ -73,8 +73,8 @@ public class Category {
 	
 	public String findMatch(String description) {
 		String result = Category.UNKNOWN;
-		Iterator<String> it = matches.iterator();
-		logger.info(this.getName() + "matches"+ matches.toString());
+		Iterator<String> it = descriptionMatches.iterator();
+		logger.info(this.getName() + "matches"+ descriptionMatches.toString());
 		while (it.hasNext()) {
 			String match = it.next();
 			if (description.contains(match)) {

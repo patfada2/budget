@@ -43,7 +43,7 @@ public class AddMatchController {
 			
 			Category selectedCategory = categories.getCategoryByName(selectedRow.getCategory());
 			
-			selectedCategory.getMatches().add(matchText.getText());
+			selectedCategory.getDescriptionMatches().add(matchText.getText());
 		}
 		hide();
 			

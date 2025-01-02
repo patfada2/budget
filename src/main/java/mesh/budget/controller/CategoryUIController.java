@@ -124,15 +124,15 @@ public class CategoryUIController {
 	@FXML
 	public void onAddMatch(ActionEvent event) {
 		logger.info("onAddMatch");
-		selectedCategory.getMatches().add(matchText.getText());
-		logger.info("!!!!!" + selectedCategory.getMatches().toString());
+		selectedCategory.getDescriptionMatches().add(matchText.getText());
+		logger.debug(selectedCategory.getDescriptionMatches().toString());
 		loadMatches(selectedCategory) ;	
 	}
 	
 	private void loadMatches(Category cat) {
 		matches.clear();
 		
-		List<String> theMatches = cat.getMatches();
+		List<String> theMatches = cat.getDescriptionMatches();
 		for (int i=0; i < theMatches.size(); i++) {
 			matches.add(theMatches.get(i));
 		}
