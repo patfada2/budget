@@ -29,7 +29,7 @@ public class Category {
 	@JsonProperty
 	private List<String> referenceMatches = new ArrayList<String>();
 	
-	public List<String> getRefernceMatches() {
+	public List<String> getReferenceMatches() {
 		return referenceMatches;
 	}
 

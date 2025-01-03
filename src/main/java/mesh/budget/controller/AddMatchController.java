@@ -52,7 +52,7 @@ public class AddMatchController {
 			case MatchTypes.DESCRIPTION:
 				selectedCategory.getDescriptionMatches().add(match);
 			case MatchTypes.REFERNCE:
-				selectedCategory.getRefernceMatches().add(match);
+				selectedCategory.getReferenceMatches().add(match);
 
 			}
 

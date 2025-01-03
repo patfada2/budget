@@ -29,7 +29,8 @@ public class CategoryUIController {
 	}
 
 	private ObservableList<String> names; 
-	private ObservableList<String> matches; 
+	private ObservableList<String> descMatches; 
+	private ObservableList<String> refMatches; 
 	private AppState appStateModel;
 	
 
@@ -58,7 +59,11 @@ public class CategoryUIController {
 	private ListView<String> listCategory;
 	
 	@FXML
-	private ListView<String> listDetail;
+	private ListView<String> descriptionList;
+	
+	@FXML
+	private ListView<String> referenceList;
+	
 	
 	@FXML
 	private Button okButton;
@@ -74,7 +79,11 @@ public class CategoryUIController {
 	
 	
 	@FXML
-	private TextField matchText;
+	private TextField descriptionMatchText;
+	
+	@FXML
+	private TextField referenceMatchText;
+
 	
 	private Category selectedCategory;
 	
@@ -86,7 +95,8 @@ public class CategoryUIController {
 		
 				
 		names = FXCollections.observableArrayList();
-		matches = FXCollections.observableArrayList();	
+		descMatches = FXCollections.observableArrayList();	
+		refMatches = FXCollections.observableArrayList();
 		
 		listCategory.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
 
@@ -112,7 +122,7 @@ public class CategoryUIController {
 	}
 	
 	@FXML
-	public void onAddClick(ActionEvent event) {
+	public void onAddCategoryClick(ActionEvent event) {
 		logger.info("onAddClick");
 		Category cat = new Category();
 		cat.setName(newCatText.getText());
@@ -122,22 +132,38 @@ public class CategoryUIController {
 	
 	
 	@FXML
-	public void onAddMatch(ActionEvent event) {
-		logger.info("onAddMatch");
-		selectedCategory.getDescriptionMatches().add(matchText.getText());
+	public void onAddDescriptionMatch(ActionEvent event) {
+		logger.info("onAddDescriptionMatch");
+		selectedCategory.getDescriptionMatches().add(descriptionMatchText.getText());
 		logger.debug(selectedCategory.getDescriptionMatches().toString());
 		loadMatches(selectedCategory) ;	
 	}
 	
+	@FXML
+	public void onAddReferenceMatch(ActionEvent event) {
+		logger.info("onAddReferenceMatch");
+		selectedCategory.getReferenceMatches().add(referenceMatchText.getText());
+		logger.debug(selectedCategory.getReferenceMatches().toString());
+		loadMatches(selectedCategory) ;	
+	}
+	
 	private void loadMatches(Category cat) {
-		matches.clear();
+		descMatches.clear();
 		
-		List<String> theMatches = cat.getDescriptionMatches();
-		for (int i=0; i < theMatches.size(); i++) {
-			matches.add(theMatches.get(i));
+		List<String> descriptionMatches = cat.getDescriptionMatches();
+		for (int i=0; i < descriptionMatches.size(); i++) {
+			descMatches.add(descriptionMatches.get(i));
 		}
-		listDetail.setItems(matches);
-				
+		descriptionList.setItems(descMatches);
+		
+		refMatches.clear();
+		
+		List<String> referenceMatches = cat.getReferenceMatches();
+		for (int i=0; i < referenceMatches.size(); i++) {
+			refMatches.add(referenceMatches.get(i));
+		}
+		referenceList.setItems(refMatches);
+								
 	}
 
 	private void loadCategories() {
