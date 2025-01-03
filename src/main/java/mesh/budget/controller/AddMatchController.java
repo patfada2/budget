@@ -21,7 +21,13 @@ public class AddMatchController {
 	private Budget budget;
 	private Categories categories;
 	private static final Logger logger = LoggerFactory.getLogger(AddMatchController.class);
-	
+
+	public enum MatchTypes {
+		DESCRIPTION, REFERNCE
+	};
+
+	private MatchTypes matchType;
+
 	private BankStatementRow selectedRow;
 
 	@FXML
@@ -33,38 +39,44 @@ public class AddMatchController {
 	// Event Listener on Button.onAction
 	@FXML
 	public void addMatch(ActionEvent event) {
-		
-		logger.info("adding match to category:"+selectedRow.getCategory());
-		
+		String match = matchText.getText();
+
+		logger.info("adding match " + match + " to category:" + selectedRow.getCategory());
+
 		if (selectedRow.getCategory().equals(Category.UNKNOWN)) {
 			showAlert();
-		}
-		else {
-			
+		} else {
+
 			Category selectedCategory = categories.getCategoryByName(selectedRow.getCategory());
-			
-			selectedCategory.getDescriptionMatches().add(matchText.getText());
+			switch (matchType) {
+			case MatchTypes.DESCRIPTION:
+				selectedCategory.getDescriptionMatches().add(match);
+			case MatchTypes.REFERNCE:
+				selectedCategory.getRefernceMatches().add(match);
+
+			}
+
 		}
 		hide();
-			
+
 	}
 
-	private void  showAlert() {
+	private void showAlert() {
 		Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
 		alert.setTitle("Message");
 		alert.setHeaderText("cant add match before category is assigned");
 		alert.showAndWait();
 	}
-	
-	
-	public AddMatchController(Budget budget, Categories categories) {
+
+	public AddMatchController(Budget budget, Categories categories, MatchTypes matchType) {
 		this.budget = budget;
-		this.categories=categories;
+		this.categories = categories;
+		this.matchType = matchType;
 	}
-	
+
 	private void hide() {
 		Stage stage = (Stage) anchorPane.getScene().getWindow();
-		stage.hide();		
+		stage.hide();
 	}
 
 	public void show(String description, BankStatementRow selectedRow) {

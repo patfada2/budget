@@ -1,3 +1,5 @@
 Food,Countdown,xxx
 InsuranceFamilyHouse,D/D KAPITI RATES
 Savings,kiwisaver
+Business,"A/P Accountant Xero fees","D/C FROM REFRACTION DA",D/C FROM REFRACTION
+Health,Southern Cross

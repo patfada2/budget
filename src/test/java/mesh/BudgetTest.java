@@ -23,7 +23,7 @@ public class BudgetTest {
 
 	
 	//@Test
-	public void descriptionMatches() {
+	public void budget() {
 		logger.info("testing");
 		//BudgetClassifier c = new BudgetClassifier();
 		
@@ -76,7 +76,38 @@ public class BudgetTest {
 		BankStatementRow row = new BankStatementRow(dateProcessed,dateOfTransaction,id,type,reference,description,amount,category);
 		
 		
-		String result = cat.findMatch(description);
+		String result = cat.findDescriptionMatch(description);
+		if (result != null) {
+			logger.info("matching category is " + result);
+		}
+	    assertEquals("Food",result);
+			
+	}
+	
+	
+	@Test
+	public void matchReference() {
+		
+		logger.info("testing reference matcher");
+		
+		Category cat = new Category("Food");
+		List<String> matches = new ArrayList<String>();
+		matches.add("Southern Cross");
+		cat.setRefernceMatches(matches);
+		
+		String dateProcessed="2024/10/24";
+		String dateOfTransaction="2024102402";
+		String id="1";
+		String type= "D/D";
+		String reference="Southern Cross Health";
+		String description="countdown";
+		String amount="109.21";
+		String category="no category";
+		
+		BankStatementRow row = new BankStatementRow(dateProcessed,dateOfTransaction,id,type,reference,description,amount,category);
+		
+		
+		String result = cat.findReferenceMatch(reference);
 		if (result != null) {
 			logger.info("matching category is " + result);
 		}

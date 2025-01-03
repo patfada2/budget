@@ -1,10 +1,10 @@
 dateProcessed=,dateOfTransaction,id,type,referenece,description,amount
-2024/10/15,2024101501,EFTPOS,,"The Cut Hairdressing Otaki","EFTPOS",-100.00,null
+2024/10/15,2024101501,EFTPOS,,"The Cut Hairdressing Otaki","EFTPOS",-100.00,Health
 2024/10/16,2024101601,EFTPOS,,"Hartleys Hair Co. Paraparaumu","EFTPOS",-48.00,Food
 2024/10/18,2024101801,A/P,,"Our savings","A/P savings",-500.00,no category
 2024/10/18,2024101802,D/D,,"KCDC RATES","D/D KAPITI RATES 21 GAVIN RD 1528235800",-187.84,House
 2024/10/24,2024102401,D/D,,"MERCURY NZ LTD","D/D MERCURY LIMI 00023651322 110038746",-231.08,no category
-2024/10/24,2024102402,D/D,,"Southern Cross Healt","D/D 000035942669 2040493",-109.21,no category
+2024/10/24,2024102402,D/D,,"Southern Cross Healt","D/D 000035942669 2040493",-109.21,Health
 2024/10/25,2024102501,A/P,,"Our savings","A/P savings",-500.00,no category
 2024/10/25,2024102502,EFTPOS,,"Kapiti Kennels Paraparaumu","EFTPOS",-285.00,no category
 2024/10/29,2024102901,D/C,,"D/C FROM MCFARLANE PJ&TE","",45.00,Food
@@ -16,13 +16,13 @@ dateProcessed=,dateOfTransaction,id,type,referenece,description,amount
 2024/05/06,2024050601,A/P,,"ASB KiwiSaver","A/P 011-060-749 RYAN kiwisaver",-100.00,Savings
 2024/05/13,2024051301,A/P,,"ASB KiwiSaver","A/P 011-060-749 RYAN kiwisaver",-100.00,Savings
 2024/05/20,2024052001,A/P,,"ASB KiwiSaver","A/P 011-060-749 RYAN kiwisaver",-100.00,Savings
-2024/05/20,2024052002,A/P,,"Kennedy Assoc","A/P Accountant Xero fees",-38.00,no category
+2024/05/20,2024052002,A/P,,"Kennedy Assoc","A/P Accountant Xero fees",-38.00,Business
 2024/05/21,2024052101,D/D,,"SPARK NZ TRADING","D/D 071108248444 240504240521",-40.19,no category
 2024/05/22,2024052201,EFTPOS,,"The Waterfront Bar & Kit Paraparaumu","EFTPOS",-128.00,no category
 2024/05/27,2024052701,A/P,,"ASB KiwiSaver","A/P 011-060-749 RYAN kiwisaver",-100.00,Savings
-2024/05/27,2024052702,D/C,,"D/C FROM REFRACTION DA","MOH MDM  APR 24",30912.00,no category
-2024/05/27,2024052703,D/C,,"D/C FROM REFRACTION DA","MOH MDM  MAR 24",29440.00,no category
-2024/05/27,2024052704,D/C,,"D/C FROM REFRACTION DA","MOH MDM  FEB 24",29440.00,no category
+2024/05/27,2024052702,D/C,,"D/C FROM REFRACTION DA","MOH MDM  APR 24",30912.00,Business
+2024/05/27,2024052703,D/C,,"D/C FROM REFRACTION DA","MOH MDM  MAR 24",29440.00,Business
+2024/05/27,2024052704,D/C,,"D/C FROM REFRACTION DA","MOH MDM  FEB 24",29440.00,Business
 2024/05/29,2024052901,TFR OUT,,"MB TRANSFER","TO 12-3140- 0131102-04 drawings",-22120.00,no category
 2024/05/29,2024052902,TFR OUT,,"MB TRANSFER","TO 12-3140- 0131102-00 drawings",-3000.00,no category
 2024/05/29,2024052903,TFR OUT,,"MB TRANSFER","TO 12-3157- 0148824-50 transfer",-60000.00,no category
@@ -32,7 +32,7 @@ dateProcessed=,dateOfTransaction,id,type,referenece,description,amount
 2024/06/10,2024061002,TFR OUT,,"FN TRANSFER","TO 12-3157- 0148824-00 transfer",-280.00,no category
 2024/06/17,2024061701,A/P,,"ASB KiwiSaver","A/P 011-060-749 RYAN kiwisaver",-100.00,Savings
 2024/06/19,2024061901,D/D,,"SPARK NZ TRADING","D/D 071108248444 240604240619",-40.19,no category
-2024/06/20,2024062001,A/P,,"Kennedy Assoc","A/P Accountant Xero fees",-38.00,no category
+2024/06/20,2024062001,A/P,,"Kennedy Assoc","A/P Accountant Xero fees",-38.00,Business
 2024/06/20,2024062002,EFTPOS,,"TatsushiWellington","EFTPOS",-25.50,no category
 2024/06/24,2024062401,A/P,,"ASB KiwiSaver","A/P 011-060-749 RYAN kiwisaver",-100.00,Savings
 2024/06/28,2024062801,TFR OUT,,"MB TRANSFER","TO 12-3140- 0131102-00 drawings",-2500.00,no category
@@ -41,7 +41,7 @@ dateProcessed=,dateOfTransaction,id,type,referenece,description,amount
 2024/07/08,2024070801,A/P,,"ASB KiwiSaver","A/P 011-060-749 RYAN kiwisaver",-100.00,Savings
 2024/07/15,2024071501,A/P,,"ASB KiwiSaver","A/P 011-060-749 RYAN kiwisaver",-100.00,Savings
 2024/07/19,2024071901,D/D,,"SPARK NZ TRADING","D/D 071108248444 240704240719",-40.39,no category
-2024/07/20,2024072001,A/P,,"Kennedy Assoc","A/P Accountant Xero fees",-38.00,no category
+2024/07/20,2024072001,A/P,,"Kennedy Assoc","A/P Accountant Xero fees",-38.00,Business
 2024/07/22,2024072201,A/P,,"ASB KiwiSaver","A/P 011-060-749 RYAN kiwisaver",-100.00,Savings
 2024/07/22,2024072202,EFTPOS,,"Burger Liquor Wellington","EFTPOS",-19.90,no category
 2024/07/29,2024072901,A/P,,"ASB KiwiSaver","A/P 011-060-749 RYAN kiwisaver",-100.00,Savings
@@ -51,15 +51,15 @@ dateProcessed=,dateOfTransaction,id,type,referenece,description,amount
 2024/08/12,2024081201,A/P,,"ASB KiwiSaver","A/P 011-060-749 RYAN kiwisaver",-100.00,Savings
 2024/08/13,2024081301,EFTPOS,,"MOJO CENTRALWELLINGTON","EFTPOS",-10.40,no category
 2024/08/19,2024081901,A/P,,"ASB KiwiSaver","A/P 011-060-749 RYAN kiwisaver",-100.00,Savings
-2024/08/20,2024082001,A/P,,"Kennedy Assoc","A/P Accountant Xero fees",-38.00,no category
+2024/08/20,2024082001,A/P,,"Kennedy Assoc","A/P Accountant Xero fees",-38.00,Business
 2024/08/20,2024082002,TFR IN,,"FN TRANSFER","EX 12-3157- 0148824-50 transfer",14000.00,no category
 2024/08/20,2024082003,TFR IN,,"FN TRANSFER","EX 12-3140- 0131102-04 funds",10000.00,no category
 2024/08/20,2024082004,BILLPAY,,"PMT TO IRD Payment","BILL PAYMENT TO INC31032025 IRD018975203 31 Mar 2025",-5142.00,no category
 2024/08/20,2024082005,BILLPAY,,"PMT TO IRD Payment","BILL PAYMENT TO INC31032025 IRD011060749 31 Mar 2025",-18500.00,no category
 2024/08/20,2024082006,D/D,,"SPARK NZ TRADING","D/D 071108248444 240804240820",-40.68,no category
-2024/08/25,2024082501,D/C,,"D/C FROM REFRACTION DA","MOH MDM  JULY 24",33856.00,no category
-2024/08/25,2024082502,D/C,,"D/C FROM REFRACTION DA","MOH MDM  JUNE 24",26496.00,no category
-2024/08/25,2024082503,D/C,,"D/C FROM REFRACTION DA","MOH MDM  MAY 24",33856.00,no category
+2024/08/25,2024082501,D/C,,"D/C FROM REFRACTION DA","MOH MDM  JULY 24",33856.00,Business
+2024/08/25,2024082502,D/C,,"D/C FROM REFRACTION DA","MOH MDM  JUNE 24",26496.00,Business
+2024/08/25,2024082503,D/C,,"D/C FROM REFRACTION DA","MOH MDM  MAY 24",33856.00,Business
 2024/08/26,2024082601,A/P,,"ASB KiwiSaver","A/P 011-060-749 RYAN kiwisaver",-100.00,Savings
 2024/08/29,2024082901,TFR OUT,,"FN TRANSFER","TO 12-3140- 0131102-04 drawings",-25000.00,no category
 2024/08/29,2024082902,TFR OUT,,"FN TRANSFER","TO 12-3140- 0131102-50 drawings",-10000.00,no category
@@ -72,7 +72,7 @@ dateProcessed=,dateOfTransaction,id,type,referenece,description,amount
 2024/09/18,2024091802,EFTPOS,,"ABLE CABSINVERCARGILL","EFTPOS",-25.00,no category
 2024/09/18,2024091803,EFTPOS,,"THE LANGLANDS HOTEL INVERCARGILL","EFTPOS",-12.70,no category
 2024/09/19,2024091901,D/D,,"SPARK NZ TRADING","D/D 071108248444 240904240919",-39.99,no category
-2024/09/20,2024092001,A/P,,"Kennedy Assoc","A/P Accountant Xero fees",-38.00,no category
+2024/09/20,2024092001,A/P,,"Kennedy Assoc","A/P Accountant Xero fees",-38.00,Business
 2024/09/23,2024092301,A/P,,"ASB KiwiSaver","A/P 011-060-749 RYAN kiwisaver",-100.00,Savings
 2024/09/30,2024093001,A/P,,"ASB KiwiSaver","A/P 011-060-749 RYAN kiwisaver",-100.00,Savings
 2024/10/05,2024100501,EFTPOS,,"Hey CoastieLimited Waikanae","EFTPOS",-82.30,no category
@@ -82,7 +82,7 @@ dateProcessed=,dateOfTransaction,id,type,referenece,description,amount
 2024/10/07,2024100704,TFR IN,,"MB TRANSFER","EX 12-3157- 0148824-50 transfer",5000.00,no category
 2024/10/07,2024100705,TFR OUT,,"MB TRANSFER","TO CARD 8920  drawings",-5000.00,no category
 2024/10/14,2024101401,A/P,,"ASB KiwiSaver","A/P 011-060-749 RYAN kiwisaver",-100.00,Savings
-2024/10/20,2024102001,A/P,,"Kennedy Assoc","A/P Accountant Xero fees",-38.00,no category
+2024/10/20,2024102001,A/P,,"Kennedy Assoc","A/P Accountant Xero fees",-38.00,Business
 2024/10/21,2024102101,A/P,,"ASB KiwiSaver","A/P 011-060-749 RYAN kiwisaver",-100.00,Savings
 2024/10/21,2024102102,D/D,,"SPARK NZ TRADING","D/D 071108248444 241004241021",-39.99,no category
 2024/10/28,2024102801,A/P,,"ASB KiwiSaver","A/P 011-060-749 RYAN kiwisaver",-100.00,Savings
@@ -94,7 +94,7 @@ dateProcessed=,dateOfTransaction,id,type,referenece,description,amount
 2024/11/18,2024111801,A/P,,"ASB KiwiSaver","A/P 011-060-749 RYAN kiwisaver",-100.00,Savings
 2024/11/18,2024111802,EFTPOS,,"WELLINGTON -SNAPPER WELLINGTNO","EFTPOS",-100.00,no category
 2024/11/19,2024111901,D/D,,"SPARK NZ TRADING","D/D 071108248444 241104241119",-41.46,no category
-2024/11/20,2024112001,A/P,,"Kennedy Assoc","A/P Accountant Xero fees",-38.00,no category
+2024/11/20,2024112001,A/P,,"Kennedy Assoc","A/P Accountant Xero fees",-38.00,Business
 2024/11/25,2024112501,A/P,,"ASB KiwiSaver","A/P 011-060-749 RYAN kiwisaver",-100.00,Savings
 2024/11/26,2024112601,D/C,,"D/C FROM I.R.D. 018-975-203","D1323885904# INC 31/03/2024",682.31,no category
 2024/11/27,2024112701,D/D,,"BizCover","D/D 633084702",-67.05,no category
@@ -122,7 +122,7 @@ dateProcessed=,dateOfTransaction,id,type,referenece,description,amount
 2024/06/30,2024063001,BILLPAY,,"PMT TO FC03-0732-0306101-00","BILL PAYMENT TO dogrego 034679 46110",-109.00,no category
 2024/07/02,2024070201,EFTPOS,,"MOJO CENTRALWELLINGTON","EFTPOS",-10.40,no category
 2024/07/02,2024070202,BILLPAY,,"PMT TO FC03-1502-0044526-00","BILL PAYMENT TO KaseyLiveLif sess24May inv0188",-172.50,no category
-2024/07/04,2024070401,EFTPOS,,"The Cut Hairdressing Otaki","EFTPOS",-100.00,no category
+2024/07/04,2024070401,EFTPOS,,"The Cut Hairdressing Otaki","EFTPOS",-100.00,Health
 2024/07/04,2024070402,EFTPOS,,"PARAPARAUMUTAXIS NEWMARKET","EFTPOS",-20.60,no category
 2024/07/04,2024070403,EFTPOS,,"Kapiti Dental Clinic Paraparaumu","EFTPOS",-79.00,no category
 2024/07/04,2024070404,EFTPOS,,"LIFE PHARMACY KAPITI CST PARAPARAUMU","EFTPOS",-31.99,no category
@@ -187,7 +187,7 @@ dateProcessed=,dateOfTransaction,id,type,referenece,description,amount
 2024/08/29,2024082902,D/D,,"Southern Cross Healt","D/D 000034824605 2040493",-96.06,no category
 2024/08/30,2024083001,A/P,,"Our savings","A/P savings",-500.00,no category
 2024/08/31,2024083101,EFTPOS,,"Composting Waikanae Paraparaumu","EFTPOS",-20.00,no category
-2024/09/02,2024090201,EFTPOS,,"The Cut Hairdressing Otaki","EFTPOS",-100.00,no category
+2024/09/02,2024090201,EFTPOS,,"The Cut Hairdressing Otaki","EFTPOS",-100.00,Health
 2024/09/03,2024090301,BILLPAY,,"PMT TO FC03-1502-0044526-00","BILL PAYMENT TO KaseyLiveLif sess26July inv0251",-172.50,no category
 2024/09/04,2024090401,BILLPAY,,"PMT TO FC01-1841-0077779-00","BILL PAYMENT TO Jill family sess4Sept",-350.00,no category
 2024/09/06,2024090601,A/P,,"Our savings","A/P savings",-500.00,no category
@@ -220,7 +220,7 @@ dateProcessed=,dateOfTransaction,id,type,referenece,description,amount
 2024/10/12,2024101201,TFR IN,,"MB TRANSFER","EX 12-3157- 0148824-50 drawings",10000.00,no category
 2024/10/12,2024101202,TFR OUT,,"MB TRANSFER","TO 12-3140- 0131102-04 funds",-100.00,no category
 2024/10/13,2024101301,BILLPAY,,"PMT TO FC38-9024-0101990-01","BILL PAYMENT TO outdoor chairs",-600.00,no category
-2024/10/15,2024101501,EFTPOS,,"The Cut Hairdressing Otaki","EFTPOS",-100.00,no category
+2024/10/15,2024101501,EFTPOS,,"The Cut Hairdressing Otaki","EFTPOS",-100.00,Health
 2024/10/16,2024101601,EFTPOS,,"Hartleys Hair Co. Paraparaumu","EFTPOS",-48.00,no category
 2024/10/18,2024101801,A/P,,"Our savings","A/P savings",-500.00,no category
 2024/10/18,2024101802,D/D,,"KCDC RATES","D/D KAPITI RATES 21 GAVIN RD 1528235800",-187.84,House

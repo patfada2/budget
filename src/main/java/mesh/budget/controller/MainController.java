@@ -54,7 +54,10 @@ public class MainController {
 	
 
 	public CategoryUIController catController;
-	public AddMatchController addMatchController;
+	public AddMatchController addDescriptionMatchController;
+	public AddMatchController addReferenceMatchController;
+
+	
 	
 	
 	public Scene catScene;
@@ -147,29 +150,39 @@ public class MainController {
 			TableColumn<BankStatementRow, String> dateOfTransaction = new TableColumn<BankStatementRow, String>("dateOfTransaction");
 			TableColumn<BankStatementRow, String> id = new TableColumn<BankStatementRow, String>("id");
 			TableColumn<BankStatementRow, String> type = new TableColumn<BankStatementRow, String>("type");
-			TableColumn<BankStatementRow, String> referenece = new TableColumn<BankStatementRow, String>("reference");
+			TableColumn<BankStatementRow, String> reference = new TableColumn<BankStatementRow, String>("reference");
 			TableColumn<BankStatementRow, String> description = new TableColumn<BankStatementRow, String>("description");
 			TableColumn<BankStatementRow, String> amount = new TableColumn<BankStatementRow, String>("amount");
 			TableColumn<BankStatementRow, String> category = new TableColumn<BankStatementRow, String>("category");
 
-			table1.getColumns().addAll(dateProcessed, dateOfTransaction, id, type, referenece, description, amount,
+			table1.getColumns().addAll(dateProcessed, dateOfTransaction, id, type, reference, description, amount,
 					category);
 
 			dateProcessed.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("dateProcessed"));
 			amount.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("amount"));
 			description.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("description"));
-			//description.setCellFactory(column -> addMatchController.show(" hello"));
+			reference.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("reference"));
+			
 			
 			description.setOnEditStart(event -> {
 			    String currentValue = event.getOldValue();
 			   
 			    BankStatementRow row = (BankStatementRow)event.getRowValue();
-			    addMatchController.show(currentValue,row);
+			    addDescriptionMatchController.show(currentValue,row);
 			});
+			
+			reference.setOnEditStart(event -> {
+			    String currentValue = event.getOldValue();
+			   
+			    BankStatementRow row = (BankStatementRow)event.getRowValue();
+			    addReferenceMatchController.show(currentValue,row);
+			});
+			
+			
 			dateOfTransaction
 					.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("dateOfTransaction"));
 			id.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("id"));
-			referenece.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("reference"));
+			reference.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("reference"));
 			type.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("type"));
 		
 			category.setCellValueFactory(new PropertyValueFactory<BankStatementRow,String>("category"));

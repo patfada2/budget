@@ -21,6 +21,7 @@ import javafx.scene.layout.StackPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import mesh.budget.controller.AddMatchController;
+import mesh.budget.controller.AddMatchController.MatchTypes;
 import mesh.budget.controller.CategoryUIController;
 import mesh.budget.controller.MainController;
 import mesh.budget.model.AppState;
@@ -38,7 +39,8 @@ public class App extends Application {
 	private static final Logger logger = LoggerFactory.getLogger(App.class);
 
 	private CategoryUIController catController;
-	private AddMatchController addMatchController;
+	private AddMatchController addReferenceMatchController;
+	private AddMatchController addDescriptionMatchController;
 	private AppState appStateModel = new AppState();
 	private Categories categories;
 	private Budget budget = new Budget();
@@ -51,7 +53,8 @@ public class App extends Application {
 		
 		//initialise views
 		categoryManagerSetup();
-		addMatchSetup();
+		addReferenceMatchController = addMatchSetup(MatchTypes.REFERNCE);
+		addDescriptionMatchController = addMatchSetup(MatchTypes.DESCRIPTION);
 		mainSetup(stage);
 		
 		
@@ -63,16 +66,16 @@ public class App extends Application {
 	
 	}
 
-	private void addMatchSetup() {
+	private AddMatchController addMatchSetup(MatchTypes matchType) {
 		URL location = getResourceURL("fxml/AddMatch.fxml");
 		Scene scene;
 		Stage stage;
 
 		Parent root;
 
+		AddMatchController matchController = new AddMatchController(budget,categories,matchType);
 		FXMLLoader addMatchLoader = new FXMLLoader(location);
-		addMatchController = new AddMatchController(budget,categories);
-		addMatchLoader.setController(addMatchController);
+		addMatchLoader.setController(matchController);
 
 		try {
 			root = addMatchLoader.load();
@@ -86,6 +89,7 @@ public class App extends Application {
 			e.printStackTrace();
 
 		}
+		return matchController;
 
 	}
 
@@ -105,10 +109,9 @@ public class App extends Application {
 			stage.setScene(scene);
 			stage.show();
 
-			// mainController.catScene = this.catScene;
-			// mainController.catStage = this.catStage;
 			mainController.catController = this.catController;
-			mainController.addMatchController = this.addMatchController;
+			mainController.addDescriptionMatchController = this.addDescriptionMatchController;
+			mainController.addReferenceMatchController = this.addReferenceMatchController;
 
 			logger.info(appStateModel.toString());
 

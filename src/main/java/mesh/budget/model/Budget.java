@@ -39,7 +39,7 @@ public class Budget {
 		}
 		return result;
 	}
-	
+
 	public void loadExports() {
 		List<File> exports = Utils.findExports(Utils.exportsDir);
 
@@ -74,30 +74,34 @@ public class Budget {
 		// ObservableList<BankStatementRow> budget;
 		logger.info("running matches!!");
 		Iterator<BankStatementRow> it = budget.iterator();
-		
+
 		while (it.hasNext()) {
 
 			BankStatementRow row = it.next();
 			if (row.getCategory().equals(Category.UNKNOWN)) {
-				String match = categories.findMatch(row.getDescription());
+				String match = categories.findReferenceMatch(row.getReference());
+				if (match.equals(Category.UNKNOWN)) {
+					match = categories.findDescriptionMatch(row.getDescription());
+				}
+
 				if (!match.equals(Category.UNKNOWN)) {
 					row.setCategory(match);
-					logger.info("match assigned");
-				}
-				else logger.info(row.getDescription() + " does not match any categories" );
+					logger.info("match assigned: " + match);
+				} else
+					logger.info(row.getDescription() + " does not match any categories");
 
 			}
 		}
 	}
 
 	private ObservableList<BankStatementRow> loadCsv(String filename) {
-		
-		logger.info("loading file " + filename); 
+
+		logger.info("loading file " + filename);
 		ObservableList<BankStatementRow> rows = FXCollections.observableArrayList();
 
 		try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
 			String line;
-			
+
 			BankStatementRow row;
 			// skip headers
 			do {
@@ -121,7 +125,7 @@ public class Budget {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} 
+		}
 		return rows;
 
 	}

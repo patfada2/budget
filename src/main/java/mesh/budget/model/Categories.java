@@ -29,22 +29,46 @@ public class Categories {
 	public void add(Category cat) {
 		categories.add(cat);
 	}
-	
-	
-	//return matching category, or UNKNOWN
-	public String findMatch(String description) {
+
+	// return matching category, or UNKNOWN
+	public String findDescriptionMatch(String description) {
 		String result = Category.UNKNOWN;
 		Iterator<Category> it = categories.iterator();
 		while (it.hasNext()) {
 			Category cat = it.next();
 			logger.info("looking in " + cat.getName());
-			result = cat.findMatch(description);
-			if (!result.equals(Category.UNKNOWN)){								
-				logger.info("match found for " + description);
+			result = cat.findDescriptionMatch(description);
+
+			if (result.equals(Category.UNKNOWN)) {
+				logger.info("no match found for description" + description + "in category " + cat.getName());
+			} else {
+
+				logger.info("match found for description" + description);
 				break;
-			} else logger.info("no match found for " + description + "in category " + cat.getName());
-		}		
-		return result;		
+			}
+		}
+		return result;
+
+	}
+	
+	public String findReferenceMatch(String reference) {
+		String result = Category.UNKNOWN;
+		Iterator<Category> it = categories.iterator();
+		while (it.hasNext()) {
+			Category cat = it.next();
+			logger.info("looking in " + cat.getName());
+			result = cat.findReferenceMatch(reference);
+
+			if (result.equals(Category.UNKNOWN)) {
+				logger.info("no match found for reference" + reference + "in category " + cat.getName());
+			} else {
+
+				logger.info("match found for reference" + reference);
+				break;
+			}
+		}
+		return result;
+
 	}
 
 	public Category getCategoryByName(String name) {
@@ -60,7 +84,7 @@ public class Categories {
 	}
 
 	public void loadFromFile(String filename) {
-		logger.info("loading category file from: "+filename );
+		logger.info("loading category file from: " + filename);
 
 		try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
 			String line;
@@ -81,14 +105,14 @@ public class Categories {
 		}
 
 	}
-	
+
 	public void saveToFile(String filename) {
-		logger.info("saving  category file to: "+filename );
-		String str;		
+		logger.info("saving  category file to: " + filename);
+		String str;
 		try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename))) {
-		
+
 			Iterator<Category> it = categories.iterator();
-			
+
 			while (it.hasNext()) {
 
 				writer.append(it.next().toCsv());
@@ -100,7 +124,6 @@ public class Categories {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
 
 	}
 
