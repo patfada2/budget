@@ -140,20 +140,7 @@ public class App extends Application {
 
 		categories = new Categories();
 		categories.loadFromFile(Utils.categoryFileName);
-		
-		/*
-		Category cat = new Category("Food");
-		List<String> matches = new ArrayList<String>();
-		matches.add("Southern Cross");
-		cat.setDescriptionMatches(matches);
-		
-		List<String> referenceMatches = new ArrayList<String>();
-		referenceMatches.add("XXXXX ");
-		cat.setRefernceMatches(referenceMatches);
-		
-		categories.add(cat);
-		*/
-		
+						
 		catController.setCategories(categories);
 		
 		categories.saveToFile(Utils.categoryFileName+"_xxx");
