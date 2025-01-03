@@ -1,6 +1,7 @@
 package mesh;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,6 +17,10 @@ import mesh.budget.model.Category;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 
 
 public class BudgetTest {
@@ -47,7 +52,7 @@ public class BudgetTest {
 		categories.getCategoryByName("Food").getDescriptionMatches().add("EFTPOS");
 		logger.info("row 0:"+row.getDescription());
 		
-		String match = categories.findMatch(row.getDescription());
+		String match = categories.findDescriptionMatch(row.getDescription());
 		
 		logger.info("done testing");
 		
@@ -118,9 +123,61 @@ public class BudgetTest {
 	@Test
 	public void categoryFile() {
 		Categories categories = new Categories();
-		categories.loadFromFile(Utils.categoryFileName);
-		logger.info("categories count" + categories.getCategories().size());
-		categories.saveToFile(Utils.categoryFileName);
+		Category cat = new Category("Food");
+		List<String> matches = new ArrayList<String>();
+		matches.add("Southern Cross");
+		cat.setDescriptionMatches(matches);
+		cat.setReferenceMatches(matches);
+		
+		categories.add(cat);
+	
+		
+		//Gson gson = new Gson();	
+		//logger.info(cat.toCsv());
+		logger.info(cat.toJson().toString());
+		
+	
+		//categories.saveToFile(Utils.categoryFileName);
+		
+		//categories.loadFromFile(Utils.categoryFileName);
+		//cat = categories.getCategoryByName("Food");
+		//assertNotNull(cat);
+		
+		
+		ObjectMapper objectMapper = new ObjectMapper();
+		
+		try {
+			String catAsString = objectMapper.writeValueAsString(cat);
+			
+			Category cat2 = objectMapper.readValue(catAsString, Category.class);	
+			String cat2AsString = objectMapper.writeValueAsString(cat2);
+			
+			assertEquals(catAsString, cat2AsString);
+			
+			logger.info(cat2.getName());
+			assertEquals(cat.getDescriptionMatches().get(0), cat2.getDescriptionMatches().get(0));
+			logger.info(cat2.getDescriptionMatches().get(0));
+			
+			
+			String s2 = cat.toJson();
+			logger.info("!!!!!!!!!!!!"+s2);
+			
+			Category cat3 = Category.createFromJson(s2);
+			logger.info(cat3.getDescriptionMatches().get(0));
+			
+			categories.saveToFile(Utils.categoryFileName+"_test");
+			categories.loadFromFile(Utils.categoryFileName+"_test");
+			
+			logger.info(categories.getCategories().get(0).getDescriptionMatches().get(0));
+			
+			
+			
+		} catch (JsonProcessingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		//List<Strinh> listCar = objectMapper.readValue(jsonCarArray, new TypeReference<List<Car>>(){});
 		
 	}
 	

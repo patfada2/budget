@@ -6,6 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -14,6 +15,8 @@ import java.util.TreeSet;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import mesh.budget.App;
 
@@ -50,7 +53,7 @@ public class Categories {
 		return result;
 
 	}
-	
+
 	public String findReferenceMatch(String reference) {
 		String result = Category.UNKNOWN;
 		Iterator<Category> it = categories.iterator();
@@ -90,9 +93,9 @@ public class Categories {
 			String line;
 
 			while ((line = br.readLine()) != null) {
-				Category c = new Category();
+
 				logger.debug("line =" + line);
-				categories.add(c.createFromCsv(line));
+				categories.add(Category.createFromJson(line));
 
 			}
 			br.close();
@@ -103,7 +106,6 @@ public class Categories {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
 	}
 
 	public void saveToFile(String filename) {
@@ -115,7 +117,7 @@ public class Categories {
 
 			while (it.hasNext()) {
 
-				writer.append(it.next().toCsv());
+				writer.append(it.next().toJson()+"\n");
 
 			}
 			writer.close();

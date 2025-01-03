@@ -7,6 +7,10 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import javafx.beans.property.SimpleStringProperty;
 import mesh.budget.App;
 
@@ -14,9 +18,15 @@ public class Category {
 	private static final Logger logger = LoggerFactory.getLogger(Category.class);
 	
 	public  static final String UNKNOWN="no category";
+	private static ObjectMapper mapper = new ObjectMapper();
 
 	private SimpleStringProperty name;
+    @JsonProperty
 	private List<String> descriptionMatches = new ArrayList<String>();
+	public void setReferenceMatches(List<String> referenceMatches) {
+		this.referenceMatches = referenceMatches;
+	}
+	@JsonProperty
 	private List<String> referenceMatches = new ArrayList<String>();
 	
 	public List<String> getRefernceMatches() {
@@ -43,6 +53,7 @@ public class Category {
 	
 	public Category() {
 		name = new SimpleStringProperty(Category.UNKNOWN);
+	   
 	}
 	
 	public Category(String name) {
@@ -64,6 +75,21 @@ public class Category {
 		
 	}
 	
+	
+	
+	public static Category createFromJson(String json) {
+		
+		Category cat=null;
+		try {
+			cat = mapper.readValue(json, Category.class);
+		} catch (JsonProcessingException e) {
+			logger.error("failed to create category from json:"+json);
+			e.printStackTrace();
+		}	
+	
+		return cat;
+		
+	}
 	public String toCsv() {
 		String result = this.name.get();
 		if (descriptionMatches.size()>0) {
@@ -114,6 +140,20 @@ public class Category {
 		}
 		return result;
 
+	}
+
+	public String toJson() {
+		// TODO Auto-generated method stub
+		String result = null;
+		
+		try {
+			result =  mapper.writeValueAsString(this);
+		} catch (JsonProcessingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return result;
+		
 	}
 
 }

@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -27,6 +28,7 @@ import mesh.budget.controller.MainController;
 import mesh.budget.model.AppState;
 import mesh.budget.model.Budget;
 import mesh.budget.model.Categories;
+import mesh.budget.model.Category;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
@@ -138,8 +140,24 @@ public class App extends Application {
 
 		categories = new Categories();
 		categories.loadFromFile(Utils.categoryFileName);
+		
+		/*
+		Category cat = new Category("Food");
+		List<String> matches = new ArrayList<String>();
+		matches.add("Southern Cross");
+		cat.setDescriptionMatches(matches);
+		
+		List<String> referenceMatches = new ArrayList<String>();
+		referenceMatches.add("XXXXX ");
+		cat.setRefernceMatches(referenceMatches);
+		
+		categories.add(cat);
+		*/
+		
 		catController.setCategories(categories);
-
+		
+		categories.saveToFile(Utils.categoryFileName+"_xxx");
+		
 		logger.info("catcontroler=" + catController.toString());
 		try {
 			root = catLoader.load();
