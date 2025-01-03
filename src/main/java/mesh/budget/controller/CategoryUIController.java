@@ -79,6 +79,9 @@ public class CategoryUIController {
 	
 	
 	@FXML
+	private Button deleteCatButton;
+	
+	@FXML
 	private TextField descriptionMatchText;
 	
 	@FXML
@@ -130,6 +133,16 @@ public class CategoryUIController {
 		loadCategories();
 	}
 	
+	
+	//deleteCatButton
+	
+	@FXML
+	public void ondeleteCatButton(ActionEvent event) {
+		logger.info("ondeleteCatButton");
+		
+		categories.delete(selectedCategory.getName());
+		loadCategories();
+	}
 	
 	@FXML
 	public void onAddDescriptionMatch(ActionEvent event) {

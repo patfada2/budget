@@ -129,4 +129,32 @@ public class Categories {
 
 	}
 
+	public int getIndexOfName(String name) {
+
+		int result = -1;
+		for (int i=0;  i < categories.size(); i++ ) {
+			if (categories.get(i).getName().equals(name)) {
+				result = i;
+				break;
+			}
+		}
+		
+		return result;
+	}
+	
+	public void delete(String name) {
+		int i = getIndexOfName(name);
+		if (i <0) {
+			logger.error("category " + name + "not found");
+		}
+		else {
+			ArrayList c = (ArrayList) categories;
+			c.remove(i);
+			
+		}
+		logger.info("removed category: " + name);
+		
+		
+	}
+
 }
