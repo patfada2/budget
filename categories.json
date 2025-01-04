@@ -1,3 +1,11 @@
-{"name":"Food","descriptionMatches":["Southern Cross"],"referenceMatches":["Southern Cross"]}
-{"name":"health","descriptionMatches":["xxx","bbbb"],"referenceMatches":["cccc"]}
-{"name":"helo","descriptionMatches":[],"referenceMatches":[]}
+{"name":"Food","descriptionMatches":["\"MY FOOD BAG Auckland\"","\"Dominos Estore PARAPARAUM dominos.co.nz\""],"referenceMatches":["\"MY FOOD BAG Auckland\"","\"Dominos Estore PARAPARAUM dominos.co.nz\""]}
+{"name":"health","descriptionMatches":[],"referenceMatches":["cccc","\"Southern Cross Healt\""]}
+{"name":"Helen","descriptionMatches":[],"referenceMatches":["\"The Cut Hairdressing Otaki\""]}
+{"name":"Pat","descriptionMatches":[],"referenceMatches":["\"Hartleys Hair Co. Paraparaumu\""]}
+{"name":"Transfer","descriptionMatches":["\"A/P savings\""],"referenceMatches":["\"A/P savings\"","\"MB TRANSFER\"","\"FN TRANSFER\""]}
+{"name":"Holidays and Entertainment","descriptionMatches":[],"referenceMatches":["\"Kapiti Kennels Paraparaumu\""," Waterfront Bar"]}
+{"name":"Interest and Bank Charges","descriptionMatches":[],"referenceMatches":["\"ASB BANK - INTEREST\""]}
+{"name":"Gifts","descriptionMatches":[],"referenceMatches":[]}
+{"name":"Phones and Internet","descriptionMatches":["AMAZON PRIME"],"referenceMatches":["\"SPARK NZ TRADING\"","AMAZON PRIME"]}
+{"name":"Insurance","descriptionMatches":["\"IAG NZ - ASB INSURANCE AUCKLAND\""],"referenceMatches":["\"IAG NZ - ASB INSURANCE AUCKLAND\""]}
+{"name":"no category","descriptionMatches":[],"referenceMatches":[]}

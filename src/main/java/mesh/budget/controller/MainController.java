@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 
+import org.controlsfx.control.table.TableFilter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -123,6 +124,8 @@ public class MainController {
 	@FXML
 	public void initialize() {
 		tableSetup();
+		
+		TableFilter filter = new TableFilter(table1);
 	
 		appStateModel.bankStatementRowChangedProperty().addListener((observable, oldValue, newValue) -> {
             // Only if completed

@@ -2,9 +2,17 @@
 budget
 
 Next:
-add reference to cat manager dialog
-add category/match delete
+
 close all windows
+
+rename category
+
+add a pie chart by category over month
+
+add a sub category?
+
+
+
 
 
 

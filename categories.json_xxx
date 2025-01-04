@@ -1,3 +1,9 @@
-{"name":"Food","descriptionMatches":["Southern Cross"],"referenceMatches":["Southern Cross"]}
-{"name":"health","descriptionMatches":["xxx","bbbb"],"referenceMatches":["cccc"]}
-{"name":"helo","descriptionMatches":[],"referenceMatches":[]}
+{"name":"Food","descriptionMatches":[],"referenceMatches":[]}
+{"name":"health","descriptionMatches":[],"referenceMatches":["cccc","\"Southern Cross Healt\""]}
+{"name":"Helen","descriptionMatches":[],"referenceMatches":["\"The Cut Hairdressing Otaki\""]}
+{"name":"Pat","descriptionMatches":[],"referenceMatches":["\"Hartleys Hair Co. Paraparaumu\""]}
+{"name":"Transfer","descriptionMatches":["\"A/P savings\""],"referenceMatches":["\"A/P savings\"","\"MB TRANSFER\""]}
+{"name":"Holidays and Entertainment","descriptionMatches":[],"referenceMatches":["\"Kapiti Kennels Paraparaumu\""," Waterfront Bar"]}
+{"name":"Interest and Bank Charges","descriptionMatches":[],"referenceMatches":["\"ASB BANK - INTEREST\""]}
+{"name":"Gifts","descriptionMatches":[],"referenceMatches":[]}
+{"name":"Phones and Internet","descriptionMatches":[],"referenceMatches":["\"SPARK NZ TRADING\""]}
