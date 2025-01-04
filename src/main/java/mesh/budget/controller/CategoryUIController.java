@@ -144,8 +144,7 @@ public class CategoryUIController {
 		loadCategories();
 	}
 	
-	
-	//deleteDescMatchButton
+
 	@FXML
 	public void onDeleteDescMatch(ActionEvent event) {
 		logger.info("ondeleteDescMatch");
@@ -153,6 +152,16 @@ public class CategoryUIController {
 		selectedCategory.deleteDescriptionMatch(match);		
 		loadMatches(selectedCategory) ;	
 	}
+	
+	//onDeleteRefMatch
+	@FXML
+	public void onDeleteRefMatch(ActionEvent event) {
+		logger.info("onDeleteRefMatch");
+		String match = referenceList.getSelectionModel().getSelectedItem();
+		selectedCategory.deleteReferenceMatch(match);		
+		loadMatches(selectedCategory) ;	
+	}
+	
 	
 	@FXML
 	public void onAddDescriptionMatch(ActionEvent event) {
@@ -212,6 +221,8 @@ public class CategoryUIController {
 	
 		Stage stage = (Stage) borderPane.getScene().getWindow();
 		loadCategories();
+		listCategory.getSelectionModel().select(0);
+		
 		newCatText.clear();
 		this.selectedRow = selectedRow;
 		stage.show();

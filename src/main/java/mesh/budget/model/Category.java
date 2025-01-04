@@ -56,13 +56,27 @@ public class Category {
 	}
 
 	public void deleteDescriptionMatch(String match) {
-		logger.info("deleting "+match);
+		logger.info("deleting desc match "+match);
 		for (int i = 0; i < descriptionMatches.size(); i++) {
 			logger.debug("comparing "+ descriptionMatches.get(i) );
 
 			if (descriptionMatches.get(i).equals(match)) {
 				descriptionMatches.remove(i);
-				logger.info("deleted " + match + " from category " + this.getName());
+				logger.info("deleted desc match" + match + " from category " + this.getName());
+				break;
+			}
+		}
+	}
+	//deleteReferenceMatch
+	
+	public void deleteReferenceMatch(String match) {
+		logger.info("deleting ref match "+match);
+		for (int i = 0; i < referenceMatches.size(); i++) {
+			logger.debug("comparing "+ referenceMatches.get(i) );
+
+			if (referenceMatches.get(i).equals(match)) {
+				referenceMatches.remove(i);
+				logger.info("deleted ref match" + match + " from category " + this.getName());
 				break;
 			}
 		}
