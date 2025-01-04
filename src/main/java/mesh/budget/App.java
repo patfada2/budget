@@ -137,6 +137,7 @@ public class App extends Application {
 		catController = new CategoryUIController();
 		catLoader.setController(catController);
 		catController.setAppStateModel(appStateModel);
+		catController.setBudget(budget);
 
 		categories = new Categories();
 		categories.loadFromFile(Utils.categoryFileName);

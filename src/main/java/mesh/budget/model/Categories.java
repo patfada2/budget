@@ -23,6 +23,7 @@ import mesh.budget.App;
 public class Categories {
 	private static final Logger logger = LoggerFactory.getLogger(Categories.class);
 
+
 	private List<Category> categories = new ArrayList<Category>();
 
 	public List<Category> getCategories() {
@@ -117,7 +118,7 @@ public class Categories {
 
 			while (it.hasNext()) {
 
-				writer.append(it.next().toJson()+"\n");
+				writer.append(it.next().toJson() + "\n");
 
 			}
 			writer.close();
@@ -132,29 +133,28 @@ public class Categories {
 	public int getIndexOfName(String name) {
 
 		int result = -1;
-		for (int i=0;  i < categories.size(); i++ ) {
+		for (int i = 0; i < categories.size(); i++) {
 			if (categories.get(i).getName().equals(name)) {
 				result = i;
 				break;
 			}
 		}
-		
+
 		return result;
 	}
-	
+
 	public void delete(String name) {
 		int i = getIndexOfName(name);
-		if (i <0) {
+		if (i < 0) {
 			logger.error("category " + name + "not found");
-		}
-		else {
+		} else {
 			ArrayList c = (ArrayList) categories;
 			c.remove(i);
-			
+
 		}
 		logger.info("removed category: " + name);
-		
-		
+
 	}
 
+	
 }

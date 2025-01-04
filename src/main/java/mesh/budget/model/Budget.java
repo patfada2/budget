@@ -129,6 +129,24 @@ public class Budget {
 		return rows;
 
 	}
+	
+	public void renameCategories(String oldName, String newName) {
+	
+		logger.info("renaming categories from " + oldName + " to " + newName);
+		
+		int count = 0;
+		Iterator<BankStatementRow> it = budget.iterator();
+
+		while (it.hasNext()) {
+
+			BankStatementRow row = it.next();
+			if (row.getCategory().equals(oldName)) {
+				row.setCategory(newName);
+				count++;
+			}
+		}
+		logger.info("renamed " + count + " categories from " + oldName + " to " + newName);
+	}
 
 	public void loadFromFile(String filename) {
 		budget = loadCsv(filename);
