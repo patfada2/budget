@@ -11,9 +11,6 @@
    <top>
       <Label text="Category Manager" BorderPane.alignment="CENTER" />
    </top>
-   <bottom>
-      <Button fx:id="okButton" mnemonicParsing="false" onAction="#onOKClick" text="OK" BorderPane.alignment="CENTER" />
-   </bottom>
    <center>
       <AnchorPane prefHeight="352.0" prefWidth="261.0" BorderPane.alignment="CENTER">
          <children>
@@ -25,6 +22,7 @@
                <children>
                   <ListView fx:id="descriptionList" layoutX="25.0" layoutY="31.0" prefHeight="266.0" prefWidth="166.0" />
                   <Label layoutX="23.0" layoutY="5.0" text="Description Matchers" />
+                  <Button fx:id="deleteDescMatchButton" layoutX="120.0" layoutY="349.0" mnemonicParsing="false" onAction="#onDeleteDescMatch" text="Delete" />
                   <Button fx:id="addMatchButton" layoutX="25.0" layoutY="349.0" mnemonicParsing="false" onAction="#onAddDescriptionMatch" text="Add" />
                   <TextField fx:id="descriptionMatchText" layoutX="27.0" layoutY="317.0" prefHeight="25.0" prefWidth="159.0" />
                </children>
@@ -37,7 +35,8 @@
                </children>
             </AnchorPane>
             <Label layoutX="429.0" layoutY="14.0" text="Reference Matchers" />
-            <Button fx:id="deleteCatButton" layoutX="165.0" layoutY="359.0" mnemonicParsing="false" onAction="#ondeleteCatButton" text="Delete" />
+            <Button fx:id="deleteCatButton" layoutX="165.0" layoutY="359.0" mnemonicParsing="false" onAction="#onDeleteCat" text="Delete" />
+            <Button fx:id="okButton" layoutX="304.0" layoutY="382.0" mnemonicParsing="false" onAction="#onOKClick" text="OK" />
          </children>
       </AnchorPane>
    </center>

@@ -137,11 +137,21 @@ public class CategoryUIController {
 	//deleteCatButton
 	
 	@FXML
-	public void ondeleteCatButton(ActionEvent event) {
-		logger.info("ondeleteCatButton");
+	public void onDeleteCat(ActionEvent event) {
+		logger.info("onDeleteCat");
 		
 		categories.delete(selectedCategory.getName());
 		loadCategories();
+	}
+	
+	
+	//deleteDescMatchButton
+	@FXML
+	public void onDeleteDescMatch(ActionEvent event) {
+		logger.info("ondeleteDescMatch");
+		String match = descriptionList.getSelectionModel().getSelectedItem();
+		selectedCategory.deleteDescriptionMatch(match);		
+		loadMatches(selectedCategory) ;	
 	}
 	
 	@FXML
@@ -161,6 +171,7 @@ public class CategoryUIController {
 	}
 	
 	private void loadMatches(Category cat) {
+		logger.info("loading matches for cat " + cat.getName());
 		descMatches.clear();
 		
 		List<String> descriptionMatches = cat.getDescriptionMatches();
