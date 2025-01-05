@@ -14,9 +14,9 @@
    <center>
       <AnchorPane prefHeight="352.0" prefWidth="261.0" BorderPane.alignment="CENTER">
          <children>
-            <ListView fx:id="listCategory" layoutX="26.0" layoutY="37.0" prefHeight="265.0" prefWidth="201.0" />
-            <Button fx:id="addButton" layoutX="26.0" layoutY="359.0" mnemonicParsing="false" onAction="#onAddCategoryClick" text="Add" />
-            <TextField fx:id="newCatText" layoutX="27.0" layoutY="325.0" prefHeight="25.0" prefWidth="190.0" />
+            <ListView fx:id="listCategory" layoutX="37.0" layoutY="40.0" prefHeight="265.0" prefWidth="196.0" />
+            <Button fx:id="addButton" layoutX="36.0" layoutY="359.0" mnemonicParsing="false" onAction="#onAddCategoryClick" text="Add" />
+            <TextField fx:id="newCatText" layoutX="39.0" layoutY="325.0" prefHeight="25.0" prefWidth="190.0" />
             <Label layoutX="26.0" layoutY="14.0" text="Categories" />
             <AnchorPane layoutX="231.0" layoutY="8.0" prefHeight="376.0" prefWidth="216.0">
                <children>

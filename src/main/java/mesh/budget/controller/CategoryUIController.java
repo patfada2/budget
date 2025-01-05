@@ -125,6 +125,7 @@ public class CategoryUIController {
 
 				budget.renameCategories(oldValue, newValue);
 				selectedCategory.setName(newValue);
+				loadCategories();
 			}
 
 		});

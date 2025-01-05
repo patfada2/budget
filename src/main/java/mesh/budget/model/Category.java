@@ -20,6 +20,26 @@ public class Category {
 	public static final String UNKNOWN = "no category";
 	private static ObjectMapper mapper = new ObjectMapper();
 
+	private double total;
+	
+	public double getTotal() {
+		return total;
+	}
+
+	public void setTotal(double total) {
+		this.total = total;
+	}
+	
+	public void addToTotal(String amount) {
+		try {
+			double d = Double.parseDouble(amount);
+			total+=d;
+		}catch (NumberFormatException e) {
+			logger.info(amount + " is not a valid number");
+		}
+		
+	}
+
 	private SimpleStringProperty name;
 	@JsonProperty
 	private List<String> descriptionMatches = new ArrayList<String>();

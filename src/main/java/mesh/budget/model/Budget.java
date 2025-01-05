@@ -19,6 +19,8 @@ import javafx.beans.property.SimpleSetProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.ObservableSet;
+import javafx.scene.chart.PieChart;
+import javafx.scene.chart.PieChart.Data;
 import mesh.budget.Utils;
 
 public class Budget {
@@ -129,11 +131,11 @@ public class Budget {
 		return rows;
 
 	}
-	
+
 	public void renameCategories(String oldName, String newName) {
-	
+
 		logger.info("renaming categories from " + oldName + " to " + newName);
-		
+
 		int count = 0;
 		Iterator<BankStatementRow> it = budget.iterator();
 
@@ -170,6 +172,30 @@ public class Budget {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+
+	}
+
+	public ObservableList<PieChart.Data> calcCategoryTotals(Categories cats) {
+
+		ObservableList<PieChart.Data> result = FXCollections.observableArrayList();
+
+
+		for (Category cat : cats.getCategories()) {
+			for (BankStatementRow row : this.budget) {
+				if (row.getCategory().equals(cat.getName())) {
+					cat.addToTotal(row.getAmount());
+				}
+
+			}
+		}
+
+		for (Category cat : cats.getCategories()) {
+			PieChart.Data d = new PieChart.Data(cat.getName(), cat.getTotal());
+			result.add(d);
+
+		}
+
+		return result;
 
 	}
 

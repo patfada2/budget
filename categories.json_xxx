@@ -1,11 +1,11 @@
-{"name":"Food","descriptionMatches":["\"MY FOOD BAG Auckland\"","\"Dominos Estore PARAPARAUM dominos.co.nz\""],"referenceMatches":["\"MY FOOD BAG Auckland\"","\"Dominos Estore PARAPARAUM dominos.co.nz\""]}
-{"name":"health","descriptionMatches":[],"referenceMatches":["cccc","\"Southern Cross Healt\""]}
-{"name":"Helen","descriptionMatches":[],"referenceMatches":["\"The Cut Hairdressing Otaki\""]}
-{"name":"Pat","descriptionMatches":[],"referenceMatches":["\"Hartleys Hair Co. Paraparaumu\""]}
-{"name":"Transfer","descriptionMatches":["\"A/P savings\""],"referenceMatches":["\"A/P savings\"","\"MB TRANSFER\"","\"FN TRANSFER\""]}
-{"name":"Holidays and Entertainment","descriptionMatches":[],"referenceMatches":["\"Kapiti Kennels Paraparaumu\""," Waterfront Bar"]}
-{"name":"Interest and Bank Charges","descriptionMatches":[],"referenceMatches":["\"ASB BANK - INTEREST\""]}
-{"name":"Gifts","descriptionMatches":[],"referenceMatches":[]}
-{"name":"Phones,Internet","descriptionMatches":["AMAZON PRIME"],"referenceMatches":["\"SPARK NZ TRADING\"","AMAZON PRIME"]}
-{"name":"Insurance","descriptionMatches":["\"IAG NZ - ASB INSURANCE AUCKLAND\""],"referenceMatches":["\"IAG NZ - ASB INSURANCE AUCKLAND\""]}
-{"name":"no category","descriptionMatches":[],"referenceMatches":[]}
+{"total":0.0,"name":"Food","descriptionMatches":["\"MY FOOD BAG Auckland\"","\"Dominos Estore PARAPARAUM dominos.co.nz\""],"referenceMatches":["\"MY FOOD BAG Auckland\"","\"Dominos Estore PARAPARAUM dominos.co.nz\""]}
+{"total":0.0,"name":"health","descriptionMatches":["\"BILL PAYMENT TO Counselling \""],"referenceMatches":["cccc","\"Southern Cross Healt\"","\"BILL PAYMENT TO Counselling \""]}
+{"total":0.0,"name":"Helen","descriptionMatches":[],"referenceMatches":["\"The Cut Hairdressing Otaki\""]}
+{"total":0.0,"name":"Pat","descriptionMatches":[],"referenceMatches":["\"Hartleys Hair Co. Paraparaumu\""]}
+{"total":0.0,"name":"Transfer","descriptionMatches":["\"A/P savings\""],"referenceMatches":["\"A/P savings\"","\"MB TRANSFER\"","\"FN TRANSFER\""]}
+{"total":0.0,"name":"Holidays and Entertainment","descriptionMatches":[],"referenceMatches":["\"Kapiti Kennels Paraparaumu\""," Waterfront Bar"]}
+{"total":0.0,"name":"Interest and Bank Charges","descriptionMatches":[],"referenceMatches":["\"ASB BANK - INTEREST\""]}
+{"total":0.0,"name":"Gifts","descriptionMatches":[],"referenceMatches":["\"Royal New Zealand Fo\""]}
+{"total":0.0,"name":"Phones,Internet","descriptionMatches":["AMAZON PRIME"],"referenceMatches":["\"SPARK NZ TRADING\"","AMAZON PRIME"]}
+{"total":0.0,"name":"Insurance","descriptionMatches":["\"IAG NZ - ASB INSURANCE AUCKLAND\""],"referenceMatches":["\"IAG NZ - ASB INSURANCE AUCKLAND\""]}
+{"total":0.0,"name":"no category","descriptionMatches":[],"referenceMatches":[]}

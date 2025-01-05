@@ -17,13 +17,16 @@ import javafx.collections.FXCollections;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.chart.PieChart;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.DialogPane;
+import javafx.scene.control.Tab;
 import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableColumn.CellDataFeatures;
@@ -73,6 +76,21 @@ public class MainController {
 
 	@FXML
 	private Alert alert;
+	
+	@FXML
+	private Tab charttab;
+	
+	@FXML 
+	private PieChart pieChart;
+	
+	@FXML
+	public void onSelectChartTab(Event event) {
+
+		pieChart.setData(budget.calcCategoryTotals(categories));	
+		
+	}
+	
+	
 
 	private boolean tableCreated = false;
 
