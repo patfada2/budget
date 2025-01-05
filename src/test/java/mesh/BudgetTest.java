@@ -58,6 +58,16 @@ public class BudgetTest {
 		
 		
 	}
+	
+	@Test
+	public void csvLoad() {
+		
+		String line = "2024/06/13,2024061302,D/C,,\"D/C FROM BRADLEY, J R\",\"beer mule fe  Dad\",60.00";
+		
+		BankStatementRow row =BankStatementRow.CreateFromCsv(line);
+		
+		logger.info(row.toString());
+	}
 		
 	@Test
 	public void matcher() {

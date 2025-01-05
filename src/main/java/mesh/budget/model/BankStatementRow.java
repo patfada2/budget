@@ -39,8 +39,10 @@ public class BankStatementRow  implements Comparable<BankStatementRow>{
 	        this.category = new SimpleStringProperty(category);
 	    }
 	
-	public static BankStatementRow CreateFromCsv(String line) {
-		String[] v = line.split(COMMA_DELIMITER);	
+	public static BankStatementRow CreateFromCsv(String line) {		
+		line = line.replace("\\,", "_");
+		//ignore commas between quotes
+		String[] v = line.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)", -1);
 		ArrayList<String> values = new ArrayList<String>();
 		for (int i=0; i< v.length; i++)
 		values.add(v[i]);	

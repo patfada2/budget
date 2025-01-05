@@ -107,8 +107,7 @@ public class Budget {
 			BankStatementRow row;
 			// skip headers
 			do {
-				line = br.readLine();
-				logger.info("!!@@## " + line);
+				line = br.readLine();				
 				if (line == null)
 					break;
 			} while (!line.startsWith("202"));
@@ -118,7 +117,7 @@ public class Budget {
 
 			while ((line = br.readLine()) != null) {
 				row = BankStatementRow.CreateFromCsv(line);
-				logger.info(row.toString());
+				logger.debug(row.toString());
 				rows.add(row);
 			}
 		} catch (FileNotFoundException e) {
