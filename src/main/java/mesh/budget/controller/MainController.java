@@ -323,10 +323,16 @@ public class MainController {
 	
 	public MainController(AppState appStateModel,Categories categories, Budget budget)
 	{
+		logger.info("constructing main controler="+this.toString());
+		
 		this.appStateModel=appStateModel;
 		this.categories = categories;
+		
 		this.budget = budget;
-		logger.info("constructing main controler="+this.toString());
+		
+		//to do: recalc when categories edited
+		budget.calcCategoryTotals(categories);
+		
 		
 	}
 }

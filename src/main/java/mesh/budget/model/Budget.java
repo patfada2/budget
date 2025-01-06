@@ -175,22 +175,32 @@ public class Budget {
 	}
 
 	public ObservableList<PieChart.Data> calcCategoryTotals(Categories cats) {
+		logger.info("calculating category totals");
 
 		ObservableList<PieChart.Data> result = FXCollections.observableArrayList();
-
-
+		//clear totals
+		for (Category cat : cats.getCategories()){
+			cat.setTotal(0);
+		}
+		//calc totals
 		for (Category cat : cats.getCategories()) {
 			for (BankStatementRow row : this.budget) {
 				if (row.getCategory().equals(cat.getName())) {
 					cat.addToTotal(row.getAmount());
+				}
+				if (row.getCategory().equals("Helen")&&cat.getName().equals("Helen")) {
+					logger.debug("!!!!added " + row.getAmount() + "to total, now " + cat.getTotal() );
 				}
 
 			}
 		}
 
 		for (Category cat : cats.getCategories()) {
-			PieChart.Data d = new PieChart.Data(cat.getName(), cat.getTotal());
-			result.add(d);
+			if (!cat.getName().equals("Transfer")) {
+				PieChart.Data d = new PieChart.Data(cat.getName(), cat.getTotal());
+				result.add(d);
+				logger.info("category " + cat.getName() + " total " + cat.getTotal());
+			}
 
 		}
 

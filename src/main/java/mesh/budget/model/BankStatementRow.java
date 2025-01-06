@@ -23,7 +23,9 @@ public class BankStatementRow  implements Comparable<BankStatementRow>{
 	private SimpleStringProperty  amount;
 	private SimpleStringProperty  category;
 	
-	
+	public enum RowType {
+		CREDIT, DEBIT
+	};
 
 	
 	public BankStatementRow(String dateProcessed, String dateOfTransaction, String id, String type, 
@@ -37,6 +39,17 @@ public class BankStatementRow  implements Comparable<BankStatementRow>{
 	        this.description = new SimpleStringProperty(description);
 	        this.amount = new SimpleStringProperty(amount);
 	        this.category = new SimpleStringProperty(category);
+	        
+	        //negate amount if it is  a debit
+	        /*
+	        if (typeToRowType(this.getType()).equals(RowType.DEBIT)) {
+	        	
+	        	double val = Double.parseDouble(this.getAmount());
+	        	val = val * (-1);
+	        	this.amount.set(String.valueOf(val));
+	        	
+	        }
+	        */
 	    }
 	
 	public static BankStatementRow CreateFromCsv(String line) {		
@@ -54,6 +67,15 @@ public class BankStatementRow  implements Comparable<BankStatementRow>{
 		return row;
 
 	}
+	
+	private RowType typeToRowType(String typrStr) {
+		RowType result;
+		if (typrStr.contentEquals("DEBIT")) {
+			result = RowType.DEBIT;
+		}
+		else result= RowType.CREDIT;
+		return result;
+	}
 
 	private static String COMMA_DELIMITER = ",";
 	
@@ -64,7 +86,7 @@ public class BankStatementRow  implements Comparable<BankStatementRow>{
 	}
 
 	public static String cSVHeader() {
-		return "dateProcessed=,dateOfTransaction,id,type,referenece,description,amount\n";
+		return "dateProcessed=,dateOfTransaction,id,type,referenece,description,amount,category\n";
 	}
 	 
 	public String toCsv() {

@@ -179,7 +179,7 @@ public class Category {
 	public String findReferenceMatch(String reference) {
 		String result = Category.UNKNOWN;
 		Iterator<String> it = referenceMatches.iterator();
-		logger.info(this.getName() + "looking for reference matches for " + reference + " in"
+		logger.info(this.getName() + " looking for reference matches for " + reference + " in"
 				+ referenceMatches.toString());
 		while (it.hasNext()) {
 			String match = it.next();
