@@ -33,6 +33,7 @@ import javafx.scene.control.TableColumn.CellDataFeatures;
 import javafx.scene.control.TableColumn.CellEditEvent;
 import javafx.scene.control.TableRow;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.input.ContextMenuEvent;
@@ -82,6 +83,9 @@ public class MainController {
 	
 	@FXML 
 	private PieChart pieChart;
+	
+	@FXML 
+	private TextArea alertsTextArea;
 	
 	@FXML
 	public void onSelectChartTab(Event event) {
@@ -334,5 +338,10 @@ public class MainController {
 		budget.calcCategoryTotals(categories);
 		
 		
+	}
+	
+	public void alert(String msg) {
+		 alertsTextArea.setText(msg);
+	
 	}
 }

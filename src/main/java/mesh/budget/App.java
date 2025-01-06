@@ -59,7 +59,7 @@ public class App extends Application {
 		addDescriptionMatchController = addMatchSetup(MatchTypes.DESCRIPTION);
 		mainSetup(stage);
 		
-		
+	
 
 	}
 
@@ -116,6 +116,7 @@ public class App extends Application {
 			mainController.addReferenceMatchController = this.addReferenceMatchController;
 
 			logger.info(appStateModel.toString());
+			mainController.alert("loaded " + budget.getBudget().size() +" rows");
 
 
 		} catch (IOException e) {
