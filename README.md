@@ -3,9 +3,7 @@ budget
 
 Next:
 
-close all windows
-
-rename category
+add atble view to chart tab : cat,count
 
 add a pie chart by category over month
 - budget should maintain categroy totals
@@ -20,7 +18,7 @@ accessible: module javafx.controls does not "opens javafx.scene.control.skin" to
 VM arg --add-opens?
 
 
-business actegory not dispalying in cat manager
+piechart colours
 
 
 

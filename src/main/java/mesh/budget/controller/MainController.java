@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.util.Arrays;
 import java.util.List;
 
 import org.controlsfx.control.table.TableFilter;
@@ -20,7 +21,11 @@ import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.chart.BarChart;
+import javafx.scene.chart.CategoryAxis;
+import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.PieChart;
+import javafx.scene.chart.XYChart;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
@@ -38,6 +43,8 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.input.ContextMenuEvent;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.FlowPane;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 import mesh.budget.Utils;
@@ -50,21 +57,16 @@ import mesh.budget.model.Category;
 public class MainController {
 
 	private static final Logger logger = LoggerFactory.getLogger(MainController.class);
-	
-	
-	//Models
+
+	// Models
 	private AppState appStateModel;
 	private Categories categories;
 	private Budget budget;
-	
 
 	public CategoryUIController catController;
 	public AddMatchController addDescriptionMatchController;
 	public AddMatchController addReferenceMatchController;
 
-	
-	
-	
 	public Scene catScene;
 	public Stage catStage;
 
@@ -77,24 +79,94 @@ public class MainController {
 
 	@FXML
 	private Alert alert;
-	
+
 	@FXML
 	private Tab charttab;
-	
-	@FXML 
+
+	@FXML
 	private PieChart pieChart;
-	
-	@FXML 
+
+	@FXML
+	private BarChart barChart;
+
+	@FXML
+	private Button pieButton1;
+
+	@FXML
 	private TextArea alertsTextArea;
 	
 	@FXML
+	private FlowPane chartPane;
+
+	@FXML
 	public void onSelectChartTab(Event event) {
 
-		pieChart.setData(budget.calcCategoryTotals(categories));	
-		
+		logger.info("onSelectChartTab");
+
 	}
 	
+
+	@FXML
+	public void onChartButton1Click(ActionEvent event) {
+
+		logger.info("onpieButton1Click");
+		
+		ObservableList<PieChart.Data> pieChartData = budget.calcCategoryTotals(categories);
+		
+		//applyCustomColorSequence(pieChartData, "aqua", "bisque", "chocolate", "coral", "crimson");
+
+		showBarChart(pieChartDatetoBarChartData(pieChartData));
+
+	}
+
+	private XYChart.Series<String, Number> pieChartDatetoBarChartData(ObservableList<PieChart.Data> pieChartData) {
+
+		XYChart.Series<String, Number> result = new XYChart.Series<>();
+		pieChartData.forEach(pcd -> {
+
+			result.getData().add(new XYChart.Data<String, Number>(pcd.getName(), pcd.getPieValue()));
+			
+		});
+
+		return result;
+
+	}
+
+	private void showBarChart(XYChart.Series<String, Number> barchartData) {
+		
+		//define x axis
+		
+		CategoryAxis xAxis = new CategoryAxis();
+		xAxis.setLabel("category");
+		
+		barchartData.getData().forEach(bcd -> {
+			xAxis.getCategories().add(bcd.getXValue());
+			
+		});
+		
+		//define y axis
+		NumberAxis yAxis = new NumberAxis();
+		yAxis.setLabel("amount");
+		
+		barChart = new BarChart<String, Number>(xAxis, yAxis);  
+		
+		chartPane.getChildren().add(barChart);
+					
+
+		barChart.getData().add(barchartData);
+		
+		
 	
+
+	}		
+
+	private void applyCustomColorSequence(ObservableList<PieChart.Data> pieChartData, String... pieColors) {
+		int i = 0;
+		for (PieChart.Data data : pieChartData) {
+			data.getNode().setStyle("-fx-pie-color: " + pieColors[i % pieColors.length] + ";");
+			i++;
+		}
+	}
 
 	private boolean tableCreated = false;
 
@@ -102,37 +174,34 @@ public class MainController {
 	public void Table1Context(ContextMenuEvent event) {
 		// System.out.println("context");
 		logger.info("context");
-		
+
 	}
-	
+
 	@FXML
 	public void loadExports(ActionEvent event) {
 
 		logger.info("loading exports");
 		budget.loadExports();
 	}
-	
+
 	@FXML
 	public void save(ActionEvent event) {
 		budget.saveToFile(Utils.budgetFileName);
-		categories.saveToFile(Utils.categoryFileName);		
+		categories.saveToFile(Utils.categoryFileName);
 	}
-	
+
 	@FXML
 	public void showCategoryManager(ActionEvent event) {
 		logger.info("showing Category Manger");
 		showCategoryManger();
 	}
-	
+
 	@FXML
 	public void runMatches(ActionEvent event) {
 		logger.info("running matches");
 		budget.runMatches(categories);
 		table1.refresh();
 	}
-	
-	
-	
 
 	@FXML
 	public void HelloButtonClicked(ActionEvent event) {
@@ -142,41 +211,39 @@ public class MainController {
 
 	}
 
-
 	@FXML
 	public void initialize() {
 		tableSetup();
 		
-		TableFilter filter = new TableFilter(table1);
-	
 		appStateModel.bankStatementRowChangedProperty().addListener((observable, oldValue, newValue) -> {
-            // Only if completed
-          logger.info("bankStatementRow changed");
-          table1.refresh();
-          appStateModel.setBankStatementRowChanged(false);
-        });
-			
+			// Only if completed
+			logger.info("bankStatementRow changed");
+			table1.refresh();
+			appStateModel.setBankStatementRowChanged(false);
+		});
+
 		budget.getBudget().addListener(new ListChangeListener<BankStatementRow>() {
-			  @Override
-			  public void onChanged(Change<? extends BankStatementRow> c) {
-				  table1.refresh();
-				  logger.info("budget changed");
-			  }
-			});
+			@Override
+			public void onChanged(Change<? extends BankStatementRow> c) {
+				table1.refresh();
+				logger.info("budget changed");
+			}
+		});
 
 	}
-
-
 
 	private void tableSetup() {
 		if (!tableCreated) {
 
-			TableColumn<BankStatementRow, String> dateProcessed = new TableColumn<BankStatementRow, String>("dateProcessed");
-			TableColumn<BankStatementRow, String> dateOfTransaction = new TableColumn<BankStatementRow, String>("dateOfTransaction");
+			TableColumn<BankStatementRow, String> dateProcessed = new TableColumn<BankStatementRow, String>(
+					"dateProcessed");
+			TableColumn<BankStatementRow, String> dateOfTransaction = new TableColumn<BankStatementRow, String>(
+					"dateOfTransaction");
 			TableColumn<BankStatementRow, String> id = new TableColumn<BankStatementRow, String>("id");
 			TableColumn<BankStatementRow, String> type = new TableColumn<BankStatementRow, String>("type");
 			TableColumn<BankStatementRow, String> reference = new TableColumn<BankStatementRow, String>("reference");
-			TableColumn<BankStatementRow, String> description = new TableColumn<BankStatementRow, String>("description");
+			TableColumn<BankStatementRow, String> description = new TableColumn<BankStatementRow, String>(
+					"description");
 			TableColumn<BankStatementRow, String> amount = new TableColumn<BankStatementRow, String>("amount");
 			TableColumn<BankStatementRow, String> category = new TableColumn<BankStatementRow, String>("category");
 
@@ -187,115 +254,106 @@ public class MainController {
 			amount.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("amount"));
 			description.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("description"));
 			reference.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("reference"));
-			
-			
+
 			description.setOnEditStart(event -> {
-			    String currentValue = event.getOldValue();
-			   
-			    BankStatementRow row = (BankStatementRow)event.getRowValue();
-			    addDescriptionMatchController.show(currentValue,row);
+				String currentValue = event.getOldValue();
+
+				BankStatementRow row = (BankStatementRow) event.getRowValue();
+				addDescriptionMatchController.show(currentValue, row);
 			});
-			
+
 			reference.setOnEditStart(event -> {
-			    String currentValue = event.getOldValue();
-			   
-			    BankStatementRow row = (BankStatementRow)event.getRowValue();
-			    addReferenceMatchController.show(currentValue,row);
+				String currentValue = event.getOldValue();
+
+				BankStatementRow row = (BankStatementRow) event.getRowValue();
+				addReferenceMatchController.show(currentValue, row);
 			});
-			
-			
+
 			dateOfTransaction
 					.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("dateOfTransaction"));
 			id.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("id"));
 			reference.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("reference"));
 			type.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("type"));
-		
-			category.setCellValueFactory(new PropertyValueFactory<BankStatementRow,String>("category"));
+
+			category.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("category"));
 			category.setCellFactory(column -> new TableCel_Edit());
-			
-			
-			
-			
-			};
-						
 
-			tableCreated = true;
-			table1.setItems(budget.getBudget());
-			table1.setEditable(true);
-			
 		}
-	
-	
-	
-	 private class TableCel_Edit extends TableCell<BankStatementRow, String> {
+		;
 
-	        ChoiceBox<String> categoryBox = new ChoiceBox<>();
+		tableCreated = true;
+		table1.setItems(budget.getBudget());
+		table1.setEditable(true);
 
-	        public TableCel_Edit() {
-	        	
-	        	for (Category c : categories.getCategories()) {
-	        		categoryBox.getItems().add(c.getName());
-	    		}
-	        	
-	        	categoryBox.getSelectionModel().selectedIndexProperty().addListener((obs, oldValue, newValue) -> {
+	}
 
-	                String value = categoryBox.getItems().get(newValue.intValue());
-	                processEdit(value);
-	            });
+	private class TableCel_Edit extends TableCell<BankStatementRow, String> {
 
-	        }
+		ChoiceBox<String> categoryBox = new ChoiceBox<>();
 
-	        private void processEdit(String value) {
-	            commitEdit(value);
-	        }
+		public TableCel_Edit() {
 
-	        @Override
-	        public void cancelEdit() {
-	            super.cancelEdit();
-	            setText(getItem());
-	            setGraphic(null);
-	        }
+			for (Category c : categories.getCategories()) {
+				categoryBox.getItems().add(c.getName());
+			}
 
-	        @Override
-	        public void commitEdit(String value) {
-	            super.commitEdit(value);
-	            TableRow<BankStatementRow> row = this.getTableRow();
-	            row.getItem().setCategory(value);	           
-	            setGraphic(null);
-	            table1.refresh();
-	            
-	        }
+			categoryBox.getSelectionModel().selectedIndexProperty().addListener((obs, oldValue, newValue) -> {
 
-	        @Override
-	        public void startEdit() {
-	            super.startEdit();
-	            String value = getItem();
-	            if (value != null) {
-	                setGraphic(categoryBox);
-	                setText(null);
-	            }
-	        }
+				String value = categoryBox.getItems().get(newValue.intValue());
+				processEdit(value);
+			});
 
-	        @Override
-	        protected void updateItem(String item, boolean empty) {
-	            super.updateItem(item, empty);
-	            if (item == null || empty) {
-	                setText(null);
+		}
 
-	            } else {
-	                setText(item);
-	            }
-	        }
+		private void processEdit(String value) {
+			commitEdit(value);
+		}
 
-	    }
+		@Override
+		public void cancelEdit() {
+			super.cancelEdit();
+			setText(getItem());
+			setGraphic(null);
+		}
 
-	
+		@Override
+		public void commitEdit(String value) {
+			super.commitEdit(value);
+			TableRow<BankStatementRow> row = this.getTableRow();
+			row.getItem().setCategory(value);
+			setGraphic(null);
+			table1.refresh();
+
+		}
+
+		@Override
+		public void startEdit() {
+			super.startEdit();
+			String value = getItem();
+			if (value != null) {
+				setGraphic(categoryBox);
+				setText(null);
+			}
+		}
+
+		@Override
+		protected void updateItem(String item, boolean empty) {
+			super.updateItem(item, empty);
+			if (item == null || empty) {
+				setText(null);
+
+			} else {
+				setText(item);
+			}
+		}
+
+	}
+
 	private void showCategoryManger() {
 
-		
 		BankStatementRow r = (BankStatementRow) table1.getSelectionModel().getSelectedItem();
 
-		//catController.setSelectedRow(r);
+		// catController.setSelectedRow(r);
 
 		if (r == null) {
 			logger.error("selected row is null");
@@ -324,24 +382,22 @@ public class MainController {
 
 		return url;
 	}
-	
-	public MainController(AppState appStateModel,Categories categories, Budget budget)
-	{
-		logger.info("constructing main controler="+this.toString());
-		
-		this.appStateModel=appStateModel;
+
+	public MainController(AppState appStateModel, Categories categories, Budget budget) {
+		logger.info("constructing main controler=" + this.toString());
+
+		this.appStateModel = appStateModel;
 		this.categories = categories;
-		
+
 		this.budget = budget;
-		
-		//to do: recalc when categories edited
+
+		// to do: recalc when categories edited
 		budget.calcCategoryTotals(categories);
-		
-		
+
 	}
-	
+
 	public void alert(String msg) {
-		 alertsTextArea.setText(msg);
-	
+		alertsTextArea.setText(msg);
+
 	}
 }
