@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.time.Month;
 import java.util.Arrays;
 import java.util.List;
 
@@ -29,7 +30,9 @@ import javafx.scene.chart.XYChart;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.DialogPane;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TableCell;
@@ -97,6 +100,11 @@ public class MainController {
 	
 	@FXML
 	private FlowPane chartPane;
+	
+	@FXML
+	private ComboBox<String> monthPicker;
+	
+	private Month selectedMonth;
 
 	@FXML
 	public void onSelectChartTab(Event event) {
@@ -105,18 +113,30 @@ public class MainController {
 
 	}
 	
+	
+	@FXML
+	public void onMonthSelected(Event event) {
+ 
+		selectedMonth = Month.valueOf( monthPicker.getValue());
+		
+
+	}
 
 	@FXML
 	public void onChartButton1Click(ActionEvent event) {
 
 		logger.info("onpieButton1Click");
 		
-		ObservableList<PieChart.Data> pieChartData = budget.calcCategoryTotals(categories);
+		//ObservableList<PieChart.Data> pieChartData = budget.calcCategoryTotals(categories);
 		
 		//applyCustomColorSequence(pieChartData, "aqua", "bisque", "chocolate", "coral", "crimson");
 
-		showBarChart(pieChartDatetoBarChartData(pieChartData));
-
+		//showBarChart(pieChartDatetoBarChartData(pieChartData));
+		
+		 //XYChart.Series<String, Number> barChartData = budget.calcCategoryTotalsForMonth(categories, Month.JULY);
+		
+		XYChart.Series<String, Number> barChartData  = budget.calcCategoryTotalsForMonth(categories, selectedMonth);
+		showBarChart(barChartData);
 	}
 
 	private XYChart.Series<String, Number> pieChartDatetoBarChartData(ObservableList<PieChart.Data> pieChartData) {
@@ -214,7 +234,7 @@ public class MainController {
 	@FXML
 	public void initialize() {
 		tableSetup();
-		
+		chartSetup();
 		appStateModel.bankStatementRowChangedProperty().addListener((observable, oldValue, newValue) -> {
 			// Only if completed
 			logger.info("bankStatementRow changed");
@@ -229,7 +249,18 @@ public class MainController {
 				logger.info("budget changed");
 			}
 		});
+		
+		
 
+	}
+	
+	private void chartSetup() {
+		
+		for (Month month : Month.values()) { 
+		    System.out.println(month); 
+		    monthPicker.getItems().add(month.toString());
+		}
+		
 	}
 
 	private void tableSetup() {

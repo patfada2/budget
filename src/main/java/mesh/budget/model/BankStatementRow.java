@@ -1,6 +1,10 @@
 package mesh.budget.model;
 
+import java.time.LocalDate;
+import java.time.Month;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Locale;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -27,6 +31,12 @@ public class BankStatementRow  implements Comparable<BankStatementRow>{
 		CREDIT, DEBIT
 	};
 
+	public Month  getMonth() {
+		String dateStr = this.getDateProcessed();		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd",Locale.ENGLISH);
+		LocalDate date = LocalDate.parse(dateStr, formatter);
+	
+		return date.getMonth();
+	}
 	
 	public BankStatementRow(String dateProcessed, String dateOfTransaction, String id, String type, 
 			 String reference, String description, String amount, String category) {

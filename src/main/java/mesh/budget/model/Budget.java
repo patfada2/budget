@@ -7,6 +7,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.time.Month;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
@@ -20,6 +21,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.ObservableSet;
 import javafx.scene.chart.PieChart;
+import javafx.scene.chart.XYChart;
 import javafx.scene.chart.PieChart.Data;
 import mesh.budget.Utils;
 
@@ -206,6 +208,36 @@ public class Budget {
 
 		return result;
 
+	}
+	
+
+	public XYChart.Series<String, Number>  calcCategoryTotalsForMonth(Categories cats,  Month month) {
+		//clear totals
+				for (Category cat : cats.getCategories()){
+					cat.setTotal(0);
+				}
+	for (Category cat : cats.getCategories()) {
+		for (BankStatementRow row : this.budget) {
+			if (row.getCategory().equals(cat.getName()) && row.getMonth().equals(month)) {
+				cat.addToTotal(row.getAmount());
+			}
+			
+		}
+	}
+	
+
+	XYChart.Series<String, Number> result = new XYChart.Series<>();
+
+	
+	for (Category cat : cats.getCategories()) {
+		if (!cat.getName().equals("Transfer")) {			
+			result.getData().add(new XYChart.Data<String, Number>(cat.getName(), cat.getTotal()));
+			logger.info("category " + cat.getName() + " total " + cat.getTotal());
+		}
+
+	}
+	
+	return result;
 	}
 
 }

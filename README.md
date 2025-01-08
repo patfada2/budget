@@ -5,9 +5,10 @@ Next:
 
 add atble view to chart tab : cat,count
 
-add a pie chart by category over month
-- budget should maintain categroy totals
-- row.setCategory shoudl remove amount from old cat and add to new cat
+add a bar  chart by category over month
+- add a mothh pciker - show series per seelcted month
+
+
 
 add a sub category?
 
