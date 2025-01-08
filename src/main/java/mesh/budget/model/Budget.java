@@ -109,7 +109,7 @@ public class Budget {
 			BankStatementRow row;
 			// skip headers
 			do {
-				line = br.readLine();				
+				line = br.readLine();
 				if (line == null)
 					break;
 			} while (!line.startsWith("202"));
@@ -180,18 +180,18 @@ public class Budget {
 		logger.info("calculating category totals");
 
 		ObservableList<PieChart.Data> result = FXCollections.observableArrayList();
-		//clear totals
-		for (Category cat : cats.getCategories()){
+		// clear totals
+		for (Category cat : cats.getCategories()) {
 			cat.setTotal(0);
 		}
-		//calc totals
+		// calc totals
 		for (Category cat : cats.getCategories()) {
 			for (BankStatementRow row : this.budget) {
 				if (row.getCategory().equals(cat.getName())) {
 					cat.addToTotal(row.getAmount());
 				}
-				if (row.getCategory().equals("Helen")&&cat.getName().equals("Helen")) {
-					logger.debug("!!!!added " + row.getAmount() + "to total, now " + cat.getTotal() );
+				if (row.getCategory().equals("Helen") && cat.getName().equals("Helen")) {
+					logger.debug("!!!!added " + row.getAmount() + "to total, now " + cat.getTotal());
 				}
 
 			}
@@ -209,35 +209,33 @@ public class Budget {
 		return result;
 
 	}
-	
 
-	public XYChart.Series<String, Number>  calcCategoryTotalsForMonth(Categories cats,  Month month) {
-		//clear totals
-				for (Category cat : cats.getCategories()){
-					cat.setTotal(0);
+	public XYChart.Series<String, Number> calcCategoryTotalsForMonth(Categories cats, Month month) {
+		logger.info("calculating totals for month " + month.name());
+		// clear totals
+		for (Category cat : cats.getCategories()) {
+			cat.setTotal(0);
+		}
+		for (Category cat : cats.getCategories()) {
+			for (BankStatementRow row : this.budget) {
+				if (row.getCategory().equals(cat.getName()) && row.getMonth().equals(month)) {
+					cat.addToTotal(row.getAmount());
 				}
-	for (Category cat : cats.getCategories()) {
-		for (BankStatementRow row : this.budget) {
-			if (row.getCategory().equals(cat.getName()) && row.getMonth().equals(month)) {
-				cat.addToTotal(row.getAmount());
+
 			}
-			
-		}
-	}
-	
-
-	XYChart.Series<String, Number> result = new XYChart.Series<>();
-
-	
-	for (Category cat : cats.getCategories()) {
-		if (!cat.getName().equals("Transfer")) {			
-			result.getData().add(new XYChart.Data<String, Number>(cat.getName(), cat.getTotal()));
-			logger.info("category " + cat.getName() + " total " + cat.getTotal());
 		}
 
-	}
-	
-	return result;
+		XYChart.Series<String, Number> result = new XYChart.Series<>();
+
+		for (Category cat : cats.getCategories()) {
+			if (!cat.getName().equals("Transfer")) {
+				result.getData().add(new XYChart.Data<String, Number>(cat.getName(), cat.getTotal()));
+				logger.info("category " + cat.getName() + " total " + cat.getTotal());
+			}
+
+		}
+
+		return result;
 	}
 
 }

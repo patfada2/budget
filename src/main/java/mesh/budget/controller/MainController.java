@@ -7,6 +7,7 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.time.Month;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -34,6 +35,8 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DialogPane;
+import javafx.scene.control.ListView;
+import javafx.scene.control.SelectionMode;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
@@ -97,14 +100,12 @@ public class MainController {
 
 	@FXML
 	private TextArea alertsTextArea;
-	
+
 	@FXML
 	private FlowPane chartPane;
-	
+
 	@FXML
-	private ComboBox<String> monthPicker;
-	
-	private Month selectedMonth;
+	private ListView<String> monthPicker;
 
 	@FXML
 	public void onSelectChartTab(Event event) {
@@ -112,31 +113,35 @@ public class MainController {
 		logger.info("onSelectChartTab");
 
 	}
-	
-	
-	@FXML
-	public void onMonthSelected(Event event) {
- 
-		selectedMonth = Month.valueOf( monthPicker.getValue());
-		
-
-	}
 
 	@FXML
 	public void onChartButton1Click(ActionEvent event) {
 
 		logger.info("onpieButton1Click");
-		
-		//ObservableList<PieChart.Data> pieChartData = budget.calcCategoryTotals(categories);
-		
-		//applyCustomColorSequence(pieChartData, "aqua", "bisque", "chocolate", "coral", "crimson");
 
-		//showBarChart(pieChartDatetoBarChartData(pieChartData));
-		
-		 //XYChart.Series<String, Number> barChartData = budget.calcCategoryTotalsForMonth(categories, Month.JULY);
-		
-		XYChart.Series<String, Number> barChartData  = budget.calcCategoryTotalsForMonth(categories, selectedMonth);
-		showBarChart(barChartData);
+		// ObservableList<PieChart.Data> pieChartData =
+		// budget.calcCategoryTotals(categories);
+
+		// applyCustomColorSequence(pieChartData, "aqua", "bisque", "chocolate",
+		// "coral", "crimson");
+
+		// showBarChart(pieChartDatetoBarChartData(pieChartData));
+
+		// XYChart.Series<String, Number> barChartData =
+		// budget.calcCategoryTotalsForMonth(categories, Month.JULY);
+
+		ArrayList<XYChart.Series<String, Number>> barchartdata = new ArrayList<XYChart.Series<String, Number>>();
+
+		ObservableList<String> selectedMonths = monthPicker.getSelectionModel().getSelectedItems();
+		selectedMonths.forEach(month -> {
+			Month theMonth = Month.valueOf(month);
+			XYChart.Series<String, Number> series = budget.calcCategoryTotalsForMonth(categories, theMonth);
+			barchartdata.add(series);
+
+		});
+		;
+
+		showBarChart(barchartdata, categories);
 	}
 
 	private XYChart.Series<String, Number> pieChartDatetoBarChartData(ObservableList<PieChart.Data> pieChartData) {
@@ -145,43 +150,43 @@ public class MainController {
 		pieChartData.forEach(pcd -> {
 
 			result.getData().add(new XYChart.Data<String, Number>(pcd.getName(), pcd.getPieValue()));
-			
+
 		});
 
 		return result;
 
 	}
 
-	private void showBarChart(XYChart.Series<String, Number> barchartData) {
-		
-		//remove teh odl one
+	private void showBarChart(ArrayList<XYChart.Series<String, Number>> barchartdata, Categories categories) {
+
+		// remove the old one
 		chartPane.getChildren().remove(barChart);
-		
-		//define x axis
-		
+
+		// define x axis
+
 		CategoryAxis xAxis = new CategoryAxis();
 		xAxis.setLabel("category");
-		
-		barchartData.getData().forEach(bcd -> {
-			xAxis.getCategories().add(bcd.getXValue());
+		categories.getCategories().forEach(cat ->{
+			xAxis.getCategories().add(cat.getName());
 			
 		});
-		
-		//define y axis
+
+
+		// define y axis
 		NumberAxis yAxis = new NumberAxis();
 		yAxis.setLabel("amount");
-		
-		barChart = new BarChart<String, Number>(xAxis, yAxis);  
-		
+
+		barChart = new BarChart<String, Number>(xAxis, yAxis);
+
 		chartPane.getChildren().add(barChart);
-					
-
-		barChart.getData().add(barchartData);
 		
-		
-	
 
-	}		
+		barchartdata.forEach(series -> {
+			barChart.getData().addLast(series);
+		});
+			
+
+	}
 
 	private void applyCustomColorSequence(ObservableList<PieChart.Data> pieChartData, String... pieColors) {
 		int i = 0;
@@ -252,18 +257,17 @@ public class MainController {
 				logger.info("budget changed");
 			}
 		});
-		
-		
 
 	}
-	
+
 	private void chartSetup() {
-		
-		for (Month month : Month.values()) { 
-		    System.out.println(month); 
-		    monthPicker.getItems().add(month.toString());
+
+		monthPicker.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+		for (Month month : Month.values()) {
+			System.out.println(month);
+			monthPicker.getItems().add(month.toString());
 		}
-		
+
 	}
 
 	private void tableSetup() {
