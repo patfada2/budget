@@ -2,6 +2,7 @@ package mesh.budget.controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Side;
 
 import java.io.File;
 import java.io.IOException;
@@ -14,7 +15,7 @@ import java.util.List;
 import org.controlsfx.control.table.TableFilter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
+import javafx.scene.Node;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ListChangeListener;
@@ -35,6 +36,7 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DialogPane;
+import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.control.Tab;
@@ -136,10 +138,10 @@ public class MainController {
 		selectedMonths.forEach(month -> {
 			Month theMonth = Month.valueOf(month);
 			XYChart.Series<String, Number> series = budget.calcCategoryTotalsForMonth(categories, theMonth);
+			series.setName(month);
 			barchartdata.add(series);
 
 		});
-		;
 
 		showBarChart(barchartdata, categories);
 	}
@@ -166,11 +168,10 @@ public class MainController {
 
 		CategoryAxis xAxis = new CategoryAxis();
 		xAxis.setLabel("category");
-		categories.getCategories().forEach(cat ->{
+		categories.getCategories().forEach(cat -> {
 			xAxis.getCategories().add(cat.getName());
-			
-		});
 
+		});
 
 		// define y axis
 		NumberAxis yAxis = new NumberAxis();
@@ -178,13 +179,15 @@ public class MainController {
 
 		barChart = new BarChart<String, Number>(xAxis, yAxis);
 
+		// setup legend
+		barChart.legendSideProperty().set(Side.RIGHT);
+
+		// make it visible
 		chartPane.getChildren().add(barChart);
-		
 
 		barchartdata.forEach(series -> {
 			barChart.getData().addLast(series);
 		});
-			
 
 	}
 
