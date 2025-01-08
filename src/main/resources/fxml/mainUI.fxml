@@ -12,7 +12,6 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.FlowPane?>
 
 <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" styleClass="root" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <top>
@@ -34,7 +33,7 @@
       </MenuBar>
    </top>
    <bottom>
-      <AnchorPane prefHeight="68.0" prefWidth="1024.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="94.0" prefWidth="1295.0" BorderPane.alignment="CENTER">
          <children>
             <Button fx:id="labeutton1l1" layoutY="21.0" mnemonicParsing="false" onAction="#HelloButtonClicked" text="Button" />
             <Label layoutX="346.0" layoutY="13.0" text="Label" />
@@ -58,7 +57,7 @@
           </Tab>
           <Tab fx:id="charttab" text="Chart">
                <content>
-                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                  <BorderPane fx:id="chartPane" prefHeight="200.0" prefWidth="200.0">
                      <left>
                         <AnchorPane prefHeight="346.0" prefWidth="193.0" BorderPane.alignment="CENTER">
                            <children>
@@ -68,12 +67,6 @@
                            </children>
                         </AnchorPane>
                      </left>
-                     <center>
-                        <FlowPane fx:id="chartPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
-                     </center>
-                     <top>
-                        <AnchorPane prefHeight="54.0" prefWidth="1200.0" BorderPane.alignment="CENTER" />
-                     </top>
                   </BorderPane>
                </content>
           </Tab>

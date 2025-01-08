@@ -52,6 +52,7 @@ import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.input.ContextMenuEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.FlowPane;
 import javafx.stage.Stage;
 import javafx.util.Callback;
@@ -104,7 +105,7 @@ public class MainController {
 	private TextArea alertsTextArea;
 
 	@FXML
-	private FlowPane chartPane;
+	private BorderPane chartPane;
 
 	@FXML
 	private ListView<String> monthPicker;
@@ -178,12 +179,14 @@ public class MainController {
 		yAxis.setLabel("amount");
 
 		barChart = new BarChart<String, Number>(xAxis, yAxis);
+		
 
 		// setup legend
 		barChart.legendSideProperty().set(Side.RIGHT);
 
 		// make it visible
-		chartPane.getChildren().add(barChart);
+		//chartPane.getChildren().add(barChart);
+		chartPane.setCenter(barChart);
 
 		barchartdata.forEach(series -> {
 			barChart.getData().addLast(series);

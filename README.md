@@ -3,10 +3,8 @@ budget
 
 Next:
 
-add atble view to chart tab : cat,count
+add a table view to chart tab : cat,count
 
-add a bar  chart by category over month
-- add a mothh pciker - show series per seelcted month
 
 
 
