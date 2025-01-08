@@ -154,6 +154,9 @@ public class MainController {
 
 	private void showBarChart(XYChart.Series<String, Number> barchartData) {
 		
+		//remove teh odl one
+		chartPane.getChildren().remove(barChart);
+		
 		//define x axis
 		
 		CategoryAxis xAxis = new CategoryAxis();
