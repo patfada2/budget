@@ -1,28 +1,18 @@
 package mesh.budget.controller;
 
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.geometry.Side;
 
-import java.io.File;
-import java.io.IOException;
-import java.net.URL;
 import java.time.Month;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 import org.controlsfx.control.table.TableFilter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import javafx.scene.Node;
-import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.chart.BarChart;
 import javafx.scene.chart.CategoryAxis;
@@ -30,32 +20,22 @@ import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.PieChart;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Alert;
-import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.ComboBox;
 import javafx.scene.control.DialogPane;
-import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableColumn.CellDataFeatures;
-import javafx.scene.control.TableColumn.CellEditEvent;
 import javafx.scene.control.TableRow;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.input.ContextMenuEvent;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.FlowPane;
 import javafx.stage.Stage;
-import javafx.util.Callback;
 import mesh.budget.Utils;
 import mesh.budget.model.AppState;
 import mesh.budget.model.BankStatementRow;
@@ -84,7 +64,7 @@ public class MainController {
 	@FXML
 	private Button labeutton1l1;
 	@FXML
-	private TableView table1;
+	private TableView<BankStatementRow> budgetTable;
 
 	@FXML
 	private TableView<CategoryMonth> catTable;
@@ -102,7 +82,7 @@ public class MainController {
 	private PieChart pieChart;
 
 	@FXML
-	private BarChart barChart;
+	private BarChart<String, Number> barChart;
 
 	@FXML
 	private Button pieButton1;
@@ -168,19 +148,7 @@ public class MainController {
 		
 
 		catTable.setItems(catTableData);
-
-	}
-
-	private XYChart.Series<String, Number> pieChartDatetoBarChartData(ObservableList<PieChart.Data> pieChartData) {
-
-		XYChart.Series<String, Number> result = new XYChart.Series<>();
-		pieChartData.forEach(pcd -> {
-
-			result.getData().add(new XYChart.Data<String, Number>(pcd.getName(), pcd.getPieValue()));
-
-		});
-
-		return result;
+		
 
 	}
 
@@ -206,6 +174,7 @@ public class MainController {
 
 		// setup legend
 		barChart.legendSideProperty().set(Side.RIGHT);
+		barChart.setTitle("amount spent per month by category");
 
 		// make it visible
 		// chartPane.getChildren().add(barChart);
@@ -217,13 +186,6 @@ public class MainController {
 
 	}
 
-	private void applyCustomColorSequence(ObservableList<PieChart.Data> pieChartData, String... pieColors) {
-		int i = 0;
-		for (PieChart.Data data : pieChartData) {
-			data.getNode().setStyle("-fx-pie-color: " + pieColors[i % pieColors.length] + ";");
-			i++;
-		}
-	}
 
 	private boolean tableCreated = false;
 
@@ -238,12 +200,14 @@ public class MainController {
 	public void loadExports(ActionEvent event) {
 
 		logger.info("loading exports");
+		alert("loading exports");
 		budget.loadExports();
 	}
 
 	@FXML
 	public void save(ActionEvent event) {
 		budget.saveToFile(Utils.budgetFileName);
+	    alert("saved to file " + Utils.budgetFileName);
 		categories.saveToFile(Utils.categoryFileName);
 	}
 
@@ -256,15 +220,16 @@ public class MainController {
 	@FXML
 	public void runMatches(ActionEvent event) {
 		logger.info("running matches");
+		alert("running matches");
 		budget.runMatches(categories);
-		table1.refresh();
+		budgetTable.refresh();
 	}
 
 	@FXML
 	public void HelloButtonClicked(ActionEvent event) {
 
 		logger.info("hello button clicked");
-		table1.refresh();
+		budgetTable.refresh();
 
 	}
 
@@ -276,14 +241,14 @@ public class MainController {
 		appStateModel.bankStatementRowChangedProperty().addListener((observable, oldValue, newValue) -> {
 			// Only if completed
 			logger.info("bankStatementRow changed");
-			table1.refresh();
+			budgetTable.refresh();
 			appStateModel.setBankStatementRowChanged(false);
 		});
 
 		budget.getBudget().addListener(new ListChangeListener<BankStatementRow>() {
 			@Override
 			public void onChanged(Change<? extends BankStatementRow> c) {
-				table1.refresh();
+				budgetTable.refresh();
 				logger.info("budget changed");
 			}
 		});
@@ -334,7 +299,7 @@ public class MainController {
 			TableColumn<BankStatementRow, String> amount = new TableColumn<BankStatementRow, String>("amount");
 			TableColumn<BankStatementRow, String> category = new TableColumn<BankStatementRow, String>("category");
 
-			table1.getColumns().addAll(dateProcessed, dateOfTransaction, id, type, reference, description, amount,
+			budgetTable.getColumns().addAll(dateProcessed, dateOfTransaction, id, type, reference, description, amount,
 					category);
 
 			dateProcessed.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("dateProcessed"));
@@ -368,8 +333,9 @@ public class MainController {
 		};
 
 		tableCreated = true;
-		table1.setItems(budget.getBudget());
-		table1.setEditable(true);
+		budgetTable.setItems(budget.getBudget());
+		TableFilter.forTableView(budgetTable).apply();
+		budgetTable.setEditable(true);
 
 	}
 
@@ -391,7 +357,7 @@ public class MainController {
 
 		}
 
-		private void processEdit(String value) {
+		private void processEdit(String value) {			
 			commitEdit(value);
 		}
 
@@ -407,8 +373,9 @@ public class MainController {
 			super.commitEdit(value);
 			TableRow<BankStatementRow> row = this.getTableRow();
 			row.getItem().setCategory(value);
+			alert("changing category to " + value);
 			setGraphic(null);
-			table1.refresh();
+			budgetTable.refresh();
 
 		}
 
@@ -437,7 +404,7 @@ public class MainController {
 
 	private void showCategoryManger() {
 
-		BankStatementRow r = (BankStatementRow) table1.getSelectionModel().getSelectedItem();
+		BankStatementRow r = (BankStatementRow) budgetTable.getSelectionModel().getSelectedItem();
 
 		// catController.setSelectedRow(r);
 
@@ -455,19 +422,9 @@ public class MainController {
 	public void Table1Clicked(MouseEvent event) {
 		logger.info("Table1Clicked");
 
-		table1.refresh();
+		budgetTable.refresh();
 
-	}
-
-	private URL getResourceURL(final String fileName) {
-		URL url = this.getClass().getClassLoader().getResource(fileName);
-
-		if (url == null) {
-			throw new IllegalArgumentException(fileName + " is not found 1");
-		}
-
-		return url;
-	}
+	}	
 
 	public MainController(AppState appStateModel, Categories categories, Budget budget) {
 		logger.info("constructing main controler=" + this.toString());

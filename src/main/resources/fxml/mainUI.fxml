@@ -33,13 +33,9 @@
       </MenuBar>
    </top>
    <bottom>
-      <AnchorPane prefHeight="94.0" prefWidth="1295.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="70.0" prefWidth="1295.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="labeutton1l1" layoutY="21.0" mnemonicParsing="false" onAction="#HelloButtonClicked" text="Button" />
-            <Label layoutX="346.0" layoutY="13.0" text="Label" />
-            <Label layoutX="346.0" layoutY="38.0" text="Label" />
-            <Label layoutX="587.0" layoutY="38.0" text="Label" />
-            <TextArea fx:id="alertsTextArea" layoutX="668.0" layoutY="11.0" prefHeight="95.0" prefWidth="243.0" />
+            <TextArea fx:id="alertsTextArea" layoutX="620.0" layoutY="16.0" prefHeight="22.0" prefWidth="302.0" />
          </children>
       </AnchorPane>
    </bottom>
@@ -50,7 +46,7 @@
                <content>
                   <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
                      <center>
-                        <TableView fx:id="table1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="1200.0" BorderPane.alignment="CENTER" />
+                        <TableView fx:id="budgetTable" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="1200.0" BorderPane.alignment="CENTER" />
                      </center>
                   </BorderPane>
                </content>
@@ -59,21 +55,20 @@
                <content>
                   <BorderPane fx:id="outerBorderPane">
                      <center>
-                        <BorderPane fx:id="chartPane" prefHeight="200.0" prefWidth="200.0">
-                           <left>
-                              <AnchorPane prefHeight="346.0" prefWidth="193.0" BorderPane.alignment="CENTER">
-                                 <children>
-                                    <Button layoutX="14.0" layoutY="298.0" mnemonicParsing="false" onAction="#onChartButton1Click" text="show" />
-                                    <Label layoutX="9.0" layoutY="21.0" text="select months" />
-                                    <ListView fx:id="monthPicker" layoutX="14.0" layoutY="54.0" prefHeight="200.0" prefWidth="200.0" />
-                                 </children>
-                              </AnchorPane>
-                           </left>
-                        </BorderPane>
+                        <BorderPane fx:id="chartPane" prefHeight="200.0" prefWidth="200.0" />
                      </center>
                      <bottom>
                         <TableView fx:id="catTable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
                      </bottom>
+                     <left>
+                        <AnchorPane prefHeight="346.0" prefWidth="193.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Button layoutX="14.0" layoutY="298.0" mnemonicParsing="false" onAction="#onChartButton1Click" text="show" />
+                              <Label layoutX="9.0" layoutY="21.0" text="select months" />
+                              <ListView fx:id="monthPicker" layoutX="14.0" layoutY="54.0" prefHeight="200.0" prefWidth="200.0" />
+                           </children>
+                        </AnchorPane>
+                     </left>
                   </BorderPane>
                </content>
           </Tab>
