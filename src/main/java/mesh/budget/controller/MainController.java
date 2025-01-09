@@ -62,6 +62,7 @@ import mesh.budget.model.BankStatementRow;
 import mesh.budget.model.Budget;
 import mesh.budget.model.Categories;
 import mesh.budget.model.Category;
+import mesh.budget.model.CategoryMonth;
 
 public class MainController {
 
@@ -78,11 +79,16 @@ public class MainController {
 
 	public Scene catScene;
 	public Stage catStage;
+	private boolean catTableCreated = false;
 
 	@FXML
 	private Button labeutton1l1;
 	@FXML
 	private TableView table1;
+
+	@FXML
+	private TableView<CategoryMonth> catTable;
+
 	@FXML
 	private DialogPane dialogPane1;
 
@@ -122,17 +128,6 @@ public class MainController {
 
 		logger.info("onpieButton1Click");
 
-		// ObservableList<PieChart.Data> pieChartData =
-		// budget.calcCategoryTotals(categories);
-
-		// applyCustomColorSequence(pieChartData, "aqua", "bisque", "chocolate",
-		// "coral", "crimson");
-
-		// showBarChart(pieChartDatetoBarChartData(pieChartData));
-
-		// XYChart.Series<String, Number> barChartData =
-		// budget.calcCategoryTotalsForMonth(categories, Month.JULY);
-
 		ArrayList<XYChart.Series<String, Number>> barchartdata = new ArrayList<XYChart.Series<String, Number>>();
 
 		ObservableList<String> selectedMonths = monthPicker.getSelectionModel().getSelectedItems();
@@ -145,6 +140,35 @@ public class MainController {
 		});
 
 		showBarChart(barchartdata, categories);
+		showCatTable(barchartdata);
+	}
+
+	private void showCatTable(ArrayList<XYChart.Series<String, Number>> barchartdata) {
+		logger.info("getting cat table data");
+		ObservableList<CategoryMonth> catTableData = FXCollections.observableArrayList();
+		barchartdata.forEach(series -> {
+
+			String month =series.getName();
+
+			series.getData().forEach(row -> {
+				CategoryMonth catm = new CategoryMonth();
+
+				catm.setMonth(month);
+				catm.setCategoryName(row.getXValue());
+				catm.setCategoryAmount(row.getYValue());
+				
+			
+				catTableData.add(catm);
+				logger.debug(catm.toString());
+
+			});
+
+		});
+
+		
+
+		catTable.setItems(catTableData);
+
 	}
 
 	private XYChart.Series<String, Number> pieChartDatetoBarChartData(ObservableList<PieChart.Data> pieChartData) {
@@ -179,13 +203,12 @@ public class MainController {
 		yAxis.setLabel("amount");
 
 		barChart = new BarChart<String, Number>(xAxis, yAxis);
-		
 
 		// setup legend
 		barChart.legendSideProperty().set(Side.RIGHT);
 
 		// make it visible
-		//chartPane.getChildren().add(barChart);
+		// chartPane.getChildren().add(barChart);
 		chartPane.setCenter(barChart);
 
 		barchartdata.forEach(series -> {
@@ -249,6 +272,7 @@ public class MainController {
 	public void initialize() {
 		tableSetup();
 		chartSetup();
+		catTableSetup();
 		appStateModel.bankStatementRowChangedProperty().addListener((observable, oldValue, newValue) -> {
 			// Only if completed
 			logger.info("bankStatementRow changed");
@@ -273,6 +297,25 @@ public class MainController {
 			System.out.println(month);
 			monthPicker.getItems().add(month.toString());
 		}
+
+	}
+
+	private void catTableSetup() {
+		if (!catTableCreated) {
+			logger.info("catTableSetup");
+			TableColumn<CategoryMonth, String> month = new TableColumn<CategoryMonth, String>("Month");
+			TableColumn<CategoryMonth, String> category = new TableColumn<CategoryMonth, String>("category");
+			TableColumn<CategoryMonth, Number> amount = new TableColumn<CategoryMonth, Number>("Amount");
+
+			catTable.getColumns().addAll(month, category, amount);
+
+			
+			month.setCellValueFactory(new PropertyValueFactory<CategoryMonth, String>("Month"));
+			category.setCellValueFactory(new PropertyValueFactory<CategoryMonth, String>("categoryName"));
+			amount.setCellValueFactory(new PropertyValueFactory<CategoryMonth, Number>("categoryAmount"));
+			
+		}
+		catTableCreated = true;
 
 	}
 
@@ -322,8 +365,7 @@ public class MainController {
 			category.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("category"));
 			category.setCellFactory(column -> new TableCel_Edit());
 
-		}
-		;
+		};
 
 		tableCreated = true;
 		table1.setItems(budget.getBudget());
