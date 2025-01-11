@@ -2,7 +2,7 @@
 budget
 
 Next:
-- get rid o one of the date rows, replace with account
+
 - different laoder logic for budget and export
 - deduper
 
@@ -16,7 +16,7 @@ add a sub category?
 add an account attribute
 
 bugs:
-
+commas in category confuse save to csv
 
 piechart colours
 

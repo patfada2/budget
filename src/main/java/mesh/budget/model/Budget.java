@@ -83,7 +83,7 @@ public class Budget {
 	private void addExportFile(String filename) {
 		int count = 0;
 		logger.info("loading " + filename);
-		ObservableList<BankStatementRow> rows = loadCsv(filename);
+		ObservableList<BankStatementRow> rows = loadExportCsv(filename);
 
 		Iterator<BankStatementRow> it = rows.iterator();
 		while (it.hasNext()) {
@@ -140,7 +140,7 @@ public class Budget {
 
 	}
 
-	private ObservableList<BankStatementRow> loadCsv(String filename) {
+	private ObservableList<BankStatementRow> loadExportCsv(String filename) {
 
 		logger.info("loading file " + filename);
 		ObservableList<BankStatementRow> rows = FXCollections.observableArrayList();
@@ -166,6 +166,36 @@ public class Budget {
 
 			while ((line = br.readLine()) != null) {
 				row = BankStatementRow.CreateFromCsv(account, line);
+				logger.debug(row.toString());
+				rows.add(row);
+			}
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return rows;
+
+	}
+	
+	private ObservableList<BankStatementRow> loadCsv(String filename) {
+
+		logger.info("loading budget file " + filename);
+		ObservableList<BankStatementRow> rows = FXCollections.observableArrayList();
+
+		try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
+			String line;
+
+			BankStatementRow row;
+			Account account = Account.Unknown;
+			// skip headers
+			line = br.readLine();
+			
+			
+			while ((line = br.readLine()) != null) {
+				row = BankStatementRow.CreateFromCsv(line);
 				logger.debug(row.toString());
 				rows.add(row);
 			}

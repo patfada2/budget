@@ -48,14 +48,14 @@ public class BankStatementRow implements Comparable<BankStatementRow> {
 	public BankStatementRow(String account, String dateProcessed, String id, String type, String reference,
 			String description, String amount, String category) {
 		logger.debug("creating new BankStatementRow");
-		this.account = new SimpleStringProperty(account);	
+		this.account = new SimpleStringProperty(account);
 		this.dateProcessed = new SimpleStringProperty(dateProcessed);
 		this.id = new SimpleStringProperty(id);
 		this.type = new SimpleStringProperty(type);
 		this.reference = new SimpleStringProperty(reference);
 		this.description = new SimpleStringProperty(description);
 		this.amount = new SimpleStringProperty(amount);
-		//to ensure negation of visa
+		// to ensure negation of visa
 		this.setAmount(amount);
 		this.category = new SimpleStringProperty(category);
 	}
@@ -84,6 +84,30 @@ public class BankStatementRow implements Comparable<BankStatementRow> {
 					values.get(5), values.get(6), values.get(7));
 		}
 		return row;
+
+	}
+
+	public static BankStatementRow CreateFromCsv(String line) {
+		line = line.replace("\\,", "_");
+		// ignore commas between quotes
+		String[] v = line.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)", -1);
+		ArrayList<String> values = new ArrayList<String>();
+		for (int i = 0; i < v.length; i++)
+			values.add(v[i]);
+		if (values.size() < 8) {
+			values.add(Category.UNKNOWN);
+		}
+
+		if (values.size() != 8) {
+			logger.error("invalid row " + line);
+			return null;
+
+		} else {
+
+			BankStatementRow row = new BankStatementRow(values.get(0), values.get(1), values.get(2), values.get(3),
+					values.get(4), values.get(5), values.get(6), values.get(7));
+			return row;
+		}
 
 	}
 
@@ -162,17 +186,7 @@ public class BankStatementRow implements Comparable<BankStatementRow> {
 	}
 
 	public void setAmount(String amount) {
-		logger.debug("!.visa amount=" + amount);
-		logger.debug("!.this.account=" + account);
-		logger.debug("!.Account.Visa.name()= "+Account.Visa.name());
-		if (this.account.get().equals(Account.Visa.name())) {
-			logger.debug("!!.visa amount=" + amount);
-			double val = Double.parseDouble(this.getAmount());
-			val = val * (-1);
-			this.amount.set(String.valueOf(val));
-			logger.debug("!!!!!!!!!!!!!!visa amount=" + String.valueOf(val));
-		} else
-			this.amount.set(amount);
+		this.amount.set(amount);
 	}
 
 	public String getCategory() {
