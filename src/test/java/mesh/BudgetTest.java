@@ -11,6 +11,7 @@ import org.junit.jupiter.api.Test;
 
 import mesh.budget.Utils;
 import mesh.budget.model.BankStatementRow;
+import mesh.budget.model.BankStatementRow.Account;
 import mesh.budget.model.Budget;
 import mesh.budget.model.Categories;
 import mesh.budget.model.Category;
@@ -33,7 +34,7 @@ public class BudgetTest {
 		//BudgetClassifier c = new BudgetClassifier();
 		
 		Budget budget = new Budget();
-		budget.loadFromFile(Utils.budgetFileName);
+		//budget.loadFromFile(Utils.budgetFileName);
 		budget.loadExports();
 		
 		logger.info(budget.getBudget().size() + " items laoded");
@@ -60,15 +61,48 @@ public class BudgetTest {
 	}
 	
 	@Test
-	public void csvLoad() {
+	public void exportLoadVisa() {
+		Budget budget = new Budget();
+		String filename = "C:\\Users\\patri\\Downloads\\Export20241224162534.csv";
+		budget.loadFromFile(filename);
+		logger.info("loaded " + budget.getBudget().size() + " records");
+		assertEquals(578,  budget.getBudget().size());
+		
+	}
+	
+	@Test
+	public void exportLoadStreamline() {
+		Budget budget = new Budget();
+		
+		String filename = "C:\\Users\\patri\\Downloads\\Export20241224162527.csv";
+		budget.loadFromFile(filename);
+		logger.info("loaded " + budget.getBudget().size() + " records");
+		assertEquals(178,  budget.getBudget().size());
+		
+	}
+	
+	@Test
+	public void streamlineLoad() {
 		
 		String line = "2024/06/13,2024061302,D/C,,\"D/C FROM BRADLEY, J R\",\"beer mule fe  Dad\",60.00";
 		
-		BankStatementRow row =BankStatementRow.CreateFromCsv(line);
+		BankStatementRow row =BankStatementRow.CreateFromCsv(Account.Streamline, line);
+		
+		logger.info(row.toString());
+	}
+	
+	@Test
+	public void visaLoad() {
+		
+		String line = "2024/06/10,2024/06/09,2024061001,DEBIT,8128,\"MITRE 10 MEGA KAPITI PARAPARAUMU\",23.98";
+		
+		BankStatementRow row =BankStatementRow.CreateFromCsv(Account.Visa, line);
 		
 		logger.info(row.toString());
 	}
 		
+	
+	
 	@Test
 	public void matcher() {
 		

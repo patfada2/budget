@@ -232,7 +232,12 @@ public class MainController {
 		budgetTable.refresh();
 
 	}
-
+	
+	@FXML
+	public void deduper(ActionEvent event) {
+		budget.dedupe();	
+	}
+	
 	@FXML
 	public void initialize() {
 		tableSetup();
@@ -287,10 +292,10 @@ public class MainController {
 	private void tableSetup() {
 		if (!tableCreated) {
 
-			TableColumn<BankStatementRow, String> dateProcessed = new TableColumn<BankStatementRow, String>(
-					"dateProcessed");
-			TableColumn<BankStatementRow, String> dateOfTransaction = new TableColumn<BankStatementRow, String>(
-					"dateOfTransaction");
+			TableColumn<BankStatementRow, String> account = new TableColumn<BankStatementRow, String>(
+					"account");
+			TableColumn<BankStatementRow, String> date = new TableColumn<BankStatementRow, String>(
+					"date");
 			TableColumn<BankStatementRow, String> id = new TableColumn<BankStatementRow, String>("id");
 			TableColumn<BankStatementRow, String> type = new TableColumn<BankStatementRow, String>("type");
 			TableColumn<BankStatementRow, String> reference = new TableColumn<BankStatementRow, String>("reference");
@@ -299,10 +304,11 @@ public class MainController {
 			TableColumn<BankStatementRow, String> amount = new TableColumn<BankStatementRow, String>("amount");
 			TableColumn<BankStatementRow, String> category = new TableColumn<BankStatementRow, String>("category");
 
-			budgetTable.getColumns().addAll(dateProcessed, dateOfTransaction, id, type, reference, description, amount,
+			budgetTable.getColumns().addAll(account, date, id, type, reference, description, amount,
 					category);
 
-			dateProcessed.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("dateProcessed"));
+			account.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("account"));
+			date.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("date"));
 			amount.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("amount"));
 			description.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("description"));
 			reference.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("reference"));
@@ -321,8 +327,7 @@ public class MainController {
 				addReferenceMatchController.show(currentValue, row);
 			});
 
-			dateOfTransaction
-					.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("dateOfTransaction"));
+			
 			id.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("id"));
 			reference.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("reference"));
 			type.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("type"));

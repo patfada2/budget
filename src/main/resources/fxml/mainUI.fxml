@@ -27,6 +27,7 @@
             <items>
               <MenuItem mnemonicParsing="false" onAction="#showCategoryManager" text="Category Manager" />
                   <MenuItem mnemonicParsing="false" onAction="#runMatches" text="Run matches" />
+                  <MenuItem mnemonicParsing="false" onAction="#deduper" text="find duplicates" />
             </items>
           </Menu>
         </menus>

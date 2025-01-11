@@ -8,6 +8,8 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.time.Month;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
@@ -24,6 +26,7 @@ import javafx.scene.chart.PieChart;
 import javafx.scene.chart.XYChart;
 import javafx.scene.chart.PieChart.Data;
 import mesh.budget.Utils;
+import mesh.budget.model.BankStatementRow.Account;
 
 public class Budget {
 	private static final Logger logger = LoggerFactory.getLogger(Budget.class);
@@ -34,12 +37,29 @@ public class Budget {
 		return budget;
 	}
 
+	public void dedupe() {
+				
+		 Set<BankStatementRow> hashset = new HashSet<BankStatementRow>();
+		  	 
+		 budget.forEach(row ->{
+			 if (!hashset.add(row));{
+				 logger.info("id " + row.getId() + " is a duplicate");
+				 
+			 }
+			 
+		 });		 		 
+		 		
+	}
+	
+	
 	// de-duplicates
 	public boolean add(BankStatementRow row) {
-		boolean result = true;
+		boolean result = false;
 		if (budget.indexOf(row) < 0) {
 			budget.add(row);
 			result = true;
+		} else {
+			logger.info("duplicate found :" + row.getId());
 		}
 		return result;
 	}
@@ -98,6 +118,24 @@ public class Budget {
 		}
 	}
 
+	private Account getAccount(String line) {
+		Account result = Account.Unknown;
+		
+		for (int i = 0 ; i < Account.values().length; i++) {
+			if (line.contains("Card Number")) {
+				result = Account.Visa;
+				break;
+			}
+			else if (line.contains(Account.values()[i].name())){
+				result = Account.values()[i];
+				break;
+			}
+		}
+				
+		return result;
+		
+	}
+	
 	private ObservableList<BankStatementRow> loadCsv(String filename) {
 
 		logger.info("loading file " + filename);
@@ -107,18 +145,23 @@ public class Budget {
 			String line;
 
 			BankStatementRow row;
+			Account account= Account.Unknown;
 			// skip headers
 			do {
 				line = br.readLine();
 				if (line == null)
 					break;
+				if (line.contains("Account") || line.contains("Card Number")) {
+					account = getAccount(line);
+					logger.info("account = " + account.name());
+				}
 			} while (!line.startsWith("202"));
 
 			if (line != null)
-				rows.add(BankStatementRow.CreateFromCsv(line));
+				rows.add(BankStatementRow.CreateFromCsv(account,line));
 
 			while ((line = br.readLine()) != null) {
-				row = BankStatementRow.CreateFromCsv(line);
+				row = BankStatementRow.CreateFromCsv(account,line);
 				logger.debug(row.toString());
 				rows.add(row);
 			}

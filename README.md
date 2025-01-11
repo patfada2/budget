@@ -2,8 +2,11 @@
 budget
 
 Next:
+- get rid o one of the date rows, replace with account
+- different laoder logic for budget and export
+- deduper
 
-add a table view to chart tab : cat,count
+- need a way to alert from other controllers than  main
 
 
 
@@ -18,5 +21,16 @@ bugs:
 piechart colours
 
 
+money
+========
+
+look at FLP payment
+drop office 365
+
+
+check rates payments
+2 on 18 Oct
+
+power dupl 24 oct
 
 

@@ -12,113 +12,126 @@ import org.slf4j.LoggerFactory;
 import javafx.beans.property.SimpleStringProperty;
 import mesh.budget.model.BankStatementRow;
 
-public class BankStatementRow  implements Comparable<BankStatementRow>{
+public class BankStatementRow implements Comparable<BankStatementRow> {
 	private static final Logger logger = LoggerFactory.getLogger(BankStatementRow.class);
 
 	// Date Processed Date of Transaction Unique Id Tran Type Reference Description
 	// Amount
 
-	private SimpleStringProperty  dateProcessed;
-	private SimpleStringProperty  dateOfTransaction;
-	private SimpleStringProperty  id;
-	private SimpleStringProperty  type;
-	private SimpleStringProperty  reference;
-	private SimpleStringProperty  description;
-	private SimpleStringProperty  amount;
-	private SimpleStringProperty  category;
-	
+	private SimpleStringProperty account;
+	private SimpleStringProperty date;
+	private SimpleStringProperty id;
+	private SimpleStringProperty type;
+	private SimpleStringProperty reference;
+	private SimpleStringProperty description;
+	private SimpleStringProperty amount;
+	private SimpleStringProperty category;
+
 	public enum RowType {
 		CREDIT, DEBIT
 	};
 
-	public Month  getMonth() {
-		String dateStr = this.getDateProcessed();		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd",Locale.ENGLISH);
+	public enum Account {
+		Business_Account, // 0148824-01 (Business Account)
+		Streamline, // Account 0131102-00 (Streamline)
+		Visa, Unknown
+	};
+
+	public Month getMonth() {
+		String dateStr = this.getDateProcessed();
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd", Locale.ENGLISH);
 		LocalDate date = LocalDate.parse(dateStr, formatter);
-	
+
 		return date.getMonth();
 	}
-	
-	public BankStatementRow(String dateProcessed, String dateOfTransaction, String id, String type, 
-			 String reference, String description, String amount, String category) {
-		    logger.debug("creating new BankStatementRow");
-	        this.dateProcessed = new SimpleStringProperty(dateProcessed);
-	        this.dateOfTransaction = new SimpleStringProperty(dateOfTransaction);
-	        this.id = new SimpleStringProperty(id);
-	        this.type = new SimpleStringProperty(type);
-	        this.reference = new SimpleStringProperty(reference);
-	        this.description = new SimpleStringProperty(description);
-	        this.amount = new SimpleStringProperty(amount);
-	        this.category = new SimpleStringProperty(category);
-	        
-	        //negate amount if it is  a debit
-	        /*
-	        if (typeToRowType(this.getType()).equals(RowType.DEBIT)) {
-	        	
-	        	double val = Double.parseDouble(this.getAmount());
-	        	val = val * (-1);
-	        	this.amount.set(String.valueOf(val));
-	        	
-	        }
-	        */
-	    }
-	
-	public static BankStatementRow CreateFromCsv(String line) {		
+
+	public BankStatementRow(String account, String date, String id, String type,
+			String reference, String description, String amount, String category) {
+		logger.debug("creating new BankStatementRow");
+		this.account = new SimpleStringProperty(account);
+		this.date= new SimpleStringProperty(date);		
+		this.id = new SimpleStringProperty(id);
+		this.type = new SimpleStringProperty(type);
+		this.reference = new SimpleStringProperty(reference);
+		this.description = new SimpleStringProperty(description);
+		this.amount = new SimpleStringProperty(amount);
+		this.category = new SimpleStringProperty(category);
+
+		// negate amount if it is a debit
+		/*
+		 * if (typeToRowType(this.getType()).equals(RowType.DEBIT)) {
+		 * 
+		 * double val = Double.parseDouble(this.getAmount()); val = val * (-1);
+		 * this.amount.set(String.valueOf(val));
+		 * 
+		 * }
+		 */
+	}
+
+	public static BankStatementRow CreateFromCsv(Account account, String line) {
 		line = line.replace("\\,", "_");
-		//ignore commas between quotes
+		// ignore commas between quotes
 		String[] v = line.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)", -1);
 		ArrayList<String> values = new ArrayList<String>();
-		for (int i=0; i< v.length; i++)
-		values.add(v[i]);	
+		for (int i = 0; i < v.length; i++)
+			values.add(v[i]);
 		if (values.size() < 8) {
 			values.add(Category.UNKNOWN);
 		}
-		BankStatementRow row = new BankStatementRow(values.get(0),values.get(1),values.get(2),values.get(3),
-				values.get(4),values.get(5),values.get(6),values.get(7));		
+		BankStatementRow row;
+
+		if (Account.Visa.equals(account)) {//skip seconf date field fro visa
+			row = new BankStatementRow(account.name(), values.get(0), values.get(2), values.get(3),
+					values.get(4), values.get(5), values.get(6), values.get(7));
+
+		} else { 
+
+			row = new BankStatementRow(account.name(), values.get(0), values.get(1), values.get(2),
+					values.get(3), values.get(4), values.get(5), values.get(6));
+		}
 		return row;
 
 	}
-	
+
 	private RowType typeToRowType(String typrStr) {
 		RowType result;
 		if (typrStr.contentEquals("DEBIT")) {
 			result = RowType.DEBIT;
-		}
-		else result= RowType.CREDIT;
+		} else
+			result = RowType.CREDIT;
 		return result;
 	}
 
 	private static String COMMA_DELIMITER = ",";
-	
 
 	public String toString() {
-		return "dateProcessed=" + dateProcessed + " dateOfTransaction=" + dateOfTransaction + " id=" + id + " type=" + type
-				+ " referenece=" + reference + " description=" + description + " amount=" + amount + "category=" + category;
+		return "account=" + account.getValue() + " date="  + date.getValue()
+				+ " id=" + id.getValue() + " type=" + type.getValue() + " reference=" + reference.getValue()
+				+ " description=" + description.getValue()+ " amount=" + amount.getValue() + " category=" + category.getValue();
 	}
 
 	public static String cSVHeader() {
-		return "dateProcessed=,dateOfTransaction,id,type,referenece,description,amount,category\n";
+		return "account,date,id,type,referenece,description,amount,category\n";
 	}
-	 
+
 	public String toCsv() {
-		return dateProcessed.get() + "," + dateOfTransaction.get() + "," + id.get() + "," + type.get()
-				+ "," + reference.get() + "," + description.get() + "," + amount.get() + "," + category.get() +"\n";
+		return account.get() + "," + date.get() + "," + id.get() + ","
+				+ type.get() + "," + reference.get() + "," + description.get() + "," + amount.get() + ","
+				+ category.get() + "\n";
+	}
+
+	public String getAccount() {
+		return account.get();
+	}
+
+	public void setAccount(String acc) {
+		this.account.set(acc);
 	}
 
 	public String getDateProcessed() {
-		return dateProcessed.get();
+		return date.get();
 	}
 
-	public void setDateProcessed(String dp) {
-		this.dateProcessed.set(dp);
-	}
-
-	public String getDateOfTransaction() {
-		return dateOfTransaction.get();
-	}
-
-	public void setDateOfTransaction(String dateOfTransaction) {
-		this.dateOfTransaction.set(dateOfTransaction);
-	}
 
 	public String getId() {
 		return id.get();
@@ -170,28 +183,28 @@ public class BankStatementRow  implements Comparable<BankStatementRow>{
 
 	@Override
 	public int compareTo(BankStatementRow o) {
-		
-		int result =  this.id.get().compareTo(o.getId());
-		
-		 return result;
+
+		int result = this.id.get().compareTo(o.getId());
+
+		return result;
 	}
-	
-	 @Override
-	    public boolean equals(Object obj) {
-	        if (obj == null) {
-	            return false;
-	        }
 
-	        if (obj.getClass() != this.getClass()) {
-	            return false;
-	        }
+	@Override
+	public boolean equals(Object obj) {
+		if (obj == null) {
+			return false;
+		}
 
-	        final BankStatementRow other = (BankStatementRow) obj;
-	        if ((this.id == null) ? (other.id != null) : !this.id.equals(other.id)) {
-	            return false;
-	        }
+		if (obj.getClass() != this.getClass()) {
+			return false;
+		}
 
-	        return true;
-	    }
+		final BankStatementRow other = (BankStatementRow) obj;
+		if ((this.id == null) ? (other.id != null) : !this.id.equals(other.id) && this.account.equals(other.account)) {
+			return false;
+		}
+
+		return true;
+	}
 
 }
