@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.Menu?>
@@ -37,6 +38,7 @@
       <AnchorPane prefHeight="70.0" prefWidth="1295.0" BorderPane.alignment="CENTER">
          <children>
             <TextArea fx:id="alertsTextArea" layoutX="620.0" layoutY="16.0" prefHeight="22.0" prefWidth="302.0" />
+            <Button layoutX="138.0" layoutY="22.0" mnemonicParsing="false" onAction="#onAlertButton1Click" text="Button" />
          </children>
       </AnchorPane>
    </bottom>
@@ -47,8 +49,11 @@
                <content>
                   <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
                      <center>
-                        <TableView fx:id="budgetTable" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="1200.0" BorderPane.alignment="CENTER" />
+                        <TableView fx:id="budgetTable" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onContextMenuRequested="#Table1Context" prefWidth="1200.0" BorderPane.alignment="CENTER" />
                      </center>
+                     <top>
+                        <DatePicker BorderPane.alignment="CENTER" />
+                     </top>
                   </BorderPane>
                </content>
           </Tab>

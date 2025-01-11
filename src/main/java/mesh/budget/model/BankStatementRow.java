@@ -19,7 +19,7 @@ public class BankStatementRow implements Comparable<BankStatementRow> {
 	// Amount
 
 	private SimpleStringProperty account;
-	private SimpleStringProperty date;
+	private SimpleStringProperty dateProcessed;
 	private SimpleStringProperty id;
 	private SimpleStringProperty type;
 	private SimpleStringProperty reference;
@@ -32,7 +32,7 @@ public class BankStatementRow implements Comparable<BankStatementRow> {
 	};
 
 	public enum Account {
-		Business_Account, // 0148824-01 (Business Account)
+		Business, // 0148824-01 (Business Account)
 		Streamline, // Account 0131102-00 (Streamline)
 		Visa, Unknown
 	};
@@ -45,27 +45,19 @@ public class BankStatementRow implements Comparable<BankStatementRow> {
 		return date.getMonth();
 	}
 
-	public BankStatementRow(String account, String date, String id, String type,
-			String reference, String description, String amount, String category) {
+	public BankStatementRow(String account, String dateProcessed, String id, String type, String reference,
+			String description, String amount, String category) {
 		logger.debug("creating new BankStatementRow");
-		this.account = new SimpleStringProperty(account);
-		this.date= new SimpleStringProperty(date);		
+		this.account = new SimpleStringProperty(account);	
+		this.dateProcessed = new SimpleStringProperty(dateProcessed);
 		this.id = new SimpleStringProperty(id);
 		this.type = new SimpleStringProperty(type);
 		this.reference = new SimpleStringProperty(reference);
 		this.description = new SimpleStringProperty(description);
 		this.amount = new SimpleStringProperty(amount);
+		//to ensure negation of visa
+		this.setAmount(amount);
 		this.category = new SimpleStringProperty(category);
-
-		// negate amount if it is a debit
-		/*
-		 * if (typeToRowType(this.getType()).equals(RowType.DEBIT)) {
-		 * 
-		 * double val = Double.parseDouble(this.getAmount()); val = val * (-1);
-		 * this.amount.set(String.valueOf(val));
-		 * 
-		 * }
-		 */
 	}
 
 	public static BankStatementRow CreateFromCsv(Account account, String line) {
@@ -80,14 +72,16 @@ public class BankStatementRow implements Comparable<BankStatementRow> {
 		}
 		BankStatementRow row;
 
-		if (Account.Visa.equals(account)) {//skip seconf date field fro visa
-			row = new BankStatementRow(account.name(), values.get(0), values.get(2), values.get(3),
-					values.get(4), values.get(5), values.get(6), values.get(7));
+		if (Account.Visa.equals(account)) {// Date Processed,Date of Transaction,Unique Id,Tran
+											// Type,Reference,Description,Amount
+			row = new BankStatementRow(account.name(), values.get(0), values.get(2), values.get(3), values.get(4),
+					values.get(5), values.get(6), values.get(7));
 
-		} else { 
+		} else {
+			// Date,Unique Id,Tran Type,Cheque Number,Payee,Memo,Amount
 
-			row = new BankStatementRow(account.name(), values.get(0), values.get(1), values.get(2),
-					values.get(3), values.get(4), values.get(5), values.get(6));
+			row = new BankStatementRow(account.name(), values.get(0), values.get(1), values.get(2), values.get(4),
+					values.get(5), values.get(6), values.get(7));
 		}
 		return row;
 
@@ -105,19 +99,18 @@ public class BankStatementRow implements Comparable<BankStatementRow> {
 	private static String COMMA_DELIMITER = ",";
 
 	public String toString() {
-		return "account=" + account.getValue() + " date="  + date.getValue()
-				+ " id=" + id.getValue() + " type=" + type.getValue() + " reference=" + reference.getValue()
-				+ " description=" + description.getValue()+ " amount=" + amount.getValue() + " category=" + category.getValue();
+		return "account=" + account.getValue() + " dateProcessed=" + dateProcessed.getValue() + " id=" + id.getValue()
+				+ " type=" + type.getValue() + " reference=" + reference.getValue() + " description="
+				+ description.getValue() + " amount=" + amount.getValue() + " category=" + category.getValue();
 	}
 
 	public static String cSVHeader() {
-		return "account,date,id,type,referenece,description,amount,category\n";
+		return "account,dateProcessed,id,type,referenece,description,amount,category\n";
 	}
 
 	public String toCsv() {
-		return account.get() + "," + date.get() + "," + id.get() + ","
-				+ type.get() + "," + reference.get() + "," + description.get() + "," + amount.get() + ","
-				+ category.get() + "\n";
+		return account.get() + "," + dateProcessed.get() + "," + id.get() + "," + type.get() + "," + reference.get()
+				+ "," + description.get() + "," + amount.get() + "," + category.get() + "\n";
 	}
 
 	public String getAccount() {
@@ -129,9 +122,8 @@ public class BankStatementRow implements Comparable<BankStatementRow> {
 	}
 
 	public String getDateProcessed() {
-		return date.get();
+		return dateProcessed.get();
 	}
-
 
 	public String getId() {
 		return id.get();
@@ -170,7 +162,17 @@ public class BankStatementRow implements Comparable<BankStatementRow> {
 	}
 
 	public void setAmount(String amount) {
-		this.amount.set(amount);
+		logger.debug("!.visa amount=" + amount);
+		logger.debug("!.this.account=" + account);
+		logger.debug("!.Account.Visa.name()= "+Account.Visa.name());
+		if (this.account.get().equals(Account.Visa.name())) {
+			logger.debug("!!.visa amount=" + amount);
+			double val = Double.parseDouble(this.getAmount());
+			val = val * (-1);
+			this.amount.set(String.valueOf(val));
+			logger.debug("!!!!!!!!!!!!!!visa amount=" + String.valueOf(val));
+		} else
+			this.amount.set(amount);
 	}
 
 	public String getCategory() {
@@ -200,11 +202,12 @@ public class BankStatementRow implements Comparable<BankStatementRow> {
 		}
 
 		final BankStatementRow other = (BankStatementRow) obj;
-		if ((this.id == null) ? (other.id != null) : !this.id.equals(other.id) && this.account.equals(other.account)) {
-			return false;
-		}
+		if (this.id.equals(other.id) && this.account.equals(other.account)) {
+			return true;
 
-		return true;
+		} else
+			return false;
+
 	}
 
 }

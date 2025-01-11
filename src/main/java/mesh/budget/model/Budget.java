@@ -37,30 +37,35 @@ public class Budget {
 		return budget;
 	}
 
-	public void dedupe() {
-				
-		 Set<BankStatementRow> hashset = new HashSet<BankStatementRow>();
-		  	 
-		 budget.forEach(row ->{
-			 if (!hashset.add(row));{
-				 logger.info("id " + row.getId() + " is a duplicate");
-				 
-			 }
-			 
-		 });		 		 
-		 		
+	public int dedupe() {
+
+		Set<BankStatementRow> hashset = new HashSet<BankStatementRow>();
+		int count = 0;
+
+		BankStatementRow row;
+		for (int i = 0; i < budget.size(); i++) {
+			row = budget.get(i);
+			if (!hashset.add(row))
+			{
+				logger.info("id " + row.getId() + " is a duplicate");
+				count = count++;
+			}
+		}
+
+		return count;
 	}
-	
-	
+
 	// de-duplicates
 	public boolean add(BankStatementRow row) {
-		boolean result = false;
-		if (budget.indexOf(row) < 0) {
-			budget.add(row);
-			result = true;
-		} else {
+		/*
+		 * boolean result = false; if (budget.indexOf(row) < 0) { budget.add(row);
+		 * result = true; } else { logger.info("duplicate found :" + row.getId()); }
+		 */
+		boolean result = true;
+		if (budget.indexOf(row) > 0) {
 			logger.info("duplicate found :" + row.getId());
 		}
+		budget.add(row);
 		return result;
 	}
 
@@ -120,22 +125,21 @@ public class Budget {
 
 	private Account getAccount(String line) {
 		Account result = Account.Unknown;
-		
-		for (int i = 0 ; i < Account.values().length; i++) {
+
+		for (int i = 0; i < Account.values().length; i++) {
 			if (line.contains("Card Number")) {
 				result = Account.Visa;
 				break;
-			}
-			else if (line.contains(Account.values()[i].name())){
+			} else if (line.contains(Account.values()[i].name())) {
 				result = Account.values()[i];
 				break;
 			}
 		}
-				
+
 		return result;
-		
+
 	}
-	
+
 	private ObservableList<BankStatementRow> loadCsv(String filename) {
 
 		logger.info("loading file " + filename);
@@ -145,7 +149,7 @@ public class Budget {
 			String line;
 
 			BankStatementRow row;
-			Account account= Account.Unknown;
+			Account account = Account.Unknown;
 			// skip headers
 			do {
 				line = br.readLine();
@@ -158,10 +162,10 @@ public class Budget {
 			} while (!line.startsWith("202"));
 
 			if (line != null)
-				rows.add(BankStatementRow.CreateFromCsv(account,line));
+				rows.add(BankStatementRow.CreateFromCsv(account, line));
 
 			while ((line = br.readLine()) != null) {
-				row = BankStatementRow.CreateFromCsv(account,line);
+				row = BankStatementRow.CreateFromCsv(account, line);
 				logger.debug(row.toString());
 				rows.add(row);
 			}

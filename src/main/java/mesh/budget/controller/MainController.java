@@ -103,6 +103,15 @@ public class MainController {
 
 	}
 
+	
+	@FXML
+	public void onAlertButton1Click(ActionEvent event) {
+		
+		BankStatementRow row = budgetTable.getSelectionModel().getSelectedItem();
+		alert(row.toString());
+	}
+
+	
 	@FXML
 	public void onChartButton1Click(ActionEvent event) {
 
@@ -193,6 +202,7 @@ public class MainController {
 	public void Table1Context(ContextMenuEvent event) {
 		// System.out.println("context");
 		logger.info("context");
+		alert(budgetTable.selectionModelProperty().getValue().toString());
 
 	}
 
@@ -235,7 +245,8 @@ public class MainController {
 	
 	@FXML
 	public void deduper(ActionEvent event) {
-		budget.dedupe();	
+		int count = budget.dedupe();
+		alert(count + " duplicates found");
 	}
 	
 	@FXML
@@ -254,7 +265,7 @@ public class MainController {
 			@Override
 			public void onChanged(Change<? extends BankStatementRow> c) {
 				budgetTable.refresh();
-				logger.info("budget changed");
+				logger.debug("budget changed");
 			}
 		});
 
@@ -294,8 +305,8 @@ public class MainController {
 
 			TableColumn<BankStatementRow, String> account = new TableColumn<BankStatementRow, String>(
 					"account");
-			TableColumn<BankStatementRow, String> date = new TableColumn<BankStatementRow, String>(
-					"date");
+			TableColumn<BankStatementRow, String> dateProcessed = new TableColumn<BankStatementRow, String>(
+					"dateProcessed");
 			TableColumn<BankStatementRow, String> id = new TableColumn<BankStatementRow, String>("id");
 			TableColumn<BankStatementRow, String> type = new TableColumn<BankStatementRow, String>("type");
 			TableColumn<BankStatementRow, String> reference = new TableColumn<BankStatementRow, String>("reference");
@@ -304,11 +315,11 @@ public class MainController {
 			TableColumn<BankStatementRow, String> amount = new TableColumn<BankStatementRow, String>("amount");
 			TableColumn<BankStatementRow, String> category = new TableColumn<BankStatementRow, String>("category");
 
-			budgetTable.getColumns().addAll(account, date, id, type, reference, description, amount,
+			budgetTable.getColumns().addAll(account, dateProcessed, id, type, reference, description, amount,
 					category);
 
 			account.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("account"));
-			date.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("date"));
+			dateProcessed.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("dateProcessed"));
 			amount.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("amount"));
 			description.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("description"));
 			reference.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("reference"));
