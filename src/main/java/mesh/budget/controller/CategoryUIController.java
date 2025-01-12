@@ -145,7 +145,8 @@ public class CategoryUIController {
 	public void onAddCategoryClick(ActionEvent event) {
 		logger.info("onAddClick");
 		Category cat = new Category();
-		cat.setName(newCatText.getText());
+		String name = newCatText.getText();
+		cat.setName(name.replace(',', ' '));
 		categories.add(cat);
 		loadCategories();
 	}
