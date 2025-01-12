@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.Menu?>
@@ -14,7 +13,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" styleClass="root" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="524.0" prefWidth="1220.0" styleClass="root" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
@@ -28,7 +27,6 @@
             <items>
               <MenuItem mnemonicParsing="false" onAction="#showCategoryManager" text="Category Manager" />
                   <MenuItem mnemonicParsing="false" onAction="#runMatches" text="Run matches" />
-                  <MenuItem mnemonicParsing="false" onAction="#deduper" text="find duplicates" />
             </items>
           </Menu>
         </menus>
@@ -37,8 +35,8 @@
    <bottom>
       <AnchorPane prefHeight="70.0" prefWidth="1295.0" BorderPane.alignment="CENTER">
          <children>
-            <TextArea fx:id="alertsTextArea" layoutX="620.0" layoutY="16.0" prefHeight="22.0" prefWidth="302.0" />
-            <Button layoutX="138.0" layoutY="22.0" mnemonicParsing="false" onAction="#onAlertButton1Click" text="Button" />
+            <TextArea fx:id="alertsTextArea" layoutX="107.0" layoutY="16.0" prefHeight="39.0" prefWidth="1072.0" />
+            <Button fx:id="alertButton1" layoutX="30.0" layoutY="22.0" mnemonicParsing="false" onAction="#onAlertButton1Click" text="Inspect" />
          </children>
       </AnchorPane>
    </bottom>
@@ -49,11 +47,8 @@
                <content>
                   <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
                      <center>
-                        <TableView fx:id="budgetTable" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onContextMenuRequested="#Table1Context" prefWidth="1200.0" BorderPane.alignment="CENTER" />
+                        <TableView fx:id="budgetTable" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="1200.0" BorderPane.alignment="CENTER" />
                      </center>
-                     <top>
-                        <DatePicker BorderPane.alignment="CENTER" />
-                     </top>
                   </BorderPane>
                </content>
           </Tab>
@@ -63,9 +58,6 @@
                      <center>
                         <BorderPane fx:id="chartPane" prefHeight="200.0" prefWidth="200.0" />
                      </center>
-                     <bottom>
-                        <TableView fx:id="catTable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
-                     </bottom>
                      <left>
                         <AnchorPane prefHeight="346.0" prefWidth="193.0" BorderPane.alignment="CENTER">
                            <children>
@@ -75,6 +67,9 @@
                            </children>
                         </AnchorPane>
                      </left>
+                     <right>
+                        <TableView fx:id="catTable" prefHeight="400.0" prefWidth="317.0" BorderPane.alignment="CENTER" />
+                     </right>
                   </BorderPane>
                </content>
           </Tab>
