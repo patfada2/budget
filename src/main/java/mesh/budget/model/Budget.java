@@ -8,6 +8,8 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.time.Month;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
@@ -24,6 +26,7 @@ import javafx.scene.chart.PieChart;
 import javafx.scene.chart.XYChart;
 import javafx.scene.chart.PieChart.Data;
 import mesh.budget.Utils;
+import mesh.budget.model.BankStatementRow.Account;
 
 public class Budget {
 	private static final Logger logger = LoggerFactory.getLogger(Budget.class);
@@ -34,13 +37,35 @@ public class Budget {
 		return budget;
 	}
 
+	public int dedupe() {
+
+		Set<BankStatementRow> hashset = new HashSet<BankStatementRow>();
+		int count = 0;
+
+		BankStatementRow row;
+		for (int i = 0; i < budget.size(); i++) {
+			row = budget.get(i);
+			if (!hashset.add(row))
+			{
+				logger.info("id " + row.getId() + " is a duplicate");
+				count = count++;
+			}
+		}
+
+		return count;
+	}
+
 	// de-duplicates
 	public boolean add(BankStatementRow row) {
+		/*
+		 * boolean result = false; if (budget.indexOf(row) < 0) { budget.add(row);
+		 * result = true; } else { logger.info("duplicate found :" + row.getId()); }
+		 */
 		boolean result = true;
-		if (budget.indexOf(row) < 0) {
-			budget.add(row);
-			result = true;
+		if (budget.indexOf(row) > 0) {
+			logger.info("duplicate found :" + row.getId());
 		}
+		budget.add(row);
 		return result;
 	}
 
@@ -58,7 +83,7 @@ public class Budget {
 	private void addExportFile(String filename) {
 		int count = 0;
 		logger.info("loading " + filename);
-		ObservableList<BankStatementRow> rows = loadCsv(filename);
+		ObservableList<BankStatementRow> rows = loadExportCsv(filename);
 
 		Iterator<BankStatementRow> it = rows.iterator();
 		while (it.hasNext()) {
@@ -98,7 +123,24 @@ public class Budget {
 		}
 	}
 
-	private ObservableList<BankStatementRow> loadCsv(String filename) {
+	private Account getAccount(String line) {
+		Account result = Account.Unknown;
+
+		for (int i = 0; i < Account.values().length; i++) {
+			if (line.contains("Card Number")) {
+				result = Account.Visa;
+				break;
+			} else if (line.contains(Account.values()[i].name())) {
+				result = Account.values()[i];
+				break;
+			}
+		}
+
+		return result;
+
+	}
+
+	private ObservableList<BankStatementRow> loadExportCsv(String filename) {
 
 		logger.info("loading file " + filename);
 		ObservableList<BankStatementRow> rows = FXCollections.observableArrayList();
@@ -107,16 +149,51 @@ public class Budget {
 			String line;
 
 			BankStatementRow row;
+			Account account = Account.Unknown;
 			// skip headers
 			do {
 				line = br.readLine();
 				if (line == null)
 					break;
+				if (line.contains("Account") || line.contains("Card Number")) {
+					account = getAccount(line);
+					logger.info("account = " + account.name());
+				}
 			} while (!line.startsWith("202"));
 
 			if (line != null)
-				rows.add(BankStatementRow.CreateFromCsv(line));
+				rows.add(BankStatementRow.CreateFromCsv(account, line));
 
+			while ((line = br.readLine()) != null) {
+				row = BankStatementRow.CreateFromCsv(account, line);
+				logger.debug(row.toString());
+				rows.add(row);
+			}
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return rows;
+
+	}
+	
+	private ObservableList<BankStatementRow> loadCsv(String filename) {
+
+		logger.info("loading budget file " + filename);
+		ObservableList<BankStatementRow> rows = FXCollections.observableArrayList();
+
+		try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
+			String line;
+
+			BankStatementRow row;
+			Account account = Account.Unknown;
+			// skip headers
+			line = br.readLine();
+			
+			
 			while ((line = br.readLine()) != null) {
 				row = BankStatementRow.CreateFromCsv(line);
 				logger.debug(row.toString());
