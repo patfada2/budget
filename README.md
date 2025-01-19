@@ -21,7 +21,8 @@ piechart colours
 money
 ========
 
-look at FLP payment
+mercury energy
+
 drop office 365
 
 

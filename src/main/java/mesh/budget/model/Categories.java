@@ -23,7 +23,6 @@ import mesh.budget.App;
 public class Categories {
 	private static final Logger logger = LoggerFactory.getLogger(Categories.class);
 
-
 	private List<Category> categories = new ArrayList<Category>();
 
 	public List<Category> getCategories() {
@@ -85,6 +84,21 @@ public class Categories {
 			}
 		}
 		return result;
+	}
+
+	//the grand total of categories
+	public double getTotal() {
+		double result = 0;
+		for (Category c : categories) {
+			if (!c.getName().equals("Transfer")){
+				result += c.getTotal();
+				logger.debug("adding "+ c.getName() + ":"+c.getTotal()); 
+				
+			}
+			
+		}
+		return result;
+
 	}
 
 	public void loadFromFile(String filename) {
@@ -156,5 +170,4 @@ public class Categories {
 
 	}
 
-	
 }
