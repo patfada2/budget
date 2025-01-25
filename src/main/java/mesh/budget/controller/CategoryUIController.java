@@ -90,6 +90,9 @@ public class CategoryUIController {
 
 	@FXML
 	private TextField referenceMatchText;
+	
+	@FXML
+	private TextField budgetText;
 
 	private Category selectedCategory;
 
@@ -110,7 +113,7 @@ public class CategoryUIController {
 				selectedCategory = categories.getCategoryByName(selection);
 				if (selectedCategory != null)
 					loadMatches(selectedCategory);
-
+					budgetText.setText(String.valueOf(selectedCategory.getBudget()));					
 			}
 		});
 
@@ -194,6 +197,12 @@ public class CategoryUIController {
 		loadMatches(selectedCategory);
 	}
 
+	@FXML
+	public void onSetBudget(ActionEvent event) {
+		selectedCategory.setBudget(Double.parseDouble(budgetText.getText()));
+		
+	}
+	
 	private void loadMatches(Category cat) {
 		logger.info("loading matches for cat " + cat.getName());
 		descMatches.clear();

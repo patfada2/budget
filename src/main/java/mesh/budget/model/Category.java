@@ -21,9 +21,18 @@ public class Category {
 	private static ObjectMapper mapper = new ObjectMapper();
 
 	private double total;
+    private double budget;
 	
 	public double getTotal() {
 		return total;
+	}
+
+	public double getBudget() {
+		return budget;
+	}
+
+	public void setBudget(double budget) {
+		this.budget = budget;
 	}
 
 	public void setTotal(double total) {
