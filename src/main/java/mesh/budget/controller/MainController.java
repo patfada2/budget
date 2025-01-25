@@ -43,6 +43,7 @@ import mesh.budget.model.BankStatementRow;
 import mesh.budget.model.Budget;
 import mesh.budget.model.Categories;
 import mesh.budget.model.Category;
+import mesh.budget.model.CategoryAverage;
 import mesh.budget.model.CategoryMonth;
 
 public class MainController {
@@ -61,6 +62,7 @@ public class MainController {
 	public Scene catScene;
 	public Stage catStage;
 	private boolean catTableCreated = false;
+	private boolean averageTableCreated = false;
 
 	@FXML
 	private Button labeutton1l1;
@@ -69,6 +71,9 @@ public class MainController {
 
 	@FXML
 	private TableView<CategoryMonth> catTable;
+
+	@FXML
+	private TableView<CategoryAverage> averageTable;
 
 	@FXML
 	private DialogPane dialogPane1;
@@ -96,7 +101,7 @@ public class MainController {
 
 	@FXML
 	private ListView<String> monthPicker;
-	
+
 	@FXML
 	private TextField catTableTotalTextField;
 
@@ -107,15 +112,13 @@ public class MainController {
 
 	}
 
-	
 	@FXML
 	public void onAlertButton1Click(ActionEvent event) {
-		
+
 		BankStatementRow row = budgetTable.getSelectionModel().getSelectedItem();
 		alert(row.toString());
 	}
 
-	
 	@FXML
 	public void onChartButton1Click(ActionEvent event) {
 
@@ -142,7 +145,7 @@ public class MainController {
 		ObservableList<CategoryMonth> catTableData = FXCollections.observableArrayList();
 		barchartdata.forEach(series -> {
 
-			String month =series.getName();
+			String month = series.getName();
 
 			series.getData().forEach(row -> {
 				CategoryMonth catm = new CategoryMonth();
@@ -150,8 +153,7 @@ public class MainController {
 				catm.setMonth(month);
 				catm.setCategoryName(row.getXValue());
 				catm.setCategoryAmount(row.getYValue());
-				
-			
+
 				catTableData.add(catm);
 				logger.debug(catm.toString());
 
@@ -159,8 +161,30 @@ public class MainController {
 
 		});
 
-
 		catTable.setItems(catTableData);
+		showAverageTable(catTableData);
+
+	}
+
+	private void showAverageTable(ObservableList<CategoryMonth> monthdata) {
+		logger.info("getting average table data");
+		ObservableList<CategoryAverage> averageTableData = FXCollections.observableArrayList();
+
+
+		monthdata.forEach(catMon -> {
+			CategoryAverage catAvg= new CategoryAverage(catMon.getCategoryName());
+						
+			if (averageTableData.indexOf(catAvg) < 0) {
+				averageTableData.add(catAvg);	
+				logger.debug("adding" + catAvg.getCategoryName() );
+			}
+			int index = averageTableData.indexOf(catAvg);
+			CategoryAverage thisCat = averageTableData.get(index);
+			thisCat.addValue(catMon.getCategoryAmount());
+			
+		});
+		averageTable.setItems(averageTableData);
+
 		
 
 	}
@@ -199,7 +223,6 @@ public class MainController {
 
 	}
 
-
 	private boolean tableCreated = false;
 
 	@FXML
@@ -221,7 +244,7 @@ public class MainController {
 	@FXML
 	public void save(ActionEvent event) {
 		budget.saveToFile(Utils.budgetFileName);
-	    alert("saved to file " + Utils.budgetFileName);
+		alert("saved to file " + Utils.budgetFileName);
 		categories.saveToFile(Utils.categoryFileName);
 	}
 
@@ -246,18 +269,19 @@ public class MainController {
 		budgetTable.refresh();
 
 	}
-	
+
 	@FXML
 	public void deduper(ActionEvent event) {
 		int count = budget.dedupe();
 		alert(count + " duplicates found");
 	}
-	
+
 	@FXML
 	public void initialize() {
 		tableSetup();
 		chartSetup();
 		catTableSetup();
+		averageTableSetup();
 		appStateModel.bankStatementRowChangedProperty().addListener((observable, oldValue, newValue) -> {
 			// Only if completed
 			logger.info("bankStatementRow changed");
@@ -294,21 +318,36 @@ public class MainController {
 
 			catTable.getColumns().addAll(month, category, amount);
 
-			
 			month.setCellValueFactory(new PropertyValueFactory<CategoryMonth, String>("Month"));
 			category.setCellValueFactory(new PropertyValueFactory<CategoryMonth, String>("categoryName"));
 			amount.setCellValueFactory(new PropertyValueFactory<CategoryMonth, Number>("categoryAmount"));
-			
+
 		}
 		catTableCreated = true;
+
+	}
+
+	private void averageTableSetup() {
+		if (!averageTableCreated) {
+			logger.info("averageTableSetup");
+
+			TableColumn<CategoryAverage, String> category = new TableColumn<CategoryAverage, String>("category");
+			TableColumn<CategoryAverage, Number> average = new TableColumn<CategoryAverage, Number>("average");
+
+			averageTable.getColumns().addAll(category, average);
+
+			category.setCellValueFactory(new PropertyValueFactory<CategoryAverage, String>("categoryName"));
+			average.setCellValueFactory(new PropertyValueFactory<CategoryAverage, Number>("categoryAverage"));
+
+		}
+		averageTableCreated = true;
 
 	}
 
 	private void tableSetup() {
 		if (!tableCreated) {
 
-			TableColumn<BankStatementRow, String> account = new TableColumn<BankStatementRow, String>(
-					"account");
+			TableColumn<BankStatementRow, String> account = new TableColumn<BankStatementRow, String>("account");
 			TableColumn<BankStatementRow, String> dateProcessed = new TableColumn<BankStatementRow, String>(
 					"dateProcessed");
 			TableColumn<BankStatementRow, String> id = new TableColumn<BankStatementRow, String>("id");
@@ -319,8 +358,7 @@ public class MainController {
 			TableColumn<BankStatementRow, String> amount = new TableColumn<BankStatementRow, String>("amount");
 			TableColumn<BankStatementRow, String> category = new TableColumn<BankStatementRow, String>("category");
 
-			budgetTable.getColumns().addAll(account, dateProcessed, id, type, reference, description, amount,
-					category);
+			budgetTable.getColumns().addAll(account, dateProcessed, id, type, reference, description, amount, category);
 
 			account.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("account"));
 			dateProcessed.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("dateProcessed"));
@@ -342,7 +380,6 @@ public class MainController {
 				addReferenceMatchController.show(currentValue, row);
 			});
 
-			
 			id.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("id"));
 			reference.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("reference"));
 			type.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("type"));
@@ -350,7 +387,8 @@ public class MainController {
 			category.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("category"));
 			category.setCellFactory(column -> new TableCel_Edit());
 
-		};
+		}
+		;
 
 		tableCreated = true;
 		budgetTable.setItems(budget.getBudget());
@@ -377,7 +415,7 @@ public class MainController {
 
 		}
 
-		private void processEdit(String value) {			
+		private void processEdit(String value) {
 			commitEdit(value);
 		}
 
@@ -444,7 +482,7 @@ public class MainController {
 
 		budgetTable.refresh();
 
-	}	
+	}
 
 	public MainController(AppState appStateModel, Categories categories, Budget budget) {
 		logger.info("constructing main controler=" + this.toString());

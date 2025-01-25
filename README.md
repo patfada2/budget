@@ -21,13 +21,13 @@ piechart colours
 money
 ========
 
-mercury energy
+budget spreadsheet
 
-drop office 365
+average spend per category per month
+
+month under/over budget per category
 
 
-check rates payments
-2 on 18 Oct
 
 power dupl 24 oct
 
