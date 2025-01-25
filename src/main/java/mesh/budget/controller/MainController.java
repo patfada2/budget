@@ -24,6 +24,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.DialogPane;
+import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.control.Tab;
@@ -104,7 +105,10 @@ public class MainController {
 	private ListView<String> monthPicker;
 
 	@FXML
-	private TextField catTableTotalTextField;
+	private Label catTableTotalLabel;
+	
+	@FXML
+	private Label budgetTotalLabel;
 
 	@FXML
 	public void onSelectChartTab(Event event) {
@@ -155,7 +159,9 @@ public class MainController {
 
 		showBarChart(barchartdata, categories);
 		//catTableTotalTextField.setText(new Double(categories.getTotal()).toString());
-		catTableTotalTextField.setText(grandtotal.toString());
+		catTableTotalLabel.setText(Utils.toCurrency(grandtotal));
+		int numMonths = monthPicker.getSelectionModel().getSelectedItems().size();
+		budgetTotalLabel.setText(Utils.toCurrency(numMonths * categories.getBudgetTotal()));
 		showCatTable(barchartdata);
 	}
 

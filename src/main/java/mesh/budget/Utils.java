@@ -1,6 +1,7 @@
 package mesh.budget;
 
 import java.io.File;
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
 import org.slf4j.Logger;
@@ -17,6 +18,13 @@ public class Utils {
 	
 	
 	private static final Logger logger = LoggerFactory.getLogger(Utils.class);
+	
+	static public String toCurrency(Number n) {
+		
+		NumberFormat formatter = NumberFormat.getCurrencyInstance();
+		return formatter.format(n);
+		
+	}
 
 
 	static public List<File> findExports(String startPath) {

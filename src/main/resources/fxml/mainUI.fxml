@@ -10,7 +10,6 @@
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 
@@ -61,11 +60,13 @@
                            <right>
                               <AnchorPane BorderPane.alignment="CENTER">
                                  <children>
-                                    <TableView fx:id="catTable" layoutY="52.0" prefHeight="348.0" prefWidth="317.0" />
+                                    <TableView fx:id="catTable" layoutY="64.0" prefHeight="336.0" prefWidth="317.0" />
                                     <TableView fx:id="averageTable" layoutX="2.0" layoutY="437.0" prefHeight="284.0" prefWidth="320.0" />
-                                    <TextField fx:id="catTableTotalTextField" layoutX="159.0" layoutY="14.0" />
-                                    <Label layoutX="43.0" layoutY="18.0" text="Total" />
+                                    <Label layoutX="43.0" layoutY="18.0" text=" Total Spend" />
                                     <Label layoutX="108.0" layoutY="412.0" text="average per month" />
+                                    <Label fx:id="budgetTotalLabel" layoutX="47.0" layoutY="35.0" text="Budget:" />
+                                    <Label fx:id="catTableTotalLabel" layoutX="161.0" layoutY="18.0" text="-----" />
+                                    <Label fx:id="budgetTotalLabel" layoutX="159.0" layoutY="35.0" text="-----" />
                                  </children>
                               </AnchorPane>
                            </right></BorderPane>

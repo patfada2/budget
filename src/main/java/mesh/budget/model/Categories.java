@@ -32,6 +32,15 @@ public class Categories {
 	public void add(Category cat) {
 		categories.add(cat);
 	}
+	
+	public Double getBudgetTotal() {
+		
+		Double total = Double.valueOf(0);
+		for (int i = 0; i < categories.size(); i++) {
+			total += categories.get(i).getBudget();			
+		}
+		return total;
+	}
 
 	// return matching category, or UNKNOWN
 	public String findDescriptionMatch(String description) {
