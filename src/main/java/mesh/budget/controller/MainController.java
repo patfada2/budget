@@ -19,6 +19,7 @@ import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.PieChart;
 import javafx.scene.chart.XYChart;
+import javafx.scene.chart.XYChart.Series;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
@@ -125,6 +126,8 @@ public class MainController {
 		logger.info("onpieButton1Click");
 
 		ArrayList<XYChart.Series<String, Number>> barchartdata = new ArrayList<XYChart.Series<String, Number>>();
+		
+		
 
 		ObservableList<String> selectedMonths = monthPicker.getSelectionModel().getSelectedItems();
 		selectedMonths.forEach(month -> {
@@ -134,9 +137,25 @@ public class MainController {
 			barchartdata.add(series);
 
 		});
+		
+		Number grandtotal= Double.valueOf(0);
+		
+		//calculate the grand total
+		for (int i=0;i<barchartdata.size();i++) {
+			Number amount;
+			//category amounts for a given momth
+			XYChart.Series<String, Number> theSeries = barchartdata.get(i);
+			for (int k=0; k< theSeries.getData().size();k++) {
+				amount = theSeries.getData().get(k).getYValue();
+				grandtotal=grandtotal.doubleValue()+amount.doubleValue();				
+			}						
+		}
+		
+
 
 		showBarChart(barchartdata, categories);
-		catTableTotalTextField.setText(new Double(categories.getTotal()).toString());
+		//catTableTotalTextField.setText(new Double(categories.getTotal()).toString());
+		catTableTotalTextField.setText(grandtotal.toString());
 		showCatTable(barchartdata);
 	}
 

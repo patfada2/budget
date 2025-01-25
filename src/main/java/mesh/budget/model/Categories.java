@@ -92,7 +92,7 @@ public class Categories {
 		for (Category c : categories) {
 			if (!c.getName().equals("Transfer")){
 				result += c.getTotal();
-				logger.debug("adding "+ c.getName() + ":"+c.getTotal()); 
+				logger.debug("!!adding "+ c.getName() + ":"+c.getTotal()); 
 				
 			}
 			
