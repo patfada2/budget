@@ -11,6 +11,7 @@ public class CategoryAverage implements Comparable<CategoryAverage>  {
 
 	private SimpleStringProperty categoryName;
 	private SimpleDoubleProperty categoryAverage;
+	private SimpleDoubleProperty categoryBudget;
 	private List<Double> values;
 
 	public Double getCategoryAverage() {
@@ -28,6 +29,10 @@ public class CategoryAverage implements Comparable<CategoryAverage>  {
 	public String getCategoryName() {
 		return categoryName.get();
 	}
+	
+	public Double getCategoryBudget() {
+		return categoryBudget.get();
+	}
 
 	public void setCategoryName(String categoryName) {
 		this.categoryName.set(categoryName);
@@ -38,10 +43,11 @@ public class CategoryAverage implements Comparable<CategoryAverage>  {
 		return result;
 	}
 
-	public CategoryAverage(String categoryName) {
+	public CategoryAverage(String categoryName, double budget) {
 
 		this.categoryName = new SimpleStringProperty(categoryName);
 		this.categoryAverage = new SimpleDoubleProperty();
+		this.categoryBudget = new SimpleDoubleProperty(budget);
 		values = new ArrayList<Double>();
 	}
 

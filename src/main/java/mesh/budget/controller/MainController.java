@@ -191,7 +191,10 @@ public class MainController {
 
 
 		monthdata.forEach(catMon -> {
-			CategoryAverage catAvg= new CategoryAverage(catMon.getCategoryName());
+			//categories.getCategoryByName(c
+			String catName = catMon.getCategoryName();
+			double catBudget = categories.getCategoryByName(catName).getBudget();
+			CategoryAverage catAvg= new CategoryAverage(catName,catBudget);
 						
 			if (averageTableData.indexOf(catAvg) < 0) {
 				averageTableData.add(catAvg);	
@@ -352,11 +355,13 @@ public class MainController {
 
 			TableColumn<CategoryAverage, String> category = new TableColumn<CategoryAverage, String>("category");
 			TableColumn<CategoryAverage, Number> average = new TableColumn<CategoryAverage, Number>("average");
+			TableColumn<CategoryAverage, Number> budget = new TableColumn<CategoryAverage, Number>("budget");
 
-			averageTable.getColumns().addAll(category, average);
+			averageTable.getColumns().addAll(category, average,budget);
 
 			category.setCellValueFactory(new PropertyValueFactory<CategoryAverage, String>("categoryName"));
 			average.setCellValueFactory(new PropertyValueFactory<CategoryAverage, Number>("categoryAverage"));
+			budget.setCellValueFactory(new PropertyValueFactory<CategoryAverage, Number>("categoryBudget"));
 
 		}
 		averageTableCreated = true;
