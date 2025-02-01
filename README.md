@@ -3,10 +3,13 @@ budget
 
 Next:
 
-
+- add month column to table 
 - need a way to alert from other controllers than  main
 
 add a sub category?
+
+
+"GOOGLE  SERVICES AUCKLAND 16.56 US DOLLAR at a Conversion Rate  of 0.5885 (NZ$28.14)"
 
 
 
@@ -24,5 +27,7 @@ piechart colours
 money
 ========
 tiger
+cancel prime
+check google payment $28 per month
 
 
