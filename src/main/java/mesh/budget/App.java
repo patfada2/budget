@@ -65,6 +65,7 @@ public class App extends Application {
 
 	private void loadBudget() {
 		budget.loadFromFile(Utils.budgetFileName);
+		logger.info("budget loaded");
 	}
 
 	private AddMatchController addMatchSetup(MatchTypes matchType) {

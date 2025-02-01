@@ -38,20 +38,22 @@ public class Budget {
 	}
 
 	public int dedupe() {
-
+		logger.info("looking for duplicates");
 		Set<BankStatementRow> hashset = new HashSet<BankStatementRow>();
 		int count = 0;
 
 		BankStatementRow row;
 		for (int i = 0; i < budget.size(); i++) {
 			row = budget.get(i);
+			
 			if (!hashset.add(row))
 			{
 				logger.info("id " + row.getId() + " is a duplicate");
-				count = count++;
+				count++;
+				logger.debug("count = " + count);
 			}
 		}
-
+				
 		return count;
 	}
 
@@ -65,7 +67,7 @@ public class Budget {
 		if (budget.indexOf(row) > 0) {
 			logger.info("duplicate found :" + row.getId());
 		}
-		budget.add(row);
+		else budget.add(row);
 		return result;
 	}
 
@@ -267,8 +269,8 @@ public class Budget {
 				if (row.getCategory().equals(cat.getName())) {
 					cat.addToTotal(row.getAmount());
 				}
-				if (row.getCategory().equals("Helen") && cat.getName().equals("Helen")) {
-					logger.debug("!!!!added " + row.getAmount() + "to total, now " + cat.getTotal());
+				if (row.getCategory().equals("Food") && cat.getName().equals("Food")) {
+					logger.debug("!!!!added Food " + row.getAmount() + "to total, now " + cat.getTotal());
 				}
 
 			}

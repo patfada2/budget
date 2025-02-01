@@ -5,6 +5,7 @@ import java.time.Month;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Locale;
+import java.util.Objects;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -60,6 +61,7 @@ public class BankStatementRow implements Comparable<BankStatementRow> {
 		this.category = new SimpleStringProperty(category);
 	}
 
+	//used for loading from asb export lines
 	public static BankStatementRow CreateFromCsv(Account account, String line) {
 		line = line.replace("\\,", "_");
 		// ignore commas between quotes
@@ -76,6 +78,11 @@ public class BankStatementRow implements Comparable<BankStatementRow> {
 											// Type,Reference,Description,Amount
 			row = new BankStatementRow(account.name(), values.get(0), values.get(2), values.get(3), values.get(4),
 					values.get(5), values.get(6), values.get(7));
+			
+			//negate  amount if visa
+			double a = Double.parseDouble(row.getAmount());
+			a= a* -1;
+			row.setAmount(Double.toString(a));
 
 		} else {
 			// Date,Unique Id,Tran Type,Cheque Number,Payee,Memo,Amount
@@ -87,6 +94,7 @@ public class BankStatementRow implements Comparable<BankStatementRow> {
 
 	}
 
+	//used when loading budget files create dby this app
 	public static BankStatementRow CreateFromCsv(String line) {
 		line = line.replace("\\,", "_");
 		// ignore commas between quotes
@@ -205,8 +213,19 @@ public class BankStatementRow implements Comparable<BankStatementRow> {
 		return result;
 	}
 
+	 @Override
+	    public int hashCode() {
+		 int result=0;
+		 result =  Objects.hash(id.getValue(),account.getValue());
+		 logger.trace("hashcode for id," + id.getValue() +" account"+ account.getValue()+": " + result);
+	     
+	     return result;
+	    }
+	 
+	 
 	@Override
 	public boolean equals(Object obj) {
+		
 		if (obj == null) {
 			return false;
 		}
@@ -216,10 +235,15 @@ public class BankStatementRow implements Comparable<BankStatementRow> {
 		}
 
 		final BankStatementRow other = (BankStatementRow) obj;
-		if (this.id.equals(other.id) && this.account.equals(other.account)) {
+		logger.trace("this id = " + this.getId() + "other id = " + other.getId());
+		logger.trace("this account = " + this.getAccount() + "other account = " + other.getAccount());
+		if (this.id.getValue().equals(other.id.getValue()) && this.account.getValue().equals(other.account.getValue())) {
+			logger.trace("equal");
+			
 			return true;
 
 		} else
+			logger.trace("not equal");
 			return false;
 
 	}

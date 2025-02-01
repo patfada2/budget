@@ -387,7 +387,7 @@ public class MainController {
 	}
 
 	@FXML
-	public void deduper(ActionEvent event) {
+	public void dedupe(ActionEvent event) {
 		int count = budget.dedupe();
 		alert(count + " duplicates found");
 	}
@@ -459,6 +459,7 @@ public class MainController {
 
 		}
 		averageTableCreated = true;
+		logger.info("averageTableSetup finished");
 
 	}
 
