@@ -89,8 +89,8 @@ public class MainController {
 	@FXML
 	private PieChart pieChart;
 
-	@FXML
 	private BarChart<String, Number> barChart;
+	private BarChart<String, Number> barChart2;
 
 	@FXML
 	private Button pieButton1;
@@ -100,6 +100,9 @@ public class MainController {
 
 	@FXML
 	private BorderPane chartPane;
+	
+	@FXML
+	private BorderPane chart2Pane;
 
 	@FXML
 	private ListView<String> monthPicker;
@@ -109,13 +112,10 @@ public class MainController {
 	
 	@FXML
 	private Label budgetTotalLabel;
-
+	
 	@FXML
-	public void onSelectChartTab(Event event) {
+	private Tab chartTab2;
 
-		logger.info("onSelectChartTab");
-
-	}
 
 	@FXML
 	public void onAlertButton1Click(ActionEvent event) {
@@ -125,9 +125,91 @@ public class MainController {
 	}
 
 	@FXML
+	public void onSelectChartTab(Event event) {
+		logger.info("onSelectChartTab");
+	}
+	
+	//onShowChart2
+	@FXML
+	public void onShowChart2(ActionEvent event) {
+		logger.info("showing tab 2");
+
+	}
+	
+	@FXML void onChart2Button1Click(){
+		logger.info("onShowChart2");
+
+		ArrayList<XYChart.Series<String, Number>> barchartdata = new ArrayList<XYChart.Series<String, Number>>();
+		
+		
+
+		ObservableList<String> selectedMonths = monthPicker.getSelectionModel().getSelectedItems();
+		selectedMonths.forEach(month -> {
+			Month theMonth = Month.valueOf(month);
+			XYChart.Series<String, Number> series = budget.calcCategoryTotalsForMonth(categories, theMonth);
+			series.setName(month);
+			barchartdata.add(series);
+
+		});
+		
+		Number grandtotal= Double.valueOf(0);
+		
+		//calculate the grand total
+		for (int i=0;i<barchartdata.size();i++) {
+			Number amount;
+			//category amounts for a given momth
+			XYChart.Series<String, Number> theSeries = barchartdata.get(i);
+			for (int k=0; k< theSeries.getData().size();k++) {
+				amount = theSeries.getData().get(k).getYValue();
+				grandtotal=grandtotal.doubleValue()+amount.doubleValue();				
+			}						
+		}
+		
+
+
+		showBarChart2(barchartdata, categories);
+		
+	}
+	
+	private void showBarChart2(ArrayList<XYChart.Series<String, Number>> barchartdata, Categories categories) {
+
+		// remove the old one
+		chart2Pane.getChildren().remove(barChart2);
+
+		// define x axis
+
+		CategoryAxis xAxis = new CategoryAxis();
+		xAxis.setLabel("category");
+		categories.getCategories().forEach(cat -> {
+			xAxis.getCategories().add(cat.getName());
+
+		});
+
+		// define y axis
+		NumberAxis yAxis = new NumberAxis();
+		yAxis.setLabel("amount");
+
+		barChart2 = new BarChart<String, Number>(xAxis, yAxis);
+
+		// setup legend
+		barChart2.legendSideProperty().set(Side.RIGHT);
+		barChart2.setTitle("amount spent per month by category");
+
+		// make it visible
+		// chartPane.getChildren().add(barChart);
+		chart2Pane.setCenter(barChart2);
+
+		barchartdata.forEach(series -> {
+			barChart2.getData().addLast(series);
+		});
+
+	}
+
+	
+	@FXML
 	public void onChartButton1Click(ActionEvent event) {
 
-		logger.info("onpieButton1Click");
+		logger.info("onChartButton1Click");
 
 		ArrayList<XYChart.Series<String, Number>> barchartdata = new ArrayList<XYChart.Series<String, Number>>();
 		
@@ -164,7 +246,8 @@ public class MainController {
 		budgetTotalLabel.setText(Utils.toCurrency(numMonths * categories.getBudgetTotal()));
 		showCatTable(barchartdata);
 	}
-
+	
+	
 	private void showCatTable(ArrayList<XYChart.Series<String, Number>> barchartdata) {
 		logger.info("getting cat table data");
 		ObservableList<CategoryMonth> catTableData = FXCollections.observableArrayList();
@@ -252,6 +335,11 @@ public class MainController {
 	}
 
 	private boolean tableCreated = false;
+	//selectChart2
+	@FXML
+	public void selectChart2(ActionEvent event) {
+		logger.info("showing Chart2");
+	}
 
 	@FXML
 	public void Table1Context(ContextMenuEvent event) {
@@ -331,7 +419,7 @@ public class MainController {
 
 		monthPicker.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
 		for (Month month : Month.values()) {
-			System.out.println(month);
+			
 			monthPicker.getItems().add(month.toString());
 		}
 

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="829.0" prefWidth="1262.0" styleClass="root" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <MenuBar prefWidth="1245.0" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="loadmenu" mnemonicParsing="false" onAction="#loadExports" text="load exports" />
+                  <MenuItem fx:id="savemenu1" mnemonicParsing="false" onAction="#save" text="save" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Tools">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#showCategoryManager" text="Category Manager" />
+                  <MenuItem mnemonicParsing="false" onAction="#runMatches" text="Run matches" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="0.0" prefWidth="1265.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextArea fx:id="alertsTextArea" layoutX="107.0" layoutY="16.0" prefHeight="39.0" prefWidth="1072.0" />
+            <Button fx:id="alertButton1" layoutX="30.0" layoutY="22.0" mnemonicParsing="false" onAction="#onAlertButton1Click" text="Inspect" />
+         </children>
+      </AnchorPane>
+   </bottom>
+   <left>
+      <TabPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab onSelectionChanged="#onSelectChartTab" text="Table">
+               <content>
+                  <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                     <center>
+                        <TableView fx:id="budgetTable" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="1200.0" BorderPane.alignment="CENTER" />
+                     </center>
+                  </BorderPane>
+               </content>
+          </Tab>
+          <Tab fx:id="charttab" text="Chart">
+               <content>
+                  <BorderPane fx:id="outerBorderPane">
+                     <center>
+                        <BorderPane fx:id="chartPane" prefHeight="647.0" prefWidth="998.0">
+                           <right>
+                              <AnchorPane BorderPane.alignment="CENTER">
+                                 <children>
+                                    <TableView fx:id="catTable" layoutY="64.0" prefHeight="336.0" prefWidth="317.0" />
+                                    <TableView fx:id="averageTable" layoutX="2.0" layoutY="437.0" prefHeight="284.0" prefWidth="320.0" />
+                                    <Label layoutX="43.0" layoutY="18.0" text=" Total Spend" />
+                                    <Label layoutX="108.0" layoutY="412.0" text="average per month" />
+                                    <Label fx:id="budgetTotalLabel" layoutX="47.0" layoutY="35.0" text="Budget:" />
+                                    <Label fx:id="catTableTotalLabel" layoutX="161.0" layoutY="18.0" text="-----" />
+                                    <Label fx:id="budgetTotalLabel" layoutX="159.0" layoutY="35.0" text="-----" />
+                                 </children>
+                              </AnchorPane>
+                           </right></BorderPane>
+                     </center>
+                     <left>
+                        <AnchorPane prefHeight="346.0" prefWidth="193.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Button layoutX="14.0" layoutY="298.0" mnemonicParsing="false" onAction="#onChartButton1Click" text="show" />
+                              <Label layoutX="9.0" layoutY="21.0" text="select months" />
+                              <ListView fx:id="monthPicker" layoutX="14.0" layoutY="54.0" prefHeight="200.0" prefWidth="200.0" />
+                           </children>
+                        </AnchorPane>
+                     </left>
+                  </BorderPane>
+               </content>
+          </Tab>
+            <Tab fx:id="chartTab2" onSelectionChanged="#selectChart2" text="Chart2">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </left>
+</BorderPane>

@@ -83,6 +83,18 @@
                   </BorderPane>
                </content>
           </Tab>
+            <Tab fx:id="chartTab2" text="Chart2">
+              <content>
+                  <BorderPane fx:id="chart2Pane">
+                     <center>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                     </center>
+                     <left>
+                        <Button mnemonicParsing="false" onAction="#onChart2Button1Click" text="Button" BorderPane.alignment="CENTER" />
+                     </left>
+                  </BorderPane>
+              </content>
+            </Tab>
         </tabs>
       </TabPane>
    </left>
