@@ -5,9 +5,13 @@ import javafx.geometry.Side;
 
 import java.time.Month;
 import java.util.ArrayList;
+
 import org.controlsfx.control.table.TableFilter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
@@ -30,6 +34,7 @@ import javafx.scene.control.SelectionMode;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableColumn.CellDataFeatures;
 import javafx.scene.control.TableRow;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
@@ -39,6 +44,7 @@ import javafx.scene.input.ContextMenuEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import javafx.util.Callback;
 import mesh.budget.Utils;
 import mesh.budget.model.AppState;
 import mesh.budget.model.BankStatementRow;
@@ -100,7 +106,7 @@ public class MainController {
 
 	@FXML
 	private BorderPane chartPane;
-	
+
 	@FXML
 	private BorderPane chart2Pane;
 
@@ -109,13 +115,12 @@ public class MainController {
 
 	@FXML
 	private Label catTableTotalLabel;
-	
+
 	@FXML
 	private Label budgetTotalLabel;
-	
+
 	@FXML
 	private Tab chartTab2;
-
 
 	@FXML
 	public void onAlertButton1Click(ActionEvent event) {
@@ -128,20 +133,19 @@ public class MainController {
 	public void onSelectChartTab(Event event) {
 		logger.info("onSelectChartTab");
 	}
-	
-	//onShowChart2
+
+	// onShowChart2
 	@FXML
 	public void onShowChart2(ActionEvent event) {
 		logger.info("showing tab 2");
 
 	}
-	
-	@FXML void onChart2Button1Click(){
+
+	@FXML
+	void onChart2Button1Click() {
 		logger.info("onShowChart2");
 
 		ArrayList<XYChart.Series<String, Number>> barchartdata = new ArrayList<XYChart.Series<String, Number>>();
-		
-		
 
 		ObservableList<String> selectedMonths = monthPicker.getSelectionModel().getSelectedItems();
 		selectedMonths.forEach(month -> {
@@ -151,26 +155,24 @@ public class MainController {
 			barchartdata.add(series);
 
 		});
-		
-		Number grandtotal= Double.valueOf(0);
-		
-		//calculate the grand total
-		for (int i=0;i<barchartdata.size();i++) {
-			Number amount;
-			//category amounts for a given momth
-			XYChart.Series<String, Number> theSeries = barchartdata.get(i);
-			for (int k=0; k< theSeries.getData().size();k++) {
-				amount = theSeries.getData().get(k).getYValue();
-				grandtotal=grandtotal.doubleValue()+amount.doubleValue();				
-			}						
-		}
-		
 
+		Number grandtotal = Double.valueOf(0);
+
+		// calculate the grand total
+		for (int i = 0; i < barchartdata.size(); i++) {
+			Number amount;
+			// category amounts for a given momth
+			XYChart.Series<String, Number> theSeries = barchartdata.get(i);
+			for (int k = 0; k < theSeries.getData().size(); k++) {
+				amount = theSeries.getData().get(k).getYValue();
+				grandtotal = grandtotal.doubleValue() + amount.doubleValue();
+			}
+		}
 
 		showBarChart2(barchartdata, categories);
-		
+
 	}
-	
+
 	private void showBarChart2(ArrayList<XYChart.Series<String, Number>> barchartdata, Categories categories) {
 
 		// remove the old one
@@ -205,15 +207,12 @@ public class MainController {
 
 	}
 
-	
 	@FXML
 	public void onChartButton1Click(ActionEvent event) {
 
 		logger.info("onChartButton1Click");
 
 		ArrayList<XYChart.Series<String, Number>> barchartdata = new ArrayList<XYChart.Series<String, Number>>();
-		
-		
 
 		ObservableList<String> selectedMonths = monthPicker.getSelectionModel().getSelectedItems();
 		selectedMonths.forEach(month -> {
@@ -223,31 +222,28 @@ public class MainController {
 			barchartdata.add(series);
 
 		});
-		
-		Number grandtotal= Double.valueOf(0);
-		
-		//calculate the grand total
-		for (int i=0;i<barchartdata.size();i++) {
-			Number amount;
-			//category amounts for a given momth
-			XYChart.Series<String, Number> theSeries = barchartdata.get(i);
-			for (int k=0; k< theSeries.getData().size();k++) {
-				amount = theSeries.getData().get(k).getYValue();
-				grandtotal=grandtotal.doubleValue()+amount.doubleValue();				
-			}						
-		}
-		
 
+		Number grandtotal = Double.valueOf(0);
+
+		// calculate the grand total
+		for (int i = 0; i < barchartdata.size(); i++) {
+			Number amount;
+			// category amounts for a given momth
+			XYChart.Series<String, Number> theSeries = barchartdata.get(i);
+			for (int k = 0; k < theSeries.getData().size(); k++) {
+				amount = theSeries.getData().get(k).getYValue();
+				grandtotal = grandtotal.doubleValue() + amount.doubleValue();
+			}
+		}
 
 		showBarChart(barchartdata, categories);
-		//catTableTotalTextField.setText(new Double(categories.getTotal()).toString());
+		// catTableTotalTextField.setText(new Double(categories.getTotal()).toString());
 		catTableTotalLabel.setText(Utils.toCurrency(grandtotal));
 		int numMonths = monthPicker.getSelectionModel().getSelectedItems().size();
 		budgetTotalLabel.setText(Utils.toCurrency(numMonths * categories.getBudgetTotal()));
 		showCatTable(barchartdata);
 	}
-	
-	
+
 	private void showCatTable(ArrayList<XYChart.Series<String, Number>> barchartdata) {
 		logger.info("getting cat table data");
 		ObservableList<CategoryMonth> catTableData = FXCollections.observableArrayList();
@@ -278,25 +274,22 @@ public class MainController {
 		logger.info("getting average table data");
 		ObservableList<CategoryAverage> averageTableData = FXCollections.observableArrayList();
 
-
 		monthdata.forEach(catMon -> {
-			//categories.getCategoryByName(c
+			// categories.getCategoryByName(c
 			String catName = catMon.getCategoryName();
 			double catBudget = categories.getCategoryByName(catName).getBudget();
-			CategoryAverage catAvg= new CategoryAverage(catName,catBudget);
-						
+			CategoryAverage catAvg = new CategoryAverage(catName, catBudget);
+
 			if (averageTableData.indexOf(catAvg) < 0) {
-				averageTableData.add(catAvg);	
-				logger.debug("adding" + catAvg.getCategoryName() );
+				averageTableData.add(catAvg);
+				logger.debug("adding" + catAvg.getCategoryName());
 			}
 			int index = averageTableData.indexOf(catAvg);
 			CategoryAverage thisCat = averageTableData.get(index);
 			thisCat.addValue(catMon.getCategoryAmount());
-			
+
 		});
 		averageTable.setItems(averageTableData);
-
-		
 
 	}
 
@@ -335,7 +328,8 @@ public class MainController {
 	}
 
 	private boolean tableCreated = false;
-	//selectChart2
+
+	// selectChart2
 	@FXML
 	public void selectChart2(ActionEvent event) {
 		logger.info("showing Chart2");
@@ -419,7 +413,7 @@ public class MainController {
 
 		monthPicker.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
 		for (Month month : Month.values()) {
-			
+
 			monthPicker.getItems().add(month.toString());
 		}
 
@@ -451,7 +445,7 @@ public class MainController {
 			TableColumn<CategoryAverage, Number> average = new TableColumn<CategoryAverage, Number>("average");
 			TableColumn<CategoryAverage, Number> budget = new TableColumn<CategoryAverage, Number>("budget");
 
-			averageTable.getColumns().addAll(category, average,budget);
+			averageTable.getColumns().addAll(category, average, budget);
 
 			category.setCellValueFactory(new PropertyValueFactory<CategoryAverage, String>("categoryName"));
 			average.setCellValueFactory(new PropertyValueFactory<CategoryAverage, Number>("categoryAverage"));
@@ -467,6 +461,8 @@ public class MainController {
 		if (!tableCreated) {
 
 			TableColumn<BankStatementRow, String> account = new TableColumn<BankStatementRow, String>("account");
+			TableColumn<BankStatementRow, String> month = new TableColumn<BankStatementRow, String>("month");
+
 			TableColumn<BankStatementRow, String> dateProcessed = new TableColumn<BankStatementRow, String>(
 					"dateProcessed");
 			TableColumn<BankStatementRow, String> id = new TableColumn<BankStatementRow, String>("id");
@@ -477,9 +473,18 @@ public class MainController {
 			TableColumn<BankStatementRow, String> amount = new TableColumn<BankStatementRow, String>("amount");
 			TableColumn<BankStatementRow, String> category = new TableColumn<BankStatementRow, String>("category");
 
-			budgetTable.getColumns().addAll(account, dateProcessed, id, type, reference, description, amount, category);
+			budgetTable.getColumns().addAll(account, month, dateProcessed, id, type, reference, description, amount,
+					category);
 
 			account.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("account"));
+
+			month.setCellValueFactory(
+					new Callback<CellDataFeatures<BankStatementRow, String>, ObservableValue<String>>() {
+						public ObservableValue<String> call(CellDataFeatures<BankStatementRow, String> r) {							
+							return new SimpleStringProperty(r.getValue().getMonth().toString());
+						}
+					});
+
 			dateProcessed.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("dateProcessed"));
 			amount.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("amount"));
 			description.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("description"));
