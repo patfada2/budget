@@ -8,10 +8,12 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.time.Month;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -45,15 +47,14 @@ public class Budget {
 		BankStatementRow row;
 		for (int i = 0; i < budget.size(); i++) {
 			row = budget.get(i);
-			
-			if (!hashset.add(row))
-			{
+
+			if (!hashset.add(row)) {
 				logger.info("id " + row.getId() + " is a duplicate");
 				count++;
 				logger.debug("count = " + count);
 			}
 		}
-				
+
 		return count;
 	}
 
@@ -66,8 +67,8 @@ public class Budget {
 		boolean result = true;
 		if (budget.indexOf(row) > 0) {
 			logger.info("duplicate found :" + row.getId());
-		}
-		else budget.add(row);
+		} else
+			budget.add(row);
 		return result;
 	}
 
@@ -181,7 +182,7 @@ public class Budget {
 		return rows;
 
 	}
-	
+
 	private ObservableList<BankStatementRow> loadCsv(String filename) {
 
 		logger.info("loading budget file " + filename);
@@ -194,8 +195,7 @@ public class Budget {
 			Account account = Account.Unknown;
 			// skip headers
 			line = br.readLine();
-			
-			
+
 			while ((line = br.readLine()) != null) {
 				row = BankStatementRow.CreateFromCsv(line);
 				logger.debug(row.toString());
@@ -290,7 +290,7 @@ public class Budget {
 	}
 
 	public XYChart.Series<String, Number> calcCategoryTotalsForMonth(Categories cats, Month month) {
-		logger.info("calculating totals for month " + month.name());
+		logger.info("calculating totals for month: " + month.name());
 		// clear totals
 		for (Category cat : cats.getCategories()) {
 			cat.setTotal(0);
@@ -315,6 +315,51 @@ public class Budget {
 		}
 
 		return result;
+	}
+
+	public ArrayList<XYChart.Series<String, Number>> calcMonthTotalsPerCategory(Categories categories) {
+		logger.info("calcMonthTotalsPerCategory");
+
+		Category theCat = null;
+		Double theTotal = Double.valueOf(0);
+		Month month = null;
+
+		// calculate totals
+		for (BankStatementRow row : this.budget) {
+			theCat = categories.getCategoryByName(row.getCategory());
+
+			month = row.getMonth();
+			theTotal = theCat.getMonthTotals().get(month);
+			theTotal = theTotal + Double.parseDouble(row.getAmount());
+			theCat.getMonthTotals().put(month, theTotal);
+		}
+
+		// populate Series for response
+		ArrayList<XYChart.Series<String, Number>> barchartdata = new ArrayList<XYChart.Series<String, Number>>();
+
+		for (Category cat : categories.getCategories()) {
+			
+			if (!cat.getName().equals("Transfer")) {
+
+				XYChart.Series<String, Number> series = new XYChart.Series<>();
+				series.setName(cat.getName());
+
+				for (Month m : Month.values()) {
+				    Double total = cat.getMonthTotals().get(m);
+				    total = total * -1;
+					//Double total = Double.valueOf(100);
+					XYChart.Data<String, Number> p = new XYChart.Data<String, Number>(m.name(), total);
+
+					logger.debug(cat.getName() + "total for month " + m.name() + "=" + total);
+					series.getData().add(p);
+				}
+
+				barchartdata.add(series);
+			}
+		}
+
+		return barchartdata;
+
 	}
 
 }

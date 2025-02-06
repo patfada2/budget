@@ -7,9 +7,12 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
+import java.time.Month;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -24,7 +27,7 @@ public class Categories {
 	private static final Logger logger = LoggerFactory.getLogger(Categories.class);
 
 	private List<Category> categories = new ArrayList<Category>();
-
+	
 	public List<Category> getCategories() {
 		return categories;
 	}
@@ -109,6 +112,8 @@ public class Categories {
 		return result;
 
 	}
+	
+	
 
 	public void loadFromFile(String filename) {
 		logger.info("loading category file from: " + filename);

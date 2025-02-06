@@ -1,8 +1,11 @@
 package mesh.budget.model;
 
+import java.time.Month;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,8 +24,15 @@ public class Category {
 	private static ObjectMapper mapper = new ObjectMapper();
 
 	private double total;
-    private double budget;
-	
+	private double budget;
+
+	private Map<Month, Double> monthTotals;
+
+	public Map<Month, Double> getMonthTotals() {
+		return monthTotals;
+
+	}
+
 	public double getTotal() {
 		return total;
 	}
@@ -38,15 +48,15 @@ public class Category {
 	public void setTotal(double total) {
 		this.total = total;
 	}
-	
+
 	public void addToTotal(String amount) {
 		try {
 			double d = Double.parseDouble(amount);
-			total+=d;
-		}catch (NumberFormatException e) {
+			total += d;
+		} catch (NumberFormatException e) {
 			logger.info(amount + " is not a valid number");
 		}
-		
+
 	}
 
 	private SimpleStringProperty name;
@@ -85,9 +95,9 @@ public class Category {
 	}
 
 	public void deleteDescriptionMatch(String match) {
-		logger.info("deleting desc match "+match);
+		logger.info("deleting desc match " + match);
 		for (int i = 0; i < descriptionMatches.size(); i++) {
-			logger.debug("comparing "+ descriptionMatches.get(i) );
+			logger.debug("comparing " + descriptionMatches.get(i));
 
 			if (descriptionMatches.get(i).equals(match)) {
 				descriptionMatches.remove(i);
@@ -96,12 +106,12 @@ public class Category {
 			}
 		}
 	}
-	//deleteReferenceMatch
-	
+	// deleteReferenceMatch
+
 	public void deleteReferenceMatch(String match) {
-		logger.info("deleting ref match "+match);
+		logger.info("deleting ref match " + match);
 		for (int i = 0; i < referenceMatches.size(); i++) {
-			logger.debug("comparing "+ referenceMatches.get(i) );
+			logger.debug("comparing " + referenceMatches.get(i));
 
 			if (referenceMatches.get(i).equals(match)) {
 				referenceMatches.remove(i);
@@ -114,6 +124,11 @@ public class Category {
 	public Category() {
 		name = new SimpleStringProperty(Category.UNKNOWN);
 
+		monthTotals = new HashMap<Month, Double>();
+		// initialize month totals to zero
+		for (Month month : Month.values()) {
+			monthTotals.put(month, Double.valueOf(0));
+		}
 	}
 
 	public Category(String name) {

@@ -22,6 +22,7 @@ import javafx.scene.chart.BarChart;
 import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.PieChart;
+import javafx.scene.chart.StackedBarChart;
 import javafx.scene.chart.XYChart;
 import javafx.scene.chart.XYChart.Series;
 import javafx.scene.control.Alert;
@@ -96,7 +97,7 @@ public class MainController {
 	private PieChart pieChart;
 
 	private BarChart<String, Number> barChart;
-	private BarChart<String, Number> barChart2;
+	private StackedBarChart<String, Number> barChart2;
 
 	@FXML
 	private Button pieButton1;
@@ -144,36 +145,14 @@ public class MainController {
 	@FXML
 	void onChart2Button1Click() {
 		logger.info("onShowChart2");
-
-		ArrayList<XYChart.Series<String, Number>> barchartdata = new ArrayList<XYChart.Series<String, Number>>();
-
-		ObservableList<String> selectedMonths = monthPicker.getSelectionModel().getSelectedItems();
-		selectedMonths.forEach(month -> {
-			Month theMonth = Month.valueOf(month);
-			XYChart.Series<String, Number> series = budget.calcCategoryTotalsForMonth(categories, theMonth);
-			series.setName(month);
-			barchartdata.add(series);
-
-		});
-
-		Number grandtotal = Double.valueOf(0);
-
-		// calculate the grand total
-		for (int i = 0; i < barchartdata.size(); i++) {
-			Number amount;
-			// category amounts for a given momth
-			XYChart.Series<String, Number> theSeries = barchartdata.get(i);
-			for (int k = 0; k < theSeries.getData().size(); k++) {
-				amount = theSeries.getData().get(k).getYValue();
-				grandtotal = grandtotal.doubleValue() + amount.doubleValue();
-			}
-		}
-
-		showBarChart2(barchartdata, categories);
-
+			
+			ArrayList<XYChart.Series<String, Number>>  seriesArray = budget.calcMonthTotalsPerCategory(categories);
+			logger.debug("seriesArray size:" + seriesArray.size());
+			showBarChart2(seriesArray,categories);	
 	}
 
 	private void showBarChart2(ArrayList<XYChart.Series<String, Number>> barchartdata, Categories categories) {
+		logger.info("showBarChart2");
 
 		// remove the old one
 		chart2Pane.getChildren().remove(barChart2);
@@ -181,29 +160,40 @@ public class MainController {
 		// define x axis
 
 		CategoryAxis xAxis = new CategoryAxis();
-		xAxis.setLabel("category");
-		categories.getCategories().forEach(cat -> {
-			xAxis.getCategories().add(cat.getName());
-
-		});
+		xAxis.setLabel("month");
+		
+		/*
+		for (Month m : Month.values()) { 
+			xAxis.getCategories().add(m.name());
+		};
+		*/
 
 		// define y axis
 		NumberAxis yAxis = new NumberAxis();
 		yAxis.setLabel("amount");
 
-		barChart2 = new BarChart<String, Number>(xAxis, yAxis);
+		barChart2 = new StackedBarChart<String, Number>(xAxis, yAxis);
 
 		// setup legend
 		barChart2.legendSideProperty().set(Side.RIGHT);
-		barChart2.setTitle("amount spent per month by category");
+		barChart2.setTitle("amount spent per category by month");
 
 		// make it visible
 		// chartPane.getChildren().add(barChart);
 		chart2Pane.setCenter(barChart2);
-
-		barchartdata.forEach(series -> {
+		
+	/*
+		
+		for (XYChart.Series<String, Number> series: barchartdata) {
 			barChart2.getData().addLast(series);
-		});
+			logger.debug("adding series " + series.getName());
+			
+		}
+		
+	*/	
+		barChart2.getData().addAll(barchartdata);
+
+		
 
 	}
 
