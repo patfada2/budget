@@ -31,6 +31,9 @@ import javafx.scene.chart.PieChart;
 import javafx.scene.chart.XYChart;
 import javafx.scene.text.Text;
 import javafx.scene.chart.PieChart.Data;
+import javafx.scene.Parent;
+import javafx.scene.Group;
+
 import mesh.budget.Utils;
 import mesh.budget.model.BankStatementRow.Account;
 
@@ -361,7 +364,7 @@ public class Budget {
 						public void changed(ObservableValue<? extends Node> ov, Node oldNode, final Node node) {
 							if (node != null) {
 								setNodeStyle(p, categories.getCatColour(cat.getName()));
-								// displayLabelForData(p);
+								//displayLabelForData(p);
 							}
 						}
 					});
@@ -375,13 +378,23 @@ public class Budget {
 		}
 
 		return barchartdata;
-
 	}
 
+	
+	private void displayLabelForData(XYChart.Data<String, Number> data) {
+		    final Node node = data.getNode();
+		    final Text dataText = new Text(data.getYValue() + "");
+		    node.parentProperty().addListener(new ChangeListener<Parent>() {
+		      @Override public void changed(ObservableValue<? extends Parent> ov, Parent oldParent, Parent parent) {
+		        Group parentGroup = (Group) parent;
+		        parentGroup.getChildren().add(dataText);
+		      }
+		    });
+		    
+	 }
+	
 	private void setNodeStyle(XYChart.Data<String, Number> data, String colour) {
 		Node node = data.getNode();
-		// node.setStyle(" -fx-bar-fill: lawngreen;");
-		// .default-color8.chart-bar
 		node.setStyle(colour);
 	}
 

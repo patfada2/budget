@@ -19,7 +19,6 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.chart.BarChart;
 import javafx.scene.chart.CategoryAxis;
@@ -43,6 +42,7 @@ import javafx.scene.control.TableRow;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Tooltip;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.effect.Glow;
 import javafx.scene.effect.Reflection;
@@ -183,29 +183,36 @@ public class MainController {
 		// setup legend
 		barChart2.legendSideProperty().set(Side.RIGHT);
 		barChart2.setTitle("amount spent per category by month");
-		
 
 		chart2Pane.setCenter(barChart2);
 
 		barChart2.getData().addAll(barchartdata);
-		
+
 		for (Node n : barChart2.getChildrenUnmodifiable()) {
 			if (n instanceof Legend) {
 				setLegendItemColor((Legend) n);
 			}
 		}
-		
+
+		// setup hover
+
+		for (XYChart.Series<String, Number> series : barchartdata) {
+			for (XYChart.Data<String, Number> item : series.getData()) {
+				item.getNode().setOnMousePressed((MouseEvent event) -> {
+					alert("you clicked " + item.toString() + series.toString());
+				});
+				Tooltip.install(item.getNode(), new Tooltip(series.getName() + ":\n" + item.getYValue()));
+			}
+		}
 
 	}
 
-
-
 	private void setLegendItemColor(Legend lg) {
 		logger.info("setLegendItemColor");
-		
+
 		logger.debug("legend has " + lg.getChildren().size() + " children");
 		logger.debug("legend has " + lg.getItems().size() + " items");
-		
+
 		for (Node n : lg.getChildren()) {
 			Label lb = (Label) n;
 			String colour = categories.getCatColour(lb.getText());
