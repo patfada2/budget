@@ -86,7 +86,7 @@
           </Tab>
             <Tab fx:id="chartTab2" text="Chart2">
               <content>
-                  <BorderPane fx:id="chart2Pane">
+                  <BorderPane fx:id="chart2Pane" stylesheets="@mychart.css">
                      <center>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
                      </center>

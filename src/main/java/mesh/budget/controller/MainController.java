@@ -5,11 +5,12 @@ import javafx.geometry.Side;
 
 import java.time.Month;
 import java.util.ArrayList;
+import java.util.Set;
 
 import org.controlsfx.control.table.TableFilter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
+import com.sun.javafx.charts.Legend;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -17,6 +18,8 @@ import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
+import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.chart.BarChart;
 import javafx.scene.chart.CategoryAxis;
@@ -41,9 +44,13 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.effect.Glow;
+import javafx.scene.effect.Reflection;
 import javafx.scene.input.ContextMenuEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 import mesh.budget.Utils;
@@ -145,10 +152,10 @@ public class MainController {
 	@FXML
 	void onChart2Button1Click() {
 		logger.info("onShowChart2");
-			
-			ArrayList<XYChart.Series<String, Number>>  seriesArray = budget.calcMonthTotalsPerCategory(categories);
-			logger.debug("seriesArray size:" + seriesArray.size());
-			showBarChart2(seriesArray,categories);	
+
+		ArrayList<XYChart.Series<String, Number>> seriesArray = budget.calcMonthTotalsPerCategory(categories);
+		logger.debug("seriesArray size:" + seriesArray.size());
+		showBarChart2(seriesArray, categories);
 	}
 
 	private void showBarChart2(ArrayList<XYChart.Series<String, Number>> barchartdata, Categories categories) {
@@ -161,40 +168,51 @@ public class MainController {
 
 		CategoryAxis xAxis = new CategoryAxis();
 		xAxis.setLabel("month");
-		
+
 		/*
-		for (Month m : Month.values()) { 
-			xAxis.getCategories().add(m.name());
-		};
-		*/
+		 * for (Month m : Month.values()) { xAxis.getCategories().add(m.name()); };
+		 */
 
 		// define y axis
 		NumberAxis yAxis = new NumberAxis();
 		yAxis.setLabel("amount");
 
 		barChart2 = new StackedBarChart<String, Number>(xAxis, yAxis);
+		// .getStylesheets().add("piechart.css");
 
 		// setup legend
 		barChart2.legendSideProperty().set(Side.RIGHT);
 		barChart2.setTitle("amount spent per category by month");
+		
 
-		// make it visible
-		// chartPane.getChildren().add(barChart);
 		chart2Pane.setCenter(barChart2);
+
+		barChart2.getData().addAll(barchartdata);
 		
-	/*
-		
-		for (XYChart.Series<String, Number> series: barchartdata) {
-			barChart2.getData().addLast(series);
-			logger.debug("adding series " + series.getName());
-			
+		for (Node n : barChart2.getChildrenUnmodifiable()) {
+			if (n instanceof Legend) {
+				setLegendItemColor((Legend) n);
+			}
 		}
 		
-	*/	
-		barChart2.getData().addAll(barchartdata);
 
+	}
+
+
+
+	private void setLegendItemColor(Legend lg) {
+		logger.info("setLegendItemColor");
 		
+		logger.debug("legend has " + lg.getChildren().size() + " children");
+		logger.debug("legend has " + lg.getItems().size() + " items");
+		
+		for (Node n : lg.getChildren()) {
+			Label lb = (Label) n;
+			String colour = categories.getCatColour(lb.getText());
+			lb.getGraphic().setStyle(colour);
+			logger.debug("setting legend colour " + colour);
 
+		}
 	}
 
 	@FXML
@@ -312,7 +330,8 @@ public class MainController {
 		chartPane.setCenter(barChart);
 
 		barchartdata.forEach(series -> {
-			barChart.getData().addLast(series);
+			barChart.getData().add(series);
+
 		});
 
 	}
@@ -470,7 +489,7 @@ public class MainController {
 
 			month.setCellValueFactory(
 					new Callback<CellDataFeatures<BankStatementRow, String>, ObservableValue<String>>() {
-						public ObservableValue<String> call(CellDataFeatures<BankStatementRow, String> r) {							
+						public ObservableValue<String> call(CellDataFeatures<BankStatementRow, String> r) {
 							return new SimpleStringProperty(r.getValue().getMonth().toString());
 						}
 					});

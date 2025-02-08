@@ -49,9 +49,9 @@ public class AddMatchController {
 
 			Category selectedCategory = categories.getCategoryByName(selectedRow.getCategory());
 			switch (matchType) {
-			case MatchTypes.DESCRIPTION:
+			case DESCRIPTION:
 				selectedCategory.getDescriptionMatches().add(match);
-			case MatchTypes.REFERNCE:
+			case REFERNCE:
 				selectedCategory.getReferenceMatches().add(match);
 
 			}

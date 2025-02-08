@@ -21,11 +21,15 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javafx.beans.property.SimpleSetProperty;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.ObservableSet;
+import javafx.scene.Node;
 import javafx.scene.chart.PieChart;
 import javafx.scene.chart.XYChart;
+import javafx.scene.text.Text;
 import javafx.scene.chart.PieChart.Data;
 import mesh.budget.Utils;
 import mesh.budget.model.BankStatementRow.Account;
@@ -338,17 +342,29 @@ public class Budget {
 		ArrayList<XYChart.Series<String, Number>> barchartdata = new ArrayList<XYChart.Series<String, Number>>();
 
 		for (Category cat : categories.getCategories()) {
-			
+
 			if (!cat.getName().equals("Transfer")) {
+				logger.debug("!!!!!!!!!!!!"+ cat.getName());
 
 				XYChart.Series<String, Number> series = new XYChart.Series<>();
 				series.setName(cat.getName());
+				// series.getNode().setStyle(null);
 
 				for (Month m : Month.values()) {
-				    Double total = cat.getMonthTotals().get(m);
-				    total = total * -1;
-					//Double total = Double.valueOf(100);
+					Double total = cat.getMonthTotals().get(m);
+					total = total * -1;
+					// Double total = Double.valueOf(100);
 					XYChart.Data<String, Number> p = new XYChart.Data<String, Number>(m.name(), total);
+
+					p.nodeProperty().addListener(new ChangeListener<Node>() {
+						@Override
+						public void changed(ObservableValue<? extends Node> ov, Node oldNode, final Node node) {
+							if (node != null) {
+								setNodeStyle(p, categories.getCatColour(cat.getName()));
+								// displayLabelForData(p);
+							}
+						}
+					});
 
 					logger.debug(cat.getName() + "total for month " + m.name() + "=" + total);
 					series.getData().add(p);
@@ -360,6 +376,13 @@ public class Budget {
 
 		return barchartdata;
 
+	}
+
+	private void setNodeStyle(XYChart.Data<String, Number> data, String colour) {
+		Node node = data.getNode();
+		// node.setStyle(" -fx-bar-fill: lawngreen;");
+		// .default-color8.chart-bar
+		node.setStyle(colour);
 	}
 
 }

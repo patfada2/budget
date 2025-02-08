@@ -25,22 +25,55 @@ import mesh.budget.App;
 
 public class Categories {
 	private static final Logger logger = LoggerFactory.getLogger(Categories.class);
+	// these need to be defined in the css
+	private String[] catColours = { "-fx-bar-fill: #f9d900;", "-fx-bar-fill: #a9e200;", "-fx-bar-fill: #22bad9;",
+			"-fx-bar-fill: #0181e2;", "-fx-bar-fill: #2f357f;",
+			"-fx-bar-fill: #860061;",
+			"-fx-bar-fill: #c62b00;",
+			" -fx-bar-fill: #ff5700;",
+			"-fx-bar-fill: lawngreen;",
+			"-fx-bar-fill: indianred;",
+			"-fx-bar-fill: blue;",
+			"-fx-bar-fill: darksalmon;",
+			"-fx-bar-fill: cornflowerblue ;",
+			"-fx-bar-fill: honeydew ;",
+			"-fx-bar-fill: goldenrod ;",
+			"-fx-bar-fill: darkred ;",
+			"-fx-bar-fill: purple ;",
+			"-fx-bar-fill: red ;",
+			"-fx-bar-fill: seagreen;",
+			"-fx-bar-fill: yellow;"
+			
+	};
 
 	private List<Category> categories = new ArrayList<Category>();
-	
+
 	public List<Category> getCategories() {
 		return categories;
+	}
+
+	public String getCatColour(String catName) {
+		int i = this.getIndexOfName(catName);
+		if ((i >= 0) && (i < catColours.length)) {
+			logger.trace("colour for "+catName+" is "+ catColours[i]);
+			return catColours[i];
+		}
+		else {
+			logger.debug(catName+" is not found, using"+ catColours[0]);
+			return catColours[0];
+			
+		}
 	}
 
 	public void add(Category cat) {
 		categories.add(cat);
 	}
-	
+
 	public Double getBudgetTotal() {
-		
+
 		Double total = Double.valueOf(0);
 		for (int i = 0; i < categories.size(); i++) {
-			total += categories.get(i).getBudget();			
+			total += categories.get(i).getBudget();
 		}
 		return total;
 	}
@@ -98,22 +131,20 @@ public class Categories {
 		return result;
 	}
 
-	//the grand total of categories
+	// the grand total of categories
 	public double getTotal() {
 		double result = 0;
 		for (Category c : categories) {
-			if (!c.getName().equals("Transfer")){
+			if (!c.getName().equals("Transfer")) {
 				result += c.getTotal();
-				logger.debug("!!adding "+ c.getName() + ":"+c.getTotal()); 
-				
+				logger.debug("!!adding " + c.getName() + ":" + c.getTotal());
+
 			}
-			
+
 		}
 		return result;
 
 	}
-	
-	
 
 	public void loadFromFile(String filename) {
 		logger.info("loading category file from: " + filename);
@@ -166,8 +197,7 @@ public class Categories {
 				result = i;
 				break;
 			}
-		}
-
+		}	
 		return result;
 	}
 
