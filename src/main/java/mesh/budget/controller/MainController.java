@@ -215,7 +215,7 @@ public class MainController {
 
 		for (Node n : lg.getChildren()) {
 			Label lb = (Label) n;
-			String colour = categories.getCatColour(lb.getText());
+			String colour = categories.getDefaultCatColour(lb.getText());
 			lb.getGraphic().setStyle(colour);
 			logger.debug("setting legend colour " + colour);
 
@@ -404,7 +404,7 @@ public class MainController {
 
 	@FXML
 	public void initialize() {
-		tableSetup();
+		budgetTableSetup();
 		chartSetup();
 		catTableSetup();
 		averageTableSetup();
@@ -473,7 +473,7 @@ public class MainController {
 
 	}
 
-	private void tableSetup() {
+	private void budgetTableSetup() {
 		if (!tableCreated) {
 
 			TableColumn<BankStatementRow, String> account = new TableColumn<BankStatementRow, String>("account");

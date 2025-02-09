@@ -363,7 +363,7 @@ public class Budget {
 						@Override
 						public void changed(ObservableValue<? extends Node> ov, Node oldNode, final Node node) {
 							if (node != null) {
-								setNodeStyle(p, categories.getCatColour(cat.getName()));
+								setNodeStyle(p, categories.getDefaultCatColour(cat.getName()));
 								//displayLabelForData(p);
 							}
 						}

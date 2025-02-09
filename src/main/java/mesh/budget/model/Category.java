@@ -25,6 +25,7 @@ public class Category {
 
 	private double total;
 	private double budget;
+	private String colour;
 
 	private Map<Month, Double> monthTotals;
 

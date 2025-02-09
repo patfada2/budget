@@ -3060,6 +3060,7 @@
                           linear-gradient(to right, derive(-fx-bar-fill,30%), derive(-fx-bar-fill,-10%));
     -fx-background-radius: 5 0 0 5, 4 0 0 4, 3 0 0 3;
 }
+
 .default-color0.chart-bar { -fx-bar-fill: #f9d900; }
 .default-color1.chart-bar { -fx-bar-fill: #a9e200; }
 .default-color2.chart-bar { -fx-bar-fill: #22bad9; }
@@ -3068,6 +3069,19 @@
 .default-color5.chart-bar { -fx-bar-fill: #860061; }
 .default-color6.chart-bar { -fx-bar-fill: #c62b00; }
 .default-color7.chart-bar { -fx-bar-fill: #ff5700; }
+.default-color8.chart-bar { -fx-bar-fill: lawngreen ; }
+.default-color9.chart-bar { -fx-bar-fill: indianred ; }
+.default-color10.chart-bar { -fx-bar-fill: blue ; }
+.default-colo11.chart-bar { -fx-bar-fill: darksalmon ; }
+.default-color12.chart-bar { -fx-bar-fill: cornflowerblue ; }
+.default-colo13.chart-bar { -fx-bar-fill: honeydew ; }
+.default-color14.chart-bar { -fx-bar-fill: goldenrod ; }
+.default-colo115.chart-bar { -fx-bar-fill: darkred ; }
+.default-colo116.chart-bar { -fx-bar-fill: purple  ; }
+.default-colo117.chart-bar { -fx-bar-fill: red ; }
+.default-colo118.chart-bar { -fx-bar-fill: seagreen  ; }
+.default-colo119.chart-bar { -fx-bar-fill: yellow  ; }
+
 .bar-legend-symbol {
     -fx-padding: 8px;
 }

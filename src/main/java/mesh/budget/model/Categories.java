@@ -52,7 +52,7 @@ public class Categories {
 		return categories;
 	}
 
-	public String getCatColour(String catName) {
+	public String getDefaultCatColour(String catName) {
 		int i = this.getIndexOfName(catName);
 		if ((i >= 0) && (i < catColours.length)) {
 			logger.trace("colour for "+catName+" is "+ catColours[i]);

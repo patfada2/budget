@@ -15,7 +15,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.TextFieldListCell;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 import mesh.budget.model.AppState;
 import mesh.budget.model.BankStatementRow;
@@ -59,6 +62,12 @@ public class CategoryUIController {
 		return selection;
 	}
 
+	@FXML 
+	private AnchorPane catDetailAnchor;
+	
+	@FXML
+	private Rectangle catColourRect;
+	
 	@FXML
 	private BorderPane borderPane;
 	@FXML
@@ -111,9 +120,17 @@ public class CategoryUIController {
 				logger.info(newValue);
 				selection = newValue;
 				selectedCategory = categories.getCategoryByName(selection);
-				if (selectedCategory != null)
+				if (selectedCategory != null) {
 					loadMatches(selectedCategory);
-					budgetText.setText(String.valueOf(selectedCategory.getBudget()));					
+					budgetText.setText(String.valueOf(selectedCategory.getBudget()));
+					String colourString = categories.getDefaultCatColour((selectedCategory.getName()));
+					String s = colourString.substring(colourString.indexOf(":")+1,colourString.length()-1);
+					logger.debug("colour:"+s);
+					
+					Color c = Color.web(s.trim());
+					catColourRect.setFill(c);
+					reDraw();
+				}
 			}
 		});
 
@@ -142,6 +159,12 @@ public class CategoryUIController {
 		Stage stage = (Stage) borderPane.getScene().getWindow();
 		stage.hide();
 
+	}
+	
+	private void reDraw() {
+		Stage stage = (Stage) borderPane.getScene().getWindow();
+		stage.show();
+		
 	}
 
 	@FXML
