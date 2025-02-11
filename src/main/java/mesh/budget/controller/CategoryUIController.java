@@ -12,14 +12,19 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TableCell;
+import javafx.scene.control.TableRow;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.TextFieldListCell;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
+import mesh.budget.Utils;
 import mesh.budget.model.AppState;
 import mesh.budget.model.BankStatementRow;
 import mesh.budget.model.Budget;
@@ -62,12 +67,15 @@ public class CategoryUIController {
 		return selection;
 	}
 
-	@FXML 
+	@FXML
 	private AnchorPane catDetailAnchor;
-	
+
+	@FXML
+	private ChoiceBox<String> colourPickChoiceBox;
+
 	@FXML
 	private Rectangle catColourRect;
-	
+
 	@FXML
 	private BorderPane borderPane;
 	@FXML
@@ -99,7 +107,7 @@ public class CategoryUIController {
 
 	@FXML
 	private TextField referenceMatchText;
-	
+
 	@FXML
 	private TextField budgetText;
 
@@ -123,11 +131,7 @@ public class CategoryUIController {
 				if (selectedCategory != null) {
 					loadMatches(selectedCategory);
 					budgetText.setText(String.valueOf(selectedCategory.getBudget()));
-					String colourString = categories.getDefaultCatColour((selectedCategory.getName()));
-					String s = colourString.substring(colourString.indexOf(":")+1,colourString.length()-1);
-					logger.debug("colour:"+s);
-					
-					Color c = Color.web(s.trim());
+					Color c = Utils.cssStringToColor(selectedCategory.getColour());
 					catColourRect.setFill(c);
 					reDraw();
 				}
@@ -149,8 +153,14 @@ public class CategoryUIController {
 			}
 
 		});
+		for (int i = 0; i < Categories.catColours.length; i++) {
+			colourPickChoiceBox.getItems().add(Categories.catColours[i]);
+		}
+
 
 	}
+
+	
 
 	@FXML
 	public void onOKClick(ActionEvent event) {
@@ -160,11 +170,11 @@ public class CategoryUIController {
 		stage.hide();
 
 	}
-	
+
 	private void reDraw() {
 		Stage stage = (Stage) borderPane.getScene().getWindow();
 		stage.show();
-		
+
 	}
 
 	@FXML
@@ -223,9 +233,27 @@ public class CategoryUIController {
 	@FXML
 	public void onSetBudget(ActionEvent event) {
 		selectedCategory.setBudget(Double.parseDouble(budgetText.getText()));
-		
+
 	}
-	
+
+	@FXML
+	public void onSelectColour(MouseEvent event) {
+
+		logger.info("onColourPick");
+		
+		colourPickChoiceBox.getSelectionModel().selectedIndexProperty().addListener((obs, oldValue, newValue) -> {
+
+			String value = colourPickChoiceBox.getItems().get(newValue.intValue());
+			Color c = Utils.cssStringToColor(colourPickChoiceBox.getItems().get(newValue.intValue()));
+			logger.info("colour " + c.toString() + " selected");
+			catColourRect.setFill(c);
+			selectedCategory.setColour(c);
+			reDraw();
+			// processEdit(value);
+		});
+
+	}
+
 	private void loadMatches(Category cat) {
 		logger.info("loading matches for cat " + cat.getName());
 		descMatches.clear();
@@ -264,12 +292,15 @@ public class CategoryUIController {
 
 	public void show(BankStatementRow selectedRow) {
 
-		Stage stage = (Stage) borderPane.getScene().getWindow();
+		
 		loadCategories();
 		listCategory.getSelectionModel().select(0);
 
 		newCatText.clear();
 		this.selectedRow = selectedRow;
+		
+		Stage stage = (Stage) borderPane.getScene().getWindow();
+		
 		stage.show();
 		stage.toFront();
 

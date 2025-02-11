@@ -144,9 +144,7 @@ public class App extends Application {
 		categories.loadFromFile(Utils.categoryFileName);
 						
 		catController.setCategories(categories);
-		
-		categories.saveToFile(Utils.categoryFileName+"_xxx");
-		
+				
 		logger.info("catcontroler=" + catController.toString());
 		try {
 			root = catLoader.load();

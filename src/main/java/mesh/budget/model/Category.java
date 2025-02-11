@@ -15,7 +15,9 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import javafx.beans.property.SimpleStringProperty;
+import javafx.scene.paint.Color;
 import mesh.budget.App;
+import mesh.budget.Utils;
 
 public class Category {
 	private static final Logger logger = LoggerFactory.getLogger(Category.class);
@@ -25,13 +27,24 @@ public class Category {
 
 	private double total;
 	private double budget;
-	private String colour;
+	private String  colour;
+
+	public String getColour() {
+		return colour;
+	}
+
+	public void setColour(Color colour) {
+		this.colour = Utils.colorToCssString(colour);
+	}
+
+	public void setColour(String colour) {
+		this.colour = colour;
+	}
 
 	private Map<Month, Double> monthTotals;
 
 	public Map<Month, Double> getMonthTotals() {
 		return monthTotals;
-
 	}
 
 	public double getTotal() {
@@ -60,6 +73,8 @@ public class Category {
 
 	}
 
+
+	
 	private SimpleStringProperty name;
 	@JsonProperty
 	private List<String> descriptionMatches = new ArrayList<String>();
@@ -226,8 +241,8 @@ public class Category {
 		try {
 			result = mapper.writeValueAsString(this);
 		} catch (JsonProcessingException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			
+			logger.error(e.getMessage());
 		}
 		return result;
 

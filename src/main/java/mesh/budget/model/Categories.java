@@ -21,12 +21,14 @@ import org.slf4j.LoggerFactory;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import javafx.scene.paint.Color;
 import mesh.budget.App;
+import mesh.budget.Utils;
 
 public class Categories {
 	private static final Logger logger = LoggerFactory.getLogger(Categories.class);
 	// these need to be defined in the css
-	private String[] catColours = { "-fx-bar-fill: #f9d900;", "-fx-bar-fill: #a9e200;", "-fx-bar-fill: #22bad9;",
+	public static String[] catColours = { "-fx-bar-fill: #f9d900;", "-fx-bar-fill: #a9e200;", "-fx-bar-fill: #22bad9;",
 			"-fx-bar-fill: #0181e2;", "-fx-bar-fill: #2f357f;",
 			"-fx-bar-fill: #860061;",
 			"-fx-bar-fill: #c62b00;",
@@ -52,6 +54,16 @@ public class Categories {
 		return categories;
 	}
 
+	public String getCatColour(String catName) {
+		Category cat = this.getCategoryByName(catName);
+		if (cat.getColour()==null){
+			return getDefaultCatColour(catName);
+		} else {
+			return cat.getColour();
+		}
+		
+	} 
+	
 	public String getDefaultCatColour(String catName) {
 		int i = this.getIndexOfName(catName);
 		if ((i >= 0) && (i < catColours.length)) {
@@ -60,9 +72,10 @@ public class Categories {
 		}
 		else {
 			logger.debug(catName+" is not found, using"+ catColours[0]);
-			return catColours[0];
+			return  catColours[0];
 			
 		}
+		
 	}
 
 	public void add(Category cat) {

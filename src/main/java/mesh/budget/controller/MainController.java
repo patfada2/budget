@@ -215,10 +215,9 @@ public class MainController {
 
 		for (Node n : lg.getChildren()) {
 			Label lb = (Label) n;
-			String colour = categories.getDefaultCatColour(lb.getText());
-			lb.getGraphic().setStyle(colour);
+			Color colour = Utils.cssStringToColor(categories.getCatColour(lb.getText()));
+			lb.getGraphic().setStyle(Utils.colorToCssString(colour));
 			logger.debug("setting legend colour " + colour);
-
 		}
 	}
 

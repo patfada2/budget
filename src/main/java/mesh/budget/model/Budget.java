@@ -277,7 +277,7 @@ public class Budget {
 					cat.addToTotal(row.getAmount());
 				}
 				if (row.getCategory().equals("Food") && cat.getName().equals("Food")) {
-					logger.debug("!!!!added Food " + row.getAmount() + "to total, now " + cat.getTotal());
+					logger.debug("added Food " + row.getAmount() + "to total, now " + cat.getTotal());
 				}
 
 			}
@@ -363,7 +363,7 @@ public class Budget {
 						@Override
 						public void changed(ObservableValue<? extends Node> ov, Node oldNode, final Node node) {
 							if (node != null) {
-								setNodeStyle(p, categories.getDefaultCatColour(cat.getName()));
+								setNodeStyle(p, categories.getCatColour(cat.getName()));
 								//displayLabelForData(p);
 							}
 						}
