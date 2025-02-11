@@ -39,8 +39,7 @@ public class Utils {
 			return Categories.catColours[0];	
 	}
 	
-	static public String toCurrency(Number n) {
-		
+	static public String toCurrency(Number n) {		
 		NumberFormat formatter = NumberFormat.getCurrencyInstance();
 		return formatter.format(n);
 		

@@ -201,7 +201,8 @@ public class MainController {
 				item.getNode().setOnMousePressed((MouseEvent event) -> {
 					alert("you clicked " + item.toString() + series.toString());
 				});
-				Tooltip.install(item.getNode(), new Tooltip(series.getName()+  "\n" + item.getXValue() + "\n" + item.getYValue()));
+				Tooltip.install(item.getNode(),
+						new Tooltip(series.getName() + "\n" + item.getXValue() + "\n" + item.getYValue()));
 			}
 		}
 
@@ -339,13 +340,14 @@ public class MainController {
 			barChart.getData().add(series);
 
 		});
-		
+
 		for (XYChart.Series<String, Number> series : barchartdata) {
 			for (XYChart.Data<String, Number> item : series.getData()) {
 				item.getNode().setOnMousePressed((MouseEvent event) -> {
 					alert("you clicked " + item.toString() + series.toString());
 				});
-				Tooltip.install(item.getNode(), new Tooltip(series.getName()+  "\n" + item.getXValue() + "\n" + item.getYValue()));
+				Tooltip.install(item.getNode(),
+						new Tooltip(series.getName() + "\n" + item.getXValue() + "\n" + item.getYValue()));
 			}
 		}
 
@@ -448,14 +450,22 @@ public class MainController {
 			logger.info("catTableSetup");
 			TableColumn<CategoryMonth, String> month = new TableColumn<CategoryMonth, String>("Month");
 			TableColumn<CategoryMonth, String> category = new TableColumn<CategoryMonth, String>("category");
-			TableColumn<CategoryMonth, Number> amount = new TableColumn<CategoryMonth, Number>("Amount");
+			TableColumn<CategoryMonth, String> amount = new TableColumn<CategoryMonth, String>("Amount");
 
 			catTable.getColumns().addAll(month, category, amount);
 
 			month.setCellValueFactory(new PropertyValueFactory<CategoryMonth, String>("Month"));
 			category.setCellValueFactory(new PropertyValueFactory<CategoryMonth, String>("categoryName"));
-			amount.setCellValueFactory(new PropertyValueFactory<CategoryMonth, Number>("categoryAmount"));
-
+		
+			amount.setCellValueFactory(
+					new Callback<CellDataFeatures<CategoryMonth, String>, ObservableValue<String>>() {
+						public ObservableValue<String> call(CellDataFeatures<CategoryMonth, String> p) {						
+							String formattedAmount = Utils.toCurrency(Double.valueOf(p.getValue().getCategoryAmount()));
+							return new SimpleStringProperty(formattedAmount);
+						}
+					});
+			
+			
 		}
 		catTableCreated = true;
 
@@ -510,7 +520,18 @@ public class MainController {
 					});
 
 			dateProcessed.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("dateProcessed"));
-			amount.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("amount"));
+			// amount.setCellValueFactory(new PropertyValueFactory<BankStatementRow,
+			// String>("amount"));
+
+			amount.setCellValueFactory(
+					new Callback<CellDataFeatures<BankStatementRow, String>, ObservableValue<String>>() {
+						public ObservableValue<String> call(CellDataFeatures<BankStatementRow, String> p) {
+							// p.getValue() returns the Person instance for a particular TableView row
+							String formattedAmount = Utils.toCurrency(Double.valueOf(p.getValue().getAmount()));
+							return new SimpleStringProperty(formattedAmount);
+						}
+					});
+
 			description.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("description"));
 			reference.setCellValueFactory(new PropertyValueFactory<BankStatementRow, String>("reference"));
 
