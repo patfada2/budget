@@ -201,7 +201,7 @@ public class MainController {
 				item.getNode().setOnMousePressed((MouseEvent event) -> {
 					alert("you clicked " + item.toString() + series.toString());
 				});
-				Tooltip.install(item.getNode(), new Tooltip(series.getName() + ":\n" + item.getYValue()));
+				Tooltip.install(item.getNode(), new Tooltip(series.getName()+  "\n" + item.getXValue() + "\n" + item.getYValue()));
 			}
 		}
 
@@ -339,6 +339,15 @@ public class MainController {
 			barChart.getData().add(series);
 
 		});
+		
+		for (XYChart.Series<String, Number> series : barchartdata) {
+			for (XYChart.Data<String, Number> item : series.getData()) {
+				item.getNode().setOnMousePressed((MouseEvent event) -> {
+					alert("you clicked " + item.toString() + series.toString());
+				});
+				Tooltip.install(item.getNode(), new Tooltip(series.getName()+  "\n" + item.getXValue() + "\n" + item.getYValue()));
+			}
+		}
 
 	}
 
