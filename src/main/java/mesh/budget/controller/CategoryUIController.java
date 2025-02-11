@@ -11,18 +11,27 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.geometry.Insets;
 import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
+
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TableCell;
 import javafx.scene.control.TableRow;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.TextFieldListCell;
+import javafx.scene.effect.DropShadow;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.CornerRadii;
 import javafx.scene.paint.Color;
+import javafx.scene.paint.Paint;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import mesh.budget.Utils;
 import mesh.budget.model.AppState;
@@ -71,7 +80,7 @@ public class CategoryUIController {
 	private AnchorPane catDetailAnchor;
 
 	@FXML
-	private ChoiceBox<String> colourPickChoiceBox;
+	private ComboBox<Item> colourPickComboBox;
 
 	@FXML
 	private Rectangle catColourRect;
@@ -130,7 +139,7 @@ public class CategoryUIController {
 				selectedCategory = categories.getCategoryByName(selection);
 				if (selectedCategory != null) {
 					loadMatches(selectedCategory);
-					budgetText.setText(String.valueOf(selectedCategory.getBudget()));
+					budgetText.setText(String.valueOf(selectedCategory.getBudget()));					
 					Color c = Utils.cssStringToColor(selectedCategory.getColour());
 					catColourRect.setFill(c);
 					reDraw();
@@ -154,12 +163,70 @@ public class CategoryUIController {
 
 		});
 		for (int i = 0; i < Categories.catColours.length; i++) {
-			colourPickChoiceBox.getItems().add(Categories.catColours[i]);
+			MyText text = new MyText(Categories.catColours[i]);
+			Item item = new Item(Categories.catColours[i], Utils.cssStringToColor(Categories.catColours[i]));
+			
+			colourPickComboBox.getItems().add(item);
+			
 		}
+		colourPickComboBox.setCellFactory(lv -> new ListCell<Item>(){
+
+		    @Override
+		    protected void updateItem(Item item, boolean empty) {
+		        super.updateItem(item, empty);
+
+		        if (empty || item == null) {
+		            setBackground(Background.EMPTY);
+		            setText("");
+		        } else {
+		            setBackground(new Background(new BackgroundFill(item.getColor(),
+		                                                            CornerRadii.EMPTY,
+		                                                            Insets.EMPTY)));
+		            setText(item.getValue());
+		        }
+		    }
+
+		});
 
 
 	}
+	
+	private class Item {
 
+	    public Item(String value, Color color) {
+	        this.value = value;
+	        this.color = color;
+	    }
+
+	    private final String value;
+	    private final Color color;
+
+	    public String getValue() {
+	        return value;
+	    }
+
+	    public Color getColor() {
+	        return color;
+	    }
+	}
+
+	private class MyText extends Text{
+		
+		public MyText(String s) {
+			super(s);
+			DropShadow ds = new DropShadow();
+			ds.setOffsetY(3.0f);
+			Color c = Utils.cssStringToColor(s);
+			ds.setColor(c);
+			this.setEffect(ds);	
+			logger.info(this.getText() + "%%%%" + this.toString());
+		}
+		
+		public String toString() {
+			return this.getText();
+		}
+		
+	}
 	
 
 	@FXML
@@ -241,10 +308,11 @@ public class CategoryUIController {
 
 		logger.info("onColourPick");
 		
-		colourPickChoiceBox.getSelectionModel().selectedIndexProperty().addListener((obs, oldValue, newValue) -> {
-
-			String value = colourPickChoiceBox.getItems().get(newValue.intValue());
-			Color c = Utils.cssStringToColor(colourPickChoiceBox.getItems().get(newValue.intValue()));
+		colourPickComboBox.getSelectionModel().selectedIndexProperty().addListener((obs, oldValue, newValue) -> {
+			
+			Item t = colourPickComboBox.getItems().get(newValue.intValue());
+			
+			Color c = t.color;
 			logger.info("colour " + c.toString() + " selected");
 			catColourRect.setFill(c);
 			selectedCategory.setColour(c);
