@@ -17,21 +17,21 @@
       "id": "c26b783d-7dba-4ef7-a871-05243da63d0e",
       "comment": "",
       "command": "store",
-      "target": "10",
+      "target": "1",
       "targets": [],
       "value": "VarFromDay"
     }, {
       "id": "0dcbf700-4fbd-490b-a5ee-5eb1ad7bcfc9",
       "comment": "",
       "command": "store",
-      "target": "2024",
+      "target": "2025",
       "targets": [],
       "value": "VarFromYear"
     }, {
       "id": "3b820c5c-c1cf-4339-a049-c7f022792012",
       "comment": "",
       "command": "store",
-      "target": "6",
+      "target": "2",
       "targets": [],
       "value": "VarFromMonth"
     }, {
@@ -76,7 +76,7 @@
         ["xpath=//div[3]/div/input", "xpath:position"]
       ],
       "value": ""
-    },  {
+    }, {
       "id": "0ddb3427-8ef5-4047-877d-c1bdbb4f2957",
       "comment": "",
       "command": "type",

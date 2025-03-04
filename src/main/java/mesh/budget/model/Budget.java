@@ -326,6 +326,13 @@ public class Budget {
 
 	public ArrayList<XYChart.Series<String, Number>> calcMonthTotalsPerCategory(Categories categories) {
 		logger.info("calcMonthTotalsPerCategory");
+		
+		//zero totals
+		for (Category cat : categories.getCategories()) {
+			for (Month m : Month.values()) {
+				cat.getMonthTotals().put(m, Double.valueOf(0));			
+			}
+		}
 
 		Category theCat = null;
 		Double theTotal = Double.valueOf(0);
@@ -338,9 +345,18 @@ public class Budget {
 			month = row.getMonth();
 			theTotal = theCat.getMonthTotals().get(month);
 			theTotal = theTotal + Double.parseDouble(row.getAmount());
-			theCat.getMonthTotals().put(month, theTotal);
+			theCat.getMonthTotals().put(month, theTotal);									
 		}
+		
+		for (Category cat : categories.getCategories()) {
 
+			for (Month m : Month.values()) {
+				Double total = cat.getMonthTotals().get(m);
+				logger.debug(cat.getName() + " total for month " + m.name() + "="+ total);
+				
+			}
+		}
+				
 		// populate Series for response
 		ArrayList<XYChart.Series<String, Number>> barchartdata = new ArrayList<XYChart.Series<String, Number>>();
 
@@ -369,7 +385,7 @@ public class Budget {
 						}
 					});
 
-					logger.debug(cat.getName() + "total for month " + m.name() + "=" + total);
+					logger.debug(cat.getName() + " total for month " + m.name() + "=" + total);
 					series.getData().add(p);
 				}
 

@@ -13,18 +13,17 @@ because module javafx.controls does not export com.sun.javafx.charts to unnamed 
 see
 https://stackoverflow.com/questions/56900737/how-to-fix-module-javafx-graphics-does-not-opens-com-sun-javafx-text-to-unna
 
+
+## refs 
+https://gist.github.com/jewelsea/5094893
+
+
 ## to do
 
 Next:
 
-https://gist.github.com/jewelsea/5094893
-- better colours for chart 2, show value on hover
  
 - need a way to alert from other controllers than  main
-
-
-
-
 
 add a ytd view
 - some things like gifts or travel might be better to thave a tyearly budget
@@ -32,15 +31,13 @@ add a ytd view
 
 add an investments page
 
-bugs:
-
-piechart colours
-
 
 money
 ========
-tiger
-cancel prime
+
+AIRNZ shares - link has 40,456 shares - ASB has 10,000....need to check receipts in case not getting dividends
+
+
 check google payment $28 per month
 - deleted google workspace subscription
 
