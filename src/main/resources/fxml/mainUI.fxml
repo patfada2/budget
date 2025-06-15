@@ -75,9 +75,11 @@
                      <left>
                         <AnchorPane prefHeight="346.0" prefWidth="193.0" BorderPane.alignment="CENTER">
                            <children>
-                              <Button layoutX="14.0" layoutY="298.0" mnemonicParsing="false" onAction="#onChartButton1Click" text="show" />
+                              <Button layoutX="9.0" layoutY="681.0" mnemonicParsing="false" onAction="#onChartButton1Click" text="show" />
                               <Label layoutX="9.0" layoutY="21.0" text="select months" />
                               <ListView fx:id="monthPicker" layoutX="14.0" layoutY="54.0" prefHeight="200.0" prefWidth="200.0" />
+                              <ListView fx:id="yearPicker2" layoutX="7.0" layoutY="402.0" prefHeight="58.0" prefWidth="200.0" />
+                              <Label layoutX="17.0" layoutY="377.0" text="select year" />
                            </children>
                         </AnchorPane>
                      </left>
@@ -87,11 +89,14 @@
             <Tab fx:id="chartTab2" text="Chart2">
               <content>
                   <BorderPane fx:id="chart2Pane" stylesheets="@mychart.css">
-                     <center>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                     </center>
                      <left>
-                        <Button mnemonicParsing="false" onAction="#onChart2Button1Click" text="Show" BorderPane.alignment="CENTER" />
+                      <AnchorPane minWidth="-Infinity" prefHeight="686.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <ListView fx:id="yearPicker" layoutX="14.0" layoutY="262.0" prefHeight="60.0" prefWidth="65.0" />
+                              <Label layoutX="14.0" layoutY="237.0" prefHeight="17.0" prefWidth="74.0" text="select year" />
+                              <Button layoutX="9.0" layoutY="641.0" mnemonicParsing="false" onAction="#onChart2Button1Click" text="Show" />
+                           </children>
+                        </AnchorPane>
                      </left>
                   </BorderPane>
               </content>

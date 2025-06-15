@@ -31,7 +31,7 @@
       "id": "3b820c5c-c1cf-4339-a049-c7f022792012",
       "comment": "",
       "command": "store",
-      "target": "2",
+      "target": "3",
       "targets": [],
       "value": "VarFromMonth"
     }, {

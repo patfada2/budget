@@ -8,6 +8,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.time.Month;
+import java.time.Year;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -296,7 +297,7 @@ public class Budget {
 
 	}
 
-	public XYChart.Series<String, Number> calcCategoryTotalsForMonth(Categories cats, Month month) {
+	public XYChart.Series<String, Number> calcCategoryTotalsForMonth(Categories cats, Month month, Year year) {
 		logger.info("calculating totals for month: " + month.name());
 		// clear totals
 		for (Category cat : cats.getCategories()) {
@@ -304,8 +305,13 @@ public class Budget {
 		}
 		for (Category cat : cats.getCategories()) {
 			for (BankStatementRow row : this.budget) {
-				if (row.getCategory().equals(cat.getName()) && row.getMonth().equals(month)) {
+				if (row.getCategory().equals(cat.getName()) && row.getMonth().equals(month)
+						&& row.getYear().equals(year)) {
 					cat.addToTotal(row.getAmount());
+					logger.debug("!!!adding " + cat.getName() + row.getAmount());
+					if (cat.getName().equals("Gifts")) {
+						logger.debug("gift value " + row.getAmount());
+					}
 				}
 
 			}
@@ -324,13 +330,13 @@ public class Budget {
 		return result;
 	}
 
-	public ArrayList<XYChart.Series<String, Number>> calcMonthTotalsPerCategory(Categories categories) {
+	public ArrayList<XYChart.Series<String, Number>> calcMonthTotalsPerCategory(Categories categories, Year year) {
 		logger.info("calcMonthTotalsPerCategory");
-		
-		//zero totals
+
+		// zero totals
 		for (Category cat : categories.getCategories()) {
 			for (Month m : Month.values()) {
-				cat.getMonthTotals().put(m, Double.valueOf(0));			
+				cat.getMonthTotals().put(m, Double.valueOf(0));
 			}
 		}
 
@@ -340,30 +346,32 @@ public class Budget {
 
 		// calculate totals
 		for (BankStatementRow row : this.budget) {
-			theCat = categories.getCategoryByName(row.getCategory());
+			if (row.getYear().equals(year)) {
+				theCat = categories.getCategoryByName(row.getCategory());
 
-			month = row.getMonth();
-			theTotal = theCat.getMonthTotals().get(month);
-			theTotal = theTotal + Double.parseDouble(row.getAmount());
-			theCat.getMonthTotals().put(month, theTotal);									
+				month = row.getMonth();
+				theTotal = theCat.getMonthTotals().get(month);
+				theTotal = theTotal + Double.parseDouble(row.getAmount());
+				theCat.getMonthTotals().put(month, theTotal);
+			}
 		}
-		
+
 		for (Category cat : categories.getCategories()) {
 
 			for (Month m : Month.values()) {
 				Double total = cat.getMonthTotals().get(m);
-				logger.debug(cat.getName() + " total for month " + m.name() + "="+ total);
-				
+				logger.debug(cat.getName() + " total for month " + m.name() + "=" + total);
+
 			}
 		}
-				
+
 		// populate Series for response
 		ArrayList<XYChart.Series<String, Number>> barchartdata = new ArrayList<XYChart.Series<String, Number>>();
 
 		for (Category cat : categories.getCategories()) {
 
 			if (!cat.getName().equals("Transfer")) {
-				logger.debug("!!!!!!!!!!!!"+ cat.getName());
+				logger.debug("!!!!!!!!!!!!" + cat.getName());
 
 				XYChart.Series<String, Number> series = new XYChart.Series<>();
 				series.setName(cat.getName());
@@ -380,7 +388,7 @@ public class Budget {
 						public void changed(ObservableValue<? extends Node> ov, Node oldNode, final Node node) {
 							if (node != null) {
 								setNodeStyle(p, categories.getCatColour(cat.getName()));
-								//displayLabelForData(p);
+								// displayLabelForData(p);
 							}
 						}
 					});
@@ -396,19 +404,19 @@ public class Budget {
 		return barchartdata;
 	}
 
-	
 	private void displayLabelForData(XYChart.Data<String, Number> data) {
-		    final Node node = data.getNode();
-		    final Text dataText = new Text(data.getYValue() + "");
-		    node.parentProperty().addListener(new ChangeListener<Parent>() {
-		      @Override public void changed(ObservableValue<? extends Parent> ov, Parent oldParent, Parent parent) {
-		        Group parentGroup = (Group) parent;
-		        parentGroup.getChildren().add(dataText);
-		      }
-		    });
-		    
-	 }
-	
+		final Node node = data.getNode();
+		final Text dataText = new Text(data.getYValue() + "");
+		node.parentProperty().addListener(new ChangeListener<Parent>() {
+			@Override
+			public void changed(ObservableValue<? extends Parent> ov, Parent oldParent, Parent parent) {
+				Group parentGroup = (Group) parent;
+				parentGroup.getChildren().add(dataText);
+			}
+		});
+
+	}
+
 	private void setNodeStyle(XYChart.Data<String, Number> data, String colour) {
 		Node node = data.getNode();
 		node.setStyle(colour);

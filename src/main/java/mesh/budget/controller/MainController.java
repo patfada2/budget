@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.geometry.Side;
 
 import java.time.Month;
+import java.time.Year;
 import java.util.ArrayList;
 import java.util.Set;
 
@@ -122,6 +123,13 @@ public class MainController {
 	private ListView<String> monthPicker;
 
 	@FXML
+	private ListView<String> yearPicker;
+
+	@FXML
+	private ListView<String> yearPicker2;
+
+	
+	@FXML
 	private Label catTableTotalLabel;
 
 	@FXML
@@ -153,7 +161,10 @@ public class MainController {
 	void onChart2Button1Click() {
 		logger.info("onShowChart2");
 
-		ArrayList<XYChart.Series<String, Number>> seriesArray = budget.calcMonthTotalsPerCategory(categories);
+
+		Year selectedYear= Year.parse( yearPicker.getSelectionModel().getSelectedItem());
+		
+		ArrayList<XYChart.Series<String, Number>> seriesArray = budget.calcMonthTotalsPerCategory(categories, selectedYear);
 		logger.debug("seriesArray size:" + seriesArray.size());
 		showBarChart2(seriesArray, categories);
 	}
@@ -228,11 +239,13 @@ public class MainController {
 		logger.info("onChartButton1Click");
 
 		ArrayList<XYChart.Series<String, Number>> barchartdata = new ArrayList<XYChart.Series<String, Number>>();
+		
+		Year selectedYear= Year.parse( yearPicker2.getSelectionModel().getSelectedItem());
 
 		ObservableList<String> selectedMonths = monthPicker.getSelectionModel().getSelectedItems();
 		selectedMonths.forEach(month -> {
 			Month theMonth = Month.valueOf(month);
-			XYChart.Series<String, Number> series = budget.calcCategoryTotalsForMonth(categories, theMonth);
+			XYChart.Series<String, Number> series = budget.calcCategoryTotalsForMonth(categories, theMonth, selectedYear);
 			series.setName(month);
 			barchartdata.add(series);
 
@@ -298,6 +311,9 @@ public class MainController {
 			if (averageTableData.indexOf(catAvg) < 0) {
 				averageTableData.add(catAvg);
 				logger.debug("adding" + catAvg.getCategoryName());
+				if (catAvg.getCategoryName().equals("Gifts")) {
+					logger.debug("Gifts amount"+catMon.getCategoryAmount());
+				}
 			}
 			int index = averageTableData.indexOf(catAvg);
 			CategoryAverage thisCat = averageTableData.get(index);
@@ -436,6 +452,7 @@ public class MainController {
 	}
 
 	private void chartSetup() {
+		
 
 		monthPicker.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
 		for (Month month : Month.values()) {
@@ -443,6 +460,17 @@ public class MainController {
 			monthPicker.getItems().add(month.toString());
 		}
 
+		yearPicker.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+		Year startYear = Year.of(2024);
+		for (Year year = startYear; !year.isAfter(Year.now()); year = year.plusYears(1)) {
+			yearPicker.getItems().add(year.toString());
+		}
+		
+		yearPicker2.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
+		
+		for (Year year = startYear; !year.isAfter(Year.now()); year = year.plusYears(1)) {
+			yearPicker2.getItems().add(year.toString());
+		}
 	}
 
 	private void catTableSetup() {
@@ -456,16 +484,15 @@ public class MainController {
 
 			month.setCellValueFactory(new PropertyValueFactory<CategoryMonth, String>("Month"));
 			category.setCellValueFactory(new PropertyValueFactory<CategoryMonth, String>("categoryName"));
-		
+
 			amount.setCellValueFactory(
 					new Callback<CellDataFeatures<CategoryMonth, String>, ObservableValue<String>>() {
-						public ObservableValue<String> call(CellDataFeatures<CategoryMonth, String> p) {						
+						public ObservableValue<String> call(CellDataFeatures<CategoryMonth, String> p) {
 							String formattedAmount = Utils.toCurrency(Double.valueOf(p.getValue().getCategoryAmount()));
 							return new SimpleStringProperty(formattedAmount);
 						}
 					});
-			
-			
+
 		}
 		catTableCreated = true;
 
